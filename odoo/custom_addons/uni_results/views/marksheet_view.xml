@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_marksheet_register_tree" model="ir.ui.view">
+            <field name="name">marksheet.register.tree</field>
+            <field name="model">marksheet.register</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Marksheet Register">
+                    <field name="exam_id"/>
+                    <field name="generated_date"/>
+                    <field name="generated_by"/>
+                    <field name="state"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_marksheet_register_form" model="ir.ui.view">
+            <field name="name">marksheet.register.form</field>
+            <field name="model">marksheet.register</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Marksheet Register">
+                    <header >
+                        <button name="action_calculate_result" states="draft" string="Calculate Result" type="object"
+                                class="oe_highlight"/>
+                        <button name="action_validate" states="calculated" string="Validate Marksheet" type="object"
+                                class="oe_highlight"/>
+                        <button name="act_draft" states="calculated" string="Set to Draft" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,calculated,validated"/>
+                    </header>
+                    <sheet>
+                        <field name="active" invisible="1"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                                attrs="{'invisible': [('active', '=', True)]}"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" class="oe_inline" required="1"/>
+                            </h1>
+                        </div>
+                        <group colspan="4" col="4">
+                            <field name="exam_id"/>
+                            <field name="exam_id" invisible="1"/>
+                            <field name="program_id" required="1"/>
+                            <field name="level_id" required="1"/>
+                            <field name="batch_id"/>
+                            <field name="semester_id" required="1"/>
+                            <field name="generated_by"/>
+                            <field name="generated_date"/>
+                            <field name="end_level" invisible="1"/>
+                        </group>
+                        <separator string="Marksheets" colspan="4"/>
+                        <group colspan="4">
+                            <field name="marksheet_line" nolabel="1">
+                                <tree>
+                                    <field name="student_id"/>
+                                    <field name="sgpa"/>
+                                    <field name="sgpa2" attrs="{'column_invisible': [('parent.end_level', '!=',  True)]}"/>
+                                    <field name="gpa" attrs="{'column_invisible': [('parent.end_level', '!=',  True)]}"/>
+                                    <field name="sgpa_grade"/>
+                                    <field name="sgpa_grade_letter"/>
+                                    <field name="status" attrs="{'column_invisible': [('parent.end_level', '!=',  True)]}"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_marksheet_register_search" model="ir.ui.view">
+            <field name="name">marksheet.register.search</field>
+            <field name="model">marksheet.register</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Marksheet Register">
+                    <field name="exam_id"/>
+                    <field name="generated_date"/>
+                    <field name="generated_by"/>
+                    <field name="state"/>
+                    <field name="name"/>
+                    <filter string="Archived" name="inactive"
+                            domain="[('active', '=', False)]"/>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Exam Session"
+                                name="group_by_marksheet_register_exam"
+                                domain="[]" context="{'group_by':'exam_id'}"/>
+                        <filter string="Generated By"
+                                name="group_by_marksheet_register_generated_by"
+                                domain="[]" context="{'group_by':'generated_by'}"/>
+                        <filter string="Status"
+                                name="group_by_marksheet_register_generated_by"
+                                domain="[]" context="{'group_by':'state'}"/>
+                        <filter string="Marksheet Register"
+                                name="group_by_marksheet_register_name"
+                                domain="[]" context="{'group_by':'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_marksheet_register_view">
+            <field name="name">Marksheets</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">marksheet.register</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_op_marksheet_register_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_marksheet_register_view_form">
+            <field name="act_window_id" ref="act_open_op_marksheet_register_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_marksheet_register_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_marksheet_register_view_tree">
+            <field name="act_window_id" ref="act_open_op_marksheet_register_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_op_marksheet_register_tree"/>
+        </record>
+
+        <menuitem id="menu_op_marksheet_register_sub"
+                  name="Marksheets"
+                  parent="result_sub_menu"
+                  sequence="0"
+                  action="act_open_op_marksheet_register_view"
+                  />
+    </data>
+</odoo>

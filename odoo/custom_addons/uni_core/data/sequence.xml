@@ -1,0 +1,114 @@
+<odoo>
+    <data>
+        <record id="calendar_activities_sequence" model="ir.sequence">
+            <field name="name">Calendar Activities Sequence</field>
+            <field name="code">uni.calendar.activities</field>
+            <field name="prefix">CAC-</field>
+            <field name="padding">3</field>
+        </record>
+
+        <record id="faculty_activities_sequence" model="ir.sequence">
+            <field name="name">Faculty Activities Sequence</field>
+            <field name="code">uni.faculty.activities</field>
+            <field name="prefix">FAC-</field>
+            <field name="padding">3</field>
+        </record>
+
+        <record id="students_groups_sequence" model="ir.sequence">
+            <field name="name">students groups</field>
+            <field name="code">students.groups</field>
+            <field name="prefix">GROUP-</field>
+            <field name="padding">4</field>
+        </record>
+
+        <record id="classroom_sequence" model="ir.sequence">
+            <field name="name">Classroom Sequence</field>
+            <field name="code">classroom</field>
+            <field name="prefix">CLASS-</field>
+            <field name="padding">3</field>
+        </record>
+
+        <record id="lab_sequence" model="ir.sequence">
+            <field name="name">Lab Sequence</field>
+            <field name="code">lab</field>
+            <field name="prefix">LAB-</field>
+            <field name="padding">3</field>
+        </record>
+
+        <record id="building_sequence" model="ir.sequence">
+            <field name="name">building Sequence</field>
+            <field name="code">building</field>
+            <field name="prefix">BUILD-</field>
+            <field name="padding">3</field>
+        </record>
+
+        <record id="teaching_adis_sequence" model="ir.sequence">
+            <field name="name">teaching adis Sequence</field>
+            <field name="code">teaching.adis</field>
+            <field name="prefix">ADIS-</field>
+            <field name="padding">3</field>
+        </record>
+
+        <record id="assets_adis_sequence" model="ir.sequence">
+            <field name="name">assets Sequence</field>
+            <field name="code">assets</field>
+            <field name="prefix">ASST-</field>
+            <field name="padding">3</field>
+        </record>
+        <record id="program_sequence" model="ir.sequence">
+            <field name="name">Program Sequence</field>
+            <field name="code">program.sequence</field>
+            <field name="prefix">P-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <record id="specialization_sequence" model="ir.sequence">
+            <field name="name">Specialization Sequence</field>
+            <field name="code">specialization.sequence</field>
+            <field name="prefix">SP-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <record id="level_sequence" model="ir.sequence">
+            <field name="name">Level Sequence</field>
+            <field name="code">level.sequence</field>
+            <field name="prefix">LVL-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <record id="semester_sequence" model="ir.sequence">
+            <field name="name">Semester Sequence</field>
+            <field name="code">semester.sequence</field>
+            <field name="prefix">SEM-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <record id="department_sequence" model="ir.sequence">
+            <field name="name">Department Sequence</field>
+            <field name="code">department.sequence</field>
+            <field name="prefix">DP-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+        </record>
+        <record id="subject_sequence" model="ir.sequence">
+            <field name="name">Subject Sequence</field>
+            <field name="code">subject.sequence</field>
+            <field name="prefix">SUB-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <record id="curriculum_sequence" model="ir.sequence">
+            <field name="name">Curriculum Sequence</field>
+            <field name="code">curriculum.sequence</field>
+            <field name="prefix">CLM-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+        </record>
+
+    </data>
+</odoo>

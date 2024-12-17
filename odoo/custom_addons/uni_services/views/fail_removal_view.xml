@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="fail_removal_form_view" model="ir.ui.view">
+			<field name="name">fail.removal</field>
+			<field name="model">fail.removal</field>
+			<field name="arch" type="xml">
+				<form string="Fail Removal">
+					<header>
+						<button name="action_request" type="object" string="Request" states="draft" class="oe_highlight"/>
+						<button name="action_approve" type="object" string="Approve" states="exam_committee" class="oe_highlight"/>
+						<button name="action_ready" type="object" string="Confirm" states="in_progress" class="oe_highlight"/>
+						<button name="action_done" type="object" string="Delivery Docs" states="ready" class="oe_highlight"/>
+						<button name="action_ready" type="object" string="ReSend Code" class="oe_highlight" attrs="{'invisible':['|',('resend_code','!=',True),('state','not in',['ready'])]}"/>
+						<button name="to_draft" type="object" string="To Draft" states="exam_committee_supervisor,dean_approval,wait_payment,paid"/>
+						<field name="state" widget="statusbar" statusbar_visible="draft,exam_committee,done"/>
+					</header>
+					<sheet>
+						<div class="oe_title" style="float:left">
+							<label for="student_id" name="Name/Universit Id/Student NO"/>
+							<h1>
+								<field name="student_id" required="1" domain="[('state','not in',['resigned','graduate','dismissed']),('registration_status','=','registered')]" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h1>
+						</div>
+						<div style="float:right">
+							<label for="priority" name="Priority"/>
+							<h1>
+								<field name="priority" widget="priority"/>
+							</h1>
+						</div>
+						<br/><br/>
+						<group>
+							<group  string="Service Information">
+								<field name="code" readonly="1"/>
+								<field name="service_name" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_type_id" required="1" domain="[('service_type','=','fail_removal'),('state','=','approved')]" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_executor" required="1" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>	
+								<field name="request_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_amount" attrs="{'invisible':[('is_paid','!=',True)],'readonly':[('state','!=','draft')]}"/>
+								<field name="total_amount" attrs="{'invisible':[('is_paid','!=',True)],'readonly':[('state','!=','draft')]}"/>
+								<field name="execution_start_date" readonly="1" attrs="{'invisible':[('execution_start_date','=',False)]}"/>
+								<field name="execution_end_date" readonly="1" attrs="{'invisible':[('execution_start_date','=',False)]}"/>
+								<field name="is_paid" invisible="1"/>
+								<field name="resend_code" invisible="1"/>
+							</group>
+							<group string="Student Information">
+								<field name="program_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="batch_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="academic_year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="level_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="semester_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="academic_status" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="registration_status" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</group>
+							<group string="Invoice Information" attrs="{'invisible':[('is_paid','!=',True)]}">
+								<field name="invoice_id" readonly="1"/>
+								<field name="invoice_state"/>
+								<field name="payment_state"/>
+							</group>
+						</group>	
+						<notebook>
+							<page string="Fail Subjects">
+								<field name="subject_ids" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree editable="bottom">
+										<field name="subject_id" required="1"/>
+										<field name="academic_year_id" required="1"/>
+										<field name="level_id" required="1"/>
+										<field name="semester_id" required="1"/>
+										<field name="exam_academic_year_id" required="1"/>
+										<field name="exam_level_id" required="1"/>
+										<field name="exam_semester_id" required="1"/>
+										<field name="exam_date" attrs="{'column_invisible':[('parent.state','not in',['exam_committee','approved'])]}"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<record id="fail_removal_tree_view" model="ir.ui.view">
+			<field name="name">fail.removal.tree</field>
+			<field name="model">fail.removal</field>
+			<field name="arch" type="xml">
+				<tree string="Fail Removal">
+					<field name="code"/>
+					<field name="student_id" string="Name"/>
+					<field name="service_name"/>
+					
+					<field name="service_amount"/>
+					<field name="request_date"/>
+					<field name="service_executor"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="fail_removal_kanban" model="ir.ui.view">
+			<field name="name">fail.removal.view.kanban</field>
+			<field name="model">fail.removal</field>
+			<field name="arch" type="xml">
+				<kanban sample="1">
+					<field name="id"/>
+					<field name="student_id"/>
+					<field name="code"/>
+					<field name="state"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="oe_kanban_details">
+									<h4>
+										<a type="open">
+											<field name="student_id" />
+										</a>
+									</h4>
+									<ul>
+										<strong>Service:</strong>
+										<field name="service_name" />
+									</ul>
+									<ul>
+										<strong>Code:</strong>
+										<field name="code" />
+									</ul>
+									<ul>
+										<strong>Executor:</strong>
+										<field name="service_executor" />
+									</ul>
+									<ul>
+										<strong>Request Date:</strong>
+										<field name="request_date" />
+									</ul>
+									<ul>
+										<strong>State:</strong>
+										<field name="state" />
+									</ul>
+									<ul>
+										<field name="priority" widget="priority"/>
+									</ul>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+		<record id="view_fail_removal_filter" model="ir.ui.view">
+			<field name="name">fail.removal.search</field>
+			<field name="model">fail.removal</field>
+			<field name="arch" type="xml">
+				<search>
+					<!-- Search by -->
+					<field name="student_id" string="Student"/>
+					<field name="code"/>
+					<field name="service_executor"/>
+					<!-- Group by -->
+					<group expand="0" string="Group By">
+						<filter string="Service Executor" name="group_by_service_executor" context="{'group_by':'service_executor'}"/>
+						<filter string="Request Date" name="group_by_request_date" context="{'group_by':'request_date'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="fail_removal_action" model="ir.actions.act_window">
+			<field name="name">Fail Removal</field>
+			<field name="res_model">fail.removal</field>
+			<field name="view_mode">tree,form,kanban</field>
+			<field name="context">{'default_service_name':'Fail Removal'}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new Fail removal request</p>
+			</field>
+		</record>
+
+		<menuitem 
+			id="fail_removal_menu" 
+			name="Fail Removal" 
+			parent='uni_faculty_student_service_menu' 
+			action='fail_removal_action' 
+			sequence="7"
+		/>
+
+	</data>
+</odoo>

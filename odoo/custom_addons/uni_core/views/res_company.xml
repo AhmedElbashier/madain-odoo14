@@ -1,0 +1,75 @@
+<odoo>
+	<data>
+		<!-- Inherit Form view -->
+		<record id="res_company_form_view" model="ir.ui.view">
+			<field name="name">res.company.form</field>
+			<field name="model">res.company</field>
+			<field name="inherit_id" ref="base.view_company_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//page" position="after">
+					<page string="Faculty Info">
+						<group>
+							<field name="code"/>
+							<field name="last_std_no"/>
+						</group>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<!-- <record id="account_voucher_form_view" model="ir.ui.view">
+			<field name="name">account.voucher.form</field>
+			<field name="model">account.voucher</field>
+			<field name="inherit_id" ref="account_voucher.view_sale_receipt_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//notebook" position="inside">
+					<page string="Other Info">					
+						<group col="4">
+							<field name="level_id"/>
+							<field name="semester_id"/>
+						</group>
+					</page>
+				</xpath>
+			</field>
+		</record> -->
+
+		<!-- <record id="account_invoice_inherit_form_view" model="ir.ui.view">
+			<field name="name">account.invoice.form</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//notebook" position="inside">
+					<page string="Student Info">					
+						<group col="4">
+							<field name="level_id"/>
+							<field name="semester_id"/>
+						</group>
+					</page>
+				</xpath>
+			</field>
+		</record> -->
+
+		<!-- <record id="base.company_normal_action_tree" model="ir.actions.act_window">
+            <field name="name">Faculties</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.company</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('id','=',active_id)]</field>
+        </record> -->
+        <!-- <record id="base.action_res_company_form" model="ir.actions.act_window">
+            <field name="name">Faculties</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.company</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new company
+              </p><p>
+                Create and manage the companies that will be managed by Odoo from here. Shops or subsidiaries can be created and maintained from here.
+              </p>
+            </field>
+        </record>
+        <menuitem id="base.menu_users" name="Users &amp; Faculties" parent="base.menu_administration" sequence="0"/>
+		<menuitem action="base.action_res_company_form" id="base.menu_action_res_company_form" parent="base.menu_users" name="Faculties"/> -->
+	</data>
+</odoo>

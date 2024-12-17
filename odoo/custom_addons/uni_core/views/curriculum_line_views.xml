@@ -1,0 +1,82 @@
+<odoo>
+	<data>
+		<record id="uni_faculty_curriculum_lines_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.curriculum2.line.form</field>
+			<field name="model">uni.faculty.curriculum.line</field>
+			<field name="arch" type="xml">
+				<form string="Curriculum Details" create="0">
+					<sheet>
+						<group>
+							<group>
+								<field name="subject_id" options="{'no_create': True}"/>
+								<field name="subject_type"/>
+								<field name="teacher_id" options="{'no_create': True}"/>
+								<field name="teacher_ids" invisible="1"/>
+							</group>
+							<group>				
+								<field name="specialization_id" options="{'no_create': True}"/>		
+								<field name="level_id" options="{'no_create': True}"/>
+								<field name="semester_id" options="{'no_create': True}"/>
+								<field name="credit_hours"/>		
+							</group>
+						</group>
+						<group>
+							<group string="Practical" attrs="{'invisible':[('subject_type','not in',['practical','both'])]}">
+								<field name="practical_lectures" attrs="{'required':[('subject_type','in',['practical','both'])]}"/>
+								<field name="practical_hours" attrs="{'required':[('subject_type','in',['practical','both'])]}"/>
+								<field name="practical_credit_hours" attrs="{'required':[('subject_type','in',['practical','both'])]}"/>
+							</group>
+							<group string="Theoretical" attrs="{'invisible':[('subject_type','not in',['theoretical','both'])]}">
+								<field name="theoretical_lectures" attrs="{'required':[('subject_type','in',['theoretical','both'])]}"/>
+								<field name="theoretical_credit_hours" attrs="{'required':[('subject_type','in',['theoretical','both'])]}"/>
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="uni_faculty_curriculum_lines_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.curriculum.line2.tree</field>
+			<field name="model">uni.faculty.curriculum.line</field>
+			<field name="arch" type="xml">
+				<tree string="Curriculum Details" create="0">
+					<field name="curriculum_id"/>
+					<!-- <field name="faculty_id" groups="base.group_multi_company"/> -->
+					<field name="specialization_id" options="{'no_create': True}"/>
+					<field name="level_id"/>
+					<field name="semester_id"/>
+					<field name="specialization_id"  invisible="1"/>
+					<field name="subject_id"/>
+					<field name="theoretical_lectures"/>
+					<field name="practical_credit_hours" />
+				</tree>
+			</field>
+		</record>
+		<record id="uni_faculty_curriculum_lines_action" model="ir.actions.act_window">
+			<field name="name">Curriculum Detail</field>
+			<field name="res_model">uni.faculty.curriculum.line</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_ids" eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('uni_faculty_curriculum_lines_view_tree')}),(0, 0, {'view_mode': 'form', 'view_id': ref('uni_faculty_curriculum_lines_view_form')})]"/>
+		</record>
+		<record id="view_curriculum_lines_line_filter" model="ir.ui.view">
+			<field name="name">view.curriculum.lines.line.select</field>
+			<field name="model">uni.faculty.curriculum.line</field>
+			<field name="arch" type="xml">
+				<search>
+					<!-- Search by -->
+					<field name="curriculum_id"/>
+					<field name="subject_id"/>
+					<!-- Group by -->
+					<group expand="0" string="Group By">
+						<filter string="Curriculum" name="group_by_curriculum_id" context="{'group_by':'curriculum_id'}"/>
+						<filter string="Level" name="group_by_level_id" context="{'group_by':'level_id'}"/>
+						<filter string="Term" name="group_by_semester_id" context="{'group_by':'semester_id'}"/>
+						<filter string="Subject" name="group_by_subject_id" context="{'group_by':'subject_id'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<!-- Menu items -->
+		<menuitem id="uni_curriculum_lines_menu" name="Curriculum Detail" parent="curriculum_management_menu" action="uni_faculty_curriculum_lines_action" sequence="4"/>
+	</data>
+</odoo>

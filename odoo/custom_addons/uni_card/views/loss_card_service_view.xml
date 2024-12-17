@@ -1,0 +1,16 @@
+<odoo>
+	<data>
+		<!-- Student -->
+		<record id="uni_faculty_service_view_form_inherit" model="ir.ui.view">
+			<field name="name">uni.general.services.form</field>
+			<field name="model">uni.general.services</field>
+			<field name="inherit_id" ref="uni_services.uni_faculty_service_request_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='total_amount']" position="after">
+					<field name="card_id" string="Card Request Record" attrs="{'invisible':[('operation_type','!=','lost_card')]}" readonly="1"/>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

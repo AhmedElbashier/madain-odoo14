@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="admission_header">
+       <t t-set="company" t-value="user.company_id"/>
+       <style>
+            @font-face {
+                font-family: 'Almarai';
+                src: local('Almarai'), local('Almarai'),
+                url('/uni_core/static/fonts/Almarai.ttf') format('truetype');
+                }
+            *{
+                font-family: Almarai;
+                }
+        </style> 
+        <div t-attf-class="header" style="font-family: Almarai;">
+            <div class="row text-center">
+                <table class="table table-bordered">
+						<tbody>
+							<tr>
+								<td style="border: 1px solid black; width:33%;"> 
+									<span style="font-style: bold;">Ministry of Higher Education and Scientific Research</span><br/>
+									<span style="font-style: bold;">AL-Madain College for Medical Sciences &amp; Technology</span><br/>
+                                    <t t-if="o._name == 'uni.admission'">
+									<span style="font-style: bold;">Admission Office</span>
+                                    </t>
+								</td>
+                                 <td style="border: 1px solid black; width:33%;">
+									<img src="/uni_admission/static/description/logo.png" width="40%"/><br/>
+								</td>
+								<td style="border: 1px solid black; width:33%;"> 
+									<span style="font-style: bold;">وزارة التعليم العالي والبحث العملي</span><br/>
+									<span style="font-style: bold;">كلية المدائن للعلوم الطبية والتكنولوجيا</span><br/>
+									<span style="font-style: bold;">أمانة الشؤون العلمية</span><br/>
+                                    <t t-if="o._name == 'uni.admission'">  
+									<span style="font-style: bold;">إدارة القبول</span>
+                                    </t>
+                                    <!-- <t t-if="o._name == 'uni.admission'">  
+									<span style="font-style: bold;">إدارة القبول</span>
+                                    </t> -->
+								</td>
+							</tr>
+						</tbody>
+				</table>
+           </div>
+        </div>
+        <div class="footer" style="font-family: Almarai; font-size:13px;">
+            <hr class="solid" style=" border-top: 4px solid #78102F;"/>
+            <table class="table table-bordered">
+				<tbody>
+                    <tr class="text-center">
+                        <td style="border: 1px solid black; padding:5px;">
+                           <ul class="list-inline">
+                                <li class="list-inline-item">Page</li>
+                                <li class="list-inline-item"><span class="page"/></li>
+                                <li class="list-inline-item">of</li>
+                                <li class="list-inline-item"><span class="topage"/></li>
+                            </ul>
+                        </td>
+                        <td style="border: 1px solid black; padding:5px;">
+                            <span>ادارة شئون الطلاب القبول</span>
+                        </td>
+                        <td style="border: 1px solid black; padding:5px;">
+                           <span>استمارة اجراء داخلي رقم 1</span>
+                        </td>
+                    </tr>
+                    <tr class="text-center">
+                        <td style="border: 1px solid black; padding:5px;">
+                           <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/> 
+                        </td>
+                        <td style="border: 1px solid black; padding:5px;">
+                           <span t-esc="user.name"/>
+                        </td>
+                        <td style="border: 1px solid black; padding:5px;">
+                           <span>استخرجت من النظام بواسطة</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </template>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="student_groups_form_view_inherit" model="ir.ui.view">
+			<field name="name">Student Groups</field>
+			<field name="model">uni.student.groups</field>
+			<field name="inherit_id" ref="uni_core.students_groups_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='program_id']" position="before">
+					<field name="academic_year_id"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

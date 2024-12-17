@@ -1,0 +1,160 @@
+<odoo>
+	<data>
+		<!-- Curriculums -->
+		<record id="uni_faculty_curriculum_view_form_inh" model="ir.ui.view">
+			<field name="name">uni.faculty.curriculum.form</field>
+			<field name="model">uni.faculty.curriculum</field>
+			<field name="inherit_id" ref="uni_core.uni_faculty_curriculum_view_form"/>
+			<field name="arch" type="xml">
+		
+				<xpath expr="//page[2]" position="after">
+					<page string="Exams/Results">
+						<group>
+							<group>
+								<field name="level_grade"/>
+								<field name="semester_grade"/>
+								<field name="subject_grade"/>
+								<!-- <field name="gpa_grade"/> -->
+							</group>
+						</group>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<!-- Curriculum Line -->
+		<record id="uni_faculty_curriculum_line_view_form_inh" model="ir.ui.view">
+			<field name="name">uni.faculty.curriculum.line.form</field>
+			<field name="model">uni.faculty.curriculum.line</field>
+			<field name="inherit_id" ref="uni_core.uni_faculty_curriculum_lines_view_form"/>
+			<field name="arch" type="xml">
+		
+				<xpath expr="//sheet" position="inside">
+					<notebook>
+						<page string="Subject Details">
+						<group>
+							<group>
+								<field name="full_degree"/>
+								<field name="success_degree"/>
+								<field name="subject_grade"/>
+							</group>
+							<group>
+								<field name="fail_remove"/>
+								<field name="subject_carry" invisible="1"/>
+							</group>
+						</group>
+						<separator string="Degree Component" colspan="4"/>
+						<field name="degree_component">
+							<tree editable="bottom">
+								<field name="name"/>
+								<field name="component_type"/>
+								<field name="percentage"/>
+							</tree>
+						</field>
+					</page>
+					</notebook>
+				</xpath>
+			</field>
+		</record>
+
+		<!-- Subjects -->
+		<record id="uni_faculty_subject_view_form_inh" model="ir.ui.view">
+			<field name="name">uni.faculty.subject.form</field>
+			<field name="model">uni.faculty.subject</field>
+			<field name="inherit_id" ref="uni_core.uni_faculty_subject_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='fail_remove']" position="replace">
+				</xpath>
+
+				<xpath expr="//page[1]" position="after">
+					<page string="Exams/Results">
+						<group>
+							<group>
+								<field name="full_degree"/>
+								<field name="success_degree"/>
+								<field name="subject_grade"/>
+							</group>
+							<group>
+								<field name="fail_remove"/>
+								<field name="subject_carry" invisible="1"/>
+							</group>
+						</group>
+						<separator string="Degree Component" colspan="4"/>
+						<field name="degree_component">
+							<tree editable="bottom">
+								<field name="name"/>
+								<field name="component_type"/>
+								<field name="percentage"/>
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<!-- Levels -->
+		<record id="uni_faculty_level_view_form_inh" model="ir.ui.view">
+			<field name="name">uni.faculty.level.form</field>
+			<field name="model">uni.faculty.level</field>
+			<field name="inherit_id" ref="uni_core.uni_faculty_level_view_form"/>
+			<field name="arch" type="xml">
+		
+				<xpath expr="//field[@name='order']" position="after">
+					<field name="level_grade"/>
+				</xpath>
+			</field>
+		</record>
+
+		<!-- Semesters -->
+		<record id="uni_semester_view_form_inh" model="ir.ui.view">
+			<field name="name">uni.faculty.semester.form</field>
+			<field name="model">uni.faculty.semester</field>
+			<field name="inherit_id" ref="uni_core.uni_semester_view_form"/>
+			<field name="arch" type="xml">
+		
+				<xpath expr="//field[@name='order']" position="after">
+					<field name="semester_grade"/>
+				</xpath>
+			</field>
+		</record>
+
+		<!-- Degree Component -->
+		<record id="degree_comp_view_form" model="ir.ui.view">
+			<field name="name">degree.component.view.form</field>
+			<field name="model">degree.component</field>
+			<field name="arch" type="xml">
+				<form string="Degree Component" create="0">
+					<sheet>
+						<group col="4">
+							<field name="name"/>
+							<field name="component_type"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="degree_comp_view_tree" model="ir.ui.view">
+			<field name="name">degree.component.view.tree</field>
+			<field name="model">degree.component</field>
+			<field name="arch" type="xml">
+				<tree string="Degree Component" create="0">
+					<field name="name"/>
+					<field name="component_type"/>
+				</tree>
+			</field>
+		</record>
+		<record id="degree_comp_list_action" model="ir.actions.act_window">
+			<field name="name">Degree Component</field>
+			<field name="res_model">degree.component</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new Component</p>
+			</field>
+		</record>
+		<menuitem 
+			id="degree_comp_confg_menu" name="Subjects Degree Component" 
+			sequence="2" parent="uni_core.curriculum_management_menu" 
+			action="degree_comp_list_action"/>
+
+	</data>
+</odoo>

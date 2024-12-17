@@ -1,0 +1,176 @@
+<odoo>
+	<data>
+		<record id="health_service_medical_data_form" model="ir.ui.view">
+			<field name="name">Medical_data</field>
+			<field name="model">uni.health_service.medical_data</field>
+			<field name="arch" type="xml">
+				<form string="Health Medical Data">
+					<sheet>
+						<div class="oe_title">
+							<group col="1">
+								<h2>
+									<field name="student_id" class="oe_inline" required="1" options="{'no_create': True}"/>
+								</h2>
+							</group>
+						</div>
+						<notebook>
+							<page string="Medical history">
+								<group>
+									<field name="past_disease_ids" widget="many2many_tags" options="{'no_create': True}"/>
+								</group>
+								<group>
+									<field name="previous_operations" widget="many2many_tags" options="{'no_create': True}"/>
+								</group>
+								<group>
+									<field name="with_special_needs"/>
+								</group>
+								<group col="4" string="Disability">
+									<field name="no_impaired"/>
+									<field name="impaired_hearing"/>
+									<field name="optical_disablity"/>
+									<field name="impaired_mobility"/>
+								</group>
+								<group col="4" string="The Simpsons">
+									<field name="cigarettes"/>
+									<field name="rise_of"/>
+								</group>
+								<group col="4" string="Drugs">
+									<field name="injection"/>
+									<field name="inhalation"/>
+									<field name="pills"/>
+								</group>
+								<group string="Alcohol" col="2">
+									<field name="alcohol"/>
+								</group>
+							</page>
+							<page string="Family diseases">
+								<field name="family_disease_ids" options="{'no_create': True}">
+									<tree>
+										<field name="name"/>
+										<field name="description"/>
+										<field name="endemic"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Pysical examination">
+								<group string="Pysical examination">
+									<field name="general_appearance"/>
+									<field name="constitution"/>
+									<field name="height"/>
+									<field name="weight"/>
+									<field name="sclap"/>
+									<field name="cervical_lym_nodes"/>
+								</group>
+								<group string="Eyes" col="4">
+									<field name="eyes_gen"/>
+									<field name="vision"/>
+									<field name="without_glass"/>
+									<field name="with_glass"/>
+									<field name="color_vision"/>
+									<field name="near_vision"/>
+								</group>
+								<group col="4">
+									<field name="ears"/>
+									<field name="mouth"/>
+								</group>
+								<group col="4">
+									<field name="trechea"/>
+									<field name="tongue"/>
+									<field name="upper_limbs"/>
+									<field name="lower_limbs"/>
+									<field name="pulse"/>
+									<field name="b_p"/>
+								</group>
+								<group string="Teeth" col="4">
+									<field name="teeth"/>
+									<field name="decayed"/>
+									<field name="missing"/>
+									<field name="filled"/>
+									<field name="other_abnoramality"/>
+								</group>
+								<group string="Heart" col="4">
+									<field name="chest_gen"/>
+									<field name="lungs"/>
+									<field name="heart"/>
+								</group>
+								<group string="Abdomen" col="4">
+									<field name="abdomen_gen"/>
+									<field name="liver"/>
+									<field name="spleen"/>
+									<field name="other_masses"/>
+									<field name="fluid"/>
+									<field name="hernia"/>
+								</group>
+								<group>
+									<field name="genitalia"/>
+								</group>
+								<group string="G.N.S" col="4">
+									<field name="intelligence"/>
+									<field name="speech"/>
+									<field name="cranial_nerves"/>
+									<field name="motor_sys"/>
+									<field name="sensor_sys"/>
+									<field name="reflex"/>
+									<field name="skin"/>
+								</group>
+								<group string="Comment">
+									<field name="ex_comment"/>
+								</group>
+							</page>
+							<page string="Investigation">
+								<group string="Stool general Reaction" col="4">
+									<field name="stol_gen_reaction"/>
+									<field name="mucus"/>
+									<field name="blood"/>
+									<field name="parasites"/>
+									<field name="concetration"/>
+								</group>
+								<group string="Urine general" col="4">
+									<field name="sp_gravity"/>
+									<field name="Reaction"/>
+									<field name="pus_cell"/>
+									<field name="rbc"/>
+									<field name="casts"/>
+									<field name="ova"/>
+								</group>
+								<group string="X-Ray">
+									<field name="x_ray"/>
+								</group>
+								<group string="Blood" col="4">
+									<field name="hb"/>
+									<field name="b_rbc"/>
+									<field name="wbc"/>
+									<field name="blood_total"/>
+								</group>
+								<group col="4">
+									<field name="mantoux_test"/>
+									<field name="other_investigation"/>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="health_service_medical_data_tree" model="ir.ui.view">
+			<field name="name">uni.health_service.medical_data.tree</field>
+			<field name="model">uni.health_service.medical_data</field>
+			<field name="arch" type="xml">
+				<tree string="Health Medical Data">
+					<field name="student_id"/>
+				</tree>
+			</field>
+		</record>
+		<record id="action_health_service_medical_data" model="ir.actions.act_window">
+			<field name="name">Medical Data</field>
+			<field name="res_model">uni.health_service.medical_data</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">                Click to Create New Medical Data.              </p>
+			</field>
+		</record>
+		<menuitem id="medical_data_menu" name="Medical Data" action="action_health_service_medical_data"
+		parent="uni_health_service_view_menu" 
+		groups="uni_health_service.uni_group_medical_admin,uni_health_service.uni_group_medical_user" />
+	</data>
+</odoo>

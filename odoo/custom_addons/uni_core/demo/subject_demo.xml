@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="sub_1" model="uni.faculty.subject">
+			<field name="name">المهارات اللغوية والمعاجم</field>
+			<field name="code">ل ع 103</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_11" model="uni.faculty.subject">
+			<field name="name">النحو</field>
+			<field name="code">ل ع 101</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_12" model="uni.faculty.subject">
+			<field name="name">النحو والتطبيق</field>
+			<field name="code"> ن ت ط</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_13" model="uni.faculty.subject">
+			<field name="name">مبادئ القراءة والكتابة </field>
+			<field name="code"> م ق ك</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_14" model="uni.faculty.subject">
+			<field name="name"> التطبيق اللغوي</field>
+			<field name="code">ت ل غ</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_15" model="uni.faculty.subject">
+			<field name="name">المطالعة والإنشاء</field>
+			<field name="code">م ط إ</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_16" model="uni.faculty.subject">
+			<field name="name">مختارات من الأدب</field>
+			<field name="code">م خ</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_1_7" model="uni.faculty.subject">
+			<field name="name">النحو(1) </field>
+			<field name="code">ن ح 1</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_17" model="uni.faculty.subject">
+			<field name="name">النحو(2) </field>
+			<field name="code">ن ح 2</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_18" model="uni.faculty.subject">
+			<field name="name">الأدب الأموي</field>
+			<field name="code">أ د </field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_19" model="uni.faculty.subject">
+			<field name="name"> العروض</field>
+			<field name="code">ع</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_20" model="uni.faculty.subject">
+			<field name="name">التطبيق النحوي</field>
+			<field name="code">ب ن</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_21" model="uni.faculty.subject">
+			<field name="name">دراسات في علم الحديث</field>
+			<field name="code">د ع ح</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_22" model="uni.faculty.subject">
+			<field name="name">الأدب في صدر الإسلام</field>
+			<field name="code">أ ص س</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_23" model="uni.faculty.subject">
+			<field name="name">علوم القرآن</field>
+			<field name="code">ع ق</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_24" model="uni.faculty.subject">
+			<field name="name">مصادر من التراث</field>
+			<field name="code">م م ت</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_25" model="uni.faculty.subject">
+			<field name="name">البلاغة</field>
+			<field name="code">ب</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_26" model="uni.faculty.subject">
+			<field name="name">الأدب في العصر العباسي الأول</field>
+			<field name="code">أ ع ع أ</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_27" model="uni.faculty.subject">
+			<field name="name">النقد القديم</field>
+			<field name="code">ن ق</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_28" model="uni.faculty.subject">
+			<field name="name">فقه اللغة</field>
+			<field name="code">ف ل</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_2_8" model="uni.faculty.subject">
+			<field name="name">فقه اللغة(1) </field>
+			<field name="code">1 ف ل</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_29" model="uni.faculty.subject">
+			<field name="name">أدب الدعوة الإسلامية</field>
+			<field name="code">أ د إ</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_30" model="uni.faculty.subject">
+			<field name="name">المفضليات</field>
+			<field name="code">م ق</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_31" model="uni.faculty.subject">
+			<field name="name">الأدب في العصر العباسي الثاني</field>
+			<field name="code">أ ع ع ث</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_32" model="uni.faculty.subject">
+			<field name="name">الفكر الإسلامي</field>
+			<field name="code">ف إ</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_33" model="uni.faculty.subject">
+			<field name="name">الصرف(1)</field>
+			<field name="code">ص 1</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_34" model="uni.faculty.subject">
+			<field name="name">الصرف(2)</field>
+			<field name="code">ص 2</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_35" model="uni.faculty.subject">
+			<field name="name">الأدب في العصر المملوكي والعثماني</field>
+			<field name="code">أ ع م ع</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_36" model="uni.faculty.subject">
+			<field name="name">النقد المنهجي في القرنين الرابع والخامس</field>
+			<field name="code">ن م ق ر خ</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_37" model="uni.faculty.subject">
+			<field name="name">كتاب مقرر</field>
+			<field name="code"> ك م</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_38" model="uni.faculty.subject">
+			<field name="name">الأدب الأندلسي</field>
+			<field name="code">أ ن</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_39" model="uni.faculty.subject">
+			<field name="name">الأدب السوداني</field>
+			<field name="code">أ س</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_40" model="uni.faculty.subject">
+			<field name="name">الأدب الحديث</field>
+			<field name="code">أ ح</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_41" model="uni.faculty.subject">
+			<field name="name">النقد الأدبي الحديث</field>
+			<field name="code">ن أ ح</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_42" model="uni.faculty.subject">
+			<field name="name">منهج البحث وتحقيق النصوص</field>
+			<field name="code">م ب ت ن</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_43" model="uni.faculty.subject">
+			<field name="name">الدوائر والقوافي</field>
+			<field name="code">د ق</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_44" model="uni.faculty.subject">
+			<field name="name">اللغة الفارسية</field>
+			<field name="code">ل ف</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_45" model="uni.faculty.subject">
+			<field name="name">المذاهب الأدبية</field>
+			<field name="code">م أ</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_46" model="uni.faculty.subject">
+			<field name="name">الأدب المقُارن</field>
+			<field name="code">أ م ق</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_47" model="uni.faculty.subject">
+			<field name="name">التدريب اللغوي</field>
+			<field name="code">ت ل</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_48" model="uni.faculty.subject">
+			<field name="name">البحث التكميلي</field>
+			<field name="code"> ب ت</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_49" model="uni.faculty.subject">
+			<field name="name">الدراسات القرآنية</field>
+			<field name="code">د ر ق</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<!--> 				end off Literature fuclty subjects			<-->
+		<record id="sub_2" model="uni.faculty.subject">
+			<field name="name">لغة انجليزية عامة</field>
+			<field name="code">ل ن 105</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_3" model="uni.faculty.subject">
+			<field name="name">قواعد اللغة الروسية</field>
+			<field name="code">ل ر 101</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_4" model="uni.faculty.subject">
+			<field name="name">النظرية الاقتصادية الجزئية</field>
+			<field name="code">ق 201</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_5" model="uni.faculty.subject">
+			<field name="name">طرق كمية</field>
+			<field name="code">ق 202</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_6" model="uni.faculty.subject">
+			<field name="name">السياسة في افريقيا</field>
+			<field name="code">ق 203</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_7" model="uni.faculty.subject">
+			<field name="name">العنف السياسي و الثورة وعدم الاستقرار</field>
+			<field name="code">ق 204</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="sub_8" model="uni.faculty.subject">
+			<field name="name">تطور نظريات الانثروبولوجيا</field>
+			<field name="code">ق 205</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+	</data>
+</odoo>
+

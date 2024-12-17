@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="spec_1" model="uni.faculty.department.specialization">
+			<field name="name">اللغة العربية</field>
+			<field name="department_id" ref="dept_5"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="spec_2" model="uni.faculty.department.specialization">
+			<field name="name">اللغة الأنجليزية</field>
+			<field name="department_id" ref="dept_2"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="spec_3" model="uni.faculty.department.specialization">
+			<field name="name">اللغة الروسية</field>
+			<field name="department_id" ref="dept_3"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+		</record>
+		<record id="spec_4" model="uni.faculty.department.specialization">
+			<field name="name">اللغة العربية الأنجليزية</field>
+			<field name="department_id" ref="dept_5"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="parent_id" ref="spec_1"></field>
+		</record>
+		<record id="spec_5" model="uni.faculty.department.specialization">
+			<field name="name">اللغة العربية الروسية</field>
+			<field name="department_id" ref="dept_5"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="parent_id" ref="spec_1"></field>
+		</record>
+		<record id="spec_6" model="uni.faculty.department.specialization">
+			<field name="name"> اللغة الأنجليزية العربية</field>
+			<field name="department_id" ref="dept_2"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="parent_id" ref="spec_2"></field>
+		</record>
+		<record id="spec_7" model="uni.faculty.department.specialization">
+			<field name="name">اللغة الأنجليزية الروسية</field>
+			<field name="department_id" ref="dept_2"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="parent_id" ref="spec_2"></field>
+		</record>
+		<record id="spec_8" model="uni.faculty.department.specialization">
+			<field name="name"> اللغة الروسية الأنجليزية</field>
+			<field name="department_id" ref="dept_3"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="parent_id" ref="spec_3"></field>
+		</record>
+		<record id="spec_9" model="uni.faculty.department.specialization">
+			<field name="name">اللغة الروسية العربية</field>
+			<field name="department_id" ref="dept_3"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="parent_id" ref="spec_3"></field>
+		</record>
+		<record id="spec_10" model="uni.faculty.department.specialization">
+			<field name="name">مساق الاقتصاد والتحليل الكمي</field>
+			<field name="department_id" ref="dept_15"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+		</record>
+		<record id="spec_11" model="uni.faculty.department.specialization">
+			<field name="name">مساق الاقتصاد والتنمية الاقتصادية</field>
+			<field name="department_id" ref="dept_15"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+		</record>
+		<record id="spec_12" model="uni.faculty.department.specialization">
+			<field name="name">مساق الاقتصاد و التمويل</field>
+			<field name="department_id" ref="dept_15"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+		</record>
+		<record id="spec_13" model="uni.faculty.department.specialization">
+			<field name="name">مساق الاقتصاد القياسي والاحصاء الاجتماعي</field>
+			<field name="department_id" ref="dept_15"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+		</record>
+		<record id="spec_14" model="uni.faculty.department.specialization">
+			<field name="name">مساق علم الاجتماع والانثرولوجيا/الاقتصاد</field>
+			<field name="department_id" ref="dept_16"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+		</record>
+		<record id="spec_15" model="uni.faculty.department.specialization">
+			<field name="name">مساق علم الاجتماع والانثرولوجيا/الاحصاء الاجتماعي</field>
+			<field name="department_id" ref="dept_16"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+		</record>
+		<record id="spec_16" model="uni.faculty.department.specialization">
+			<field name="name">مساق علم الاجتماع والخدمة الاجتماعية</field>
+			<field name="department_id" ref="dept_16"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+		</record>
+		<record id="spec_17" model="uni.faculty.department.specialization">
+			<field name="name">مساق علم الاجتماع والانثرولوجيا/العلوم السياسية</field>
+			<field name="department_id" ref="dept_16"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+		</record>
+		<record id="spec_18" model="uni.faculty.department.specialization">
+			<field name="name">مساق العلوم السياسية/الاقتصاد</field>
+			<field name="department_id" ref="dept_17"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+		</record>
+		<record id="spec_19" model="uni.faculty.department.specialization">
+			<field name="name">مساق العلوم السياسية/الاحصاء الاجتماعي</field>
+			<field name="department_id" ref="dept_17"></field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+		</record>
+	</data>
+</odoo>

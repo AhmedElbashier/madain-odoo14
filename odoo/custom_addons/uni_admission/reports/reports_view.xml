@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+        <report 
+            id="admission_form_acion"
+            string="إستمارة القبول"
+            model="uni.admission"
+            report_type="qweb-pdf"
+            file="uni_admission.report_admission_form_template"
+            name="uni_admission.report_admission_form_template"      
+        />
+
+        <report 
+            id="registration_form_acion"
+            string="إستمارة التسجيل"
+            model="uni.student"
+            report_type="qweb-pdf"
+            file="uni_admission.report_registration_form_template"
+            name="uni_admission.report_registration_form_template"      
+        />
+
+        <report 
+            id="receipt_permission_acion"
+            string="إذن توريد للحسابات لطالب مرشح"
+            model="uni.admission"
+            report_type="qweb-pdf"
+            file="uni_admission.report_receipt_permission_template"
+            name="uni_admission.report_receipt_permission_template"      
+        />
+
+        <report 
+            id="initial_acceptance_action"
+            string="شهادة قبول مبدئي"
+            model="uni.admission"
+            report_type="qweb-pdf"
+            file="uni_admission.report_initial_acceptane_template"
+            name="uni_admission.report_initial_acceptane_template"      
+        />
+
+        <report 
+            id="study_fees_action"
+            string="إستمارة الرسوم الدراسية"
+            model="uni.study_fees"
+            report_type="qweb-pdf"
+            file="uni_admission.report_study_fees_template"
+            name="uni_admission.report_study_fees_template"      
+        />
+
+        <report 
+            id="guides_and_steps_action"
+            string="متطلبات القبول و الإرشادات"
+            model="uni.admission"
+            report_type="qweb-pdf"
+            file="uni_admission.report_guides_and_steps"
+            name="uni_admission.report_guides_and_steps"      
+        />
+
+        <report
+            id="action_letter_report"
+            string= "إسترجاع رسوم"
+            model="letter.report.wizard"
+            report_type="qweb-pdf"
+            file="uni_admission.letter_report"
+            name="uni_admission.letter_report"
+        />
+        
+    </data>
+</odoo>

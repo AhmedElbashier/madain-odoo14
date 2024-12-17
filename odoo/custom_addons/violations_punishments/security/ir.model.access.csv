@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_punishment,AccessPunishment,model_punishment_type,,1,1,1,1
+access_violation,AccessViolation,model_violation_type,,1,1,1,1
+access_student_violation,AccessStudentViolation,model_student_violation,,1,1,1,1
+

@@ -1,0 +1,128 @@
+<odoo>
+	<data>
+		<!-- uni.faculty.calendar form view -->
+		<record id="uni_faculty_calendar_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.calendar.view.form</field>
+			<field name="model">uni.faculty.calendar</field>
+			<field name="arch" type="xml">
+				<form string="Calendar">
+					<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,approved,closed"/>
+					<button name="action_approve" string="Approve" type="object" states="draft" />
+					<button name="action_close" string="Close" type="object" states="approved" />
+					<button name="rest_draft" string="Rest To Draft" type="object" states="closed" />
+				</header>
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h1>
+						</div>
+						<group>
+							<field name="code" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group col="4">
+							<field name="program_ids" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="level_ids" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="batch_ids" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<notebook>
+							<page string="Activities">
+								<field name="calendar_activities_ids" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree editable="top">
+										<field name="sequence" widget="handle"/>
+										<field name="name"/>
+										<field name="start_date"/>
+										<field name="end_date"/>
+										<field name="days_number"/>
+										<field name="week_number"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<!-- uni.faculty.calendar tree view -->
+		<record id="uni_faculty_calendar_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.calendar.view.tree</field>
+			<field name="model">uni.faculty.calendar</field>
+			<field name="arch" type="xml">
+				<tree string="Calendar">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_faculty_calendar_action" model="ir.actions.act_window">
+			<field name="name">Calendar</field>
+			<field name="res_model">uni.faculty.calendar</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new calendar</p>
+			</field>
+		</record>
+		<!-- calendar menu -->
+		<menuitem id="uni_faculty_calendar_menu" name="Study Calendar" action="uni_faculty_calendar_action" parent="menu_uni_year_root" sequence="3"/>
+
+
+		<!-- uni.calendar.activities form view -->
+		<record id="uni_calendar_activities_view_form" model="ir.ui.view">
+			<field name="name">uni.calendar.activities.view.form</field>
+			<field name="model">uni.calendar.activities</field>
+			<field name="arch" type="xml">
+				<form string="Activities">
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name"/>
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="code"/>
+							</group>
+							<group>
+								<field name="activity_type"/>
+								<field name="student_activity"/>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<!-- uni.activities tree view -->
+		<record id="uni_calendar_activities_view_tree" model="ir.ui.view">
+			<field name="name">uni.calendar.activities.view.tree</field>
+			<field name="model">uni.calendar.activities</field>
+			<field name="arch" type="xml">
+				<tree string="Activities">
+					<field name="code"/>
+					<field name="name"/>
+					
+				</tree>
+			</field>
+		</record>
+		<record id="uni_calendar_activities_action" model="ir.actions.act_window">
+			<field name="name">Activities</field>
+			<field name="res_model">uni.calendar.activities</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new calendar</p>
+			</field>
+		</record>
+		<!-- calendar activities menu -->
+		<menuitem id="uni_calendar_activities_menu" sequence="3" name="Calendar Activities" action="uni_calendar_activities_action" parent="menu_uni_year_config"/>
+	
+	</data>
+</odoo>

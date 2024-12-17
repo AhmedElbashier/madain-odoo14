@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	<record id="otp_confirm_wizard_view_form" model="ir.ui.view">
+		<field name="name">OTP Confirmation</field>
+		<field name="model">otp.wizard</field>
+		<field name="arch" type="xml">
+			<form string="OTP Confirmation">
+				<p class="oe_grey">OTP is sent Please Check your Email or SMS or Whatsapp </p>
+				<group>
+				<field name="password"/>
+				</group>
+				
+				<footer>
+					<button name="confirm" string="Confirm" type="object" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+</data>
+</odoo>

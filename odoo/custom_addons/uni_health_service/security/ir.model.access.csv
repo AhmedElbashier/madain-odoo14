@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_uni_helth_data,uni.helth.data,model_uni_health_service_medical_data,uni_health_service.uni_group_medical_admin,1,1,1,1
+access_uni_helth_record,uni.helth.record,model_uni_health_service_medical_record,uni_health_service.uni_group_medical_admin,1,1,1,1
+access_uni_helth_desise,uni.helth.desise,model_uni_health_service_disease,uni_health_service.uni_group_medical_admin,1,1,1,1
+access_uni_student_medical,uni.student.medical,uni_core.model_uni_student,uni_health_service.uni_group_medical_admin,1,0,0,0
+access_uni_department_medical,uni.faculty.department,uni_core.model_uni_faculty_department,uni_health_service.uni_group_medical_admin,1,0,0,0
+access_uni_department_specialization_medical,uni.faculty.department.specialization,uni_core.model_uni_faculty_department_specialization,uni_health_service.uni_group_medical_admin,1,0,0,0
+access_uni_helth_data_user,uni.helth.data.user,model_uni_health_service_medical_data,uni_health_service.uni_group_medical_user,1,1,0,0
+access_uni_helth_record_user,uni.helth.record,model_uni_health_service_medical_record,uni_health_service.uni_group_medical_user,1,1,1,1
+access_uni_helth_desise_user,uni.helth.desise,model_uni_health_service_disease,uni_health_service.uni_group_medical_user,1,0,0,0
+access_uni_student_medical_user,uni.student.medical.user,uni_core.model_uni_student,uni_health_service.uni_group_medical_user,1,0,0,0

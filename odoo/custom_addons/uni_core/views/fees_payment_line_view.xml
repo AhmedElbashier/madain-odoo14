@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	<record id="fees_payment_line_view_form" model="ir.ui.view">
+		<field name="name">fees.payment.line.form</field>
+		<field name="model">fees.payment.line</field>
+		<field name="arch" type="xml">
+			<form string="Fees Payments">
+				<sheet>
+					<group>
+						<field name="level_id" options="{'no_create': True}"/>
+						<field name="semester_id" options="{'no_create': True}" />
+						<field name="amount" />
+						<field name="payment_date"/>
+						<field name="payment_type"/>
+						<field name="currency_id"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="fees_payment_line_view_tree" model="ir.ui.view">
+		<field name="name">fees.payment.line.tree</field>
+		<field name="model">fees.payment.line</field>
+		<field name="arch" type="xml">
+			<tree string="Fees Payments">
+				<field name="level_id" options="{'no_create': True}"/>
+				<field name="semester_id" options="{'no_create': True}" />
+				<field name="amount" />
+				<field name="payment_date"/>
+				<field name="payment_type"/>
+				<field name="currency_id"/>
+			</tree>
+		</field>
+	</record>
+	</data>
+</odoo>

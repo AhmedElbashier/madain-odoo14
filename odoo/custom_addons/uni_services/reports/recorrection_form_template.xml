@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="report_recorrection_form_template_doc">
+		<t t-call="web.html_container">
+			<t t-call="web.internal_layout">
+				<div class="page">
+					<table class="table table-bordered">
+						<tbody>
+							<tr class="text-right">
+								<td colspan="3" style="border: 1px solid black;">
+									<span style="font-weidght: bold;" t-esc="o.program_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;">إسم البرنامج</span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;">
+									<span style="font-weidght: bold;" t-esc="o.request_date"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;">التاريخ</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td colspan="3" style="border: 1px solid black;width:40%">
+									<span style="font-weidght: bold;" t-esc="o.student_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;">إسم الطالب</span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;width:30%">
+									<span style="font-weidght: bold;" t-esc="o.student_id.seeting_number"></span>
+								</td>
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;">رقم الجلوس</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td rowspan="2" colspan="2" style="border: 1px solid black;width:30%">
+								</td>
+								<td rowspan="2" style="border: 1px solid black;">
+									<span style="font-weidght: bold;width:15%">توقيع الطالب </span>
+								</td>
+								<td colspan="3" style="border: 1px solid black;width:45%">
+									<span style="font-weidght: bold;" t-esc="line.subject_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;width:20%">
+									<span style="font-weidght: bold;">إسم المقرر</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td colspan="4" style="border: 1px solid black;">
+								</td>
+							</tr>
+							<tr style="Background-color:#a6a4a4">
+								<td colspan="7" style="border: 1px solid black;">
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;" t-esc="o.level_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;">المستوى الدراسي</span>
+								</td>
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;" t-esc="o.batch_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;">الدفعة</span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;width:25%">
+									<span style="font-weidght: bold;">بيانات المقرر</span>
+								</td>
+								<td rowspan="5" style="border: 1px solid black;width:15%;Background-color:#a6a4a4;">
+									<center><span style="font-weidght: bold;">خاص بالمسجل</span></center>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td rowspan="2" style="border: 1px solid black;width:15%">
+								</td>
+								<td style="border: 1px solid black;width:15%;Background-color:#a6a4a4">
+									<span style="font-weidght: bold;">تاريخ إعلان النتيجة*</span>
+								</td>
+								<td style="border: 1px solid black;width:15%;Background-color:#a6a4a4">
+									<span style="font-weidght: bold;">المعدل الفصلي</span>
+								</td>
+								<td style="border: 1px solid black;width:10%;Background-color:#a6a4a4">
+									<span style="font-weidght: bold;">(التقدير(حرف</span>
+								</td>
+								<td style="border: 1px solid black;width:15%;Background-color:#a6a4a4">
+									<span style="font-weidght: bold;">الدرجة</span>
+								</td>
+								<td rowspan="2" style="border: 1px solid black;width:15%;">
+									<span style="font-weidght: bold;"></span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td rowspan="2" colspan="3" style="border: 1px solid black;width:45%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td rowspan="2" style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;">التوقيع والختم</span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;width:25%">
+									<span style="font-weidght: bold;">التاريخ</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td colspan="2" style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+							</tr>
+							<tr style="Background-color:#a6a4a4">
+								<td colspan="7" style="border: 1px solid black;">
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td colspan="3" style="border: 1px solid black;width:45%">
+									<span style="font-weidght: bold;">التوقيع والختم</span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;">التاريخ</span>
+								</td>
+								<td colspan="3" style="border: 1px solid black;width:45%">
+									<span style="font-weidght: bold;">تعليق رئيس لجنة الإمتحانات</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td colspan="3" style="border: 1px solid black;width:45%">
+								</td>
+								<td style="border: 1px solid black;width:10%">
+								</td>
+								<td colspan="3" style="border: 1px solid black;width:45%">
+								</td>
+							</tr>
+							<tr style="Background-color:#a6a4a4">
+								<td colspan="7" style="border: 1px solid black;">
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td colspan="3" style="border: 1px solid black;width:45%">
+									<span style="font-weidght: bold;">التوقيع والختم</span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;">التاريخ</span>
+								</td>
+								<td colspan="3" style="border: 1px solid black;width:45%">
+									<span style="font-weidght: bold;">تعليق/قرار العميد</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td colspan="3" style="border: 1px solid black;width:45%">
+								</td>
+								<td style="border: 1px solid black;width:10%">
+								</td>
+								<td colspan="3" style="border: 1px solid black;width:45%">
+								</td>
+							</tr>
+							<tr style="Background-color:#a6a4a4">
+								<td colspan="7" style="border: 1px solid black;">
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;width:15%">
+								</td>
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;">التاريخ</span>
+								</td>
+								<td style="border: 1px solid black;width:15%">
+								</td>
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;">الرقم</span>
+								</td>
+								<td style="border: 1px solid black;width:25%">
+									<span style="font-weidght: bold;">بيانات إيصال سداد رسوم الإجراء</span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;width:15%;Background-color:#a6a4a4">
+									<span style="font-weidght: bold;">خاص بلجنة إعادة التصحيح</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td rowspan="3" style="border: 1px solid black;width:15%;Background-color:#a6a4a4">
+									<span style="font-weidght: bold;">الدرجة النهائية</span>
+								</td>
+								<td colspan="2" rowspan="2" style="border: 1px solid black;width:40%;Background-color:#a6a4a4">
+									<center><span style="font-weidght: bold;">ملحوظات</span></center>
+								</td>
+								<td colspan="2" style="border: 1px solid black;width:30%;Background-color:#a6a4a4">
+									<center><span style="font-weidght: bold;">الدرجة المرصودة</span></center>
+								</td>
+								<td rowspan="2" style="border: 1px solid black;width:10%;Background-color:#a6a4a4">
+									<span style="font-weidght: bold;">رقم السؤال</span>
+								</td>
+								<td rowspan="12" style="border: 1px solid black;width:5%">
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;width:20%;Background-color:#a6a4a4">
+									<span style="font-weidght: bold;">بعد إعادة التصحيح</span>
+								</td>
+								<td style="border: 1px solid black;width:10%;Background-color:#a6a4a4">
+									<span style="font-weidght: bold;">مسبقا</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td colspan="2" style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:40%">
+									<center><span style="font-weidght: bold;"></span></center>
+								</td>
+								<td style="border: 1px solid black;width:20%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;">مسبقا</span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:30%">
+									<center><span style="font-weidght: bold;"></span></center>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td rowspan="3" style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:30%">
+									<center><span style="font-weidght: bold;"></span></center>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td colspan="2" style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:30%">
+									<center><span style="font-weidght: bold;"></span></center>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+							</tr>
+							<!-- <tr class="text-right">
+								<td colspan="2" rowspan="2" style="border: 1px solid black;width:40%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;width:30%">
+									<center><span style="font-weidght: bold;"></span></center>
+								</td>
+								<td rowspan="2" style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td colspan="2" rowspan="2" style="border: 1px solid black;width:40%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;width:30%">
+									<center><span style="font-weidght: bold;"></span></center>
+								</td>
+								<td rowspan="2" style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;">بعد إعاة التصحيح</span>
+								</td>
+								<td colspan="2" rowspan="2" style="border: 1px solid black;width:40%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;width:30%">
+									<center><span style="font-weidght: bold;"></span></center>
+								</td>
+								<td rowspan="2" style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+							</tr> -->
+						</tbody>
+					</table>
+				</div>
+			</t>
+		</t>
+	</template>
+
+
+	<template id="report_recorrection_form_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-foreach="o.subject_ids" t-as="line">
+					<t t-call="uni_services.report_recorrection_form_template_doc"/>
+				</t>
+			</t>
+		</t>
+	</template>
+
+</odoo>

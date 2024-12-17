@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="report_fail_removal_form_template_doc">
+		<t t-call="web.html_container">
+			<t t-call="web.internal_layout">
+				<div class="page">
+					<table class="table table-bordered">
+						<tbody>
+							<h3 class="text-right"><u>إستمارة طلب إزالة الرسوب</u></h3>
+							<h5 class="text-right">:البيانات الأساسية</h5>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;" t-esc="o.student_id.fourth_name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;" t-esc="o.student_id.last_name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;" t-esc="o.student_id.middle_name"></span>
+								</td>	
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;" t-esc="o.student_id.first_name"></span>
+								</td>
+								<td  style="border: 1px solid black;">
+									<span style="font-weidght: bold;">إسم الطالب رباعي</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-bordered">
+						<tbody>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;" t-esc="o.student_id.university_id"></span>
+								</td>
+								<td style="border: 1px solid black;width:15%">
+									<span style="font-weidght: bold;">الرقم الجامعي</span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;" t-esc="o.student_id.semester_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;">الفصل الدراسي</span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;" t-esc="o.student_id.level_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;">المستوى الدراسي</span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;" t-esc="o.student_id.program_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;">البرنامج</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-bordered">
+						<tbody>
+							<tr class="text-right">
+								<td colspan="6" style="border-bottom:none;border-top: 1px solid black;border-left: 1px solid black;border-right: 1px solid black;width:90%">
+								</td>
+                               
+								<td colspan="2" style="border: 1px solid black;width:10%;height:10px">
+									<span style="font-weidght: bold;">عدد المواد</span>
+								</td>
+							</tr> 
+							<tr>
+                                
+								<td colspan="6" style="border-left:1px solid black ;border-right:none;border-top:none;border-bottom: 1px solid black;width:90%;height:50px"></td>
+                                
+								<td colspan="2" style="border-right:1px solid black;border-top:none;border-bottom: 1px solid black;border-left:none;width:10%"></td>
+							</tr>
+                            <tr class="text-right">
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;" t-esc="o.student_id.phone"></span>
+								</td>
+								<td  style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;">هاتف الطالب</span>
+								</td>
+								<td  style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;" t-esc="o.request_date"></span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;">التاريخ</span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;"></span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;">التوقيع</span>
+								</td>
+								<td style="border: 1px solid black;width:20%">
+									<span style="font-weidght: bold;" t-esc="o.student_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;width:10%">
+									<span style="font-weidght: bold;">اسم الطالب</span>
+								</td>
+							</tr>
+                            <tr class="text-right">
+								<td colspan="6" style="border-bottom:none;border-top: 1px solid black;border-left: 1px solid black;border-right: 1px solid black;width:75%">
+								</td>
+                               
+								<td colspan="2" style="border: 1px solid black;width:25%">
+									<span style="font-weidght: bold;">المرفقات إن وجدت</span>
+								</td>
+							</tr> 
+							<tr> 
+								<td colspan="6" style="border-left:1px solid black ;border-right:none;border-top:none;border-bottom: 1px solid black;width:75%;height:50px"></td>
+								<td colspan="2" style="border-right:1px solid black;border-top:none;border-bottom: 1px solid black;border-left:none;width:25%"></td>
+							</tr>
+						</tbody>
+					</table>
+                 <table class="table table-bordered">
+						<tbody>
+                            <tr class="text-right">
+								<td style="width:5%;border: 1px solid black;border-top:3px solid black;height:80px">
+								</td>
+                                <td style="width:40%;border: 1px solid black;border-top:3px solid black;"></td>
+                                <td colspan="5"  style="width:40%;border: 1px solid black;border-top:3px solid black;">
+                                    <p class="text-center">الطالب مقيد ضمن طلاب</p>
+
+                                    <p class="text-right">برنامج <span t-esc="o.student_id.program_id.name"></span></p>
+
+                                    <p class="text-center"> المستوى الدراسي  <span t-esc="o.student_id.level_id.name"></span></p>
+                                    <p class="text-center">العام الدراسي  <span t-esc="o.student_id.year_id.name"></span></p>
+                                </td>
+                                <td rowspan="3" style="width:15%;border: 1px solid black;border-top:4px solid black;writing-mode: vertical-rl;text-orientation: use-glyph-orientation;transform: rotate(180deg);background-color: darkgrey">
+                                    <p style="margin-top:70px">تعليق مسجل الكلية</p>
+								</td>
+							</tr> 
+                            <tr>
+                                <td style="border: 1px solid black;">
+                                </td>
+                                <td colspan="2" style="border: 1px solid black;" class="text-right">
+                                	<span t-esc="o.student_id.registration_status"></span>
+                                </td>
+                                <td style="border: 1px solid black;background-color: darkgrey">
+                                    <p class="text-right">موقف التسجيل</p>
+                                </td>
+                                <td colspan="2" style="border: 1px solid black;" class="text-right">
+                                	<span t-esc="o.student_id.academic_status"></span>
+                                </td>
+                                <td style="border: 1px solid black;background-color: darkgrey">
+                                    <p class="text-right">الموقف االأكاديمي</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid black;">
+                                </td>
+                                <td style="border: 1px solid black;">
+                                </td>
+                                <td style="border: 1px solid black;">
+                                    <p>التاريخ</p>
+                                </td>
+                                <td style="border: 1px solid black;">
+                                </td>
+                                <td style="border: 1px solid black;">
+                                    <p>التوقيع</p>
+                                </td>
+                                 <td style="border: 1px solid black;"></td>
+                                <td style="border: 1px solid black;">
+                                    <p>اسم الموظف</p>
+                                </td>
+                            </tr>
+                             <tr>
+                                 <td colspan="6" style="border: 1px solid black;width:80%"></td>
+                                 <td colspan="2" style="border: 1px solid black;;height:5px;width:20%;background-color: darkgrey">
+                                     <span> خاص بالادارة المالية</span>
+                                 </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border: 1px solid black">
+                                </td>
+                                <td style="border: 1px solid black;background-color: darkgrey">
+                                    <p>التاريخ</p>
+                                </td>
+                                <td style="border: 1px solid black">
+                                </td>
+                                <td style="border: 1px solid black;background-color: darkgrey">
+                                    <p>التوقيع</p>
+                                </td>
+                                <td colspan="2" style="border: 1px solid black">
+                                </td>
+                                <td style="border: 1px solid black;background-color: darkgrey">
+                                    <p>الأسم</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" style="border: 1px solid black">
+                                </td>
+                                <td colspan="2" style="border: 1px solid black;background-color: darkgrey">
+                                    <p class="text-right">الختم</p>
+                                </td>
+                            </tr>
+                     </tbody>
+                </table>
+				</div>
+			</t>
+		</t>
+	</template>
+
+
+	<template id="report_fail_removal_form_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-foreach="o.subject_ids" t-as="line">
+					<t t-call="uni_services.report_fail_removal_form_template_doc"/>
+				</t>
+			</t>
+		</t>
+	</template>
+
+</odoo>

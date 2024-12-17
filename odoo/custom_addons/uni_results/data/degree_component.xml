@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="attendance_component" model="degree.component">
+            <field name="name">الحضور</field>
+            <field name="component_type">attendance</field>
+        </record>
+        <record id="year_works" model="degree.component">
+            <field name="name">أعمال السنة</field>
+            <field name="component_type">year_works</field>
+        </record>
+        <record id="practical" model="degree.component">
+            <field name="name">العملي</field>
+            <field name="component_type">practical</field>
+        </record>
+        <record id="final_exam" model="degree.component">
+            <field name="name">الإمتحان النهائي</field>
+            <field name="component_type">final_exam</field>
+        </record>
+</odoo>

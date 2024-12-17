@@ -1,0 +1,137 @@
+<odoo>
+	<data>
+		<!-- uni.faculty.activities form view -->
+		<record id="uni_faculty_activities_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.activities.view.form</field>
+			<field name="model">uni.faculty.activities</field>
+			<field name="arch" type="xml">
+				<form string="Activity">
+					<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,approved"/>
+					<button name="action_approve" string="Approve" type="object" states="draft" />
+					<button name="rest_draft" string="Rest To Draft" type="object" states="approved" />
+				</header>
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h1>
+						</div>
+						<group >
+							<field name="code" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+
+						<group col="4">
+							<field name="target_group" attrs="{'readonly':[('state','!=','draft')]}"/>
+<!-- 							<field name="notification_type" required="1"/>
+ -->							<field name="employee_group" attrs="{'invisible':[('target_group','!=','employees')], 'required':[('target_group','=','employees')],'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group>
+						
+							<group>
+								<field name="department_id" attrs="{'invisible':['|',('employee_group','!=','department'),('target_group','!=','employees')], 'required':[('employee_group','=','department'),('target_group','=','employees')],'readonly':[('state','!=','draft')]}"/>
+								<field name="tag_ids" widget="many2many_tags" attrs="{'invisible':[('employee_group','!=','group'),('target_group','!=','group')], 'required':[('employee_group','=','group'),('target_group','!=','group')],'readonly':[('state','!=','draft')]}" options="{'no_create': True}"/>
+								<field name="program_id" attrs="{'invisible':[('target_group','!=','students')], 'required':[('target_group','=','students')],'readonly':[('state','!=','draft')]}"/>
+								
+								<field name="level_id" attrs="{'invisible':[('target_group','!=','students')], 'required':[('target_group','=','students')],'readonly':[('state','!=','draft')]}"/>
+							</group>
+							<group>
+								<field name="batch_id" attrs="{'invisible':[('target_group','!=','students')], 'required':[('target_group','=','students')],'readonly':[('state','!=','draft')]}"/>
+								
+								<field name="semester_id" attrs="{'invisible':[('target_group','!=','students')], 'required':[('target_group','=','students')],'readonly':[('state','!=','draft')]}"/>
+							</group>
+						</group>
+						<group col="4">
+							<field name="activity_type" attrs="{'invisible':[('target_group','!=','students')], 'required':[('target_group','=','students')],'readonly':[('state','!=','draft')]}"/>
+							<field name="activity_details" attrs="{'invisible':[('target_group','!=','students')], 'required':[('target_group','=','students')],'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group string="Notification Type">
+							<field name='whatsapp_notification' attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="sms_notification" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="email_notification" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+
+						<notebook>
+							<page string="Activity Details">
+								<group>
+									<group>
+										<field name="start_date" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+										<field name="end_date" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+									</group>
+									<group>
+										<field name="location" attrs="{'readonly':[('state','!=','draft')]}"/>
+									</group>
+								</group>
+								<group>
+									<field name="description" attrs="{'readonly':[('state','!=','draft')]}"/>
+								</group>
+							</page>
+							<page string="Other Info">
+								<group>
+									<field name="advertiser_id" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								</group>
+							</page>
+							<page string="Employees" attrs="{'invisible':[('target_group','!=','employees')],'readonly':[('state','!=','draft')]}">
+								<group>
+									<field name="employee_ids" nolabel="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								</group>
+							</page>
+							<page string="Students" attrs="{'invisible':[('target_group','!=','students')],'readonly':[('state','!=','draft')]}">
+								<group>
+									<field name="student_ids" nolabel="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<!-- uni.faculty.activities tree view -->
+		<record id="uni_faculty_activities_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.activities.view.tree</field>
+			<field name="model">uni.faculty.activities</field>
+			<field name="arch" type="xml">
+				<tree string="Activity">
+					<field name="code"/>
+					<field name="name"/>
+					<field name="target_group"/>
+					<field name="advertiser_id"/>
+					<field name="start_date"/>
+					<field name="end_date"/>
+					<field name="location"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_faculty_activities_view_calendar" model="ir.ui.view">
+            <field name="name">uni.faculty.activities.calendar</field>
+            <field name="model">uni.faculty.activities</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <calendar string="Activities" date_start="start_date"
+                          color="advertiser_id" date_stop="end_date">
+                    <!-- <field name="batch_id"/>
+                    <field name="timing_id"/>
+                    <field name="subject_id"/> -->
+                    <field name="target_group"/>
+                </calendar>
+            </field>
+        </record>
+		<record id="uni_faculty_activities_action" model="ir.actions.act_window">
+			<field name="name">Activity</field>
+			<field name="res_model">uni.faculty.activities</field>
+			<field name="view_mode">tree,form,calendar</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new activity</p>
+			</field>
+		</record>
+		<!-- activities menu -->
+		<menuitem id="operation_root_menu" name="Operations" parent="uni_core_faculties_menu" sequence="2"/>
+		<menuitem id="uni_faculty_activities_menu" name="Activity Advertisement" action="uni_faculty_activities_action" parent="operation_root_menu" sequence="2"/>
+	</data>
+</odoo>

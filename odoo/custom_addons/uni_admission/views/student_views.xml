@@ -1,0 +1,109 @@
+<odoo>
+	<data>
+		<!-- Inherit Form view -->
+		<record id="uni_admission_student_form_view" model="ir.ui.view">
+			<field name="name">uni.student.form</field>
+			<field name="model">uni.student</field>
+			<field name="inherit_id" ref="uni_core.uni_student_view_form"/>
+			<field name="arch" type="xml">
+
+				<xpath expr="//field[@name='specialization_id']" position="after">
+					<field name="batch_id" options="{'no_create': True}"/>
+					<field name="admission_year"/>
+				</xpath>
+
+				<xpath expr="//field[@name='level_id']" position="before">
+					<field name="year_id"/>
+				</xpath>
+
+				<xpath expr="//field[@name='academic_status']" position="after">
+					<field name="registration_status"/>
+					<field name="external"/>
+				</xpath>
+
+				<xpath expr="//group[@name='medical']" position="inside">
+					<group>
+						<field name="medical_condition" widget="radio"/>
+						<field name="committee_head"/>
+					</group>
+					<group>
+						<field name="committee_recom"  widget="radio"/>
+						<field name="committee_notes"/>
+					</group>
+				</xpath>
+
+				<xpath expr="//field[@name='partner_id']" position="after">
+					<field name="user_id" required="0"/>
+				</xpath>
+
+				<xpath expr="//page[@name='personal']" position="after">
+					<page string="Admission" name="admission">
+						<group>
+							<group string="Admission Details">
+								<field name="first_registration" readonly="1"/>
+								<field name="type_admission"/>
+								<field name="nationality_type_id"/>
+								<field name="admission_rec" options="{'no_create': True}" readonly="1"/>
+							</group>
+							<group string="School Details">
+								<field name="secondary_school"/>
+								<field name="scondary_certificate_id_img"/>
+								<field name="school_percentage"/>
+							</group>
+						</group>
+					</page>
+				</xpath>
+
+				<xpath expr="//field[@name='martial_status']" position="after">
+					<field name="identity_type_id"/>
+					<field name="identity_num"/>
+				</xpath>
+
+				<xpath expr="//page[@name='family']" position="after">
+					<page string="Attachments" attrs="{'invisible':[('state','=','draft')]}">
+						<group>
+							<field name="student_national_id_img"/>
+							<field name="student_passport_id_img"/>
+							<field name="scondary_certificate_id_img"/>
+						</group>
+					</page>
+					<page string="Fees" name="fees">
+						<group col="4">
+							<field name="tuition_fees"/>
+							<field name="registration_fees"/>
+						</group>
+					</page>
+				</xpath>
+				
+			</field>
+		</record>
+		<record id="uni_admission_student_tree_view" model="ir.ui.view">
+			<field name="name">uni.student.tree</field>
+			<field name="model">uni.student</field>
+			<field name="inherit_id" ref="uni_core.uni_student_view_tree"/>
+			<field name="arch" type="xml">
+
+				<xpath expr="//field[@name='nationality_id']" position="after">
+					<field name="nationality_type_id"/>
+					<field name="first_registration"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="uni_admission_student_search_view" model="ir.ui.view">
+			<field name="name">uni.student.search</field>
+			<field name="model">uni.student</field>
+			<field name="inherit_id" ref="uni_core.view_uni_student_search"/>
+			<field name="arch" type="xml">
+
+				<xpath expr="//field[@name='batch_id']" position="after">
+					<field name="nationality_type_id" select="True"/>
+					<field name="admission_year" select="True"/>
+					<filter string="Nationality Type" name="groupby_nationality" domain="[]" context="{'group_by':'nationality_type_id'}"/>
+					<filter string="Admission Year" name="groupby_admission_year" domain="[]" context="{'group_by':'admission_year'}"/>
+				</xpath>
+			</field>
+		</record>
+		<menuitem id="uni_admission_students_list_menu" name="Students" parent="uni_registration_root_menu" action="uni_core.uni_core_students_list_action" sequence="0"/>
+	</data>
+</odoo>

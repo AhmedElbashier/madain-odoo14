@@ -1,0 +1,111 @@
+<odoo>
+	<data>
+		<!-- Inherit Form view -->
+		<record id="inherit_uni_admission_form_view" model="ir.ui.view">
+			<field name="name">uni.admission.form</field>
+			<field name="model">uni.admission</field>
+			<field name="inherit_id" ref="uni_admission.uni_admission_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='contact_ids']" position="replace">
+					<field name="contact_ids">
+						<tree editable="bottom">
+							<field name="phone" width="0.5" widget="phone_intl" options="{ 'country_field': 'country_id', 'separate_dial_code': True, 'initial_country_code': 'SD'}"/>
+							<field name="whatsapp_number" width="0.5"/>
+						</tree>
+					</field>
+				</xpath>
+				<xpath expr="//field[@name='guardians_ids']" position="replace">
+					<field name="guardians_ids">
+						<tree>
+							<field name="name"/>
+							<field name="relation_id"/>
+							<field name="email"/>
+						</tree>
+						<form>
+							<group col="4">
+								<field name="name"/>
+								<field name="relation_id" required="1"/>
+								<field name="email"/>
+								<field name="identity_type_id" required="0"/>
+								<field name="identity_num" required="0"/>
+							</group>
+							<notebook>
+								<page string="Contacts">
+									<field name="contact_ids">
+										<tree editable="bottom">
+											<field name="phone"  widget="phone_intl" options="{ 'country_field': 'country_id', 'separate_dial_code': True, 'initial_country_code': 'SD'}" width="0.5"/>
+											<field name="whatsapp_number" width="0.5"/>
+										</tree>
+									</field>
+								</page>
+							</notebook>
+						</form>
+					</field>
+				</xpath>
+			</field>
+		</record>
+
+
+		<!-- Inherit Form view -->
+		<record id="inherit_uni_student_form_view" model="ir.ui.view">
+			<field name="name">uni.student.form</field>
+			<field name="model">uni.student</field>
+			<field name="inherit_id" ref="uni_core.uni_student_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='contact_ids']" position="replace">
+					<field name="contact_ids">
+						<tree editable="bottom">
+							<field name="phone" width="0.5" widget="phone_intl" options="{ 'country_field': 'country_id', 'separate_dial_code': True, 'initial_country_code': 'SD'}"/>
+							<field name="whatsapp_number" width="0.5"/>
+						</tree>
+					</field>
+				</xpath>
+				<xpath expr="//field[@name='guardian_ids']" position="replace">
+					<field name="guardian_ids">
+						<tree>
+							<field name="name"/>
+							<field name="relation_id"/>
+							<field name="email"/>
+						</tree>
+						<form>
+							<group col="4">
+								<field name="name"/>
+								<field name="relation_id" required="1"/>
+								<field name="email" required="1"/>
+								<field name="identity_type_id" required="0"/>
+								<field name="identity_num" required="0"/>
+							</group>
+							<notebook>
+								<page string="Contacts">
+									<field name="contact_ids">
+										<tree editable="bottom">
+											<field name="phone"  widget="phone_intl" options="{ 'country_field': 'country_id', 'separate_dial_code': True, 'initial_country_code': 'SD'}" width="0.5"/>
+											<field name="whatsapp_number" width="0.5"/>
+										</tree>
+									</field>
+								</page>
+							</notebook>
+						</form>
+					</field>	
+				</xpath>			
+			</field>
+		</record>
+
+		<record id="inherit_student_guradian_form_view" model="ir.ui.view">
+			<field name="name">uni.student.guradian.form</field>
+			<field name="model">uni.student.guradian</field>
+			<field name="inherit_id" ref="uni_core.student_guradian_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='contact_ids']" position="replace">
+					<field name="contact_ids">
+						<tree editable="bottom">
+							<field name="phone" width="0.5" widget="phone_intl" options="{ 'country_field': 'country_id', 'separate_dial_code': True, 'initial_country_code': 'SD'}"/>
+							<field name="whatsapp_number" width="0.5"/>
+						</tree>
+					</field>
+				</xpath>
+			</field>
+		</record>
+		
+	</data>
+</odoo>

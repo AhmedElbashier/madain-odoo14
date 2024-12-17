@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="student_guradian_form_view" model="ir.ui.view">
+			<field name="name">Student Guradians</field>
+			<field name="model">uni.student.guradian</field>
+			<field name="arch" type="xml">
+				<form string="Student Guradians">
+					<sheet>
+						<group col="4">
+							<field name="name"/>
+							<field name="relation_id"/>
+							<field name="email"/>
+						</group>
+						<notebook>
+							<page string="Contacts">
+								<field name="contact_ids">
+									<tree editable="bottom">
+										<field name="phone" width="0.5"/>
+										<field name="whatsapp_number" width="0.5"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="student_guradian_tree_view" model="ir.ui.view">
+			<field name="name">Student Guradians</field>
+			<field name="model">uni.student.guradian</field>
+			<field name="arch" type ="xml">
+				<tree string="Student Guradians">
+					<field name="name"/>
+					<field name="relation_id"/>
+					<field name="email"/>
+				</tree>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="program_1" model="uni.faculty.curriculum"> 
+        <field name="name">البرنامج الدراسي لكلية الآداب في  الأعوام بين 2017-2019</field> 
+        <field name="code">2017-2019 </field>
+        <field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+        <field name="department_id" ref="uni_core.dept_5"></field>
+        </record>
+    </data>
+</odoo>

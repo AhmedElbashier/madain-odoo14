@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="admission_service_request_form_view" model="ir.ui.view">
+			<field name="name">admission.services</field>
+			<field name="model">admission.services</field>
+			<field name="arch" type="xml">
+				<form string="Service Request">
+					<header>
+						<button name="action_draft" type="object" string="Request" states="draft" class="oe_highlight"/>
+						<button name="action_ready" type="object" string="Confirm" states="in_progress" class="oe_highlight"/>
+
+						<button name="action_complete" type="object" string="Delivery Docs" states="ready" class="oe_highlight"/>
+						<button name="action_ready" type="object" string="ReSend Code" class="oe_highlight" attrs="{'invisible':['|',('resend_code','!=',True),('state','not in',['ready'])]}"/>
+						<field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<label for="student_id" string="Name" class="oe_edit_only" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<h1>
+								<field name="student_id" class="oe_inline" domain="[('state','not in',['draft','registered','rejected'])]" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h1>
+						</div>
+						<group>
+							<group string="Service Information">
+								<field name="ref" readonly="1"/>
+								<field name="service_name" invisible="1"/>
+								<field name="service_type_id" required="1" domain="['|',('type','=','admission'),('registration_service_type','=','registration_admission')]" attrs="{'readonly':[('state','!=','draft')]}"/>	
+								<field name="service_amount" attrs="{'invisible':[('is_paid','!=',True)],'readonly':[('state','!=','draft')]}"/>	
+								<field name="service_amount_currency" attrs="{'invisible':[('is_paid','!=',True)],'readonly':[('state','!=','draft')]}"/>	
+								<field name="is_paid" invisible="1"/>	
+								<field name="request_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_executor" required="1" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>	
+								<field name="execution_start_date" readonly="1" attrs="{'invisible':[('execution_start_date','=',False)]}"/>
+								<field name="execution_end_date" readonly="1" attrs="{'invisible':[('execution_start_date','=',False)]}"/>
+								<field name="resend_code" invisible="1"/>
+							</group>
+							<group string="Student Information">
+								<field name="program_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="batch_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="academic_year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</group>
+							<group string="Invoice Information" attrs="{'invisible':[('is_paid','!=',True)]}">
+								<field name="invoice_id" readonly="1"/>
+								<field name="invoice_state" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="payment_state" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="admission_service_request_tree_view" model="ir.ui.view">
+			<field name="name">admission.services.tree</field>
+			<field name="model">admission.services</field>
+			<field name="arch" type="xml">
+				<tree string="Services Request">
+					<field name="student_id"/>
+					<field name="service_type_id"/>
+					<field name="ref"/>
+					<field name="service_amount"/>
+					<field name="request_date"/>
+					<field name="service_executor"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="admission_service_request_kanban" model="ir.ui.view">
+			<field name="name">admission.services.view.kanban</field>
+			<field name="model">admission.services</field>
+			<field name="arch" type="xml">
+				<kanban sample="1">
+					<field name="id"/>
+					<field name="student_id"/>
+					<field name="ref"/>
+					<field name="state"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="oe_kanban_details">
+									<h4>
+										<a type="open">
+											<field name="student_id" />
+										</a>
+									</h4>
+									<ul>
+										<strong>Service:</strong>
+										<field name="service_type_id" />
+									</ul>
+									<ul>
+										<strong>Code:</strong>
+										<field name="ref" />
+									</ul>
+									<ul>
+										<strong>Executor:</strong>
+										<field name="service_executor" />
+									</ul>
+									<ul>
+										<strong>Request Date:</strong>
+										<field name="request_date" />
+									</ul>
+									<ul>
+										<strong>State:</strong>
+										<field name="state" />
+									</ul>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<record id="view_admission_service_filter" model="ir.ui.view">
+			<field name="name">admission.services.search</field>
+			<field name="model">admission.services</field>
+			<field name="arch" type="xml">
+				<search>
+					<!-- Search by -->
+					<field name="ref"/>
+					<field name="service_executor"/>
+					<!-- Group by -->
+					<group expand="0" string="Group By">
+						<filter string="Service Executor" name="group_by_service_executor" context="{'group_by':'service_executor'}"/>
+						<filter string="Request Date" name="group_by_request_date" context="{'group_by':'request_date'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+
+
+		<record id="admission_service_action" model="ir.actions.act_window">
+			<field name="name">Service Request</field>
+			<field name="res_model">admission.services</field>
+			<field name="view_mode">tree,form,kanban</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new service request</p>
+			</field>
+		</record>
+		
+		<menuitem 
+			id="service_menu_root" 
+			name="Services"
+			sequence="2"
+			parent='uni_admission.uni_admission_admissions_menu' 
+		/>
+		
+		<menuitem 
+			id="admission_service_menu_root" 
+			name="Services Request"
+			parent='service_menu_root' 
+			action='admission_service_action' 
+		/>
+
+
+	</data>
+</odoo>

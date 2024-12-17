@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem name="TimeTables"
+              parent="uni_core.menu_uni_year_root"
+              id="menu_op_timetable_root"
+              />
+    <menuitem name="Timetable"
+              parent="menu_op_timetable_root"
+              id="menu_op_timetable"
+              action="act_open_op_session_view"
+              />
+    <menuitem id="menu_generate_time_table"
+              name="Generate Timetable"
+              parent="menu_op_timetable_root"
+              action="act_open_generate_time_table_view"/>
+    <menuitem id="menu_op_period"
+              name="Timing"
+              parent="uni_core.menu_uni_year_config"
+              action="timetable.act_open_op_timing_view"/>
+    <menuitem id="uni_core.students_groups_menu"
+              name="Students Groups"
+              parent="menu_op_timetable_root"
+              action="uni_core.students_groups_action"
+              sequence="20"/>
+        <!-- Configuration Menu -->
+    <menuitem name="Configuration"
+              parent="menu_op_timetable_root"
+              id="menu_op_timetable_config"
+              sequence="40">
+    
+    <menuitem id="menu_generate_time_table_report"
+              name="Generate Timetable Report"
+              sequence="30"
+              action="act_open_time_table_report_view"/>
+    </menuitem>
+</odoo>

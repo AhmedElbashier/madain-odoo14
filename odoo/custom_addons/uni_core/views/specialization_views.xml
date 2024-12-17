@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="uni_faculty_department_specialization_form_view" model="ir.ui.view">
+			<field name="name">Specializations</field>
+			<field name="model">uni.faculty.department.specialization</field>
+			<field name="arch" type="xml">
+				<form string="Specializations">
+					<header>
+						<field name="state" widget="statusbar" statusbar_visible="draft,approved,closed"/>
+						<button name="action_approve" string="Approve" type="object" states="draft" />
+						<button name="action_close" string="Close" type="object" states="approved" />
+						<button name="rest_draft" string="Rest To Draft" type="object" states="closed" />
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h3>
+								<field name="name" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h3>
+						</div>
+						<group col="4">
+							<field name="code"  attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="program_id" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="english_name" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="parent_id" options="{'no_create': True}" invisible="1"/>
+							<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company" invisible="1"/>
+						</group>
+						<notebook>
+							<page string="Students">
+								<field name="student_ids" widget="many2many" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree>
+										<field name="name"/>
+										<field name="university_id"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<record id="uni_faculty_department_specialization_tree_view" model="ir.ui.view">
+			<field name="name">Specializations</field>
+			<field name="model">uni.faculty.department.specialization</field>
+			<field name="arch" type ="xml">
+				<tree string="Specializations">
+					<field name="code"/>
+					<field name="name"/>
+					<field name="program_id"/>
+					<field name="parent_id" invisible="1"/>
+					<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company" invisible="1"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_faculty_department_specialization_action" model="ir.actions.act_window">
+			<field name="name">Specializations</field>
+			<field name="res_model">uni.faculty.department.specialization</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<menuitem name="Specializations" id="dept_spsdsd_location_menu_loc" action="uni_faculty_department_specialization_action" parent="faculty_management_menu" sequence="2"/>
+	</data>
+</odoo>

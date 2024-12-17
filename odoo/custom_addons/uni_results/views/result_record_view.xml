@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<record id="result_record_view_form" model="ir.ui.view">
+			<field name="name">uni.result.record.view.form</field>
+			<field name="model">uni.result.record</field>
+			<field name="arch" type="xml">
+				<form string="Result Record">
+					<header>
+						<button name="to_confirm" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+						<button name="to_program_council" string="Program Council" type="object" states="confirm" class="oe_highlight"/>
+						<button name="to_program_council_rec" string="Start Recommendation" type="object" states="program_council" class="oe_highlight" groups="uni_results.program_council_group"/> 
+							<!-- groups="uni_results.program_council_group"/> -->
+						<button name="to_scientific_council" string="Confirm" type="object" states="program_council_recomm" class="oe_highlight" groups="uni_results.program_council_group"/>
+						<button name="to_scientific_council_rec" string="Start Recommendation" type="object" states="scientific_council" class="oe_highlight" groups="uni_results.scientific_council_group"/>
+						<button name="to_close" string="Confirm Results" type="object" states="scientific_council_recomm" class="oe_highlight" groups="uni_results.scientific_council_group"/>
+						<button name="result_advertisement" string="Result Advertisement" type="object" states="close" class="oe_highlight"/>
+						<!-- <button name="start_recorrection" string="Open Recorrection Period" type="object" states="close" class="oe_highlight"/> -->
+						<button name="recorrection_recomm" string="Start Recommendation" type="object" states="recorrection_period" class="oe_highlight"/>
+						<button name="action_done" string="Done" type="object" states="recorrection_recomm" class="oe_highlight"/>
+						<button name="rest_draft" string="Rest To Draft" type="object" states="confirm,program_council,program_council_recomm,scientific_council,scientific_council_recomm,recorrection_recomm,close" />
+						<field name="state" widget="statusbar" statusbar_visible="draft,confirm,close"/>
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name" class="oe_inline" required="1"/>
+							</h1>
+						</div>
+						<group col="4">
+							<field name="exam_id" required="1"/>
+							<field name="level_id" required="1"/>
+							<field name="exam_type_id" required="1"/>
+							<field name="semester_id" required="1"/>
+							<field name="marksheet_id" />
+							<field name="year_id" required="1"/>
+							<field name="batch_id" domain="[('academic_year_id','=',year_id)]" required="1"/>
+							
+						</group>
+						<separator colspan="4" string="Dates"/>
+						<group col="4">
+							
+							<field name="program_council_meet_date"/>
+							<field name="scientific_council_meet_date"/>
+							<field name="result_confirm_date"/>
+							<field name="result_advertisement_date"/>
+							<field name="end_level" invisible="1"/>
+						</group>
+						<notebook>
+							<page string="Studesnts Results">
+								<field name="marksheet_line" nolabel="1" readonly="1">
+	                                <tree>
+	                                    <field name="student_id"/>
+	                                    <field name="sgpa"/>
+	                                    <field name="sgpa2" attrs="{'column_invisible': [('parent.end_level', '=',  False)]}"/>
+	                                    <field name="sgpa_grade" attrs="{'column_invisible': [('parent.end_level', '=',  True)]}"/>
+	                                    <field name="gpa" attrs="{'column_invisible': [('parent.end_level', '=',  False)]}"/>
+	                                    <field name="status" attrs="{'column_invisible': [('parent.end_level', '=',  False)]}"/>
+	                                    <field name="academic_status" attrs="{'column_invisible': [('parent.end_level', '=',  False)]}"/>
+	                                </tree>
+	                                <form string="Marksheet Line">
+					                    <sheet>
+					                        <group>
+					                        	<group>
+					                                <field name="student_id"/>
+					                                <field name="program_id" required="1"/>
+					                                <field name="level_id" required="1"/>
+					                                <field name="semester_id" required="1"/>
+					                                <field name="batch_id"  domain="[('academic_year_id','=',year_id),('program_id','=',program_id)]" required="1"/>
+					                                <field name="year_id" invisible="1"/>
+					                            </group>
+					                            <group>
+						                            <field name="total_points"/>
+						                            <field name="total_hours"/>
+						                            <field name="sgpa"/>
+					                                <field name="sgpa2" attrs="{'invisible': [('end_level', '=',  False)]}"/>
+					                                <field name="gpa" attrs="{'invisible': [('end_level', '=',  False)]}"/>
+					                                <field name="sgpa_grade"/>
+					                                <field name="status"  attrs="{'invisible': [('parent.end_level', '=',  False)]}"/>
+					                                <field name="academic_status" attrs="{'invisible': [('parent.end_level', '=',  False)]}"/>
+					                                <field name="end_level" invisible="1"/>
+						                        </group>
+					                        </group>
+					                        <group string="Results">
+					                            <field name="attendees_line" nolabel="1" >
+					                                <tree>
+					                                    <field name="subject"/>
+					                                    <field name="final_degree" />
+					                                    <field name="subject_degree_point"  />
+					                                    <field name="hour"  />
+					                                    <field name="subject_point"  />
+					                                    <field name="program_council_push"/>
+					                                    <field name="program_council_student_push"/>
+					                                    <field name="scientific_council_push"/>
+					                                    <field name="scientific_council_student_push"/>
+					                                    <field name="recorrection_push"/>
+														<field name="subject_total_degree"/>
+					                                    <field name="subject_status"/>
+					                                </tree>
+					                            </field>
+					                        </group>
+					                    </sheet>
+					                </form>
+                            	</field>
+							</page>
+							<page string="Subjects Recommendations " attrs="{'invisible':[('state','in',['draft','confirm'])]}">
+								<field name="subject_ids" invisible="1"/>
+								<field name="subj_recommendation_ids" colspan="4" nolabel="1" attrs="{'readonly':[('state','not in',['program_council_recomm','scientific_council_recomm'])]}">
+									<tree string="Subjects Recommendations" editable="bottom">
+										<field name="subject_id" domain="[('id','in',subject_ids)]"/>
+										<field name="date"/>
+										<field name="minimum_degree"/>
+										<field name="extra_degree"/>
+										<field name="absolute"/>
+										<field name="recommenation_type"/>
+										<field name="subject_ids" invisible="1"/>
+									</tree>
+									<form string="Subjects Recommendations">
+										<div class="oe_button_box" name="button_box">
+				                            <button  class="oe_stat_button" name="mrk_line_tree_view" type="object" icon="fa-file-text-o" string='Students'>
+				                            </button>
+				                        </div>
+										<group col="4">
+											<field name="subject_id" domain="[('id','in',subject_ids)]"/>
+											<field name="date"/>
+											<field name="minimum_degree"/>
+											<field name="extra_degree"/>
+											<field name="absolute"/>
+											<field name="recommenation_type" />
+											<field name="subject_ids" invisible="1"/>
+										</group>
+									</form>
+								</field>
+							</page>
+							<page string="Students Recommendations" attrs="{'invisible':[('state','in',['draft','confirm'])]}">
+								<field name="std_recommendation_ids" colspan="4" nolabel="1" attrs="{'readonly':[('state','not in',['program_council_recomm','scientific_council_recomm'])]}">
+									<tree string="Students Recommendations" editable="bottom">
+										<field name="student_id_domain" invisible="1"/>
+										<field name="student_id" required="1" domain="student_id_domain"/>
+										<field name="date"/>
+										<field name="subject_id" domain="[('id','in',subject_ids)]" required="1"/>
+										<field name="given_degree"/>
+										<field name="recommenation_type"/>
+										<field name="subject_ids" invisible="1"/>
+										<field name="student_ids" invisible="1"/>
+									</tree>
+									<form string="Students Recommendations">
+										<group col="4">
+											<field name="student_id" domain="[('id','not in',student_ids)]"/>
+											<field name="date"/>
+											<field name="subject_id" domain="[('id','in',subject_ids)]" required="1"/>
+											<field name="given_degree"/>
+											<field name="recommenation_type"/>
+											<field name="subject_ids" invisible="1"/>
+											<field name="student_ids" invisible="1"/>
+										</group>
+									</form>
+								</field>
+							</page>
+							<page string="Recorrection Recommendations" attrs="{'invisible':[('state','=',False)]}">
+								<field name="recorrection_recommendation_ids" colspan="4" nolabel="1" attrs="{'readonly':[('state','=',False)]}">
+									<tree string="Recorrection Recommendations" editable="bottom">
+										<field name="student_id_domain" invisible="1"/>
+										<field name="student_id" domain="student_id_domain"/>
+										<field name="date"/>
+										<field name="recorrection_subject_id" options="{'no_create': True}" required="1"/>
+										<field name="given_degree"/>
+										<field name="recommenation_type" invisible="1"/>
+										<field name="subject_ids" invisible="1"/>
+										<field name="student_ids" invisible="1"/>
+									</tree>
+									<form string="Recorrection Recommendations">
+										<group col="4">
+											<field name="student_id" domain="[('id','not in',student_ids)]" options="{'no_create': True}"/>
+											<field name="date"/>
+											<field name="recorrection_subject_id" options="{'no_create': True}" required="1"/>
+											<field name="given_degree"/>
+											<field name="recommenation_type" invisible="1"/>
+											<field name="subject_ids" invisible="1"/>
+											<field name="student_ids" invisible="1"/>
+											<field name="state2" invisible="1"/>
+										</group>
+									</form>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<record id="result_record_view_tree" model="ir.ui.view">
+			<field name="name">uni.result.record.view.tree</field>
+			<field name="model">uni.result.record</field>
+			<field name="arch" type="xml">
+				<tree string="Result Record">
+					<field name="name"/>
+					<field name="level_id"/>
+					<field name="semester_id"/>
+					<field name="exam_type_id"/>
+				</tree>
+			</field>
+		</record>
+		<record id="result_record_list_action" model="ir.actions.act_window">
+			<field name="name">Result Record</field>
+			<field name="res_model">uni.result.record</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<menuitem 
+			id="result_sub_menu" name="Result" 
+			sequence="2" parent="result_menu"
+			/>
+		<menuitem 
+			id="result_record_menu" name="Result Record" 
+			sequence="111" parent="result_sub_menu"
+			action="result_record_list_action"/>
+	</data>
+</odoo>

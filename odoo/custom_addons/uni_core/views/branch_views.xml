@@ -1,0 +1,46 @@
+<odoo>
+	<data>
+		<!-- Form view -->
+		<record id="uni_faculty_branch_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.branch.form</field>
+			<field name="model">uni.faculty.branch</field>
+			<field name="arch" type="xml">
+				<form string="Branches">
+					<sheet>
+						<group colspan="2" col="2">
+							<field name="name"/>
+							<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+						</group>
+						<notebook>
+							<page string="Departments">
+								<field name="department_ids" readonly="1"/>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Tree view -->
+		<record id="uni_faculty_branch_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.branch.tree</field>
+			<field name="model">uni.faculty.branch</field>
+			<field name="arch" type="xml">
+				<tree string="Branches">
+					<field name="name"/>
+					<field name="faculty_id" groups="base.group_multi_company"/>
+				</tree>
+			</field>
+		</record>
+		<!-- Action -->
+		<record id="uni_faculty_branch_action" model="ir.actions.act_window">
+			<field name="name">Branches</field>
+			<field name="res_model">uni.faculty.branch</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new branch</p>
+			</field>
+		</record>
+		<!-- Menu -->
+		<!-- <menuitem id="uni_faculty_branches_menu" name="Branches" parent="uni_core_configurations_view_menu" action="uni_faculty_branch_action"/> -->
+	</data>
+</odoo>

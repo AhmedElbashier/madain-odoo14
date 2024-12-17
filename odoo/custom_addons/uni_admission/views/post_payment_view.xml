@@ -1,0 +1,30 @@
+<odoo>
+	<data>
+		<record id="post_student_payment_form_view" model="ir.ui.view">
+		<field name="name">post.student.payment.form</field>
+		<field name="model">post.student.payment</field>
+		<field name="arch" type="xml">
+			<form string="Post Payment">
+				<group col="4">
+					<field name="student_id" readonly="1"/>
+					<field name="description" readonly="1"/>
+				</group>
+				<group col="4">
+					<field name="amount" readonly="0"/>
+					<field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency" readonly="0"/>
+					<field name="payment_type"/>
+					<field name="check_number" attrs="{'invisible':[('payment_type','!=','check')] , 'required':[('payment_type','=','check')]}"/>
+					<field name="journal_id" domain="[('type','in',['cash','bank']) , ('currency_id' , '=' , currency_id)]" readonly="0"/>
+					<field name="account_number" attrs="{'invisible':[('payment_type','!=','transfer')],'required':[('payment_type','=','transfer')]}"/>
+					<field name="fees_line_id" invisible="1"/>
+				</group>
+				<footer>
+					<button string='Post Payment' name="Post_payment" type="object" class="oe_highlight"/>
+                        or
+					<button string="Cancel" class="oe_link" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	</data>
+</odoo>

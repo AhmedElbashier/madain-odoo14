@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="student_fees_view_form" model="ir.ui.view">
+		<field name="name">student.fees.form</field>
+		<field name="model">student.fees</field>
+		<field name="arch" type="xml">
+			<form string="Student Fees">
+				<sheet>
+					<group cols="4">
+						<field name="level_id" options="{'no_create': True}"/>
+						<field name="semester_id" options="{'no_create': True}" />
+						<field name="registration_fees" />
+						<field name="study_fees"/>
+						<field name="other_fees" widget="many2many_tags"/>
+						<field name="discount"/>
+						<field name="other_discount" widget="many2many_tags"/>
+						<field name="total_discount"/>
+						<field name="sub_total"/>
+						<field name="paid_amount"/>
+						<!-- <field name="invoice_id"/> -->
+						<field name="paid"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="student_fees_view_tree" model="ir.ui.view">
+		<field name="name">student.fees.tree</field>
+		<field name="model">student.fees</field>
+		<field name="arch" type="xml">
+			<tree string="Student Fees">
+				<field name="level_id" options="{'no_create': True}"/>
+				<field name="semester_id" options="{'no_create': True}"/>
+				<field name="registration_fees"/>
+				<field name="study_fees"/>
+				<field name="discount"/>
+				<field name="other_discount"/>
+				<field name="discount_desc"/>
+				<field name="sub_total"/>
+				<field name="paid"/>
+				<field name="payment_date"/>
+			</tree>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="report_study_fees_template_doc">
+		<t t-call="web.html_container">
+			<t t-call="web.internal_layout">
+				<div class="page">
+					<h4>
+						<center>إدارة القبول وشؤون الطلاب</center>
+					</h4>
+					<h5>
+						<center>الرسوم الدراسية للعام <span style="font-weidght: bold;" t-esc="o.year_id.code"/></center>
+					</h5>
+					<br/>
+					<table class="table table-bordered table-condensed">
+						<tbody>
+							<tr class="text-center">
+								<td colspan="2" style="border: 1px solid black;">
+									<span>رسوم التسجيل</span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;">
+									<span>الرسوم الدراسية</span>
+								</td>
+								<td rowspan="2" style="border: 1px solid black;">
+									<span>البرنامج</span>
+								</td>
+								<td rowspan="2" style="border: 1px solid black;">
+									<span>م</span>
+								</td>
+							</tr>
+
+							<tr class="text-center">
+								<td style="border: 1px solid black;">
+									<span>الاجانب بالدولار</span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span>السودانين بالجنيه</span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span>دولار</span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span>جنيه</span>
+								</td>
+							</tr>
+
+							<t t-set="count" t-value="1"/>
+							<t t-set="sdq" t-value="0"/>
+							<t t-set="usd" t-value="0"/>
+							<t t-foreach="o.registered_line_ids" t-as="line">
+								<t t-if="line.currency_id.symbol == '$' ">
+									<t t-set="usd" t-value="line.registration_fees"/>
+								</t>
+								<t t-if="line.currency_id.symbol == 'ج.س.' ">
+									<t t-set="sdq" t-value="line.registration_fees"/>
+								</t>
+							</t>
+
+							<t t-foreach="o.get_year_fees()" t-as="line">
+								<tr class="text-center">
+									<td style="border: 1px solid black;">
+										<span t-esc="usd"></span>
+									</td>
+									<td style="border: 1px solid black;">
+										<span t-esc="sdq"></span>
+									</td>
+									<td style="border: 1px solid black;">
+										<!-- <t t-if="line.currency_id.symbol == '$' "> -->
+											<span t-esc="o.get_year_fees()[line][2]"></span>
+										<!-- </t> -->
+									</td>
+									<td style="border: 1px solid black;">
+										<!-- <t t-if="line.currency_id.symbol == 'ج.س.' "> -->
+											<span t-esc="o.get_year_fees()[line][1]"></span>
+										<!-- </t> -->
+									</td>
+									<td style="border: 1px solid black;">
+										<span t-esc="o.get_year_fees()[line][0]"></span>
+									</td>
+									<td style="border: 1px solid black;">
+										<span t-esc="count"></span>
+									</td>
+									<t t-set="count" t-value="count+1"/>
+								</tr>
+							</t>							
+						</tbody>
+					</table>
+					<br/><br/>
+					<div style="text-align: right">
+						<span style="font-weidght: bold;margin-right:10px">  .رسوم التقديم 1000 جنيه*</span><br/>
+
+						<span style="font-weidght: bold;margin-right:10px">  .البرامج الطبية تدفع 50% من الرسوم الدراسية مع التسجيل*</span><br/>
+
+						<span style="font-weidght: bold;margin-right:10px">  .البرامج الاخرى تدفع الرسوم الدراسية كاملة مع التسجيل*</span><br/>
+
+						<span style="font-weidght: bold;margin-right:10px">  :للإستفسار عن اي معلومات اخرى يرجى الاتصال على الارقام التالية*</span><br/>
+
+						<span style="font-weidght: bold;margin-right:10px">  :أو زيارة موقعنا الإلكتروني على الانترنت*</span><br/>
+
+
+					</div>
+				</div>
+			</t>
+		</t>
+	</template>
+
+
+	<template id="report_study_fees_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="uni_admission.report_study_fees_template_doc"/>
+			</t>
+		</t>
+	</template>
+
+
+</odoo>

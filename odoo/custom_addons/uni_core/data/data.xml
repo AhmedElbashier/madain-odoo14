@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+		
+		<record id="type_1" model="notification.types">
+			<field name="name">Email</field>
+		</record>
+
+		<record id="type_2" model="notification.types">
+			<field name="name">SMS</field>
+		</record>
+
+		<record id="type_3" model="notification.types">
+			<field name="name">Whatsapp</field>
+		</record>
+
+	</data>
+</odoo>

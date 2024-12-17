@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+        <report 
+
+            id="resignation_report"
+            string="خطاب استقالة"
+            model="uni.faculty.student.services"
+            report_type="qweb-pdf"
+            file="uni_services.report_resignation_template_doc"
+            name="uni_services.report_resignation_template_doc"      
+        />
+
+        <report
+            id="recorrection_form_acion"
+            string="إستمارة إعادة التصحيح والمراجعة"
+            model="uni.student.recorrection"
+            report_type="qweb-pdf"
+            file="uni_services.report_recorrection_form_template"
+            name="uni_services.report_recorrection_form_template"      
+        />
+        <report
+            id="substitution_report"
+            string="طلب تجميد"
+            model="substitution.service"
+            report_type="qweb-pdf"
+            file="uni_services.report_substitution_form_template"
+            name="uni_services.report_substitution_form_template"      
+        />
+        <report
+            id="fail_removal_report"
+            string="إستمارة طلب إمتحان إزالة الرسوب"
+            model="fail.removal"
+            report_type="qweb-pdf"
+            file="uni_services.report_fail_removal_form_template"
+            name="uni_services.report_fail_removal_form_template"      
+        />
+
+
+    </data>
+</odoo>

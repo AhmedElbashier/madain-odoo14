@@ -1,0 +1,1954 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* uni_results
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-30 09:28+0000\n"
+"PO-Revision-Date: 2022-04-30 09:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_attendees__status__absence
+msgid "Absence"
+msgstr "غياب"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__absolute
+msgid "Absolute Degree?"
+msgstr "درجة مطلقة ?"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__academic_year_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__year_id
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__year_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__academic_year_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__year_id
+msgid "Academic Year"
+msgstr "السنة الدراسية"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__academic_status
+msgid "Acadimic Status"
+msgstr "الحالة الأكاديمية"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_needaction
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_needaction
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_needaction
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_needaction
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_needaction
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_needaction
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_needaction
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__active
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__active
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__active
+msgid "Active"
+msgstr ""
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_search
+msgid "Archived"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_attachment_count
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_attachment_count
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_attachment_count
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_attachment_count
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_attachment_count
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_attachment_count
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_attachment_count
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__attendance
+#: model:ir.model.fields.selection,name:uni_results.selection__degree_component__component_type__attendance
+msgid "Attendance"
+msgstr "الحضور"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_res_company__attendance_perc
+#: model:ir.model.fields,field_description:uni_results.field_res_config_settings__attendance_perc
+msgid "Attendance Deprive Minumum Percentage(%)"
+msgstr "أقل نسبة حضور مسموحة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__attendees_line
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+msgid "Attendees"
+msgstr "الطلاب"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__attendees_degree
+msgid "Attendees Degree"
+msgstr "درجة الحضور"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__batch_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__batch_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__batch_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__batch_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__batch_id
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_search
+msgid "Batch"
+msgstr "الدفعة"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__exam_reason__bridging
+msgid "Bridging"
+msgstr "تجسير"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_form
+msgid "Calculate Result"
+msgstr "حساب النتيجة"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_register__state__calculated
+msgid "Calculated"
+msgstr "محسوب"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum_line__subject_carry
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_subject__subject_carry
+msgid "Can be carry ?"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_exam__state__cancel
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_register__state__cancelled
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__exam_reason__carry
+msgid "Carry"
+msgstr "محمول"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__category_ids
+msgid "Category"
+msgstr "الفئة"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_result_record__state__close
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_res_company
+msgid "Companies"
+msgstr "الكليات"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__company_id
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__company_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__company_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__company_id
+msgid "Company"
+msgstr "الكلية"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_degree_component__component_type
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__component_type
+msgid "Component Type"
+msgstr "مكون الدرجة"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الاعدادات"
+
+#. module: uni_results
+#: model:ir.ui.menu,name:uni_results.result_confg_root_menu
+msgid "Configurations"
+msgstr "الاعدادات"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.exam_template_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+msgid "Confirm"
+msgstr "إعتماد"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+msgid "Confirm Results"
+msgstr "إعتماد النتيجة"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_exam_record__state__confirmed
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_result_record__state__confirm
+msgid "Confirmed"
+msgstr "معتمد"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+msgid "Create Exams"
+msgstr "إنشاء الامتحانات"
+
+#. module: uni_results
+#: model_terms:ir.actions.act_window,help:uni_results.degree_comp_list_action
+msgid "Create new Component"
+msgstr "إنشاء مكون جديد"
+
+#. module: uni_results
+#: model_terms:ir.actions.act_window,help:uni_results.uni_exam_record_action
+msgid "Create new exam record"
+msgstr "إنشاء سجل إمتحان"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_degree_component__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__create_uid
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_degree_component__create_date
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__create_date
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__create_date
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__create_date
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__create_date
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__create_date
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__create_date
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__create_date
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__create_date
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__create_date
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__create_date
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__create_date
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__create_date
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_faculty_curriculum
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__curriculum_id
+msgid "Curriculum"
+msgstr "المنهج"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_faculty_curriculum_line
+msgid "Curriculum Details"
+msgstr "تفاصيل المنهج"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__date
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+msgid "Dates"
+msgstr "التواريخ"
+
+#. module: uni_results
+#: model:ir.actions.act_window,name:uni_results.degree_comp_list_action
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__degree_component
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum_line__degree_component
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_subject__degree_component
+#: model_terms:ir.ui.view,arch_db:uni_results.degree_comp_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.uni_faculty_curriculum_line_view_form_inh
+#: model_terms:ir.ui.view,arch_db:uni_results.uni_faculty_subject_view_form_inh
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+msgid "Degree Component"
+msgstr "مكونات الدرجة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__deprived_reason
+msgid "Deprived Reason"
+msgstr "سبب الحرمان"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__deprived_student_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__deprived_student_ids
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+msgid "Deprived Students"
+msgstr "الطلبة المحرومين"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__academic_status__dismiss
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__status__dismiss
+msgid "Dismiss"
+msgstr "فصل"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__exam_reason__dismiss
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__reason__dismiss
+msgid "Dismissed"
+msgstr "مفصول"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__status__dismissed_absence
+msgid "Dismissed for Absence"
+msgstr ""فصل غياب"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_degree_component__display_name
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__display_name
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__display_name
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__display_name
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__display_name
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__display_name
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__display_name
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__display_name
+#: model:ir.model.fields,field_description:uni_results.field_res_company__display_name
+#: model:ir.model.fields,field_description:uni_results.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__display_name
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__display_name
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_types__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum_line__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_level__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_program__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_semester__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_subject__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_student__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__display_name
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_recorrection__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.exam_template_view_form
+msgid "Documents"
+msgstr "المرفقات"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_exam__state__done
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_exam_record__state__done
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_result_record__state__done
+#: model_terms:ir.ui.view,arch_db:uni_results.exam_template_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+msgid "Done"
+msgstr "مكتمل"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__state__done
+msgid "Done"
+msgstr "استلام النسخة من الاستاذ"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_exam__state__draft
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_register__state__draft
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_exam_record__state__draft
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_result_record__state__draft
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__exam_duration
+msgid "Duration"
+msgstr "مدة الامتحان"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+msgid "End"
+msgstr "إلى"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__end_date
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#. module: uni_results
+#: code:addons/uni_results/models/exam_record.py:0
+#, python-format
+msgid "End Date cannot be set before Start Date."
+msgstr "تاريخ النهاية يجب ان يكون قبل تاريخ البداية"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__end_time
+msgid "End Time"
+msgstr "زمن النهاية"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__end_level
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__end_level
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__end_level
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__end_level
+msgid "End of Academic Level ?"
+msgstr "نهاية عام دراسي ?"
+
+#. module: uni_results
+#: code:addons/uni_results/models/exam.py:0
+#: code:addons/uni_results/models/exam_attendees.py:0
+#, python-format
+msgid "Enter proper marks!"
+msgstr "يجب ادخال الدرجة الكاملة ودرجة النجاح للمادة"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_exam_exam
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__exam_id
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__exam_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__exam_ids
+#: model:ir.ui.menu,name:uni_results.exam_main_menu
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_attendees_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_tree
+msgid "Exam"
+msgstr "الإمتحان"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__exam__id
+msgid "Exam "
+msgstr "الإمتحان"
+
+#. module: uni_results
+#: model:ir.actions.act_window,name:uni_results.act_exam_attendees_view
+#: model:ir.model,name:uni_results.model_exam_attendees
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_attendees_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_attendees_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_attendees_tree
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+msgid "Exam Attendees"
+msgstr "الطلاب"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__exam_category
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_types__exam_category
+msgid "Exam Category"
+msgstr "النوع"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__exam_date
+msgid "Exam Date"
+msgstr "تاريخ الإمتحان"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+msgid "Exam Forms"
+msgstr "نماذج الإمتحان"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__state__exam_papers_printing
+msgid "Exam Papers Printing"
+msgstr "طباعة أوراق الإمتحان"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__exam_reason
+msgid "Exam Reason"
+msgstr "سبب الإمتحان"
+
+#. module: uni_results
+#: model:ir.actions.act_window,name:uni_results.uni_exam_record_action
+#: model:ir.model,name:uni_results.model_uni_exam_record
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__record_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__exam_id
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__exam_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__exam_id
+#: model:ir.ui.menu,name:uni_results.exam_record_menu
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_tree
+msgid "Exam Record"
+msgstr "سجل الإمتحان"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_search
+msgid "Exam Session"
+msgstr "جلسة الإمتحان"
+
+#. module: uni_results
+#: model:ir.actions.act_window,name:uni_results.exam_template_action
+#: model:ir.model,name:uni_results.model_exam_template
+#: model_terms:ir.ui.view,arch_db:uni_results.exam_template_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.exam_template_view_tree
+msgid "Exam Template"
+msgstr "نموذج الإمتحان"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__exam_template_type
+msgid "Exam Template Type"
+msgstr "نوع نموذج الإمتحان"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__exam_type
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__exam_type_id
+msgid "Exam Type"
+msgstr "نوع الإمحان"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_exam_types
+#: model:ir.ui.menu,name:uni_results.uni_exam_types_menu2
+msgid "Exam Types"
+msgstr "أنواع الإمحانات"
+
+#. module: uni_results
+#: model:ir.actions.act_window,name:uni_results.act_exam_exam_view
+#: model:ir.ui.menu,name:uni_results.menu_exam_exam_main
+#: model_terms:ir.ui.view,arch_db:uni_results.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+msgid "Exams"
+msgstr "الإمتحانات"
+
+#. module: uni_results
+#: model:ir.ui.menu,name:uni_results.result_menu
+msgid "Exams&Results"
+msgstr "الإمتحانات والنتائج"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.uni_faculty_curriculum_view_form_inh
+#: model_terms:ir.ui.view,arch_db:uni_results.uni_faculty_subject_view_form_inh
+msgid "Exams/Results"
+msgstr "الإمتحانات والنتائج"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__exceptional_student_ids
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+msgid "Exceptional Students"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__exam_reason__external
+msgid "External"
+msgstr "خارجي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__extra_degree
+msgid "Extra Mark"
+msgstr "الدرجة الأضافية"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_attendees__subject_status__fail
+msgid "Fail"
+msgstr "رسوب"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum_line__fail_remove
+msgid "Fail can be removed?"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__final_degree
+msgid "Final Degree"
+msgstr "الدرجة النهائية"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__final_exam
+#: model:ir.model.fields.selection,name:uni_results.selection__degree_component__component_type__final_exam
+msgid "Final Exam"
+msgstr "الإمتحان النهائي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__final_exam_degree
+msgid "Final Exam Degree"
+msgstr "درجة الإمتحان"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_exam_types__exam_category__first_round
+msgid "First round"
+msgstr "الدور الأول"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_follower_ids
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_follower_ids
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_follower_ids
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_follower_ids
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_follower_ids
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_follower_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_follower_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_channel_ids
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_channel_ids
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_channel_ids
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_channel_ids
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_channel_ids
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_channel_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_channel_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_partner_ids
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_partner_ids
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_partner_ids
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_partner_ids
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_partner_ids
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_partner_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_partner_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__forms_count
+msgid "Forms Count"
+msgstr "عدد النماذج"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__academic_status__fresh
+msgid "Fresh"
+msgstr "طالب جديد"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__fulfillment_subjects
+msgid "Fulfillment Subjects"
+msgstr "مواد الإستيفاء"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__exam_reason__fulfilment
+msgid "Fulfilment"
+msgstr "إستيفاء"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__full_degree
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum_line__full_degree
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_subject__full_degree
+msgid "Full Mark"
+msgstr "الدرجة الكاملة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__gpa
+msgid "GPA"
+msgstr "المعدل التراكمي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__generated_by
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_search
+msgid "Generated By"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__generated_date
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__generated_date
+msgid "Generated Date"
+msgstr "تاريخ الانشاء"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+msgid "Get students"
+msgstr "الطلبة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__given_degree
+msgid "Given Mark"
+msgstr "الدرجة الاممنوحة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_res_company__gpa_grade
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum__gpa_grade
+msgid "Gpa Grade"
+msgstr "تقدير المعدل"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__subject_grade
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__grade
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__grade_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__sgpa_grade
+msgid "Grade"
+msgstr "التقدير"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.grade_conf_view_form
+msgid "Grade Categories"
+msgstr "فئات التقدير"
+
+#. module: uni_results
+#: model:ir.actions.act_window,name:uni_results.grade_conf_list_action
+#: model:ir.ui.menu,name:uni_results.grade_conf_menu
+#: model_terms:ir.ui.view,arch_db:uni_results.grade_conf_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.grade_conf_view_tree
+msgid "Grade Configuration"
+msgstr "إعداد التقدير"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__sgpa_grade_letter
+msgid "Grade Letter"
+msgstr "التقدير بالحروف"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__subject_grade_letter
+msgid "Grade in Letter"
+msgstr "التقدير بالحروف"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.res_config_settings_view_form
+msgid "Grades Configuration"
+msgstr "إعداد التقدير"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_attendees_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_line_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_search
+msgid "Group By..."
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__academic_status__substitutions
+msgid "Has Substitutionals"
+msgstr "لديه بدائل"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__academic_status__substitutional_supplement
+msgid "Has Substitutionals & Supplements"
+msgstr "لديه بدائل وملاحق"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__academic_status__supplement
+msgid "Has Supplements"
+msgstr "لديه ملاحق"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_exam__state__held
+msgid "Held"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_degree_component__id
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__id
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__id
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__id
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__id
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__id
+#: model:ir.model.fields,field_description:uni_results.field_res_company__id
+#: model:ir.model.fields,field_description:uni_results.field_res_config_settings__id
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__id
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__id
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_types__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum_line__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_level__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_program__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_semester__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_subject__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_student__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__id
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_recorrection__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: uni_results
+#: model:ir.model.fields,help:uni_results.field_exam_exam__message_needaction
+#: model:ir.model.fields,help:uni_results.field_exam_exam__message_unread
+#: model:ir.model.fields,help:uni_results.field_exam_template__message_needaction
+#: model:ir.model.fields,help:uni_results.field_exam_template__message_unread
+#: model:ir.model.fields,help:uni_results.field_grade_conf__message_needaction
+#: model:ir.model.fields,help:uni_results.field_grade_conf__message_unread
+#: model:ir.model.fields,help:uni_results.field_marksheet_register__message_needaction
+#: model:ir.model.fields,help:uni_results.field_marksheet_register__message_unread
+#: model:ir.model.fields,help:uni_results.field_student_recommendations_list__message_needaction
+#: model:ir.model.fields,help:uni_results.field_student_recommendations_list__message_unread
+#: model:ir.model.fields,help:uni_results.field_subject_recommendations_list__message_needaction
+#: model:ir.model.fields,help:uni_results.field_subject_recommendations_list__message_unread
+#: model:ir.model.fields,help:uni_results.field_uni_exam_record__message_needaction
+#: model:ir.model.fields,help:uni_results.field_uni_exam_record__message_unread
+#: model:ir.model.fields,help:uni_results.field_uni_result_record__message_needaction
+#: model:ir.model.fields,help:uni_results.field_uni_result_record__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,help:uni_results.field_exam_exam__message_has_error
+#: model:ir.model.fields,help:uni_results.field_exam_exam__message_has_sms_error
+#: model:ir.model.fields,help:uni_results.field_exam_template__message_has_error
+#: model:ir.model.fields,help:uni_results.field_exam_template__message_has_sms_error
+#: model:ir.model.fields,help:uni_results.field_grade_conf__message_has_error
+#: model:ir.model.fields,help:uni_results.field_grade_conf__message_has_sms_error
+#: model:ir.model.fields,help:uni_results.field_marksheet_register__message_has_error
+#: model:ir.model.fields,help:uni_results.field_marksheet_register__message_has_sms_error
+#: model:ir.model.fields,help:uni_results.field_student_recommendations_list__message_has_error
+#: model:ir.model.fields,help:uni_results.field_student_recommendations_list__message_has_sms_error
+#: model:ir.model.fields,help:uni_results.field_subject_recommendations_list__message_has_error
+#: model:ir.model.fields,help:uni_results.field_subject_recommendations_list__message_has_sms_error
+#: model:ir.model.fields,help:uni_results.field_uni_exam_record__message_has_error
+#: model:ir.model.fields,help:uni_results.field_uni_exam_record__message_has_sms_error
+#: model:ir.model.fields,help:uni_results.field_uni_result_record__message_has_error
+#: model:ir.model.fields,help:uni_results.field_uni_result_record__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__is_deprived
+msgid "Is Deprived"
+msgstr "محروم"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_is_follower
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_is_follower
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_is_follower
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_is_follower
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_is_follower
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_is_follower
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_is_follower
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__is_substitutionals
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_types__is_substitutionals
+msgid "Is Substitutionals"
+msgstr "بدائل ?"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__is_supplement
+msgid "Is Supplement"
+msgstr "ملاحق"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__is_failure
+msgid "Is failure ?"
+msgstr "رسوب ?"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_attendees__status__justified_absence
+msgid "Justified Absence"
+msgstr "غياب بعذر"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_degree_component____last_update
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees____last_update
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam____last_update
+#: model:ir.model.fields,field_description:uni_results.field_exam_template____last_update
+#: model:ir.model.fields,field_description:uni_results.field_grade_category____last_update
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf____last_update
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line____last_update
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register____last_update
+#: model:ir.model.fields,field_description:uni_results.field_res_company____last_update
+#: model:ir.model.fields,field_description:uni_results.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list____last_update
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component____last_update
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_types____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum_line____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_level____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_program____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_semester____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_subject____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_student____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam____last_update
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_recorrection____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_degree_component__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__write_uid
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_degree_component__write_date
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__write_date
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__write_date
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__write_date
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__write_date
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__write_date
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__write_date
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__write_date
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__write_date
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__write_date
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__write_date
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__write_date
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__write_date
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__level_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__level_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__level_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__level_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__level_id
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_search
+msgid "Level"
+msgstr "المستوى الدراسي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_res_company__level_grade
+#: model:ir.model.fields,field_description:uni_results.field_res_config_settings__gpa_grade
+#: model:ir.model.fields,field_description:uni_results.field_res_config_settings__level_grade
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum__level_grade
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_level__level_grade
+msgid "Level Grade"
+msgstr "تقدير المستوى الدراسي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__main
+msgid "Main"
+msgstr "أساسي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__main_exam
+msgid "Main Exam"
+msgstr "الإمتحان الأساسي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__marks
+msgid "Marks"
+msgstr "الدرجات"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__marksheet_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__marksheet_line
+msgid "Marksheet"
+msgstr "سجل درجات الاإمتحان"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_marksheet_line
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__marksheet_line_id
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_line_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_line_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_line_tree
+msgid "Marksheet Line"
+msgstr "تفاصيل درجات الإمتحان"
+
+#. module: uni_results
+#: model:ir.actions.act_window,name:uni_results.act_open_op_marksheet_line_view
+#: model:ir.ui.menu,name:uni_results.menu_op_marksheet_line_sub
+msgid "Marksheet Lines"
+msgstr "تفاصيل درجات الإمتحان"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__name
+msgid "Marksheet Name"
+msgstr "إسم سجل الدرجات"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_marksheet_register
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__marksheet_reg_id
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_line_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_tree
+msgid "Marksheet Register"
+msgstr "سجل درجات الامتحان"
+
+#. module: uni_results
+#: model:ir.actions.act_window,name:uni_results.act_open_op_marksheet_register_view
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__marksheet_line
+#: model:ir.ui.menu,name:uni_results.menu_op_marksheet_register_sub
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_form
+msgid "Marksheets"
+msgstr "سجل درجات الامتحان"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__maximum_degree
+msgid "Maximum Mark"
+msgstr "الدرجة القصوى"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_program__maximum_study_years
+msgid "Maximum Study Years"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_has_error
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_has_error
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_has_error
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_has_error
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_has_error
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_has_error
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_has_error
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_ids
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_ids
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_ids
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_ids
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_ids
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__minimum_degree
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__minimum_degree
+msgid "Minimum Mark"
+msgstr "الدرجة الدنيا"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_degree_component__name
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__name
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__name
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__name
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__name
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_search
+msgid "Not Done"
+msgstr "غير مكتمل"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__state__not_received
+msgid "Not Received"
+msgstr "غير مستلم"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__note
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__note
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_attendees_form
+msgid "Note"
+msgstr "التعليق"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,help:uni_results.field_exam_exam__message_needaction_counter
+#: model:ir.model.fields,help:uni_results.field_exam_template__message_needaction_counter
+#: model:ir.model.fields,help:uni_results.field_grade_conf__message_needaction_counter
+#: model:ir.model.fields,help:uni_results.field_marksheet_register__message_needaction_counter
+#: model:ir.model.fields,help:uni_results.field_student_recommendations_list__message_needaction_counter
+#: model:ir.model.fields,help:uni_results.field_subject_recommendations_list__message_needaction_counter
+#: model:ir.model.fields,help:uni_results.field_uni_exam_record__message_needaction_counter
+#: model:ir.model.fields,help:uni_results.field_uni_result_record__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,help:uni_results.field_exam_exam__message_has_error_counter
+#: model:ir.model.fields,help:uni_results.field_exam_template__message_has_error_counter
+#: model:ir.model.fields,help:uni_results.field_grade_conf__message_has_error_counter
+#: model:ir.model.fields,help:uni_results.field_marksheet_register__message_has_error_counter
+#: model:ir.model.fields,help:uni_results.field_student_recommendations_list__message_has_error_counter
+#: model:ir.model.fields,help:uni_results.field_subject_recommendations_list__message_has_error_counter
+#: model:ir.model.fields,help:uni_results.field_uni_exam_record__message_has_error_counter
+#: model:ir.model.fields,help:uni_results.field_uni_result_record__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,help:uni_results.field_exam_exam__message_unread_counter
+#: model:ir.model.fields,help:uni_results.field_exam_template__message_unread_counter
+#: model:ir.model.fields,help:uni_results.field_grade_conf__message_unread_counter
+#: model:ir.model.fields,help:uni_results.field_marksheet_register__message_unread_counter
+#: model:ir.model.fields,help:uni_results.field_student_recommendations_list__message_unread_counter
+#: model:ir.model.fields,help:uni_results.field_subject_recommendations_list__message_unread_counter
+#: model:ir.model.fields,help:uni_results.field_uni_exam_record__message_unread_counter
+#: model:ir.model.fields,help:uni_results.field_uni_result_record__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+msgid "Open Recorrection Period"
+msgstr ""
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.exam_template_view_form
+msgid "Pack"
+msgstr "تحزيم"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__state__packing_exam_papers
+msgid "Packing Exam Papers"
+msgstr "تحزيم اوراق الامتحان"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_attendees__subject_status__pass
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__status__pass
+msgid "Pass"
+msgstr "نجاح"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__success_degree
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum_line__success_degree
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_subject__success_degree
+msgid "Pass Mark"
+msgstr "درجة النجاح"
+
+#. module: uni_results
+#: code:addons/uni_results/models/exam.py:0
+#, python-format
+msgid "Passing Marks can't be greater than Total Marks"
+msgstr "درجة النجاح يجب ان تكون اصغر من الدرجة الكاملة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__percentage
+msgid "Perc(%)"
+msgstr "النسبة(%)"
+
+#. module: uni_results
+#: code:addons/uni_results/models/exam_record.py:0
+#, python-format
+msgid "Please make sure all exams are scheduling!!"
+msgstr "توجد امتحانات غير مكتملة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__practical
+#: model:ir.model.fields.selection,name:uni_results.selection__degree_component__component_type__practical
+msgid "Practical"
+msgstr "عملي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__practical_degree
+msgid "Practical Degree"
+msgstr "درجة العملي"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_attendees__status__presence
+msgid "Presence"
+msgstr "حضور"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__exam_template_type__primary
+msgid "Primary"
+msgstr "اساسي"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.exam_template_view_form
+msgid "Print"
+msgstr "طباعة النموذج"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__state__print_form
+msgid "Print Form"
+msgstr "طباعة النموذج"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__program_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__program_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__program_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__program_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__program_id
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_search
+msgid "Program"
+msgstr "البرناج"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__student_recommendations_list__recommenation_type__program_council
+#: model:ir.model.fields.selection,name:uni_results.selection__subject_recommendations_list__recommenation_type__program_council
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_result_record__state__program_council
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+msgid "Program Council"
+msgstr "مجلس البرنامج"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__program_council_meet_date
+msgid "Program Council Meet Date"
+msgstr "تاريخ إجازة مجلس البرنامج"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__program_council_push
+msgid "Program Council Push"
+msgstr "درجة مجلس البرنامج"
+
+#. module: uni_results
+#: model:res.groups,name:uni_results.program_council_group
+msgid "Program Council User"
+msgstr "عضو مجلس البرنامج"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_faculty_program
+msgid "Programs"
+msgstr "البرامج"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.exam_template_view_form
+msgid "Receive"
+msgstr "استلام"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__state__received
+msgid "Received"
+msgstr "مستلم"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__received_date
+msgid "Received Date"
+msgstr "تاريخ التسليم"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__recommenation_type
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__recommenation_type
+msgid "Recommenation Type"
+msgstr "نوع التوصية"
+
+#. module: uni_results
+#: model:ir.actions.server,name:uni_results.recorrection_period_scheduler_ir_actions_server
+#: model:ir.cron,cron_name:uni_results.recorrection_period_scheduler
+#: model:ir.cron,name:uni_results.recorrection_period_scheduler
+msgid "Recoorection Period"
+msgstr "فترة إعادة التصحيح"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__student_recommendations_list__recommenation_type__recorrection
+msgid "Recorrection"
+msgstr "إعادة التصحيح"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_result_record__state__recorrection_period
+msgid "Recorrection Period"
+msgstr "فترة إعادة التصحيح"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__recorrection_push
+msgid "Recorrection Push"
+msgstr "درجة إعادة التصحيح"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__recorrection_recommendation_ids
+msgid "Recorrection Recommendation"
+msgstr "توصية إعادة التصحيح"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_result_record__state__recorrection_recomm
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+msgid "Recorrection Recommendations"
+msgstr "توصيات إعادة التصحيح"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__recorrection_result_id
+msgid "Recorrection Result"
+msgstr "نتيجة إعادة التصحيح"
+
+#. module: uni_results
+#: model:res.groups,name:uni_results.recorrection_group
+msgid "Recorrection User"
+msgstr "عضو لجنة إعادة التصحيح"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__exam_template_type__removal
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__status__removal
+msgid "Removal"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__academic_status__repeat
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__status__repeat
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__exam_reason__repeat
+msgid "Repeat"
+msgstr "إعادة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__repeat_subjects
+msgid "Repeat Subjects"
+msgstr "مواد الإعادة"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__academic_status__repeat_subjects
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__status__repeat_subjects
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__exam_reason__repeat_subjects
+msgid "Repeat With Subjects"
+msgstr "إعادة بمواد"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+msgid "Reset to Draft"
+msgstr "إرجاع مبدئي"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__exam_reason__resigned
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__reason__resigned
+msgid "Resigned"
+msgstr "مستقيل"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+msgid "Rest To Draft"
+msgstr "إرجاع مبدئي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__result_id
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__result_id
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__result_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_student__result_ids
+#: model:ir.ui.menu,name:uni_results.result_sub_menu
+msgid "Result"
+msgstr "سجل النتيجة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__result_advertisement_date
+msgid "Result Advertisement Date"
+msgstr "تاريخ إعلان النتيجة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__result_confirm_date
+msgid "Result Confirm Date"
+msgstr "تاريخ إعتماد النتيجة"
+
+#. module: uni_results
+#: model:ir.actions.act_window,name:uni_results.result_record_list_action
+#: model:ir.ui.menu,name:uni_results.result_record_menu
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_tree
+msgid "Result Record"
+msgstr "سجل النتيجة"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_exam__state__result_updated
+msgid "Result Updated"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.module.category,name:uni_results.uni_results_groups
+msgid "Result Users"
+msgstr "عضو لجنة الامتحانات والنتائج"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_grade_category__grade_letter
+msgid "Result to Display"
+msgstr "التقدير"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__attendees_line
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+#: model_terms:ir.ui.view,arch_db:uni_results.uni_result_student_view_form_inh
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_line_form
+msgid "Results"
+msgstr "النتائج"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_exam_record__state__run
+msgid "Run"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__sgpa
+msgid "SGPA1"
+msgstr "المعدل الفصلي الأول"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__sgpa2
+msgid "SGPA2"
+msgstr "المعدل الفصلي الثاني"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+msgid "Schedule"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_exam__state__schedule
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_exam_record__state__schedule
+msgid "Scheduled"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__student_recommendations_list__recommenation_type__scientific_council
+#: model:ir.model.fields.selection,name:uni_results.selection__subject_recommendations_list__recommenation_type__scientific_council
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_result_record__state__scientific_council
+msgid "Scientific Council"
+msgstr "مجلس العلوم"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__scientific_council_meet_date
+msgid "Scientific Council Meet Date"
+msgstr "تاريخ إجازة مجلس العلوم"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__scientific_council_push
+msgid "Scientific Council Push"
+msgstr "درجة مجلس العلوم"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_result_record__state__scientific_council_recomm
+msgid "Scientific Council Recommendations"
+msgstr "توصيات مجلس العلوم"
+
+#. module: uni_results
+#: model:res.groups,name:uni_results.scientific_council_group
+msgid "Scientific Council User"
+msgstr "عضو مجلس العلوم"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_exam_types__exam_category__second_round
+msgid "Second round"
+msgstr "الدور الثاني"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__seeting_number
+msgid "Seeting Number"
+msgstr "رقم الجلوس"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_res_company__semester_grade
+#: model:ir.model.fields,field_description:uni_results.field_res_config_settings__semester_grade
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum__semester_grade
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_semester__semester_grade
+msgid "Semester Grade"
+msgstr "تقدير التيرم"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_form
+msgid "Set to Draft"
+msgstr "ارجاع مبدئي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__seeting_number
+#: model:ir.model.fields,field_description:uni_results.field_uni_student__seeting_number
+msgid "Setting Number"
+msgstr "رقم الجلوس"
+
+#. module: uni_results
+#: model:ir.ui.menu,name:uni_results.uni_results_config_menu
+msgid "Settings"
+msgstr "الاعدادات"
+
+#. module: uni_results
+#: code:addons/uni_results/models/marksheet.py:0
+#, python-format
+msgid "Sorry There is a calculated result for the selected exam record"
+msgstr "يوجد سجل نتيجة خاص بسجل الامتحان المحدد"
+
+#. module: uni_results
+#: code:addons/uni_results/models/exam_attendees.py:0
+#: code:addons/uni_results/models/marksheet_line.py:0
+#: code:addons/uni_results/models/marksheet_line.py:0
+#, python-format
+msgid "Sorry you must configr the grade configuration"
+msgstr "يجب عليك تهيئة اعدادات التقدير اولا"
+
+#. module: uni_results
+#: model:ir.model.constraint,message:uni_results.constraint_marksheet_register_unique_exam
+msgid "Sorry.. They are already a Marksheet for this Exam Record"
+msgstr "يوجد سجل درجات خاص بسجل الامتحان المحدد"
+
+#. module: uni_results
+#: model:ir.model.constraint,message:uni_results.constraint_uni_result_record_unique_result_record
+msgid ""
+"Sorry.. They are already a Result Record for this level in this academic "
+"year"
+msgstr "يوجد سجل نتيجة خاص بالمستوى الدراسي المحدد في السنة الدراسية المحددة"
+
+#. module: uni_results
+#: model:ir.model.constraint,message:uni_results.constraint_exam_exam_unique_time
+msgid "Sorry.. This batch has another Exam in this Time"
+msgstr "هذه الدفعة لديها امتحان اخر في الزمن المحدد"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__start_timing_id
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+msgid "Start"
+msgstr "من"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+msgid "Start Recommendation"
+msgstr "بدء التوصية"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__state
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__state
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__state
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__state2
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__state
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__state
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_search
+msgid "State"
+msgstr "الحالة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__status
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__subject_status
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__status
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__state
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_attendees_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__std_recommendation_ids
+msgid "Std Recommendation"
+msgstr "توصيات الطلبة"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_student
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__student_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__student_id
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__student_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__student_id
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_attendees_search
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_line_search
+msgid "Student"
+msgstr "الطالب"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__std_number
+msgid "Student Number"
+msgstr "الرقم الداخلي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__student_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__student_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__students
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__students
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_student_form
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_student_tree
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+msgid "Students Recommendations"
+msgstr "توصيات الطلاب"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+msgid "Studesnts Results"
+msgstr "نتائج الطلاب"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__subj_recommendation_ids
+msgid "Subj Recommendation"
+msgstr "توصيات المواد"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_faculty_subject
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__subject
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__subject_id
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__recorrection_subject_id
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__subject_id
+#: model:ir.model.fields,field_description:uni_results.field_subject_degree_component__subject_id
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__subject_id
+msgid "Subject"
+msgstr "المادة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__subject_degree_point
+msgid "Subject Degree Point"
+msgstr "الدرجة النقطية للمادة"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.uni_faculty_curriculum_line_view_form_inh
+msgid "Subject Details"
+msgstr "تفاصيل المادة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_res_company__subject_grade
+#: model:ir.model.fields,field_description:uni_results.field_res_config_settings__subject_grade
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum__subject_grade
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_curriculum_line__subject_grade
+#: model:ir.model.fields,field_description:uni_results.field_uni_faculty_subject__subject_grade
+msgid "Subject Grade"
+msgstr "تقدير المادة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__hour
+msgid "Subject Hours"
+msgstr "ساعت المادة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__subject_point
+msgid "Subject Points"
+msgstr "نقاط المادة"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__state__subject_professor_approval
+msgid "Subject professor Approval"
+msgstr "اعتماد النموذج المطبوع بواسطة استاذ المادة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__subject_ids
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__subject_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__subject_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__subject_ids
+msgid "Subjects"
+msgstr "المواد"
+
+#. module: uni_results
+#: model:ir.ui.menu,name:uni_results.degree_comp_confg_menu
+msgid "Subjects Degree Component"
+msgstr "مكونات درجات المواد"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.result_record_view_form
+msgid "Subjects Recommendations"
+msgstr "توصيات المواد"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_uni_exam_record_form
+msgid "Submit"
+msgstr "إعتماد"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_exam_record__state__submit
+msgid "Submited"
+msgstr "معتمد"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_attendees__subject_status__substitutional
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__exam_template_type__substitutional
+msgid "Substitutional"
+msgstr "بديل"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__substitutional_subjects
+msgid "Substitutional Subjects"
+msgstr "مواد البديل"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__status__substitutional
+msgid "Substitutionals"
+msgstr "بديل"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__status__substitutional_supplement
+msgid "Substitutionals & Supplements"
+msgstr "بدائل وملاحق"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__substitutionals_exam
+msgid "Substitutionals Exam"
+msgstr "إمتحان البدائل"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__academic_status__success
+msgid "Success"
+msgstr "نجاح"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__exam_template__exam_template_type__supplement
+msgid "Supplement"
+msgstr "ملحق"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__supplement_subjects
+msgid "Supplement Subjects"
+msgstr "مواد الملحق"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_line__status__supplement
+msgid "Supplements"
+msgstr "ملاحق"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__exam_reason__frozen
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_student_exam__reason__frozen
+msgid "Suspended"
+msgstr "مجمد"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__teacher_id
+msgid "Teacher"
+msgstr "أستاذ المادة"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_faculty_semester
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__semester_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__semester_id
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__semester_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__semester_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__semester_id
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_search
+msgid "Term"
+msgstr "الفصل الدراسي"
+
+#. module: uni_results
+#: code:addons/uni_results/models/recorrection_service.py:0
+#, python-format
+msgid "There is no open recorrection period for this student."
+msgstr "لا توجد فترة اعادة تصحيح مفتوحة لهذا الطالب"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_exam_types__exam_category__third_round
+msgid "Third round"
+msgstr "الدور الثالث"
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_exam_exam_form
+msgid "To Draft"
+msgstr "ارجاع مبدئي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__subject_total_degree
+msgid "Total Degree"
+msgstr "الدرجة الكاملة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__total_failed
+msgid "Total Fail"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__total_hours
+msgid "Total Hours"
+msgstr "مجموع الساعات"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__total_pass
+msgid "Total Pass"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_line__total_points
+msgid "Total Points"
+msgstr "مجموع النقاط"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__university_id
+#: model:ir.model.fields,field_description:uni_results.field_uni_student_exam__university_id
+msgid "University ID"
+msgstr "الرقم الجامعي"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_unread
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_unread
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_unread
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_unread
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_unread
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_unread
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_unread
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__message_unread_counter
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__message_unread_counter
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__message_unread_counter
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__message_unread_counter
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__message_unread_counter
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__message_unread_counter
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__message_unread_counter
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: uni_results
+#: model_terms:ir.ui.view,arch_db:uni_results.view_op_marksheet_register_form
+msgid "Validate Marksheet"
+msgstr "تأكيد"
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__marksheet_register__state__validated
+msgid "Validated"
+msgstr "معتمد"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__violation_id
+msgid "Violation"
+msgstr "المخالفات"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__website_message_ids
+#: model:ir.model.fields,field_description:uni_results.field_exam_template__website_message_ids
+#: model:ir.model.fields,field_description:uni_results.field_grade_conf__website_message_ids
+#: model:ir.model.fields,field_description:uni_results.field_marksheet_register__website_message_ids
+#: model:ir.model.fields,field_description:uni_results.field_student_recommendations_list__website_message_ids
+#: model:ir.model.fields,field_description:uni_results.field_subject_recommendations_list__website_message_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_exam_record__website_message_ids
+#: model:ir.model.fields,field_description:uni_results.field_uni_result_record__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,help:uni_results.field_exam_exam__website_message_ids
+#: model:ir.model.fields,help:uni_results.field_exam_template__website_message_ids
+#: model:ir.model.fields,help:uni_results.field_grade_conf__website_message_ids
+#: model:ir.model.fields,help:uni_results.field_marksheet_register__website_message_ids
+#: model:ir.model.fields,help:uni_results.field_student_recommendations_list__website_message_ids
+#: model:ir.model.fields,help:uni_results.field_subject_recommendations_list__website_message_ids
+#: model:ir.model.fields,help:uni_results.field_uni_exam_record__website_message_ids
+#: model:ir.model.fields,help:uni_results.field_uni_result_record__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_attendees__year_work_degree
+msgid "Year Work Degree"
+msgstr "درجة أعمال السنة"
+
+#. module: uni_results
+#: model:ir.model.fields,field_description:uni_results.field_exam_exam__year_works
+#: model:ir.model.fields.selection,name:uni_results.selection__degree_component__component_type__year_works
+msgid "Year Works"
+msgstr "أعمال السنة"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_faculty_level
+msgid "Years"
+msgstr "المستويات"
+
+#. module: uni_results
+#: code:addons/uni_results/models/exam_record.py:0
+#, python-format
+msgid "You must get students firstly !!!!!"
+msgstr "يجب اعداد الطلبة اولا"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_degree_component
+msgid "degree.component"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_grade_category
+msgid "grade.category"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_grade_conf
+msgid "grade.conf"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model.fields.selection,name:uni_results.selection__uni_result_record__state__program_council_recomm
+msgid "program Council Recommendations"
+msgstr "توصيات مجلس البرنامج"
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_student_recommendations_list
+msgid "student.recommendations.list"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_subject_degree_component
+msgid "subject.degree.component"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_subject_recommendations_list
+msgid "subject.recommendations.list"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_result_record
+msgid "uni.result.record"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_student_exam
+msgid "uni.student.exam"
+msgstr ""
+
+#. module: uni_results
+#: model:ir.model,name:uni_results.model_uni_student_recorrection
+msgid "uni.student.recorrection"
+msgstr ""

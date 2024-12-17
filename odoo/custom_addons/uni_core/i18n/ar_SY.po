@@ -1,0 +1,1376 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* uni_core
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-25 08:13+0000\n"
+"PO-Revision-Date: 2018-06-25 08:13+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_kanban
+msgid "<strong>Faculty:</strong>"
+msgstr "<strong>الكلية:</strong>"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_kanban
+msgid "<strong>University ID:</strong>"
+msgstr "<strong>الرقم الجامعي:</strong>"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_active
+msgid "Active"
+msgstr "نشط"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_address
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guardian_address
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_relative_address
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_view_form
+msgid "Address"
+msgstr "العنوان"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_type
+msgid "Address Type"
+msgstr "نوع العنوان"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Admission"
+msgstr "القبول والتسجيل"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_category_id
+msgid "Admission Category"
+msgstr "فئة القبول"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_alias_id
+msgid "Alias"
+msgstr "الكنية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_alias_contact
+msgid "Alias Contact Security"
+msgstr "رقم الطوارئ"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_bank_ids
+msgid "Banks"
+msgstr "المصارف"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_barcode
+msgid "Barcode"
+msgstr "باركود"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_batch_action
+#: model:ir.model,name:uni_core.model_uni_faculty_department_batch
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_batch_id
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_batch_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_batch_view_tree
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+msgid "Batch"
+msgstr "البرنامج الدراسي السنوي"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.uni_faculty_batch_menu
+msgid "Batches"
+msgstr "البرنامج الدراسي السنوي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_birth_date
+msgid "Birth date"
+msgstr "تاريخ الميلاد"
+
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_message_bounce
+msgid "Bounce"
+msgstr "المرتد"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_branch
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_branch_id
+msgid "Branch"
+msgstr "الشعبة"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_branch_action
+#: model:ir.ui.menu,name:uni_core.uni_faculty_branches_menu
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_branch_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_branch_view_tree
+msgid "Branches"
+msgstr "الشعب"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Brother"
+msgstr "الاخوه"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+msgid "Certificate Type"
+msgstr "نوع الشهادة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_channel_ids
+msgid "Channels"
+msgstr "قنوات"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "افحص ما اذا كان جهة الاتصال شركة، أو شخص"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_customer
+msgid "Check this box if this contact is a customer."
+msgstr "حدد هذا المربع إذا كانت جهة الاتصال هذه أحد الزبائن."
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_supplier
+msgid "Check this box if this contact is a vendor. If it's not checked, purchase people will not see it when encoding a purchase order."
+msgstr "حدد هذا المربع إذا كانت جهة الاتصال هذه بائعًا. إذا لم يتم التحقق منه ، فلن يشاهده الأشخاص عند ترميز أمر شراء."
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_employee
+msgid "Check this box if this contact is an Employee."
+msgstr "حدد هذا المربع إذا كان جهة الاتصال موظف."
+
+#. module: uni_core
+#: selection:uni.student,religion:0
+msgid "Christianity"
+msgstr "المسيحية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_city
+msgid "City"
+msgstr "المدينة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_code
+msgid "Code"
+msgstr "الكود"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_color
+msgid "Color Index"
+msgstr "اللون"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_commercial_partner_id
+msgid "Commercial Entity"
+msgstr "الكيان التجارى"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_res_company
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_company_ids
+msgid "Companies"
+msgstr "المؤسسات"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_company_name
+msgid "Company Name"
+msgstr "اسم الشركة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_commercial_company_name
+msgid "Company Name Entity"
+msgstr "اسم الشركة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_company_type
+msgid "Company Type"
+msgstr "نوع الشركة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_contact_address
+msgid "Complete Address"
+msgstr "العنوان الكامل "
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.uni_core_configurations_view_menu
+msgid "Configurations"
+msgstr "الإعدادات"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_child_ids
+msgid "Contacts"
+msgstr "جهات الاتصال"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "Counter of the number of bounced emails for this contact"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_country_id
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_view_form
+msgid "Country"
+msgstr "دولة"
+
+#. module: uni_core
+#: model:ir.actions.act_window,help:uni_core.uni_faculty_batch_action
+msgid "Create new batch"
+msgstr "إنشاء دفعة جدبدة"
+
+#. module: uni_core
+#: model:ir.actions.act_window,help:uni_core.uni_faculty_branch_action
+msgid "Create new branch"
+msgstr "إنشاء شعبة جديدة"
+
+#. module: uni_core
+#: model:ir.actions.act_window,help:uni_core.uni_faculty_department_list_action
+msgid "Create new department"
+msgstr "أضف قسم جديد"
+
+#. module: uni_core
+#: model:ir.actions.act_window,help:uni_core.uni_core_faculty_action
+msgid "Create new faculty"
+msgstr "إضافة كلية جديدة"
+
+#. module: uni_core
+#: model:ir.actions.act_window,help:uni_core.uni_core_levels_list_action
+msgid "Create new level"
+msgstr "إنشاء مستوى دراسي"
+
+#. module: uni_core
+#: model:ir.actions.act_window,help:uni_core.uni_faculty_curriculum_list_action
+msgid "Create new curriculum"
+msgstr "إنشاء منهج جديد"
+
+#. module: uni_core
+#: model:ir.actions.act_window,help:uni_core.uni_core_semesters_list_action
+msgid "Create new semester"
+msgstr "إنشاء فصل دراسي"
+
+#. module: uni_core
+#: model:ir.actions.act_window,help:uni_core.uni_core_students_list_action
+msgid "Create new student"
+msgstr "أضف طالب جديد"
+
+#. module: uni_core
+#: model:ir.actions.act_window,help:uni_core.uni_faculty_subjects_list_action
+msgid "Create new subject"
+msgstr "إنشاء مادة جديدة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch_create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level_create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester_create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch_create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level_create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester_create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_credit_limit
+msgid "Credit Limit"
+msgstr "حد الائتمان"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_credit_hours
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_credit_hours
+msgid "Credit hours"
+msgstr "الساعات المعتمدة"
+
+#. module: uni_core
+#: code:addons/uni_core/models/curriculum.py:123
+#: code:addons/uni_core/models/subject.py:92
+#, python-format
+msgid "Credit hours must be greater than zero"
+msgstr "قيمة الساعات المعتمدة يجب أن تكون اكبر من صفر"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_department
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_department_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_department_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_department_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_department_id
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_department_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+msgid "Department"
+msgstr "القسم"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_department_list_action
+#: model:ir.model.fields,field_description:uni_core.field_res_company_department_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch_department_ids
+#: model:ir.ui.menu,name:uni_core.uni_faculty_department_list_menu
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_branch_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_view_form
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch_display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level_display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester_display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: uni_core
+#: selection:uni.student,martial_status:0
+msgid "Divorsed"
+msgstr "مطلق/ه"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_partner_share
+msgid "Either customer (no user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data."
+msgstr "إما العميل (بدون مستخدم) ، سواء كان مشتركًا. أشار إلى أن الشريك الحالي هو عميل بدون وصول أو مع وصول محدود تم إنشاؤه لمشاركة البيانات."
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_elementary_school
+msgid "Elementary School"
+msgstr "المدرسة الإبتدائية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_secondary_school_type
+msgid "Elementary School Type"
+msgstr "نوع المدرسه"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_notify_email
+msgid "Email Messages and Notifications"
+msgstr "Email Messages and Notifications"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_alias_id
+msgid "Email address internally associated with this user. Incoming emails will appear in the user's notifications."
+msgstr "Email address internally associated with this user. Incoming emails will appear in the user's notifications."
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_password_crypt
+msgid "Encrypted Password"
+msgstr "كلمة المرور المشفرة"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_share
+msgid "External user with limited access, created only for the purpose of sharing data."
+msgstr "مستخدم خارجي بصلاحيات وصول محدودة، أنشئ فقط لأغراض مشاركة البيانات."
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_core_faculty_action
+#: model:ir.ui.menu,name:uni_core.uni_core_faculties_menu
+#: model:ir.ui.menu,name:uni_core.uni_faculties_menu
+#: model:ir.ui.view,arch_db:uni_core.uni_core_faculty_view_tree
+msgid "Faculties"
+msgstr "الكليات"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch_faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level_faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester_faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_faculty_id
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+msgid "Faculty"
+msgstr "الكلية"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_view_form
+msgid "Faculty Name"
+msgstr "إسم الكلية"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Family"
+msgstr "بيانات العائلة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_fax
+msgid "Fax"
+msgstr "فاكس"
+
+#. module: uni_core
+#: selection:uni.student,gender:0
+msgid "Female"
+msgstr "انثى"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "First Name"
+msgstr "الإسم الاول"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_first_name
+msgid "First name"
+msgstr "الإسم الاول"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_first_name_en
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "First name (English)"
+msgstr "الإسم الأول (بالإنجليزية)"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "تنسيق عنوان البريد الإلكتروني \"الاسم <email@domain>\""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_email_formatted
+msgid "Formatted Email"
+msgstr "البريد الإلكتروني"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Fourth Name"
+msgstr "الإسم الرابع"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Fourth Name (English)"
+msgstr "الاسم الرابع)(بالانجليزيه"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_fourth_name
+msgid "Fourth name"
+msgstr "الإسم الرابع"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_fourth_name_en
+msgid "Fourth name (English)"
+msgstr "الإسم الرابع (بالإنجليزية)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_gender
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_view_form
+msgid "General Information"
+msgstr "المعلومات العامة"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_form
+msgid "Generate Curriculum Details"
+msgstr "توليد تفاصيل المنهج"
+
+#. module: uni_core
+#: selection:uni.student,state:0
+msgid "Graduate"
+msgstr "خريج"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+#: model:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups_id
+msgid "Groups"
+msgstr "المجموعات"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guardian_nationality_id
+msgid "Guardian National ID"
+msgstr "الرقم الوطني لولي الامر"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_action_id
+msgid "Home Action"
+msgstr "Home Action"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_curriculum_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_im_status
+msgid "IM Status"
+msgstr "حالة المحادثات"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_opt_out
+msgid "If opt-out is checked, this contact has refused to receive emails for mass mailing and marketing campaign. Filter 'Available for Mass Mailing' allows users to filter the partners when performing mass mailing."
+msgstr "If opt-out is checked, this contact has refused to receive emails for mass mailing and marketing campaign. Filter 'Available for Mass Mailing' allows users to filter the partners when performing mass mailing."
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_action_id
+msgid "If specified, this action will be opened at log on for this user, in addition to the standard menu."
+msgstr "إذا تمّ تحديد هذا الإجراء فسيتم تنفيذه عند تسجيل دخول المستخدم، بالإضافة إلى القائمة الافتراضية."
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_lang
+msgid "If the selected language is loaded in the system, all documents related to this contact will be printed in this language. If not, it will be English."
+msgstr "If the selected language is loaded in the system, all documents related to this contact will be printed in this language. If not, it will be English."
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_image
+msgid "Image"
+msgstr "الصورة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_in_school
+msgid "In School"
+msgstr "في المدرسه"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_in_university
+msgid "In University"
+msgstr "في الجامعه"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_ref
+msgid "Internal Reference"
+msgstr "مرجع داخلي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_is_father_live
+msgid "Is Father life"
+msgstr "هل الوالد علي قيد الحياه ؟"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_is_company
+msgid "Is a Company"
+msgstr "هي شركة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_customer
+msgid "Is a Customer"
+msgstr "هو العميل"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_supplier
+msgid "Is a Vendor"
+msgstr "هو البائع"
+
+#. module: uni_core
+#: selection:uni.student,religion:0
+msgid "Islam"
+msgstr "الإسلام"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_function
+msgid "Job Position"
+msgstr "المناصب الوظيفية"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_password
+msgid "Keep empty if you don't want the user to be able to connect on the system."
+msgstr "تبقى فارغة إذا كنت لا تريد أن يكون المستخدم قادراً على الاتصال على النظام."
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_lang
+msgid "Language"
+msgstr "اللغة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch___last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department___last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch___last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum___last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line___last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization___last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level___last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester___last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject___last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line___last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_student___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Last Name"
+msgstr "الإسم الثالث"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Last Name (English)"
+msgstr "Last Name (English)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch_write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level_write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester_write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch_write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level_write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester_write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_last_name
+msgid "Last name"
+msgstr "الإسم الثالث"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_last_name_en
+msgid "Last name (English)"
+msgstr "الإسم الثالث (بالإنجليزية)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_login_date
+msgid "Latest connection"
+msgstr "آخر اتصال"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_level
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_level_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_level_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_level_id
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+#: model:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid "Level"
+msgstr "المستوى الدراسي"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_core_levels_list_action
+#: model:ir.ui.menu,name:uni_core.uni_core_levels_list_menu
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_level_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_level_view_tree
+msgid "Levels"
+msgstr "المستويات الدراسية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_login
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#. module: uni_core
+#: selection:uni.student,gender:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: uni_core
+#: selection:uni.student,martial_status:0
+msgid "Married"
+msgstr "متزوج"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_martial_status
+msgid "Martial Status"
+msgstr "الحاله الاجتماعيه"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_medical_data
+msgid "Medical Data"
+msgstr "البيانات الصحية والأنشطة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_image_medium
+msgid "Medium-sized image"
+msgstr "صورة متوسطة الحجم"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_image_medium
+msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Middle Name"
+msgstr "الإسم الثاني"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Middle Name (English)"
+msgstr "Middle Name (English)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_middle_name
+msgid "Middle name"
+msgstr "الإسم الثاني"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_middle_name_en
+msgid "Middle name (English)"
+msgstr "الإسم الثاني (بالإنجليزية)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: uni_core
+#: selection:uni.student,number_of_exam_seat:0
+msgid "More"
+msgstr "المزيد"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Mother info"
+msgstr "معلومات الوالده"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guardian_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_relative_name
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_department_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Name"
+msgstr "الاسم"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_name_en
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Name (English)"
+msgstr "الإسم (بالإنجليزية)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_national_id
+msgid "National ID"
+msgstr "الرقم الوطني"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_nationality_id
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: uni_core
+#: selection:uni.student,state:0
+msgid "New Student"
+msgstr "قبول جديد"
+
+#. module: uni_core
+#: selection:uni.student,is_father_live:0
+msgid "No"
+msgstr "لا"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_comment
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_number_of_brother
+msgid "Number non adult Brother"
+msgstr "عدد الاخوان القٌصر"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_companies_count
+msgid "Number of Companies"
+msgstr "عدد الشركات"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_number_of_exam_seat
+msgid "Number of Exam Seat"
+msgstr "عدد مرات الجلوس للامتحان"
+
+#. module: uni_core
+#: selection:uni.student,number_of_exam_seat:0
+msgid "One"
+msgstr "مره واحده"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_opt_out
+msgid "Opt-Out"
+msgstr "إلغاء الإشتراك"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level_order
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester_order
+msgid "Order"
+msgstr "الترتيب"
+
+#. module: uni_core
+#: selection:uni.student,religion:0
+msgid "Other"
+msgstr "اخرى"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Others"
+msgstr "اخرى"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_parent_left
+msgid "Parent Left"
+msgstr "الأصل الأيسر"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_parent_right
+msgid "Parent Right"
+msgstr "الأصل الايمن"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_parent_id
+msgid "Parent Specialization"
+msgstr "التخصص الأساسي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_parent_name
+msgid "Parent name"
+msgstr "الاسم الاساسى "
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_partner_id
+msgid "Partner-related data of the user"
+msgstr "Partner-related data of the user"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_password
+msgid "Password"
+msgstr "كلمة المرور"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Personal"
+msgstr "البيانات الشخصية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guardian_phone
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_phone
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_relative_phone
+msgid "Phone"
+msgstr "هاتف"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_place_of_birth
+msgid "Place of Birth"
+msgstr "مكان الميلاد"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_alias_contact
+msgid "Policy to post a message on the document using the mailgateway.\n"
+"- everyone: everyone can post\n"
+"- partners: only authenticated partners\n"
+"- followers: only followers of the related document or members of following channels\n"
+""
+msgstr "Policy to post a message on the document using the mailgateway.\n"
+"- everyone: everyone can post\n"
+"- partners: only authenticated partners\n"
+"- followers: only followers of the related document or members of following channels\n"
+""
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_notify_email
+msgid "Policy to receive emails for new messages pushed to your personal Inbox:\n"
+"- Never: no emails are sent\n"
+"- All Messages: for every notification you receive in your Inbox"
+msgstr "Policy to receive emails for new messages pushed to your personal Inbox:\n"
+"- Never: no emails are sent\n"
+"- All Messages: for every notification you receive in your Inbox"
+
+#. module: uni_core
+#: selection:uni.student,secondary_school_type:0
+msgid "Private"
+msgstr "خاص"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_curriculum
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch_curriculum_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_curriculum_id
+#: model:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid "Curriculum"
+msgstr "المنهج الدراسي"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_curriculum_line
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_curriculum_line_ids
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_lines_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_lines_view_tree
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_form
+msgid "Curriculum Details"
+msgstr "تفاصيل المنهج"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_curriculum_list_action
+#: model:ir.ui.menu,name:uni_core.uni_core_curriculum_menu
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_tree
+msgid "Curriculum"
+msgstr "المنهج"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_curriculum_lines_action
+#: model:ir.ui.menu,name:uni_core.uni_curriculum_lines_menu
+msgid "Curriculum Detail"
+msgstr "تفاصيل المنهج"
+
+#. module: uni_core
+#: selection:uni.student,secondary_school_type:0
+msgid "Public"
+msgstr "حكومي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_parent_id
+msgid "Related Company"
+msgstr "الشركة ذات العلاقة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_partner_id
+msgid "Related Partner"
+msgstr "الشريك المقترن"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Relative's Information"
+msgstr "بيانات اقرب الاقربين"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_religion
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_secondary_school
+msgid "Secondary School"
+msgstr "المدرسة الثانوية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_self
+msgid "Self"
+msgstr "Self"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_semester
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_semester_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_semester_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_semester_id
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+#: model:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid Term
+msgstr "الفصل الدراسي"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_core_semesters_list_action
+#: model:ir.ui.menu,name:uni_core.uni_core_semesters_menu
+#: model:ir.ui.view,arch_db:uni_core.uni_semester_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_semester_view_tree
+msgid "Terms"
+msgstr "الفصول الدراسية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_new_password
+msgid "Set Password"
+msgstr "تعيين كلمة المرور"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_partner_share
+msgid "Share Partner"
+msgstr "شارك الشريك"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_share
+msgid "Share User"
+msgstr "مشاركة المستخدم"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_signature
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_signup_type
+msgid "Signup Token Type"
+msgstr "نوع رمز التسجيل"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_signup_valid
+msgid "Signup Token is Valid"
+msgstr "رمز التسجيل صالح"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_signup_url
+msgid "Signup URL"
+msgstr "رابط التسجيل"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_signup_expiration
+msgid "Signup expiration"
+msgstr "انتهاء صلاحية التسجيل"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_signup_token
+msgid "Signup token"
+msgstr "رمز التسجيل"
+
+#. module: uni_core
+#: selection:uni.student,martial_status:0
+msgid "Single"
+msgstr "عازب"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_image_small
+msgid "Small-sized image"
+msgstr "صورة مصغرة"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_department_specialization
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_specialization_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_specialization_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_specialization_id
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_search
+#: model:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid "Specialization"
+msgstr "التخصص"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_department_specialization_action
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization_ids
+#: model:ir.ui.menu,name:uni_core.dept_spsdsd_location_menu_loc
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_department_specialization_form_view
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_department_specialization_tree_view
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_department_view_form
+msgid "Specializations"
+msgstr "التخصصات"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_new_password
+msgid "Specify a value only when creating a user or if you're changing the user's password, otherwise leave empty. After a change of password, the user has to login again."
+msgstr "Specify a value only when creating a user or if you're changing the user's password, otherwise leave empty. After a change of password, the user has to login again."
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_view_form
+msgid "State"
+msgstr "الولاية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_state
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_state_id
+msgid "State"
+msgstr "الحالة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_street
+msgid "Street"
+msgstr "الشارع"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_view_form
+msgid "Street..."
+msgstr "الشارع..."
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_street2
+msgid "Street2"
+msgstr "الشارع ٢"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_student
+#: model:ir.ui.view,arch_db:uni_core.uni_student_view_form
+#: selection:uni.student,state:0
+msgid "Student"
+msgstr "الطالب"
+
+#. module: uni_core
+#: code:addons/uni_core/models/student.py:294
+#, python-format
+msgid "Student age can't be less than 15 years"
+msgstr "عمر الطالب يجب أن لا يقل عن 15 عام"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_core_students_list_action
+#: model:ir.ui.menu,name:uni_core.uni_core_students_list_menu
+#: model:ir.ui.menu,name:uni_core.uni_core_students_view_menu
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_subject
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line_subject_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line_subject_id
+#: model:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid "Subject"
+msgstr "المقرر"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_subject_line
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_subject_line_ids
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_subject_line_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_subject_line_view_tree
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_subject_view_form
+msgid "Subject Details"
+msgstr "تفاصيل المقرر"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_subjects_list_action
+#: model:ir.ui.menu,name:uni_core.uni_core_subjects_menu
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_subject_view_form
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_subject_view_tree
+msgid "Subjects"
+msgstr "المقررات"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_vat
+msgid "TIN"
+msgstr "TIN"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_vat
+msgid "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+msgstr "رقم التعريف الضريبي. املأها إذا كانت الشركة خاضعة للضرائب. تستخدم من قبل بعض البيانات القانونية."
+
+#. module: uni_core
+#: code:addons/uni_core/models/batch.py:39
+#: code:addons/uni_core/models/subject.py:33
+#: sql_constraint:uni.faculty.department.batch:0
+#: sql_constraint:uni.faculty.subject:0
+#, python-format
+msgid "The code must be unique"
+msgstr "الكود يجب ان يتكرر"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_company_id
+msgid "The company this user is currently working for."
+msgstr "الشركة التي يعمل هذا المستخدم لصالحها حالياً."
+
+#. module: uni_core
+#: code:addons/uni_core/models/branch.py:31
+#: code:addons/uni_core/models/department.py:37
+#: code:addons/uni_core/models/level.py:35
+#: code:addons/uni_core/models/semester.py:31
+#: code:addons/uni_core/models/specialization.py:38
+#: sql_constraint:uni.faculty.department:0
+#: sql_constraint:uni.faculty.department.specialization:0
+#: sql_constraint:uni.faculty.level:0
+#: sql_constraint:uni.faculty.semester:0
+#, python-format
+msgid "The name must be unique"
+msgstr "الإسم يجب أن لا يتكرر"
+
+#. module: uni_core
+#: code:addons/uni_core/models/level.py:40
+#: code:addons/uni_core/models/semester.py:36
+#: sql_constraint:uni.faculty.level:0
+#: sql_constraint:uni.faculty.semester:0
+#, python-format
+msgid "The order must be unique"
+msgstr "الترتيب يجب أن لا يتكرر"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_tz
+msgid "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+msgstr "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+
+#. module: uni_core
+#: code:addons/uni_core/models/student.py:237
+#: sql_constraint:uni.student:0
+#, python-format
+msgid "The related user ID must be unique"
+msgstr "المستخدم المرتبط يجب أن لا يتكرر"
+
+#. module: uni_core
+#: code:addons/uni_core/models/subject.py:82
+#: sql_constraint:uni.faculty.subject.line:0
+#, python-format
+msgid "The subject details must be unique"
+msgstr "تفاصيل المقرر يجب أن لا تكرر"
+
+#. module: uni_core
+#: code:addons/uni_core/models/student.py:242
+#: sql_constraint:uni.student:0
+#, python-format
+msgid "The university ID must be unique"
+msgstr "الرقم الجامعي يجب أن لا يتكرر"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_image
+msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+msgstr "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_tz
+msgid "Timezone"
+msgstr "المنطقة الزمنية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_tz_offset
+msgid "Timezone offset"
+msgstr "Timezone offset"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_title
+msgid "Title"
+msgstr "اللقب"
+
+#. module: uni_core
+#: selection:uni.student,number_of_exam_seat:0
+msgid "Two"
+msgstr "مرتان"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_university_id
+msgid "University ID"
+msgstr "الرقم الجامعي"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_login
+msgid "Used to log into the system"
+msgstr "يستخدم لتسجيل الدخول إلى النظام"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_type
+msgid "Used to select automatically the right address according to the context in sales and purchases documents."
+msgstr "تستخدم للإختيار التلقائي العنوان الصحيح بناءاً علي سياق المستندات في المبيعات و المشتريات."
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_user_id
+msgid "User id"
+msgstr "معرف المستخدم"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_log_ids
+msgid "User log entries"
+msgstr "إدخالات سجل المستخدم"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_user_ids
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_website
+msgid "Website"
+msgstr "الموقع الإلكتروني"
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_student_website
+msgid "Website of Partner or Company"
+msgstr "Website of Partner or Company"
+
+#. module: uni_core
+#: selection:uni.student,martial_status:0
+msgid "Widow"
+msgstr "ارمل/ه"
+
+#. module: uni_core
+#: selection:uni.student,is_father_live:0
+msgid "Yes"
+msgstr "نعم"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_zip
+msgid "Zip"
+msgstr "الرمز البريدي"
+
+#. module: uni_core
+#: model:ir.ui.view,arch_db:uni_core.uni_faculty_view_form
+msgid "e.g. www.uofk.edu"
+msgstr "مثال: www.uofk.edu"
+
+#. module: uni_core
+#: model:uni.faculty.department.batch,name:uni_core.batch_3
+msgid "البرنامج الدراسي لعام 2016/2017"
+msgstr "البرنامج الدراسي لعام 2016/2017"
+
+#. module: uni_core
+#: model:uni.faculty.department.batch,name:uni_core.batch_2
+msgid "البرنامج الدراسي لعام 2017/2018"
+msgstr "البرنامج الدراسي لعام 2017/2018"
+
+#. module: uni_core
+#: model:uni.faculty.department.batch,name:uni_core.batch_1
+msgid "البرنامج الدراسي لعام 2018/2019"
+msgstr "البرنامج الدراسي لعام 2018/2019"

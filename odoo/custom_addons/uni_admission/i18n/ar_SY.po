@@ -1,0 +1,1916 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* uni_admission
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-30 17:32+0000\n"
+"PO-Revision-Date: 2018-06-30 17:32+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: uni_admission
+#: model:ir.ui.menu,name:uni_admission.admission_analysis_report_menu
+msgid " Admission Analysis"
+msgstr " تحليل القبول والتسجيل"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_year_view_form
+msgid "2018/2019"
+msgstr "2018/2019"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_info
+msgid "<i class=\"fa fa-home\" style=\"color:#2e6da4;\"/>\n"
+"									<strong> Faculty: </strong>"
+msgstr "<i class=\"fa fa-home\" style=\"color:#2e6da4;\"/>\n"
+"									<strong> الكليه: </strong>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_info
+msgid "<i class=\"fa fa-sitemap\" style=\"color:#2e6da4;\"/>\n"
+"									<strong> Department: </strong>"
+msgstr "<i class=\"fa fa-sitemap\" style=\"color:#2e6da4;\"/>\n"
+"									<strong> القسم: </strong>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_info
+msgid "<i class=\"fa fa-tag\" style=\"color:#2e6da4;\"/>\n"
+"									<strong> University ID: </strong>"
+msgstr "<i class=\"fa fa-tag\" style=\"color:#2e6da4;\"/>\n"
+"									<strong>  الرقم الجامعي: </strong>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_info
+msgid "<i class=\"fa fa-user\" style=\"color:#2e6da4;\"/>\n"
+"									<strong> Name: </strong>"
+msgstr "<i class=\"fa fa-user\" style=\"color:#2e6da4;\"/>\n"
+"									<strong> الاسم: </strong>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "<i>Notice : </i> Any field contain"
+msgstr "<i>تنبيه  : </i>اي حقل يحتوي علي "
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_photo
+msgid "<span class=\"hidden-xs\">Back</span>\n"
+"													<span class=\"visible-xs-inline\">Back</span>"
+msgstr "<span class=\"hidden-xs\">رجوع</span>\n"
+"											<span class=\"visible-xs-inline\">رجوع</span>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "<span class=\"hidden-xs\">Back</span>\n"
+"												<span class=\"visible-xs-inline\">Back</span>"
+msgstr "<span class=\"hidden-xs\">رجوع</span>\n"
+"											<span class=\"visible-xs-inline\">رجوع</span>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_photo
+msgid "<span class=\"hidden-xs\">Continue</span>\n"
+"													<span class=\"visible-xs-inline\">Continue</span>"
+msgstr "<span class=\"hidden-xs\">التالي</span>\n"
+"											<span class=\"visible-xs-inline\">التالي</span>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "<span class=\"hidden-xs\">Continue</span>\n"
+"												<span class=\"visible-xs-inline\">Continue</span>"
+msgstr "<span class=\"hidden-xs\">التالي</span>\n"
+"											<span class=\"visible-xs-inline\">التالي</span>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "<span class=\"hidden-xs\">Continue</span>\n"
+"										<span class=\"visible-xs-inline\">Continue</span>"
+msgstr "<span class=\"hidden-xs\">التالي</span>\n"
+"										<span class=\"visible-xs-inline\">التالي</span>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "<span style=\"font-size:5px;\">\n"
+"                                        Not\n"
+"                                        </span>"
+msgstr "<span style=\"font-size:5px;\">\n"
+"                                        غير مسجل\n"
+"                                        </span>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "<span style=\"font-size:5px;\">\n"
+"                                        Registered\n"
+"\n"
+"                                        </span>"
+msgstr "<span style=\"font-size:5px;\">\n"
+"                                        مسجل\n"
+"\n"
+"                                        </span>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "<span>\n"
+"																<i>Notice :</i>																The maximum file size allowed is 8MB. Only accepts JPG, JPEG and PNG formats.\n"
+"\n"
+"\n"
+"															</span>"
+msgstr "<span>\n"
+"																<i>تنبيه :</i>\n"
+"																أقصى حجم مسموح به 8 ميغابايت. نسمح برفع الصور ذات الإمتداد JPG او JPEG او PNG فقط\n"
+"															</span>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "<span>\n"
+"															<i>Notice :</i>																The maximum file size allowed is 8MB. Only accepts JPG, JPEG and PNG formats.\n"
+"														</span>"
+msgstr "<span>\n"
+"																<i style=\"color:red;\">تنبيه :</i>\n"
+"																أقصى حجم مسموح به 8 ميغابايت. نسمح برفع الصور ذات الإمتداد JPG او JPEG او PNG فقط .\n"
+"															</span>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+#: model:ir.ui.view,arch_db:uni_admission.form_photo
+msgid "<strong>Oops,</strong> an error occurred while processing your request. Please try again!"
+msgstr "<strong>عفوا،</strong> حدث خطأ أثناء محاولة حفظ البيانات. يرجى إعادة المحاولة!"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "<u> Registration Statistics Report : </u>"
+msgstr "<u> احصائيات التسجيل </u>"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_uni_year
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_wizard_year_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_wizard_year_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_year_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_year_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_year_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_year_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_year_id
+#: model:ir.ui.view,arch_db:uni_admission.uni_year_view_tree
+msgid "Academic Year"
+msgstr "العام الدراسي"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.uni_year_action_form
+#: model:ir.ui.menu,name:uni_admission.menu_uni_year
+#: model:ir.ui.view,arch_db:uni_admission.uni_year_view_form
+msgid "Academic Years"
+msgstr "الأعوام الدراسية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_form
+msgid "Accept"
+msgstr "قبول الطالب"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_nationality_type_active
+#: model:ir.model.fields,field_description:uni_admission.field_uni_year_active
+msgid "Active"
+msgstr "نشط"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Address"
+msgstr "العنوان"
+
+#. module: uni_admission
+#: model:ir.ui.menu,name:uni_admission.uni_admission_admissions_menu
+#: model:ir.ui.menu,name:uni_admission.uni_admission_view_menu
+#: model:ir.ui.view,arch_db:uni_admission.header
+msgid "Admission"
+msgstr "القبول والتسجيل"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.action_uni_admission_analysis
+#: model:ir.ui.view,arch_db:uni_admission.view_admission_pivote
+#: model:ir.ui.view,arch_db:uni_admission.view_uni_admission_graph
+msgid "Admission Analysis"
+msgstr "تحليل القبول والتسجيل"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.student_category_action_form
+#: model:ir.ui.menu,name:uni_admission.menu_admission_category
+#: model:ir.ui.view,arch_db:uni_admission.student_category_view_form
+#: model:ir.ui.view,arch_db:uni_admission.student_category_view_tree
+msgid "Admission Categories"
+msgstr "فئات القبول"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_uni_student_category
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_admission_category_id
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_wizard_admission_category_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_category_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_admission_category_ids
+msgid "Admission Category"
+msgstr "فئة القبول"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_form
+msgid "Admission Details"
+msgstr "تفاصيل القبول"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_info
+msgid "Admission Information"
+msgstr "بيانات القبول"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_form
+msgid "Admission Request"
+msgstr "طلب تسجيل"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.uni_admission_action
+#: model:ir.ui.menu,name:uni_admission.admission_request_menu
+msgid "Admission Requests"
+msgstr "طلبات التسجيل"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.action_admission_statistical_wizard
+#: model:ir.actions.report.xml,name:uni_admission.action_admission_statistical_report
+#: model:ir.ui.view,arch_db:uni_admission.admission_statistical_detailed_wizard_form
+#: model:ir.ui.view,arch_db:uni_admission.admission_statistical_wizard_view_form
+msgid "Admission Statistical"
+msgstr "إحصائيات التسجيل للمستوى الاول"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.action_admission_statistical_detailed_wizard
+#: model:ir.actions.report.xml,name:uni_admission.action_admission_statistical_detailed_report
+msgid "Admission Statistical Detailed"
+msgstr "تفصيلي إحصائيات القبول والتسجيل"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_admission_type
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_wizard_admission_type
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_wizard_admission_type
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_admission_type
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_admission_type
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_admission_type
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_admission_type
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_admission_type
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_admission_type
+msgid "Admission Type"
+msgstr "نوع القبول"
+
+#. module: uni_admission
+#: model:ir.ui.menu,name:uni_admission.menu_admission_statistical_wizard
+msgid "Admission and Registration Statistics"
+msgstr "إحصائيات القبول والتسجيل"
+
+#. module: uni_admission
+#: model:ir.ui.menu,name:uni_admission.menu_admission_statistical_detailed_wizard
+msgid "Admission and Registration Statistics Detailed"
+msgstr "تفصيلي إحصائيات القبول والتسجيل"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_admission_date
+msgid "Admission date"
+msgstr "تاريخ القبول"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_admission_type
+msgid "Admission type"
+msgstr "نوع القبول"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_done
+msgid "Admission | Done"
+msgstr "التسجيل | نجاح"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Admission | Family Background"
+msgstr "التسجيل | بيانات العائلة"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "Admission | Guidelines"
+msgstr "التسجيل | الإرشادات"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Admission | Medical Background"
+msgstr "القبول | البيانات الصحية والأنشطة"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Admission | Personal Information"
+msgstr "التسجيل | البيانات الشخصية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_photo
+msgid "Admission | Photo"
+msgstr "التسجيل | الصورة الشخصية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_success
+msgid "Admission | Success"
+msgstr "التسجيل | النجاح"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "After the student complete from filling form he go to the medical unit and do the medical test"
+msgstr "بعد إنتهاء الطالب من مرحله ملء الاستماره الالكترونيه يتوجه مباشرة الي الوحدة الطبيه ليقوم بإجراءات الفحص الطبي"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "After the student fill all required data he upload his owen Photo and go to the next level"
+msgstr "بعد إنتهاء الطالب من ملء كل البيانات المطلوبه يقوم برفع صورته الشخصية ليتوجه للمرحله التاليه"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Alcohol"
+msgstr "الكحول"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_form
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_view_form
+msgid "Approve"
+msgstr "تصديق"
+
+#. module: uni_admission
+#: selection:uni.study_fees,state:0
+msgid "Approved"
+msgstr "مصدقة"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_form
+msgid "Are you sure you want to cancel student admission?"
+msgstr "هل انت متأكد من الغاء قبول هذا الطالب"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_basket_ball
+msgid "Basket Ball"
+msgstr "كرة سلة"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_batch_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_batch_id
+msgid "Batch"
+msgstr "الخطة الدراسية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Birth Date"
+msgstr "تاريخ الميلاد"
+
+#. module: uni_admission
+#: selection:admission.statistical.detailed.wizard,admission_type:0
+#: selection:uni_admission.general_report.wizard,admission_type:0
+msgid "Both"
+msgstr "الاثنين معا"
+
+#. module: uni_admission
+#: model:ir.filters,name:uni_admission.filter_admission_type
+#: model:ir.ui.view,arch_db:uni_admission.student_fees_search_view
+msgid "By Admission Type"
+msgstr "بنوع القبول"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_fees_search_view
+msgid "By Certificate Type"
+msgstr "بنوع الشهادة"
+
+#. module: uni_admission
+#: model:ir.filters,name:uni_admission.filter_admission_department
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_search_view
+msgid "By Department"
+msgstr "بالقسم"
+
+#. module: uni_admission
+#: model:ir.filters,name:uni_admission.filter_adminission_faculity
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_search_view
+msgid "By Faculty"
+msgstr "بالكلية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_fees_search_view
+msgid "By Year"
+msgstr "بالسنة الدراسية"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,state:0
+#: model:ir.ui.view,arch_db:uni_admission.admission_statistical_detailed_wizard_form
+#: model:ir.ui.view,arch_db:uni_admission.admission_statistical_wizard_view_form
+#: model:ir.ui.view,arch_db:uni_admission.collage_share_wizard_view_form
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_wizard_view_form
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_general_report_wizard_view_form
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_registration_statistics_wizard_form
+#: selection:uni.admission,state:0
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_uni_nationality_type
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_wizard_nationality_type_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_nationality_type_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_nationality_type_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_nationality_type_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_nationality_type_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_nationality_type_id
+#: model:ir.ui.view,arch_db:uni_admission.nationality_type_view_form
+#: model:ir.ui.view,arch_db:uni_admission.nationality_type_view_tree
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_search
+msgid "Certificate Type"
+msgstr "نوع الشهادة"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.nationality_type_action_form
+#: model:ir.ui.menu,name:uni_admission.menu_nationality_type
+msgid "Certificate Types"
+msgstr "أنواع الشهادات"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_nationality_type_id
+msgid "Certificate type"
+msgstr "نوع الشهادة"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "City"
+msgstr "المدينة"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,help:uni_admission.student_migration_action
+msgid "Click on import button to import new students."
+msgstr "قم بالضغط على زر الإستيراد لإدخال طلاب جدد"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,help:uni_admission.student_category_action_form
+msgid "Click to add new admission category"
+msgstr "قم بالضغط لإضافة فئة قبول جديدة"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,help:uni_admission.uni_study_fees_action_form
+msgid "Click to add new tuition fees"
+msgstr "قم بالضغط لإعداد رسوم دراسية جديدة"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,help:uni_admission.uni_year_action_form
+msgid "Click to create new academic year"
+msgstr "قم بالضغط لإضافة سنة دراسية جديدة"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,help:uni_admission.nationality_type_action_form
+msgid "Click to create new certificate type"
+msgstr "قم بالضغط لإضافة نوع شهادة جديد"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_form
+msgid "Clinic"
+msgstr "الوحدة الطبية"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_year_code
+msgid "Code"
+msgstr "الكود"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.general_report
+msgid "Collage"
+msgstr "الكلية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_view_form
+msgid "Collage Fees"
+msgstr "رسوم الكليات"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.action_collage_share_wizard
+#: model:ir.actions.report.xml,name:uni_admission.action_collage_share_report
+#: model:ir.ui.menu,name:uni_admission.menu_collage_share_wizard
+#: model:ir.ui.view,arch_db:uni_admission.collage_share_report
+#: model:ir.ui.view,arch_db:uni_admission.collage_share_wizard_view_form
+msgid "Collage Share"
+msgstr "أنصبة الكليات"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_committee_notes
+msgid "Committee's Notes"
+msgstr "ملاحظات لجنة المعاينة بالكليات"
+
+#. module: uni_admission
+#: model:ir.ui.menu,name:uni_admission.menu_configuration_view
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_wizard_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_collage_share_wizard_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_wizard_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_registration_statistics_wizard_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_nationality_type_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_create_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_year_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_wizard_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_collage_share_wizard_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_wizard_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_registration_statistics_wizard_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_nationality_type_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_create_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_year_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_student_form_view
+msgid "Cultural activities"
+msgstr "الأنشطة الإجتماعية"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_nationality_type_currency_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_department_id
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_department_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_department_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_department_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_department_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_department_id
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_search
+msgid "Department"
+msgstr "القسم"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_uni_study_fees_departments
+msgid "Department Fees"
+msgstr "رسوم الأقسام"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_department_line_ids
+msgid "Department line ids"
+msgstr "رسوم الأقسام"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_department_ids
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_departments_view_form
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_departments_view_tree
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_view_form
+msgid "Departments Fees"
+msgstr "رسوم الأقسام"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Disability"
+msgstr "هل لديك إعاقة ؟"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_discount
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_discount
+msgid "Discount"
+msgstr "الخصم"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_discount_desc
+msgid "Discount Note"
+msgstr "ملاحظات الخصم"
+
+#. module: uni_admission
+#: code:addons/uni_admission/models/category.py:33
+#, python-format
+msgid "Discount can't be less than 0%"
+msgstr "لايمكن ان يكون الخصم أقل من 0%"
+
+#. module: uni_admission
+#: code:addons/uni_admission/models/category.py:30
+#, python-format
+msgid "Discount can't be more than 100%"
+msgstr "لايمكن أن يكون الخصم اكبر من 100%"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_wizard_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_collage_share_wizard_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_report_collage_share_report_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_admission_statistical_detailed_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_admission_statistical_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_general_report_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_registration_statistics_report_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_wizard_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_registration_statistics_wizard_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_nationality_type_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_display_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_year_display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,state:0
+#: model:ir.ui.view,arch_db:uni_admission.form_success
+#: selection:uni.admission,state:0
+msgid "Done"
+msgstr "النهاية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_wizard
+msgid "Done\n"
+"					<span class=\"custom_navbar\"/>"
+msgstr "النهايه\n"
+"					<span class=\"custom_navbar\"/>"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,state:0
+#: selection:uni.admission,state:0
+#: selection:uni.study_fees,state:0
+msgid "Draft"
+msgstr "مبدئية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Drugs"
+msgstr "مخدرات"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Drugs and Alcohol"
+msgstr "التبغ والمخدرات والكحول"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "Faculti"
+msgstr "الكلية"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_faculty_id
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_faculty_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_faculty_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_faculty_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_faculty_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_faculty_ids
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_faculty_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_faculty_id
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_search
+msgid "Faculty"
+msgstr "الكلية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_form
+msgid "Faculty Committee"
+msgstr "لجنة المعاينة بالكلية"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_uni_study_fees_line
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_line_view_form
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_line_view_tree
+msgid "Faculty Fees"
+msgstr "رسوم الكليات"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_wizard
+msgid "Family\n"
+"							<span class=\"custom_navbar\"/>"
+msgstr "بيانات العائله\n"
+"							<span class=\"custom_navbar\"/>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_wizard
+msgid "Family\n"
+"						<span class=\"custom_navbar\"/>"
+msgstr "بيانات العائله\n"
+"						<span class=\"custom_navbar\"/>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Family Background"
+msgstr "بيانات العائلة"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Father is life ?"
+msgstr "هل الوالد على قيد الحياة ؟"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_student_form_view
+msgid "Fees"
+msgstr "الرسوم الدراسية"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_fees_line_ids
+msgid "Fees line ids"
+msgstr "رسوم الكليات"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "First"
+msgstr "أولاً"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_first_name
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_view_form
+msgid "First Name"
+msgstr "الإسم الاول"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "First Name EN"
+msgstr "First Name EN"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_foot_ball
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Foot Ball"
+msgstr "كرة قدم"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "Forth"
+msgstr "رابعاً"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Forth Name EN"
+msgstr "Forth Name EN"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_fourth_name
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_view_form
+msgid "Fourth Name"
+msgstr "الإسم الرابع"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_collage_share_wizard_start
+msgid "From"
+msgstr "مِن"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Gender"
+msgstr "النوع"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category_general_discount
+msgid "General Discount"
+msgstr "تخفيض القبول العام"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.action_uni_admission_general_report_wizard
+#: model:ir.actions.report.xml,name:uni_admission.action_general_report
+#: model:ir.ui.menu,name:uni_admission.menu_uni_admission_general_report_wizard
+#: model:ir.ui.view,arch_db:uni_admission.general_report
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_general_report_wizard_view_form
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_registration_statistics_wizard_form
+msgid "General Report"
+msgstr "التقرير العام"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_fees_search_view
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_search_view
+msgid "Group By..."
+msgstr "تجميع حسب ..."
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Guardian Address"
+msgstr "عنوان ولي الامر"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Guardian Education Level"
+msgstr "مستوي تعليم ولي الامر"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Guardian Job"
+msgstr "وظيفه ولي الامر "
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Guardian Name"
+msgstr "اسم ولي الامر "
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Guardian Nationality ID"
+msgstr "الرقم الوطني لولي الامر"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Guardian Phone"
+msgstr "هاتف ولى الأمر"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Guardian's Information"
+msgstr "بيانات ولي الأمر"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Health Information"
+msgstr "المعلومات الطبيه"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_photo
+msgid "I certify the validity of this data, I also undertake to abide by the laws of the country, the law of the university, the rules and regulations relating to conduct, the general appearance, and the housing regulations and regulations of the National Student Fund"
+msgstr "اقر بصحة هذه البيانات ، كما اتعهد بالإلتزام بقوانين البلاد، وقانون الجامعة ، والنظم واللوائح المتعلقة بالسلوك والمظهر العام ونظم وضوابط السكن بالداخليات الصادرة من الصندوق القومى لرعاية الطلاب ."
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_id
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_id
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_wizard_id
+#: model:ir.model.fields,field_description:uni_admission.field_collage_share_wizard_id
+#: model:ir.model.fields,field_description:uni_admission.field_report_collage_share_report_id
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_admission_statistical_detailed_id
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_admission_statistical_id
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_general_report_id
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_registration_statistics_report_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_wizard_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_registration_statistics_wizard_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_nationality_type_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category_id_2671
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_year_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Impaired hearing"
+msgstr "إعاقة سمعية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Impaired mobility"
+msgstr "إعاقة حركية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "In School"
+msgstr "في المدرسه"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "In University"
+msgstr "في الجامعه"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category_include_registration_fees
+msgid "Include Registration Fees"
+msgstr "متضمنة رسوم التسجيل"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "Infomatin like adress,city  phone number and parent infromation,Student must be sure and fill the  correct information"
+msgstr "معلومات مثل : العنوان ,رقم الهاتف, معلومات ولي الأمر ,علي الطالب التأكيد جيدا من صحة المعلومات المدخلة"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_is_installment
+msgid "Installment"
+msgstr "تقسيط"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_wizard___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_collage_share_wizard___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_report_collage_share_report___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_admission_statistical___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_admission_statistical_detailed___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_general_report___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_report_uni_admission_registration_statistics_report___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_wizard___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_registration_statistics_wizard___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_uni_nationality_type___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line___last_update
+#: model:ir.model.fields,field_description:uni_admission.field_uni_year___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_last_name
+msgid "Last Name"
+msgstr "الإسم الثالث"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_wizard_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_collage_share_wizard_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_wizard_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_registration_statistics_wizard_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_nationality_type_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_write_uid
+#: model:ir.model.fields,field_description:uni_admission.field_uni_year_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_wizard_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_collage_share_wizard_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_wizard_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_registration_statistics_wizard_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_nationality_type_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_write_date
+#: model:ir.model.fields,field_description:uni_admission.field_uni_year_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_level_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_level_id
+msgid "Level"
+msgstr "المستوى"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "Level Four"
+msgstr "المستوى الرابع"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "Level Two"
+msgstr "المستوى الثاني"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_level_ids
+msgid "Levels"
+msgstr "المستويات"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Matrial Status"
+msgstr "الحاله الاجتماعيه"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_wizard
+msgid "Medical\n"
+"							<span class=\"custom_navbar\"/>"
+msgstr "البيانات الصحية والأنشطة\n"
+"							<span class=\"custom_navbar\"/>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_wizard
+msgid "Medical\n"
+"						<span class=\"custom_navbar\"/>"
+msgstr "البيانات الصحية والأنشطة\n"
+"						<span class=\"custom_navbar\"/>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Medical Background"
+msgstr "البيانات الصحية والأنشطة"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_medical_data
+msgid "Medical Data"
+msgstr "البيانات الصحية والأنشطة"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_medical_condition
+msgid "Medical condition"
+msgstr "الحالة الطبية"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,medical_condition:0
+#: selection:uni.admission,medical_condition:0
+msgid "Medically fit"
+msgstr "لائق طبيا"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,medical_condition:0
+#: selection:uni.admission,medical_condition:0
+msgid "Medically unfit"
+msgstr "غير لائق طبيا"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Memorizing holly quran"
+msgstr "حفظ القران الكريم"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_middle_name
+msgid "Middle Name"
+msgstr "الإسم الثاني"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_wizard_view_form
+msgid "Migrate"
+msgstr "إدخال"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.action_student_migration_wizard
+msgid "Migrate Students"
+msgstr "ادخال الطلاب"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Mother Education Level"
+msgstr "مستوي تعليم الام"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Mother Job"
+msgstr "وظيفه الام"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Mother Name"
+msgstr "اسم الام"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_nationality_type_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category_name
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_name
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Name"
+msgstr "الاسم"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Name (in English)"
+msgstr "الإسم (بالإنجليزية)"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "National ID"
+msgstr "الرقم الوطني"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Non Adult Brother"
+msgstr "عدد الاخوه القصر"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "None"
+msgstr "غير معاق"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "Not"
+msgstr "غير مسجل"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Number of exam Seat"
+msgstr "مرات الجلوس  للامتحان"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Number of non adult brother"
+msgstr "عدد الاخوه القصر"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_wizard_view_form
+msgid "Once you click on \"Migrate\" new student records will be created for the selected records"
+msgstr "سيتم إنشاء حقول طلاب جديد لكل من الحقول المختارة عند الضغط على (ادخال)"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_other_cultural
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_other_sport
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Other"
+msgstr "أخري"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_paid
+msgid "Paid ?"
+msgstr "مدفوعة"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_payment_date
+msgid "Payment Date"
+msgstr "تاريخ الدفع"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_voucher
+msgid "Payment Reference"
+msgstr "رقم الإيصال"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_wizard
+msgid "Personal\n"
+"							<span class=\"custom_navbar\"/>"
+msgstr "البيانات الشخصيه\n"
+"							<span class=\"custom_navbar\"/>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_wizard
+msgid "Personal\n"
+"						<span class=\"custom_navbar\"/>"
+msgstr "البيانات الشخصيه\n"
+"						<span class=\"custom_navbar\"/>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Personal Information"
+msgstr "المعلومات الشخصية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_photo
+msgid "Personal Photo"
+msgstr "الصورة الشخصية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Phone"
+msgstr "هاتف"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Phone"
+msgstr "هاتف ولى الأمر"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_wizard
+msgid "Photo\n"
+"							<span class=\"custom_navbar\"/>"
+msgstr "الصوره الشخصيه\n"
+"							<span class=\"custom_navbar\"/>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_wizard
+msgid "Photo\n"
+"						<span class=\"custom_navbar\"/>"
+msgstr "الصورة الشخصية\n"
+"						<span class=\"custom_navbar\"/>"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Place of Birth"
+msgstr "مكان الميلاد"
+
+#. module: uni_admission
+#: code:addons/uni_admission/models/fees.py:66
+#, python-format
+msgid "Please add faculty and/or department fees!"
+msgstr "رجاء أطلب من العمادة إعداد الرسوم الدراسية لهذه الكلية"
+
+#. module: uni_admission
+#: code:addons/uni_admission/models/admission.py:219
+#, python-format
+msgid "Please configure the faculty tuition fees for this academic year!"
+msgstr "فضلا قم بإعداد رسوم الكلية الدراسية للعام الدراسي المختار!"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_poetry
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Poetry"
+msgstr "شعر"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.admission_statistical_detailed_wizard_form
+#: model:ir.ui.view,arch_db:uni_admission.admission_statistical_wizard_view_form
+#: model:ir.ui.view,arch_db:uni_admission.collage_share_wizard_view_form
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_general_report_wizard_view_form
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_registration_statistics_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,admission_type:0
+#: selection:admission.statistical.detailed.wizard,admission_type:0
+#: selection:admission.statistical.wizard,admission_type:0
+#: selection:student.migration.wizard,admission_type:0
+#: selection:uni.student,admission_type:0
+#: selection:uni.study_fees,admission_type:0
+#: selection:uni_admission.general_report.wizard,admission_type:0
+msgid "Private"
+msgstr "خاص"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,admission_type:0
+#: selection:admission.statistical.detailed.wizard,admission_type:0
+#: selection:admission.statistical.wizard,admission_type:0
+#: selection:student.migration.wizard,admission_type:0
+#: selection:uni.student,admission_type:0
+#: selection:uni.study_fees,admission_type:0
+#: selection:uni_admission.general_report.wizard,admission_type:0
+msgid "Public"
+msgstr "عام"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_form
+msgid "Refuse"
+msgstr "رفض الطالب"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.general_report
+msgid "Registerd"
+msgstr "مسجل"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.general_report
+msgid "Registerd Percentage"
+msgstr "نسبة المسجلين"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "Registered"
+msgstr "مسجل"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_registration_fees
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_registration_fees
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_registration_fees
+msgid "Registration Fees"
+msgstr "رسوم التسجيل"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.action_uni_admission_registration_statistics_wizard
+#: model:ir.ui.menu,name:uni_admission.menu_uni_admission_registration_statistics_wizard
+msgid "Registration Statistics"
+msgstr "إحصائيات التسجيل"
+
+#. module: uni_admission
+#: model:ir.actions.report.xml,name:uni_admission.action_registration_statistics_report
+msgid "Registration Statistics Report"
+msgstr "إحصائيات التسجيل"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Relative Phone"
+msgstr "هاتف اقرب الأقربين"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Relative's Information"
+msgstr "بيانات اقرب الاقربين"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: uni_admission
+#: model:ir.ui.menu,name:uni_admission.menu_uni_admission_reports
+#: model:ir.ui.menu,name:uni_admission.menu_uni_core_reports
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_view_form
+msgid "Rest To Draft"
+msgstr "إعادة الى مبدئية"
+
+#. module: uni_admission
+#: code:addons/uni_admission/models/admission.py:370
+#, python-format
+msgid "Reversal not allowed at this time ,, please contact system administrator"
+msgstr "لايمكن عكس عملية التسجيل .. الرجاء الاتصال بمدير النظام"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_search
+msgid "Search Admission"
+msgstr "بحث القبول"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "Secend"
+msgstr "ثانياً"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_view_form
+msgid "Second Name"
+msgstr "الإسم الثاني"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Second Name EN"
+msgstr "Second Name EN"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_secondary_school
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Secondary School"
+msgstr "المدرسة الثانوية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Secondary School Type"
+msgstr "النوع"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_semester_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_semester_id
+msgid "Term"
+msgstr "الفصل الدراسي"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Singing"
+msgstr "غناء"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_category_view_form
+msgid "Sons of workers"
+msgstr "ابناء العاملين"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_category_special_discount
+msgid "Special Discount"
+msgstr "تخفيض القبول الخاص"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_specialization_id
+#: model:ir.model.fields,field_description:uni_admission.field_admission_statistical_detailed_wizard_specialization_id
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_specialization_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_general_report_wizard_specialization_ids
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_specialization_id
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_search
+msgid "Specialization"
+msgstr "التخصص"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_student_form_view
+msgid "Sports activities"
+msgstr "الأنشطة الرياضية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_student_form_view
+msgid "Sports and cultural activities"
+msgstr "الأنشطة الرياضية والثقافية"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_stage
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Stage"
+msgstr "مسرح"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "Start"
+msgstr "بدء"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_state
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_state
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_state
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_state
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_state
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_search
+msgid "State"
+msgstr "الحالة"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "State"
+msgstr "الولاية"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_uni_student
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_student_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_student_id
+msgid "Student"
+msgstr "الطالب"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_student_fees
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_fees_ids
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_fees_ids
+#: model:ir.ui.view,arch_db:uni_admission.student_fees_view_form
+#: model:ir.ui.view,arch_db:uni_admission.student_fees_view_tree
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_form
+msgid "Student Fees"
+msgstr "رسوم الطالب"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_fees_search_view
+msgid "Student Fees Search"
+msgstr "بحث رسوم الطالب"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_student_migration
+#: model:ir.ui.view,arch_db:uni_admission.Student_migration_view_tree
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_view_form
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_wizard_view_form
+msgid "Student Migration"
+msgstr "إدخال الطلاب"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_search_view
+msgid "Student Migration Search"
+msgstr "بحث إدخال الطلاب"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_student_migration_wizard
+msgid "Student Migration Wizard"
+msgstr "نافذة إدخال الطلاب"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.student_migration_action
+#: model:ir.ui.menu,name:uni_admission.menu_student_migration
+#: model:ir.ui.menu,name:uni_admission.menu_student_migration_view
+msgid "Students Migration"
+msgstr "إدخال الطلاب"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_sub_total
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_amount_sub_total
+msgid "Sub Total"
+msgstr "المجموع الجزئى"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.uni_admission_view_form
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_view_form
+msgid "Submit"
+msgstr "طلب"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.nationality_type_view_form
+msgid "Sudanese certificate"
+msgstr "شهادة سودانية"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_swimming
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Swimming"
+msgstr "سباحة"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_success
+msgid "Thank you! All done."
+msgstr "نشكرك، تم ملئ الإستمارة بنجاح"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "That mean its Mandatory field"
+msgstr "هو حقل مطلوب"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "The Simpsons"
+msgstr "التبغ"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "The Student Fill his own  Basic information in Website"
+msgstr "يقوم الطالب بملء بياناته الاساسيه علي الموقع الالكتروني للتقديم"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "The Third step in admission is the intervie with college commite"
+msgstr "الخطوه الثالثه من عمليه القبول هي المعانيه مع لجنه الكليه"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "The User Guide Line"
+msgstr "الإرشادات العامة لعملية القبول والتسجيل"
+
+#. module: uni_admission
+#: code:addons/uni_admission/models/year.py:20
+#: sql_constraint:uni.year:0
+#, python-format
+msgid "The code must be unique"
+msgstr "الكود يجب ان يتكرر"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_medical_condition
+msgid "The doctor's decision"
+msgstr "قرار الطبيب"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "The last step is payment"
+msgstr "اخر مرحله هي مرحله دفه الرسوم"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_photo
+msgid "The maximum file size allowed is 8MB. Only accepts JPG, JPEG and PNG formats."
+msgstr "أقصى حجم مسموح به 8 ميغابايت. نسمح برفع الصور ذات الإمتداد JPG او JPEG او PNG فقط"
+
+#. module: uni_admission
+#: code:addons/uni_admission/models/category.py:21
+#: code:addons/uni_admission/models/nationality_type.py:26
+#: sql_constraint:uni.nationality.type:0
+#: sql_constraint:uni.student_category:0
+#, python-format
+msgid "The name must be unique"
+msgstr "الإسم يجب أن لا يتكرر"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "The student do short intervie with his college commite to get some advise and information"
+msgstr "يقوم الطالب بعمل معيانه قصيره مع لجنه الكليه لاعطائه المعلومات الكافيه والنصائح المهمه"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "Third"
+msgstr "ثالثاً"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "Third Level"
+msgstr "المستوى الثالث"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.student_migration_view_form
+msgid "Third Name"
+msgstr "الإسم الثالث"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Third Name EN"
+msgstr "Third Name EN"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_collage_share_wizard_end
+msgid "To"
+msgstr "إلى"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_amount_total
+#: model:ir.ui.view,arch_db:uni_admission.general_report
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "Total"
+msgstr "الإجمالي "
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "Total Student"
+msgstr "العدد الكلي"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.general_report
+msgid "Total Student's"
+msgstr "العدد الكلي"
+
+#. module: uni_admission
+#: model:ir.actions.act_window,name:uni_admission.uni_study_fees_action_form
+#: model:ir.model.fields,field_description:uni_admission.field_student_fees_study_fees
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_study_fees
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_study_fees
+#: model:ir.ui.menu,name:uni_admission.menu_uni_study_fees
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_view_form
+#: model:ir.ui.view,arch_db:uni_admission.uni_study_fees_view_tree
+msgid "Tuition Fees"
+msgstr "الرسوم الدراسية"
+
+#. module: uni_admission
+#: model:ir.actions.report.xml,name:uni_admission.action_tution_fees_report
+#: model:ir.model,name:uni_admission.model_uni_study_fees
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_departments_fees_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_study_fees_line_fees_id
+msgid "Tuition fees"
+msgstr "الرسوم الدراسية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.general_report
+msgid "Un Registerd"
+msgstr "لم يسجل"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.general_report
+msgid "Un registerd Percentage"
+msgstr "نسبة غير المسجلين"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_student_migration_university_id
+#: model:ir.model.fields,field_description:uni_admission.field_uni_admission_university_id
+msgid "University ID"
+msgstr "الرقم الجامعي"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "Upload National ID Image"
+msgstr "صوره الرقم الوطني"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "Upload Nationality ID Image"
+msgstr "صوره الرقم الوطني"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_photo
+msgid "Upload new photo"
+msgstr "رفع صورة جديدة"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "Visual impairment"
+msgstr "إعاقة بصرية"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_volley_ball
+msgid "Volley Ball"
+msgstr "كرة طائرة"
+
+#. module: uni_admission
+#: selection:uni.admission,medical_condition:0
+msgid "Waiting another operation"
+msgstr "في إنتظار إجراء/عملية اخرى"
+
+#. module: uni_admission
+#: selection:uni.study_fees,state:0
+msgid "Waiting for approval"
+msgstr "في إنتظار التصديق"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,state:0
+#: selection:uni.admission,state:0
+msgid "Waiting for filling out the form"
+msgstr "في إنتظار ملء الإستمارة"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,state:0
+#: selection:uni.admission,state:0
+msgid "Waiting for medical examination"
+msgstr "في إنتظار الفحص الطبي"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,state:0
+#: selection:uni.admission,state:0
+msgid "Waiting for payment"
+msgstr "في إنتظار دفع الرسوم"
+
+#. module: uni_admission
+#: selection:admission.report.analysis,state:0
+#: selection:uni.admission,state:0
+msgid "Waiting for the faculty committee"
+msgstr "في إنتظار لجنة المعاينة بالكلية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "With Special Needs"
+msgstr "ذو احتياجات خاصه ؟"
+
+#. module: uni_admission
+#: code:addons/uni_admission/models/admission.py:123
+#: sql_constraint:uni.admission:0
+#, python-format
+msgid "You can not have two admission requests for the same student"
+msgstr "لايمكنك إنشاء أكثر من طلب تسجيل لنفس الطالب"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_done
+msgid "You've already submitted all necessary information, thank you!"
+msgstr "لقد قمت بملئ الإستمارة مسبقا، نشكرك!"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_photo
+msgid "Your profile photo"
+msgstr "الصورة الشخصية"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_admission_report_analysis
+msgid "admission.report.analysis"
+msgstr "تحليل القبول والتسجيل"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_admission_statistical_detailed_wizard
+msgid "admission.statistical.detailed.wizard"
+msgstr "admission.statistical.detailed.wizard"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_admission_statistical_wizard
+msgid "admission.statistical.wizard"
+msgstr "إحصائيات القبول والتسجيل"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "alcohol"
+msgstr "الكحول"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "basket Ball"
+msgstr "كرة سلة"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "cigarettes"
+msgstr "السجائر"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_collage_share_wizard
+msgid "collage.share.wizard"
+msgstr "أنصبة الكليات"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "cultural activities"
+msgstr "الأنشطة الثقافية"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+#: model:ir.ui.view,arch_db:uni_admission.form_family
+msgid "e.g. +249 xx axx xxxx"
+msgstr "مثال: xxx xx xxx xxxx"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "e.g. Omdurman"
+msgstr "مثال: ام درمان"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form
+msgid "e.g. email@example.com"
+msgstr "مثال: email@example.com"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "inhalation"
+msgstr "إستنشاق"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "injection"
+msgstr "حقن"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "level Five"
+msgstr "المستوى الخامس"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "level Six"
+msgstr "المستوى السادس"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.registration_statistics_report
+msgid "level one"
+msgstr "المستوى الاول"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_memorizing_holly_quran
+msgid "memorizing the holly Quran"
+msgstr "حفظ القران الكريم"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "pills"
+msgstr "حبوب"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_report_collage_share
+msgid "report.collage_share"
+msgstr "تقرير أنصبة الكليات"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_report_collage_share_report
+msgid "report.collage_share.report"
+msgstr "تقرير انصبة الكليات"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_report_uni_admission_admission_statistical
+msgid "report.uni_admission.admission_statistical"
+msgstr "report.uni_admission.admission_statistical"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_report_uni_admission_admission_statistical_detailed
+msgid "report.uni_admission.admission_statistical_detailed"
+msgstr "report.uni_admission.admission_statistical_detailed"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_report_uni_admission_general_report
+msgid "report.uni_admission.general_report"
+msgstr "report.uni_admission.general_report"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_report_uni_admission_registration_statistics_report
+msgid "report.uni_admission.registration_statistics_report"
+msgstr "report.uni_admission.registration_statistics_report"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "rise of"
+msgstr "التمباك"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_singing
+msgid "singing"
+msgstr "غناء"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_student_id
+msgid "student"
+msgstr "الطالب"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "table Tennis"
+msgstr "تنس طاولة"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_uni_student_table_tennis
+msgid "table tennis"
+msgstr "تنس طاولة"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.index
+msgid "the student pay the study fees in fisal bank by any payment method"
+msgstr " يقوم الطالب بدفع الرسوم المقرره عليه في بنك فيصل الاسلامي عن طريق كل قنوات الدفع المتاحة من قبل بنك فيصل مثل الموبايل المصرفي ، كاشير البنك ، التحويل من حساب"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_uni_admission
+msgid "uni.admission"
+msgstr "القبول والتسجيل"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_uni_admission_general_report_wizard
+msgid "uni_admission.general_report.wizard"
+msgstr "uni_admission.general_report.wizard"
+
+#. module: uni_admission
+#: model:ir.model,name:uni_admission.model_uni_admission_registration_statistics_wizard
+msgid "uni_admission.registration_statistics.wizard"
+msgstr "uni_admission.registration_statistics.wizard"
+
+#. module: uni_admission
+#: model:ir.ui.view,arch_db:uni_admission.form_medical
+msgid "volley Ball"
+msgstr "كرة طائرة"
+
+#. module: uni_admission
+#: model:ir.model.fields,field_description:uni_admission.field_admission_report_analysis_year_id
+msgid "year"
+msgstr "السنة"

@@ -1,0 +1,23 @@
+
+.In_the_name_of_of_Allah{
+	font-family: KacstFarsi;
+}
+.page-header,.page ,.header,.page-header,body{
+	font-family:KacstOffice;
+}
+.header{
+	border-bottom: 5px solid;
+	width:100% !important;
+}
+.UOFK-table-header{
+	background-color:#191c21;
+	border: 1px solid  #FFFAFA
+}
+.UOFK-table-header > *{
+	color : #FFFAFA;
+	
+}
+.table-bordered {
+	border-color: black;
+}
+

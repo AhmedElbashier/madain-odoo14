@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<template id="report_substitution_template">
+		<t t-call="web.html_container">
+			<t t-call="web.internal_layout">
+				<div>
+					<table class="table table-bordered">
+						<tbody>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+									</td>
+								<td  style="border: 1px solid black;">
+									<span> النمرة</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold;">التاريخ</span>
+								</td>	
+							</tr>
+						</tbody>
+					</table>
+					<br/><br/>
+					<div style="text-align: right">
+						<center><span style="font-weidght: bold; margin-right:55px; text-align: right; font-size:20px;"><u> إفادة</u></span></center> 
+					</div>
+					<div style="text-align: right">
+						<span> : بهذا نشهد انا الطالب/ ـة  </span>
+						<span t-esc="o.student_id.name" ></span><span>  وفقا للبيانات الموضحه ادناه  .1</span>
+						<br/><br/>
+					</div>
+					<div class="center-block">
+					<table class="table table-bordered">
+						<tbody>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+									<span t-esc="o.university_id"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold; " >:الرقم الجامعي</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+									<span t-esc="o.program_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold; " >:البرنامج</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+									<span t-esc="o.batch_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold; " >:الدفعة</span>
+								</td>
+							</tr>
+
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+									<span t-esc="o.level_id.name"></span>
+								</td>
+								<td  style="border: 1px solid black;">
+									<span style="font-weidght: bold; " >:المستوى</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+									<span t-esc="o.semester_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold; " >:الفصل الدراسي</span>
+								</td>
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+									<span t-esc="o.academic_year_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold; " >:للعام الدراسي</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+					<br/><br/><br/><br/>
+					<div style="text-align: right">
+						<span> تقدمت المذكور\ة بطلب تجميد الدراسي بتاريخ </span><span t-esc="o.request_date"></span>
+					</div>
+					<div style="text-align: right">
+						<span>تم قبول الطلب بتاريخ </span><span></span><span> و عليه \ـها استئناف الدراسة بحلول: الفصل الدراسي </span><span>للعام الدراسي </span>
+					</div>
+					<div style="text-align: right">
+						<span>حررت هذه الشهادة بناءا علي طلبه\ـا </span><span></span>
+					</div>
+					<div style="text-align: right">
+						<span> وجزاكم الله خيرا </span><span></span>
+					</div>
+					<br/><br/>
+					<br/><br/>
+					<div style="text-align: right">
+						<span style="font-weidght: bold;margin-right:550px ; font-size:23px;">د. خالد عوض عشميق</span> 
+					</div>
+					<div style="text-align: right">
+						<span style="font-weidght: bold;margin-right:550px"> مسجل الكلية</span> 
+					</div>
+		</div>
+		</t>
+		</t>
+	</template>
+
+
+	<template id="report_substitution_form_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="uni_services.report_substitution_template"/>
+			</t>
+		</t>
+	</template>
+</odoo>

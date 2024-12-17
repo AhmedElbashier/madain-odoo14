@@ -1,0 +1,105 @@
+<odoo>
+	<data>
+		<!-- uni.faculty.curriculum -->
+		<record id="uni_faculty_curriculum_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.curriculum.form</field>
+			<field name="model">uni.faculty.curriculum</field>
+			<field name="arch" type="xml">
+				<form string="Curriculum">
+					<header>
+						<field name="state" widget="statusbar" statusbar_visible="draft,approved,closed"/>
+						<button name="action_approve" string="Approve" type="object" class="oe_highlight" states="draft" />
+						<button name="action_close" string="Close" type="object" class="oe_highlight" states="approved" />
+						<button name="rest_draft" string="Rest To Draft" type="object" class="oe_highlight" states="closed" />
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h1>
+						</div>
+						<group>
+							<field name="code" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="program_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="batch_id" attrs="{'invisible':[('template_curriculum','!=',False)],'readonly':[('state','!=','draft')]}"/>
+							<field name="active" widget="boolean_toggle"/>
+							<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company" invisible="1"/>
+							<field name="template_curriculum" invisible="1"/>
+						</group>
+						<!-- <button type="object" name="generate" string="Generate Curriculum Details" class="btn-primary"/> -->
+						<notebook>
+							<page string="Curriculum Subjects">
+								<field name="curriculum_subjets_line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree editable="top">
+										<field name="level_id" options="{'no_create': True}"/>
+										<field name="semester_id" options="{'no_create': True}"/>
+										<field name="term_semester_id"/>
+										<field name="subject_ids" options="{'no_create': True}" widget="many2many_tags"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Curriculum Subjects Details">
+								<field name="curriculum_line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree>
+										<field name="faculty_id" invisible="1" options="{'no_create': True}"/>
+										<field name="level_id" options="{'no_create': True}"/>
+										<field name="semester_id" options="{'no_create': True}"/>
+										<field name="term_semester_id"/>
+										<field name="specialization_id" options="{'no_create': True}"/>
+										<field name="subject_id" options="{'no_create': True}"/>
+										<!-- <field name="credit_hours"/> -->
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<!-- uni.faculty.curriculum tree view -->
+		<record id="uni_faculty_curriculum_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.curriculum.view.tree</field>
+			<field name="model">uni.faculty.curriculum</field>
+			<field name="arch" type="xml">
+				<tree string="Curriculum" decoration-muted="(not active)">
+					<field name="name"/>
+					<field name="code"/>
+					<field name="active" widget="boolean_toggle"/>
+					<field name="faculty_id" groups="base.group_multi_company" invisible="1"/>
+					<field name="department_id" invisible="1"/>
+				</tree>
+			</field>
+		</record>
+		<record id="view_uni_curriculum_search" model="ir.ui.view">
+            <field name="name">uni.faculty.curriculum</field>
+            <field name="model">uni.faculty.curriculum</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            	<search string="Curriculums">
+            		<field name="name"/>
+            		<field name="code"/>
+					<field name="program_id" select="True"/>
+					<filter string="Program" name="groupby_programe" domain="[]" context="{'group_by':'program_id'}"/>
+            	</search>
+            </field>
+        </record>
+		<!-- uni.faculty.curriculum action -->
+		<record id="uni_faculty_curriculum_list_action" model="ir.actions.act_window">
+			<field name="name">Curriculum</field>
+			<field name="res_model">uni.faculty.curriculum</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('template_curriculum','=',True)]</field>
+			<field name="context">{'active_test': False , 'template_curriculum':True}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new curriculum</p>
+			</field>
+		</record>
+		<!-- Curriculum left menu -->
+		<menuitem id="uni_core_curriculum_menu" name="Curriculum" parent="curriculum_management_menu" action="uni_faculty_curriculum_list_action" sequence="3"/>
+	</data>
+</odoo>

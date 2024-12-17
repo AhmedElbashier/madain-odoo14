@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<odoo>
+	<data noupdate='0'>
+		<!-- faculty services -->
+		<record id="ir_seq_service_type_registration" model="ir.sequence">
+			<field name="name">Service Type registration</field>
+			<field name="code">service.type.registration</field>
+			<field name="prefix">SVR-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<record id="ir_seq_service_type_admission" model="ir.sequence">
+			<field name="name">Service Type admission</field>
+			<field name="code">service.type.admission</field>
+			<field name="prefix">SVA-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<record id="ir_seq_admission_service" model="ir.sequence">
+			<field name="name">admission.services</field>
+			<field name="code">admission.services</field>
+			<field name="prefix">ASR-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<record id="ir_seq_service_request" model="ir.sequence">
+			<field name="name">Service request seq</field>
+			<field name="code">service.request.seq</field>
+			<field name="prefix">SSR-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<!-- entry permission -->
+		<record id="permission_sequence_entry" model="ir.sequence">
+			<field name="name">entry.permission</field>
+			<field name="code">entry.permission</field>
+			<field name="prefix">EN-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<!-- substitution permission -->
+		<record id="substitution_sequence" model="ir.sequence">
+			<field name="name">substitution</field>
+			<field name="code">substitution</field>
+			<field name="prefix">SUBS-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<!-- fail permission -->
+		<record id="fail_sequence" model="ir.sequence">
+			<field name="name">fail</field>
+			<field name="code">fail</field>
+			<field name="prefix">FAIL-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<record id="permission_sequence_ornaic" model="ir.sequence">
+			<field name="name">Ornaic seq</field>
+			<field name="code">medical_ornaic</field>
+			<field name="prefix">MO-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<record id="permission_sequence_travel" model="ir.sequence">
+			<field name="name">Travel seq</field>
+			<field name="code">travel_perm</field>
+			<field name="prefix">TRV-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<record id="late_registration_sequence" model="ir.sequence">
+			<field name="name">Late Reg</field>
+			<field name="code">uni.late.registration</field>
+			<field name="prefix">LR-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<!-- resignation service -->
+		<record id="ir_seq_resignation" model="ir.sequence">
+			<field name="name">student.resignation</field>
+			<field name="code">student.resignation</field>
+			<field name="prefix">RESIGN-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<!-- frozen service -->
+		<record id="ir_seq_frozen" model="ir.sequence">
+			<field name="name">student.frozen</field>
+			<field name="code">student.frozen</field>
+			<field name="prefix">SUS-</field>
+			<field name="padding">3</field>
+		</record>
+
+		<!-- recorrection service -->
+		<record id="ir_seq_recorrection" model="ir.sequence">
+			<field name="name">student.recorrection</field>
+			<field name="code">student.recorrection</field>
+			<field name="prefix">RECOR-</field>
+			<field name="padding">3</field>
+		</record>
+		
+	</data>
+</odoo>

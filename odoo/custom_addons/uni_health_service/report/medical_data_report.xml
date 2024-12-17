@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <report id="medical_data_report" 
+            model="uni.health_service.medical_data" 
+            string="medical data report" 
+            report_type="qweb-pdf" 
+            name="uni_health_service.medical_data_report_template" 
+            file="uni_health_service.medical_data_report_template"/>
+    </data>
+</odoo>

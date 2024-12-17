@@ -1,0 +1,650 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* uni_health_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-25 08:03+0000\n"
+"PO-Revision-Date: 2018-06-25 08:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Abdomen"
+msgstr "البطن"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_abdomen_gen
+msgid "Abdomen General"
+msgstr "البطن"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_alcohol
+msgid "Alcohol"
+msgstr "الكحول"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_b_p
+msgid "B.P"
+msgstr "B.P"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_blood
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Blood"
+msgstr "الدم"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_casts
+msgid "Casts"
+msgstr "Casts"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_cervical_lym_nodes
+msgid "Cervical lymph nodes"
+msgstr "العقد الليمفاوية العنقية"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_chest_gen
+msgid "Chest General"
+msgstr "الصدر بصفه عامه"
+
+#. module: uni_health_service
+#: model:ir.actions.act_window,help:uni_health_service.action_health_service_medical_data
+msgid "Click to Create New Medical Data."
+msgstr "اضغط لانشاء بيانت طبيه جديده"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_color_vision
+msgid "Color Vision"
+msgstr "رؤيه الالوان"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Comment"
+msgstr "تعليق"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_concetration
+msgid "Concetration"
+msgstr "التركيز"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_constitution
+msgid "Constitution"
+msgstr "Constitution"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_cranial_nerves
+msgid "Cranial nerves"
+msgstr "الأعصاب الدماغية"
+
+#. module: uni_health_service
+#: model:ir.actions.act_window,help:uni_health_service.action_health_service_disease
+msgid "Create new disease"
+msgstr "انشاء مرض جديد"
+
+#. module: uni_health_service
+#: model:ir.actions.act_window,help:uni_health_service.uni_health_service_list_action
+msgid "Create new record"
+msgstr "إنشاء سجل جديد"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_surgery_create_uid
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_disease_create_uid
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_create_uid
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_surgery_create_date
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_disease_create_date
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_create_date
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_surgery_Date
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_decayed
+msgid "Decayed"
+msgstr "فاسد"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_disease_description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: uni_health_service
+#: model:ir.model,name:uni_health_service.model_uni_health_service_disease
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_disease_tree
+msgid "Disease"
+msgstr "المرض"
+
+#. module: uni_health_service
+#: model:ir.actions.act_window,name:uni_health_service.action_health_service_disease
+#: model:ir.ui.menu,name:uni_health_service.disease_menu_root
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_disease_form
+msgid "Diseases"
+msgstr "الامراض"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_surgery_display_name
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_disease_display_name
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_display_name
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_doctor_id
+msgid "Doctor"
+msgstr "الطبيب"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_doctor_notes
+msgid "Doctors Notes"
+msgstr "ملاحظات الاطباء"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_ears
+msgid "Ears"
+msgstr "اﻵذان"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_disease_endemic
+msgid "Endemic"
+msgstr "مُزمن"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_ex_comment
+msgid "Examination Comment"
+msgstr "التعليق علي الامتحان"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Eyes"
+msgstr "العيون"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_eyes_gen
+msgid "Eyes General"
+msgstr "العيون بصفه عامه"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_faculty_id
+msgid "Faculty"
+msgstr "الكلية"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_family_disease_ids
+msgid "Family disease's"
+msgstr "امرض في العائله"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Family diseases"
+msgstr "امراض في العائله"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_filled
+msgid "Filled"
+msgstr "محشو"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_fluid
+msgid "Fluid"
+msgstr "مائع"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "G.N.S"
+msgstr "G.N.S"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_general_appearance
+msgid "General appearance"
+msgstr "المظهر العام"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_genitalia
+msgid "Genitalia"
+msgstr "الأعضاء التناسلية"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_hb
+msgid "HB"
+msgstr "HB"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Habits"
+msgstr "العادات"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_tree
+msgid "Health Medical Data"
+msgstr "البيانات الطبيه"
+
+#. module: uni_health_service
+#: model:ir.ui.menu,name:uni_health_service.uni_health_service_root_menu
+#: model:ir.ui.menu,name:uni_health_service.uni_health_service_view_menu
+msgid "Health Service"
+msgstr "الخدمة الطبية"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_heart
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Heart"
+msgstr "القلب"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_height
+msgid "Height"
+msgstr "الطول"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_hernia
+msgid "Hernia"
+msgstr "الفتاق"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_surgery_id
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_disease_id
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_id
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_impaired_hearing
+msgid "Impaired hearing"
+msgstr "إعاقة سمعية"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_impaired_mobility
+msgid "Impaired mobility"
+msgstr "إعاقة حركية"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_inhalation
+msgid "Inhalation"
+msgstr "إستنشاق"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_injection
+msgid "Injection"
+msgstr "حقن"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_intelligence
+msgid "Intelligence"
+msgstr "الذكاء"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Investigation"
+msgstr "التحقيقات"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_surgery___last_update
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_disease___last_update
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data___last_update
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_surgery_write_uid
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_disease_write_uid
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_write_uid
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_surgery_write_date
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_disease_write_date
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_write_date
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_liver
+msgid "Liver"
+msgstr "الكبد"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_lower_limbs
+msgid "Lower Limbs"
+msgstr "الأطراف السفلية"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_lungs
+msgid "Lungs"
+msgstr "الرئتين"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_mantoux_test
+msgid "Mantoux Test"
+msgstr "Mantoux Test"
+
+#. module: uni_health_service
+#: model:ir.actions.act_window,name:uni_health_service.action_health_service_medical_data
+#: model:ir.ui.menu,name:uni_health_service.medical_data_menu
+msgid "Medical Data"
+msgstr "البيانات الطبيه"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.medical_record_view_form
+msgid "Medical Information"
+msgstr "المعلومات الطبية"
+
+#. module: uni_health_service
+#: model:ir.model,name:uni_health_service.model_uni_health_service_medical_record
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_student_medical_record
+#: model:ir.ui.view,arch_db:uni_health_service.medical_record_view_form
+msgid "Medical Record"
+msgstr "السجل الطبي"
+
+#. module: uni_health_service
+#: model:ir.actions.act_window,name:uni_health_service.uni_health_service_list_action
+#: model:ir.ui.menu,name:uni_health_service.uni_health_service_list_menu
+msgid "Medical Records"
+msgstr "السجلات الطبية"
+
+#. module: uni_health_service
+#: model:ir.model,name:uni_health_service.model_uni_health_service_medical_data
+msgid "Medical data"
+msgstr "البيانات الطبيه"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Medical history"
+msgstr "أمراض اصيب بها في الماضي"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_missing
+msgid "Missing"
+msgstr "مفقود"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_motor_sys
+msgid "Motor System"
+msgstr "Motor System"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_mouth
+msgid "Mouth"
+msgstr "الفم"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_mucus
+msgid "Mucus"
+msgstr "مخاط"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_surgery_name
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_disease_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_near_vision
+msgid "Near Vision"
+msgstr "الرؤيه عن قرب"
+
+#. module: uni_health_service
+#: selection:uni.health_service.medical_data,with_special_needs:0
+msgid "No"
+msgstr "لا"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_no_impaired
+msgid "None"
+msgstr "لاتوجد إعاقة"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_optical_disablity
+msgid "Optical disablity"
+msgstr "إعاقة بصرية"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_other_abnoramality
+msgid "Other Abnoramality"
+msgstr "شذوز اخر"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_other_investigation
+msgid "Other Investigation"
+msgstr "تحقيقات اخري"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_other_masses
+msgid "Other Masses"
+msgstr "Other Masses"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_ova
+msgid "Ova"
+msgstr "Ova"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_parasites
+msgid "Parasites"
+msgstr "طفيليات"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_past_disease_ids
+msgid "Past History disease's"
+msgstr "امراض اصيب بها في الماضي"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_pharmacist_id
+msgid "Pharmacist"
+msgstr "الصيدلي"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_pills
+msgid "Pills"
+msgstr "حبوب"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_previous_operations
+msgid "Previous operation"
+msgstr "عمليات جراحيه سابقه"
+
+#. module: uni_health_service
+#: selection:uni.health_service.medical_data,type_of_school:0
+msgid "Private"
+msgstr "Private"
+
+#. module: uni_health_service
+#: selection:uni.health_service.medical_data,type_of_school:0
+msgid "Public"
+msgstr "عام"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_pulse
+msgid "Pulse"
+msgstr "النبض"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_pus_cell
+msgid "Pus cells"
+msgstr "خلايا الصديد"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Pysical examination"
+msgstr "الفحص البدني"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_b_rbc
+msgid "R.B.C"
+msgstr "R.B.C"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_rbc
+msgid "R.B.c"
+msgstr "R.B.c"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_Reaction
+msgid "Reaction"
+msgstr "رد الفعل"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_reflex
+msgid "Reflexes"
+msgstr "ردود الفعل"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_sp_gravity
+msgid "S.P Gravity"
+msgstr "S.P Gravity"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_type_of_school
+msgid "School Type"
+msgstr "School Type"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_sclap
+msgid "Sclap"
+msgstr "فروه الرأس"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_sensor_sys
+msgid "Sensory System"
+msgstr "نظام الحواس"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_skin
+msgid "Skin"
+msgstr "الجلد"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_speech
+msgid "Speech"
+msgstr "التخاطب"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_spleen
+msgid "Spleen"
+msgstr "الطحال"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_stol_gen_reaction
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Stool general Reaction"
+msgstr "البراز بصفه عامه"
+
+#. module: uni_health_service
+#: model:ir.model,name:uni_health_service.model_uni_student
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_student_id
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_student_id
+msgid "Student"
+msgstr "الطالب"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_teeth
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Teeth"
+msgstr "الاسنان"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_tongue
+msgid "Tongue"
+msgstr "اللسان"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_blood_total
+msgid "Total"
+msgstr "الإجمالي "
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_trechea
+msgid "Trachea"
+msgstr "القصبه الهوائيه"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_record_treatment
+msgid "Treatment"
+msgstr "العلاج"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_upper_limbs
+msgid "Upper Limbs"
+msgstr "الاطراف العليا"
+
+#. module: uni_health_service
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "Urine general"
+msgstr "البول بصفه عامه"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_vision
+msgid "Vision"
+msgstr "الرؤيه"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_wbc
+msgid "W.B.C"
+msgstr "W.B.C"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_weight
+msgid "Weight "
+msgstr "الوزن "
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_with_glass
+msgid "With Glass"
+msgstr "بالنظاره"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_without_glass
+msgid "Without Glass"
+msgstr "من غير النظاره"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_x_ray
+#: model:ir.ui.view,arch_db:uni_health_service.health_service_medical_data_form
+msgid "X-Ray"
+msgstr "X-Ray"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_cigarettes
+msgid "cigarettes"
+msgstr "السجائر"
+
+#. module: uni_health_service
+#: model:ir.model,name:uni_health_service.model_surgery
+msgid "medical operation"
+msgstr "عمليات طبيه(جراحيه)"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_rise_of
+msgid "rise Of"
+msgstr "التمباك"
+
+#. module: uni_health_service
+#: model:ir.model.fields,field_description:uni_health_service.field_uni_health_service_medical_data_with_special_needs
+msgid "with special needs"
+msgstr "احتياجات خاصه"

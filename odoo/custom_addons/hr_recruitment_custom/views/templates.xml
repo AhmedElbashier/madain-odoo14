@@ -1,0 +1,747 @@
+<odoo>
+    <data>
+<!--
+        <template id="listing">
+          <ul>
+            <li t-foreach="objects" t-as="object">
+              <a t-attf-href="#{ root }/objects/#{ object.id }">
+                <t t-esc="object.display_name"/>
+              </a>
+            </li>
+          </ul>
+        </template>
+        <template id="object">
+          <h1><t t-esc="object.display_name"/></h1>
+          <dl>
+            <t t-foreach="object._fields" t-as="field">
+              <dt><t t-esc="field"/></dt>
+              <dd><t t-esc="object[field]"/></dd>
+            </t>
+          </dl>
+        </template>
+-->
+
+      <template id="apply_custom" inherit_id="website_hr_recruitment.apply">
+        <xpath expr="//form" position="replace">
+          <form id="hr_recruitment_form" action="/website_form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="hr.applicant" data-success-mode="redirect" data-success-page="/job-thank-you" hide-change-model="true">
+              <div class="s_website_form_rows row s_col_no_bgcolor">
+                <div class="form-group col-12 s_website_form_field s_website_form_required s_website_form_model_required" data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment1">
+                      <span class="s_website_form_label_content">Your Name</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <input id="recruitment1" type="text" class="form-control s_website_form_input" name="partner_name" required=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="email" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment2">
+                      <span class="s_website_form_label_content">Your Email</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <input id="recruitment2" type="email" class="form-control s_website_form_input" name="email_from" required="" placeholder="your-name@example.com"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="selection" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="o2jqd1bk2tdn">
+                      <span class="s_website_form_label_content">Gender</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Gender" data-display="horizontal">
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o2jqd1bk2tdn0" name="gender" value="male" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o2jqd1bk2tdn0">
+                    Male
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o2jqd1bk2tdn1" name="gender" value="female" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o2jqd1bk2tdn1">
+                    Female
+                </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom   " data-type="selection" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="oq3lsridstug">
+                      <span class="s_website_form_label_content">Age</span>
+                    </label>
+                    <div class="col-sm">
+                      <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Age" data-display="horizontal">
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="oj1msnbkhowh0" name="age" value="18"/>
+                            <label class="form-check-label s_website_form_check_label" for="oj1msnbkhowh0">
+                    18-22
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="oj1msnbkhowh1" name="age" value="23"/>
+                            <label class="form-check-label s_website_form_check_label" for="oj1msnbkhowh1">
+                    23-27
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="oj1msnbkhowh2" name="age" value="28"/>
+                            <label class="form-check-label s_website_form_check_label" for="oj1msnbkhowh2">
+                    28-32
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="oj1msnbkhowh3" name="age" value="32"/>
+                            <label class="form-check-label s_website_form_check_label" for="oj1msnbkhowh3">
+                    More than 32
+                </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="tel" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="o15liih9fnfd">
+                      <span class="s_website_form_label_content">Phone Number 2</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="tel" class="form-control s_website_form_input" name="phone2" placeholder="+2499123" id="o15liih9fnfd" required=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12  s_website_form_required  " data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="o3stzdog0x9b">
+                      <span class="s_website_form_label_content">Phone Number</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="partner_phone" required="1" placeholder="+2499123" id="o3stzdog0x9b"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="many2one" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ofr0lco5pq7n">
+                      <span class="s_website_form_label_content">city</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <select class="form-control s_website_form_input" name="city" id="ofr0lco5pq7n" style="" required="">
+                        <option value="khartoum">Khartoum</option>
+                        <option value="bahri">Bahri</option>
+                        <option value="omdurman">Omdurman</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12  s_website_form_required  " data-type="text" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="o76zc1okfbna">
+                      <span class="s_website_form_label_content">Detailed Address</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <textarea class="form-control s_website_form_input" name="address" required="1" placeholder="" id="o76zc1okfbna" rows="2"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required  " data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="obqwj4dg9nz7">
+                      <span class="s_website_form_label_content">University</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="university" required="1" placeholder="" id="obqwj4dg9nz7"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom   " data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ofhpdw3nde8h">
+                      <span class="s_website_form_label_content">Neighborhood</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="neighborhood" placeholder="" id="ofhpdw3nde8h"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="oz96f04fj66">
+                      <span class="s_website_form_label_content">Street</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="street" placeholder="" id="oz96f04fj66" required=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="o4udjxdghgdj">
+                      <span class="s_website_form_label_content">College</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="college" id="o4udjxdghgdj" required=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ocjf7p75ckzq">
+                      <span class="s_website_form_label_content">Major Field</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="major_field" placeholder="" id="ocjf7p75ckzq" required=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="many2one" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ojwq5ujpft9j">
+                      <span class="s_website_form_label_content">Grade</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <select class="form-control s_website_form_input" name="grade" id="ojwq5ujpft9j" required="" style="">
+                        <option value="d">Acceptable / مقبول</option>
+                        <option value="c">Good / جيد</option>
+                        <option value="b">V. Good / جيد جدا</option>
+                        <option value="a">Exellent</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required  " data-type="many2one" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="oalnt1s3yrav">
+                      <span class="s_website_form_label_content">Experience Years</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <select class="form-control s_website_form_input" name="experience" required="1" id="oalnt1s3yrav" style="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="more">More than 5</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required  " data-type="many2one" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="o3lqv5mtg0g9">
+                      <span class="s_website_form_label_content">Degree</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <select class="form-control s_website_form_input" name="degree" required="1" id="o3lqv5mtg0g9" style="">
+                        <option value="primary">Primary / أساس</option>
+                        <option value="secondary">Secondary / ثانوي</option> 
+                        <option value="diploma">Diploma / دبلوم</option>
+                        <option value="bachler">Bachler's / بكالريوس </option>
+                        <option value="master">Master  / ماجستير</option>
+                        <option value="phd">PhD  / دكتوراة</option>
+                         <option value="none">None / لايوجد</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div t-if="job.job_title_ids" class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="many2one" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ox52qwumpai">
+                      <span class="s_website_form_label_content">Job</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <select  class="form-control s_website_form_input" name="job_title_id" id="ox52qwumpai" required="" style="">
+                        <option selected="selected" disabled="disabled">Please Select Option</option>
+                        <t t-foreach="job.job_title_ids" t-as="j">
+                          <option t-att-value="j.id"><t t-esc="j.name" /></option>
+                        </t>
+                        <!-- <option value="1">وظائف عمالية</option>
+                        <option value="2">موظف موارد بشرية</option>
+                        <option value="3">موظف قبول</option>
+                        <option value="4">موظف تسجيل</option>
+                        <option value="5">موظف سلامة و متابعة</option>
+                        <option value="6">موظف جودة</option>
+                        <option value="7">موظف احصاء وامتحانات</option>
+                        <option value="8">مهندس تقنية معلومات وكمبيوتر</option>
+                        <option value="9">مبرمج Odoo Developer</option>
+                        <option value="10">موظف مراجعة داخلية</option>
+                        <option value="11">موظف محاسبة</option>
+                        <option value="12">موظف شئون ادارية</option>
+                        <option value="13">موظف سكرتارية</option>
+                        <option value="14">موظف أمن وسلامة ( استقبال )</option>
+                        <option value="15">موظف أمن وسلامة ( حرس أمني )</option> -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div t-if="job.program_ids" class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="many2one" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ox52qwumpai2">
+                      <span class="s_website_form_label_content">Faculty</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <select  class="form-control s_website_form_input" name="program_id" id="ox52qwumpai2" required="" style="">
+                        <option selected="selected" disabled="disabled">Please Select Option</option>
+                        <t t-foreach="job.program_ids" t-as="p">
+                          <option t-att-value="p.id"><t t-esc="p.name" /></option>
+                        </t>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="selection" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="ot2nicy9pldr">
+                      <span class="s_website_form_label_content">English language level</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="English language level" data-display="horizontal">
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ot2nicy9pldr0" name="eng_level" value="nothing" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ot2nicy9pldr0">
+                    Nothing
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ot2nicy9pldr1" name="eng_level" value="begineer" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ot2nicy9pldr1">
+                    Begineer
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ot2nicy9pldr2" name="eng_level" value="intermediate" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ot2nicy9pldr2">
+                    Intermediate
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ot2nicy9pldr3" name="eng_level" value="professional" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ot2nicy9pldr3">
+                    Professional
+                </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="selection" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="of4n20vcvmts">
+                      <span class="s_website_form_label_content">Experience in dealing with computers and devices</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Experience in dealing with computers and devices" data-display="horizontal">
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="of4n20vcvmts0" name="computer_level" value="nothing" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="of4n20vcvmts0">
+                    Nothing
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="of4n20vcvmts1" name="computer_level" value="begineer" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="of4n20vcvmts1">
+                    Begineer
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="of4n20vcvmts2" name="computer_level" value="intermediate" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="of4n20vcvmts2">
+                    Intermediate
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="of4n20vcvmts3" name="computer_level" value="professional" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="of4n20vcvmts3">
+                    Professional
+                </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="selection" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="o2qhbvu7igvu">
+                      <span class="s_website_form_label_content">Experience working with Microsoft Office</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Experience working with Microsoft Office" data-display="horizontal">
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o2qhbvu7igvu0" name="microsoft_level" value="nothing" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o2qhbvu7igvu0">
+                    Nothing
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o2qhbvu7igvu1" name="microsoft_level" value="begineer" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o2qhbvu7igvu1">
+                    Begineer
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o2qhbvu7igvu2" name="microsoft_level" value="intermediate" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o2qhbvu7igvu2">
+                    Intermediate
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o2qhbvu7igvu3" name="microsoft_level" value="professional" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o2qhbvu7igvu3">
+                    Professional
+                </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="selection" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="o7edv0bljuoo">
+                      <span class="s_website_form_label_content">Experience working with PDF</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Experience working with PDF" data-display="horizontal">
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o7edv0bljuoo0" name="pdf_level" value="nothing" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o7edv0bljuoo0">
+                    Nothing
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o7edv0bljuoo1" name="pdf_level" value="begineer" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o7edv0bljuoo1">
+                    Begineer
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o7edv0bljuoo2" name="pdf_level" value="intermediate" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o7edv0bljuoo2">
+                    Intermediate
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o7edv0bljuoo3" name="pdf_level" value="professional" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o7edv0bljuoo3">
+                    Professional
+                </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="selection" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="ooxmu2ono6mf">
+                      <span class="s_website_form_label_content">excel_level</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="excel_level" data-display="horizontal">
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ooxmu2ono6mf0" name="excel_level" value="nothing" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ooxmu2ono6mf0">
+                    Nothing
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ooxmu2ono6mf1" name="excel_level" value="begineer" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ooxmu2ono6mf1">
+                    Begineer
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ooxmu2ono6mf2" name="excel_level" value="intermediate" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ooxmu2ono6mf2">
+                    Intermediate
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ooxmu2ono6mf3" name="excel_level" value="professional" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ooxmu2ono6mf3">
+                    Professional
+                </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="selection" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="oyudhhwmzvm">
+                      <span class="s_website_form_label_content">Experience working with Excel (Advanced)</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Experience working with Excel (Advanced)" data-display="horizontal">
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="oyudhhwmzvm0" name="excel_advance_level" value="nothing" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="oyudhhwmzvm0">
+                    Nothing
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="oyudhhwmzvm1" name="excel_advance_level" value="begineer" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="oyudhhwmzvm1">
+                    Begineer
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="oyudhhwmzvm2" name="excel_advance_level" value="intermediate" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="oyudhhwmzvm2">
+                    Intermediate
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="oyudhhwmzvm3" name="excel_advance_level" value="professional" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="oyudhhwmzvm3">
+                    Professional
+                </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="selection" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="ov90qdj207ea">
+                      <span class="s_website_form_label_content">Do you have experience working with e-learning platforms?</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Do you have experience working with e-learning platforms?" data-display="horizontal">
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ov90qdj207ea0" name="e_learn_level" value="nothing" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ov90qdj207ea0">
+                    Nothing
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ov90qdj207ea1" name="e_learn_level" value="begineer" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ov90qdj207ea1">
+                    Begineer
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ov90qdj207ea2" name="e_learn_level" value="intermediate" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ov90qdj207ea2">
+                    Intermediate
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="ov90qdj207ea3" name="e_learn_level" value="professional" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="ov90qdj207ea3">
+                    Professional
+                </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="selection" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="o9g5k31uvn6">
+                      <span class="s_website_form_label_content">Do you have experience dealing with email?</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Do you have experience dealing with email?" data-display="horizontal">
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o9g5k31uvn60" name="email_level" value="nothing" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o9g5k31uvn60">
+                    Nothing
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o9g5k31uvn61" name="email_level" value="begineer" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o9g5k31uvn61">
+                    Begineer
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o9g5k31uvn62" name="email_level" value="intermediate" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o9g5k31uvn62">
+                    Intermediate
+                </label>
+                          </div>
+                        </div>
+                        <div class="radio col-12 col-lg-4 col-md-6">
+                          <div class="form-check">
+                            <input type="radio" class="s_website_form_input form-check-input" id="o9g5k31uvn63" name="email_level" value="professional" required=""/>
+                            <label class="form-check-label s_website_form_check_label" for="o9g5k31uvn63">
+                    Professional
+                </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="binary" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="odgoytpddlu8">
+                      <span class="s_website_form_label_content">Resume</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="file" class="form-control-file s_website_form_input" name="Resume" id="odgoytpddlu8" required=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="binary" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="ogu5fjemad6i">
+                      <span class="s_website_form_label_content">Degree Certification</span>
+                      <span class="s_website_form_mark"> *</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="file" class="form-control-file s_website_form_input" name="Degree Certification" id="ogu5fjemad6i" required=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom   " data-type="binary" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="o03w37cy53q5l">
+                      <span class="s_website_form_label_content">Bachelor's degree details</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="file" class="form-control-file s_website_form_input" name="Bachelor's degree details" id="o03w37cy53q5l"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom   " data-type="binary" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="oewsnqah492s">
+                      <span class="s_website_form_label_content">Current degree certificate</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="file" class="form-control-file s_website_form_input" name="Current degree certificate" id="oewsnqah492s"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_dnone">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment6">
+                      <span class="s_website_form_label_content">Job</span>
+                    </label>
+                    <div class="col-sm">
+                      <input id="recruitment6" type="hidden" class="form-control s_website_form_input" name="job_id"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_dnone">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment7">
+                      <span class="s_website_form_label_content">Department</span>
+                    </label>
+                    <div class="col-sm">
+                      <input id="recruitment7" type="hidden" class="form-control s_website_form_input" name="department_id"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                  <div style="width: 200px;" class="s_website_form_label"/>
+                  <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>
+                  <span id="s_website_form_result"/>
+                </div>
+              </div>
+            </form>
+        </xpath>
+      </template>
+    </data>
+</odoo>

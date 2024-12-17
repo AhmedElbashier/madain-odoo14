@@ -1,0 +1,34 @@
+<odoo>
+	<data>
+		<!-- Inherit Form view -->
+		<record id="violation_student_form_view" model="ir.ui.view">
+			<field name="name">uni.student.form</field>
+			<field name="model">uni.student</field>
+			<field name="inherit_id" ref="uni_core.uni_student_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[@class='oe_button_box']" position="inside">
+					<button name="show_violations" type="object" class="oe_stat_button" icon="fa-file-text-o">
+						<field string="Violations" name="violations_count" widget="statinfo"/>
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- Below tree is to be displayed when clicking the smart button in (Student Form) -->
+		<record id="uni_violation_tree" model="ir.ui.view">
+		<field name="name">Uni Violation Tree</field>
+		<field name="model">student.violation</field>
+		<field name="arch" type="xml">
+			<tree string="Violations According To The Student">
+				<field name="violation_date"/>
+				<field name="violation_id"/>
+				<field name="punishment_id" width="0.5"/>
+				<field name="time" width="0.5"/>
+				<field name="state"/>
+				
+			</tree>
+		</field>
+	</record>
+	</data>
+</odoo>

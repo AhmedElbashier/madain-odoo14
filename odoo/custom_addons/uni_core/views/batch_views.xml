@@ -1,0 +1,83 @@
+<odoo>
+	<data>
+		<!-- Form view -->
+		<record id="uni_faculty_batch_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.batch.form</field>
+			<field name="model">uni.faculty.department.batch</field>
+			<field name="arch" type="xml">
+				<form string="Batch">
+					<header>
+						<field name="state" widget="statusbar" statusbar_visible="new,under_study,graduated"/>
+						<button name="action_study" string="Submit" type="object" states="new" />
+						<button name="rest_draft" string="Rest To New" type="object" states="under_study,graduated" />
+						<button name="action_graduate" string="Graduate" type="object" states="approve" />
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h1>
+						</div>
+						<group col="4">
+							<field name="code" readonly="1"/>
+							<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company" invisible="1" />
+						</group>
+						<group col="4">
+							<field name="program_id" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="curriculum_id" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+						<!-- </group>
+						<group col="4"> -->
+							<field name="level_id" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="semester_id" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="department_id" options="{'no_create': True}" invisible="1"/>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<!-- Tree view -->
+		<record id="uni_faculty_batch_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.batch.tree</field>
+			<field name="model">uni.faculty.department.batch</field>
+			<field name="arch" type="xml">
+				<tree string="Batch">
+					<field name="code"/>
+					<field name="name"/>
+					<field name="curriculum_id"/>
+					<field name="program_id"/>
+					<field name="state" invisible="1"/>
+				</tree>
+			</field>
+		</record>
+		<record id="view_uni_batch_search" model="ir.ui.view">
+            <field name="name">uni.faculty.department.batch</field>
+            <field name="model">uni.faculty.department.batch</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            	<search string="Batches">
+            		<field name="name"/>
+            		<field name="code"/>
+					<field name="program_id" select="True"/>
+					<filter string="Program" name="groupby_programe" domain="[]" context="{'group_by':'program_id'}"/>
+					<filter string="State" name="groupby_state" domain="[]" context="{'group_by':'state'}"/>
+            	</search>
+            </field>
+        </record>
+		<!-- Action -->
+		<record id="uni_faculty_batch_action" model="ir.actions.act_window">
+			<field name="name">Batch</field>
+			<field name="res_model">uni.faculty.department.batch</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new batch</p>
+			</field>
+		</record>
+		<!-- Menu -->
+		<menuitem id="uni_faculty_batch_menu" name="Batches" parent="faculty_management_menu" action="uni_faculty_batch_action"/>
+	</data>
+</odoo>

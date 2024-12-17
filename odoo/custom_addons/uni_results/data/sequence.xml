@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Scheduler for Recoorection Period-->
+        <record id="recorrection_period_scheduler" model="ir.cron">
+            <field name="name">Recoorection Period</field>
+            <field name="model_id" ref="model_uni_result_record"/>
+            <field name="state">code</field>
+            <field name="code">model.check_recorrection_period()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+        </record>
+    </data>
+</odoo>

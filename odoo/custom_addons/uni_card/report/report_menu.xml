@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="action_report_student_idcard" model="ir.actions.report">
+            <field name="name">Student ID Card</field>
+            <field name="model">uni.card</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">uni_card.report_student_idcard</field>
+            <field name="report_file">uni_card.report_student_idcard</field>
+            <field name="print_report_name">'Student ID Card - %s' % (object.student_id.name)</field>
+            <field name="binding_model_id" ref="uni_card.model_uni_card"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <!-- <record id="action_report_student_idcard2222" model="ir.actions.report">
+            <field name="name">Student Guids</field>
+            <field name="model">uni.student</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">uni_core.report_student_idcard2</field>
+            <field name="report_file">uni_core.report_student_idcard2</field>
+            <field name="print_report_name">'Student ID Card'</field>
+            <field name="binding_model_id" ref="uni_core.model_uni_student"/>
+            <field name="binding_type">report</field>
+        </record> -->
+
+    </data>
+</odoo>

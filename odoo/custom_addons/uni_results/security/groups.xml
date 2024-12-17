@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.module.category" id="uni_results_groups">
+			<field name="name">Result Users</field>
+			<field name="sequence">4</field>
+		</record>
+
+		<record id="program_council_group" model="res.groups">
+			<field name="name">Program Council User</field>
+			<field name="category_id" ref="uni_results.uni_results_groups"/>
+		</record>
+
+		<record id="scientific_council_group" model="res.groups">
+			<field name="name">Scientific Council User</field>
+			<field name="category_id" ref="uni_results.uni_results_groups"/>
+		</record>
+
+		<record id="recorrection_group" model="res.groups">
+			<field name="name">Recorrection User</field>
+			<field name="category_id" ref="uni_results.uni_results_groups"/>
+		</record>
+
+		<record id="subject_recommendations_rule_program_council_user" model="ir.rule">
+	        <field name="name">program.council.user</field>
+	        <field name="perm_write" eval="1"/>
+	        <field name="perm_read" eval="1"/>
+	        <field name="perm_create" eval="1"/>
+	        <field name="perm_unlink" eval="1"/>
+	        <field name="model_id" ref="uni_results.model_subject_recommendations_list"/>
+	        <field name="domain_force">['|',('recommenation_type','=',False),('recommenation_type', '=', 'program_council')]</field>
+	        <field name="groups" eval="[(4, ref('uni_results.program_council_group'))]"/>
+	    </record>
+	    <record id="student_recommendations_rule_program_council_user" model="ir.rule">
+	        <field name="name">program.council.user</field>
+	        <field name="perm_write" eval="1"/>
+	        <field name="perm_read" eval="1"/>
+	        <field name="perm_create" eval="1"/>
+	        <field name="perm_unlink" eval="1"/>
+	        <field name="model_id" ref="uni_results.model_student_recommendations_list"/>
+	        <field name="domain_force">['|',('recommenation_type','=',False),('recommenation_type', '=', 'program_council')]</field>
+	        <field name="groups" eval="[(4, ref('uni_results.program_council_group'))]"/>
+	    </record>
+
+	    <record id="subject_recommendations_rule_scientific_council_user" model="ir.rule">
+	        <field name="name">scientific.council.user</field>
+	        <field name="perm_write" eval="1"/>
+	        <field name="perm_read" eval="1"/>
+	        <field name="perm_create" eval="1"/>
+	        <field name="perm_unlink" eval="1"/>
+	        <field name="model_id" ref="uni_results.model_subject_recommendations_list"/>
+	        <field name="domain_force">['|',('recommenation_type','=',False),('recommenation_type', '=', 'scientific_council')]</field>
+	        <field name="groups" eval="[(4, ref('uni_results.scientific_council_group'))]"/>
+	    </record>
+	    <record id="student_recommendations_rule_scientific_council_user" model="ir.rule">
+	        <field name="name">scientific.council.user</field>
+	        <field name="perm_write" eval="1"/>
+	        <field name="perm_read" eval="1"/>
+	        <field name="perm_create" eval="1"/>
+	        <field name="perm_unlink" eval="1"/>
+	        <field name="model_id" ref="uni_results.model_student_recommendations_list"/>
+	        <field name="domain_force">['|',('recommenation_type','=',False),('recommenation_type', '=', 'scientific_council')]</field>
+	        <field name="groups" eval="[(4, ref('uni_results.scientific_council_group'))]"/>
+	    </record>
+
+	    <record id="student_recommendations_rule_recorrection_user" model="ir.rule">
+	        <field name="name">recorrection.user</field>
+	        <field name="perm_write" eval="1"/>
+	        <field name="perm_read" eval="1"/>
+	        <field name="perm_create" eval="1"/>
+	        <field name="perm_unlink" eval="1"/>
+	        <field name="model_id" ref="uni_results.model_student_recommendations_list"/>
+	        <field name="domain_force">['|',('recommenation_type','=',False),('recommenation_type', '=', 'recorrection')]</field>
+	        <field name="groups" eval="[(4, ref('uni_results.recorrection_group'))]"/>
+	    </record>
+	</data>
+</odoo>

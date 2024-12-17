@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- <template id="report_header_custom" inherit_id="report.external_layout_header">
+            <xpath expr="//div[@class='header']" position="replace">
+            	<div class="header row col-xs-12" >
+                      <center>
+                            <div class="In_the_name_of_of_Allah">
+                                <strong>
+                                 بسم الله الرحمن الرحيم
+                                </strong>
+                            </div>
+                        </center>
+            		<div class="col-xs-5 row"  >
+            			<img class="img img-responsive col-xs-3" 
+						src="/base_custom/static/src/description/logo.jpg"/>	
+					</div>
+                    <div class="col-xs-5 row pull-right ">
+                    	  <img class="img img-responsive col-xs-3 pull-right " t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" />
+                    </div>		
+				</div>
+            </xpath>
+    </template> -->
+
+    <!-- <template id="assets_common_custom" inherit_id="report.assets_common">
+       <xpath expr="." position="inside">
+            <link rel="stylesheet"
+            href="/base_custom/static/src/css/css_custom.css"/>
+            
+        </xpath>  
+    </template>
+     -->
+</odoo>

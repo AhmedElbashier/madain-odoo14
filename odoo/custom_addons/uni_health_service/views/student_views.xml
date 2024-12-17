@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+		<!-- Inherit Form view -->
+		<record id="uni_health_service_student_form_view" model="ir.ui.view">
+			<field name="name">uni.student.form</field>
+			<field name="model">uni.student</field>
+			<field name="inherit_id" ref="uni_core.uni_student_view_form"/>
+			<field name="arch" type="xml">
+				<!-- <xpath expr="//field[@name='secondary_school']" position="after">
+					<field name="medical_record" options="{'no_create': True}"></field>
+				</xpath> -->
+			</field>
+		</record>
+	</data>
+</odoo>

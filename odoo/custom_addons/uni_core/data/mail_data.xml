@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+    	<record id="email_template" model="mail.template">
+		    <field name="name">EMAIL TEMPLATE</field>
+		    <field name="model_id" ref="model_uni_faculty_activities"/>
+		    <field name="email_from">${(object.user_id.email}</field>
+		    <field name="email_to"><![CDATA[
+	                % if (object.employee_ids):
+	                  % for p_id in object.employee_ids:
+		                ${p_id.work_email}  
+		                % endfor
+	                % endif
+	                % if (object.student_ids):
+	                  % for s_id in object.student_ids:
+		                ${s_id.email}  
+		                % endfor
+	                % endif
+	                
+            ]]></field>
+		    <field name="subject">${object.name}</field>
+		    <field name="body_html"><![CDATA[
+		 <p>Good job, you've just created your first e-mail template!<br/></p>
+		      Regards,<br/> ]]></field>
+		</record>
+
+	</data>
+</odoo>

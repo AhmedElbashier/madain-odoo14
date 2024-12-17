@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_student_idcard">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <br/><br/>
+                            <div style="height: 450px; width: 285px; border: 1px solid black;background-image:url('/uni_core/static/description/card1.png'); background-size:auto 100%;background-repeat:no-repeat;">
+                                <br/><br/><br/>
+                                <br/>
+                                <div style="width: 100%;">
+                                    <div style="-webkit-transform:rotate(90deg);width:20%;height:100%;float:left;text-align:right;font-size: 5px;margin-top:80px">
+                                        <span t-esc="o.student_id.admission_rec.admission_year.name"/>
+                                    </div>
+
+                                    <div style="width:60%;height:100%;float:left;">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr><center>
+                                                    <img class="image" 
+                                                     t-att-src="'data:image/png;base64,%s' % to_text(o.student_id.std_img)"
+                                                     style="max-height:3.2cm; max-width:3.5cm; margin-left: 10px; margin-right: 10px; border: 1px solid #ccc;border-radius: 50%;margin-top:15px"/>
+                                                </center></tr>
+                                                <tr style="float:right; margin:10px 0;">
+                                                    <td></td>
+                                                </tr>
+                                                <tr style="font-size: 10px;" class="text-center">
+                                                    <td>
+                                                        <div>
+                                                            <span t-field='o.student_id.name'/>
+                                                            <br></br>
+                                        
+                                                            <span t-field='o.student_id.university_id'/>
+                                                            <br/>
+                                                            
+                                                            <span t-esc='o.student_id.program_id.name'/>
+                                                            <br/>
+                                                            
+                                                            <span t-field='o.student_id.phone'/>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div style="-webkit-transform:rotate(90deg);width:20%;height:100%;float:left;text-align:right;font-size: 5px;margin-top:80px;">
+                                        <span  t-esc="o.student_id.std_number"/> 
+                                    </div>
+                                    
+                                </div>
+                                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                                <div style="width:30%;height:20%; float:right;text-align:right;margin-right:15px;font-size: 6px;">
+                                    <span t-esc="o.student_id.admission_rec.admission_year.code"/>-
+                                    <span  t-esc="o.student_id.university_id"/> 
+                                </div>
+
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+        <template id="report_student_idcard2">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <br/><br/>
+                            <div style="height: 250px; width: 395px; border: 1px solid black;background-image:url('/uni_core/static/description/card2.jpg'); background-size:auto 100%;background-repeat:no-repeat;">
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_student_degrees,access_student_degrees,migration.model_student_degrees,,1,1,1,1
+access_student_degrees_migration,access_student_degrees_migration,migration.model_student_degrees_migration,,1,1,1,1
+access_subjects_mapping,access_subjects_mapping,migration.model_subjects_mapping,,1,1,1,1
+access_subject_subject,access_subject_subject,migration.model_mock_subject,,1,1,1,1
+access_student_exam_mark,access_student_exam_mark,migration.model_student_exam_mark,,1,1,1,1
+
+

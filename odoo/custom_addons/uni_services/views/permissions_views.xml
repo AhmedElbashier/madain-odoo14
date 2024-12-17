@@ -1,0 +1,372 @@
+<odoo>
+	<data>
+		<!-- medical ornaic form view -->
+		<record id="ornaic_permissions_view_form" model="ir.ui.view">
+			<field name="name">uni.student.permissions.view.form</field>
+			<field name="model">uni.student.permissions</field>
+			<field name="arch" type="xml">
+				<form string="Medical Ornaic">
+					<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+					<button name="action_request" string="Request" type="object" states="draft" />
+					<!-- <button name="action_approve" string="Approve" type="object" states="requested" /> -->
+					<button name="action_ready" type="object" string="Confirm" states="in_progress" class="oe_highlight"/>
+					<button name="action_done" type="object" string="Delivery Docs" states="ready" class="oe_highlight"/>
+					<button name="action_ready" type="object" string="ReSend Code" class="oe_highlight" attrs="{'invisible':['|',('resend_code','!=',True),('state','not in',['ready'])]}"/>
+					<button name="action_reject" string="Reject" type="object" states="requested" />
+					<button name="rest_draft" string="Rest To Draft" type="object" states="rejected" />
+				</header>
+					<sheet>
+						<div class="oe_title" style="float:left">
+							<label for="name" name="Name/Universit Id/Student NO"/>
+							<h1>
+								<field name="name" required="1" domain="[('state','not in',['resigned','graduate','dismissed'])]" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h1>
+						</div>
+						<div style="float:right">
+							<label for="priority" name="Priority"/>
+							<h1>
+								<field name="priority" widget="priority"/>
+							</h1>
+						</div>
+						<br/><br/>
+						<group>
+							<group string="Service Information">
+								<field name="code" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_type_id" required="1" domain="[('service_type','=','medical_ornaic'),('state','=','approved')]" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_name" attrs="{'readonly':[('state','!=','draft')]}"/>						
+								<field name="permission_type" invisible="1"/>
+								<field name="request_date" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_executor" required="1" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>	
+								<field name="start_date" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="end_date" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="procedure_type" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>	
+								<field name="service_amount" required="1" attrs="{'invisible':[('is_paid','!=',True)],'readonly':[('state','!=','draft')]}"/>
+								<field name="execution_start_date" readonly="1" attrs="{'invisible':[('execution_start_date','=',False)]}"/>
+								<field name="execution_end_date" readonly="1" attrs="{'invisible':[('execution_start_date','=',False)]}"/>
+								<field name="is_paid" invisible="1"/>
+								<field name="resend_code" invisible="1"/>
+							</group>
+							<group string="Student Information">
+								<field name="program_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="batch_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="level_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="semester_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="academic_status" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="registration_status" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</group>
+							<group string="Invoice Information" attrs="{'invisible':[('is_paid','!=',True)]}">
+								<field name="invoice_id" readonly="1"/>
+								<field name="invoice_state"/>
+								<field name="payment_state"/>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<!-- medical ornaic tree view -->
+		<record id="ornaic_permissions_view_tree" model="ir.ui.view">
+			<field name="name">uni.student.permissions.view.tree</field>
+			<field name="model">uni.student.permissions</field>
+			<field name="arch" type="xml">
+				<tree string="Medical Ornaic">
+					<field name="code"/>
+					<field name="name" string="Name"/>
+					<field name="service_name"/>
+					
+					<field name="request_date"/>
+					<field name="service_executor"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="ornaic_permissions_kanban" model="ir.ui.view">
+			<field name="name">uni.student.permissions.view.kanban</field>
+			<field name="model">uni.student.permissions</field>
+			<field name="arch" type="xml">
+				<kanban sample="1">
+					<field name="id"/>
+					<field name="name"/>
+					<field name="code"/>
+					<field name="state"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="oe_kanban_details">
+									<h4>
+										<a type="open">
+											<field name="name" />
+										</a>
+									</h4>
+									<ul>
+										<strong>Service:</strong>
+										<field name="service_name" />
+									</ul>
+									<ul>
+										<strong>Code:</strong>
+										<field name="code" />
+									</ul>
+									<ul>
+										<strong>Executor:</strong>
+										<field name="service_executor" />
+									</ul>
+									<ul>
+										<strong>Request Date:</strong>
+										<field name="request_date" />
+									</ul>
+									<ul>
+										<strong>State:</strong>
+										<field name="state" />
+									</ul>
+									<ul>
+										<field name="priority" widget="priority"/>
+									</ul>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+
+		<!-- travcel permissions form view -->
+		<record id="travel_permissions_view_form" model="ir.ui.view">
+			<field name="name">travel.permissions.view.form</field>
+			<field name="model">uni.student.permissions</field>
+			<field name="arch" type="xml">
+				<form string="Travel Permissions">
+					<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,coordinator,scientific_affairs,dean_decision,done"/>
+					<button name="action_request" string="Confirm" type="object" states="draft" />
+					<button name="action_scientific_affairs" string="Confirm" type="object" states="coordinator" />
+					<button name="action_dean_decision" string="Approve" type="object" states="scientific_affairs" />
+					<button name="action_approve" string="Approve" type="object" states="dean_decision" />
+					<button name="action_ready" type="object" string="Confirm" states="in_progress" class="oe_highlight"/>
+					<button name="action_done" type="object" string="Delivery Docs" states="ready" class="oe_highlight"/>
+					<button name="action_ready" type="object" string="ReSend Code" class="oe_highlight" attrs="{'invisible':['|',('resend_code','!=',True),('state','not in',['ready'])]}"/>
+					<button name="rest_draft" string="Rest To Draft" type="object" states="rejected" />
+				</header>
+					<sheet>
+						<div class="oe_title" style="float:left">
+							<label for="name" name="Name/Universit Id/Student NO"/>
+							<h1>
+								<field name="name" required="1" domain="[('state','not in',['resigned','graduate','dismissed'])]" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h1>
+						</div>
+						
+						<div style="float:right">
+							<label for="priority" name="Priority"/>
+							<h1>
+								<field name="priority" widget="priority"/>
+							</h1>
+						</div>
+						<br/><br/>
+						<group>
+							<group string="Service Information">
+								<field name="code" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_type_id" required="1" domain="[('service_type','=','travel_permission'),('state','=','approved')]" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_name" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="request_date" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_executor" required="1" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="start_date" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="end_date" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="service_amount" required="1" attrs="{'invisible':[('is_paid','!=',True)],'readonly':[('state','!=','draft')]}"/>
+								<field name="permission_reason" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="permission_type" invisible="1"/>
+								<field name="execution_start_date" readonly="1" attrs="{'invisible':[('execution_start_date','=',False)]}"/>
+								<field name="execution_end_date" readonly="1" attrs="{'invisible':[('execution_start_date','=',False)]}"/>
+								<field name="is_paid" invisible="1"/>
+								<field name="resend_code" invisible="1"/>
+							</group>
+							<group string="Student Information">
+								<field name="program_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="batch_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="level_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="semester_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="academic_status" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="registration_status" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</group>
+							<group string="Invoice Information" attrs="{'invisible':[('is_paid','!=',True)]}">
+								<field name="invoice_id" readonly="1"/>
+								<field name="invoice_state"/>
+								<field name="payment_state"/>
+							</group>
+						</group>
+						<notebook>
+							<page string="Recommendations" attrs="{'invisible':[('state','not in',['coordinator','scientific_affairs','dean_decision','done'])]}">
+								<group>
+									<field name="coordinator_recommendation" attrs="{'required':[('state','in',['coordinator','scientific_affairs','dean_decision','done'])],'readonly':[('state','!=','draft')]}"/>
+									<field name="scientific_affairs_recommendation" attrs="{'required':[('state','in',['scientific_affairs','dean_decision','done'])],'invisible':[('state','not in',['scientific_affairs','dean_decision','done'])],'readonly':[('state','!=','draft')]}" />
+									<!-- <field name="dean_decision" attrs="{'required':[('state','in',['dean_decision','approved'])]}" />-->	
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<!-- travel permissions tree view -->
+		<record id="travel_permissions_view_tree" model="ir.ui.view">
+			<field name="name">travel.permissions.view.tree</field>
+			<field name="model">uni.student.permissions</field>
+			<field name="arch" type="xml">
+				<tree string="Travel Permission">
+					<field name="code"/>
+					<field name="name" string="Name"/>
+					<field name="service_name"/>
+					
+					<field name="service_amount"/>
+					<field name="request_date"/>
+					<field name="service_executor"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="travel_permissions_kanban" model="ir.ui.view">
+			<field name="name">uni.student.permissions.view.kanban</field>
+			<field name="model">uni.student.permissions</field>
+			<field name="arch" type="xml">
+				<kanban sample="1">
+					<field name="id"/>
+					<field name="name"/>
+					<field name="code"/>
+					<field name="state"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="oe_kanban_details">
+									<h4>
+										<a type="open">
+											<field name="name" />
+										</a>
+									</h4>
+									<ul>
+										<strong>Service:</strong>
+										<field name="service_name" />
+									</ul>
+									<ul>
+										<strong>Code:</strong>
+										<field name="code" />
+									</ul>
+									<ul>
+										<strong>Executor:</strong>
+										<field name="service_executor" />
+									</ul>
+									<ul>
+										<strong>Request Date:</strong>
+										<field name="request_date" />
+									</ul>
+									<ul>
+										<strong>State:</strong>
+										<field name="state" />
+									</ul>
+									<ul>
+										<field name="priority" widget="priority"/>
+									</ul>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<record id="view_travel_permissions_filter" model="ir.ui.view">
+			<field name="name">uni.student.permissions.search</field>
+			<field name="model">uni.student.permissions</field>
+			<field name="arch" type="xml">
+				<search>
+					<!-- Search by -->
+					<field name="name" string="Student"/>
+					<field name="code"/>
+					<field name="service_executor"/>
+					<!-- Group by -->
+					<group expand="0" string="Group By">
+						<filter string="Service Executor" name="group_by_service_executor" context="{'group_by':'service_executor'}"/>
+						<filter string="Request Date" name="group_by_request_date" context="{'group_by':'request_date'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+
+
+		<!-- Actions and Menus -->
+
+    	<!-- Ornaic Actions -->
+		<record id="ornaic_permissions_action" model="ir.actions.act_window">
+			<field name="name">Medical Permissions</field>
+			<field name="res_model">uni.student.permissions</field>
+			<field name="view_mode">tree,form,kanban</field>
+			<field name="context">{'default_permission_type' : 'medical_ornaic','default_service_name':'Medical Ornaic'}</field>
+			<field name="domain">[('permission_type', '=', 'medical_ornaic')]</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new Medical Permissions request</p>
+			</field>
+		</record>
+
+		<record id="ornaic_permissions_tree_action" model="ir.actions.act_window.view">
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="ornaic_permissions_view_tree"/>
+			<field name="act_window_id" ref="ornaic_permissions_action"/>
+		</record>
+		<record id="ornaic_permissions_form_action" model="ir.actions.act_window.view">
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="ornaic_permissions_view_form"/>
+			<field name="act_window_id" ref="ornaic_permissions_action"/>
+		</record>
+		<record id="ornaic_permissions_kanban_action" model="ir.actions.act_window.view">
+			<field name="view_mode">kanban</field>
+			<field name="view_id" ref="ornaic_permissions_kanban"/>
+			<field name="act_window_id" ref="ornaic_permissions_action"/>
+		</record>
+		<!-- medical ornaic menu -->
+		<menuitem id="ornaic_permissions_menu" name="Medical Ornaic" action="ornaic_permissions_action" parent="uni_faculty_student_service_menu" sequence="2"/>
+
+
+		<!-- Travel Actions --> 
+		<record id="travel_permissions_action" model="ir.actions.act_window">
+			<field name="name">Travel Permissions</field>
+			<field name="res_model">uni.student.permissions</field>
+			<field name="view_mode">tree,form,kanban</field>
+			<field name="context">{'default_permission_type' : 'travel_permission','default_service_name':'Travel Permission'}</field>
+			<field name="domain">[('permission_type', '=', 'travel_permission')]</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new Travel Permissions request</p>
+			</field>
+		</record>
+
+		<record id="travel_permissions_tree_action" model="ir.actions.act_window.view">
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="travel_permissions_view_tree"/>
+			<field name="act_window_id" ref="travel_permissions_action"/>
+		</record>
+
+		<record id="travel_permissions_form_action" model="ir.actions.act_window.view">
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="travel_permissions_view_form"/>
+			<field name="act_window_id" ref="travel_permissions_action"/>
+		</record>
+		<record id="travel_permissions_kanban_action" model="ir.actions.act_window.view">
+			<field name="view_mode">kanban</field>
+			<field name="view_id" ref="travel_permissions_kanban"/>
+			<field name="act_window_id" ref="travel_permissions_action"/>
+		</record>
+		<!-- permissions menu -->
+		<menuitem id="travel_permissions_menu" name="Travel Permission" action="travel_permissions_action" parent="uni_faculty_student_service_menu" sequence="1"/>
+
+	</data>
+</odoo>

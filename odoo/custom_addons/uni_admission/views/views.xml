@@ -1,0 +1,16 @@
+<odoo>
+	<data>
+		<menuitem id="uni_admission_admissions_menu" name="Admission" web_icon="uni_admission,static/description/icon.png"/>
+		<!-- student migration menu view -->
+		<menuitem id="menu_student_migration_view" name="Students List" sequence="7" parent="uni_admission_admissions_menu"/>
+		<!-- Reports Menu-->
+		<menuitem id="menu_uni_admission_reports" name="Reports" sequence="8" parent="uni_admission_admissions_menu"/>
+		<!-- configuration menu -->
+		<menuitem id="menu_configuration_view" name="Configuration" sequence="9" parent="uni_admission_admissions_menu"/>
+		<!-- Uni_core reports menu -->
+		<menuitem id="menu_uni_core_reports" name="Reports" sequence="2" parent="uni_core.uni_core_faculties_menu"/>
+
+
+
+	</data>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Inherit Form view -->
+		<record model="ir.ui.view" id="view_company_form_inherit">
+		<field name="name">view.company.form.inherit</field>
+		<field name="model">res.company</field>
+		<field name="inherit_id" ref="base.view_company_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//notebook/page[@name='general_info']" position="after">
+				<page string="Faculty Information" name="faculty_info">
+					<group>
+						<field name="name"/>
+						<!-- <field name="registration_fee_increase"/> -->
+					</group>
+				</page>
+			</xpath>
+		</field>
+		</record>
+	</data>
+</odoo>

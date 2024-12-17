@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="line_1" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_1"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_2"></field>
+			<field name="subject_id" ref="sub_2"></field>
+			<field name="credit_hours">2</field>
+		</record>
+		<record id="line_2" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_1"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_1"></field>
+			<field name="credit_hours">2</field>
+		</record>
+		<record id="line_3" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_8"></field>
+			<field name="subject_id" ref="sub_3"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_4" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_1"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_3"></field>
+			<field name="subject_id" ref="sub_3"></field>
+			<field name="credit_hours">2</field>
+		</record>
+		<record id="line_5" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_7"></field>
+			<field name="subject_id" ref="sub_2"></field>
+			<field name="credit_hours">2</field>
+		</record>
+		<record id="line_6" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_1"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_1"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_7" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_11"></field>
+			<field name="subject_id" ref="sub_4"></field>
+			<field name="credit_hours">2</field>
+		</record>
+		<record id="line_8" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_15"></field>
+			<field name="subject_id" ref="sub_5"></field>
+			<field name="credit_hours">2</field>
+		</record>
+		<record id="line_9" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_17"></field>
+			<field name="subject_id" ref="sub_6"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_10" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_19"></field>
+			<field name="subject_id" ref="sub_7"></field>
+			<field name="credit_hours">2</field>
+		</record>
+		<record id="line_11" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_15"></field>
+			<field name="subject_id" ref="sub_8"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_12" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_14"></field>
+			<field name="subject_id" ref="sub_8"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<!--> 				start off Literature fuclty subjects lines<-->
+		<!--> 				Semester 1								  <-->
+		<record id="line_13" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_1"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_11"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_14" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_1_7"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_15" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_22"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_16" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_23"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_17" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_24"></field>
+			<field name="credit_hours">2</field>
+		</record>
+		<record id="line_18" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_25"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_19" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_11"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_20" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_26"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_21" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_27"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_22" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_2_8"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_23" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_29"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_24" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_34"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_25" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_35"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_26" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_36"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_27" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_11"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_28" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_37"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_29" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_11"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_30" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_42"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_31" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_25"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_32" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_43"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_33" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_1"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_44"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<!--> 				End Off Semester 1								  <-->
+		<record id="line_34" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_17"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_35" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_18"></field>
+			<field name="credit_hours">2</field>
+		</record>
+		<record id="line_36" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_19"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_37" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_20"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_38" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_2"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_21"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_39" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_11"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_40" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_30"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_41" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_31"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_42" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_32"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_43" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_3"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_33"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_44" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_2_8"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_45" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_38"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_46" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_40"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_47" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_4"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_41"></field>
+			<field name="credit_hours">4</field>
+		</record>
+		<record id="line_48" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_45"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_49" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_46"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_50" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_49"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_51" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_47"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_52" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_44"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<record id="line_53" model="uni.faculty.subject.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="level_id" ref="lev_5"></field>
+			<field name="semester_id" ref="sem_2"></field>
+			<field name="specialization_id" ref="spec_1"></field>
+			<field name="subject_id" ref="sub_48"></field>
+			<field name="credit_hours">3</field>
+		</record>
+		<!--> 				end off Literature fuclty subjects lines<-->
+	</data>
+</odoo>

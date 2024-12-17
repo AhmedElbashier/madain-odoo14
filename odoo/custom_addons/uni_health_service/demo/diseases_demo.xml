@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record id="disease_1" model="uni.health_service.disease"> 
+            <field name="name">الربو </field> 
+            <field name="description"> 
+             التهاب مجاري الهواء في الرئتين
+            </field> 
+            <field name="endemic">True</field> 
+        </record> 
+        <record id="disease_2" model="uni.health_service.disease"> 
+            <field name="name">السكري </field> 
+            <field name="description"> إرتفاع نسبة السكر في الدم</field> 
+            <field name="endemic">True</field> 
+        </record> 
+        <record id="disease_3" model="uni.health_service.disease"> 
+            <field name="name">إلتهاب الجلد(إكزما) </field> 
+            <field name="description"> إلتهاب في الجلد حاد</field> 
+            <field name="endemic">True</field> 
+        </record> 
+        <record id="disease_4" model="uni.health_service.disease"> 
+            <field name="name">نزلة البرد </field> 
+            <field name="description">مرض موسمي</field> 
+            <field name="endemic">False</field> 
+        </record> 
+        <record id="disease_5" model="uni.health_service.disease"> 
+            <field name="name" >صداع نصفي </field> 
+            <field name="description">-</field> 
+        </record>
+    </data>
+</odoo>

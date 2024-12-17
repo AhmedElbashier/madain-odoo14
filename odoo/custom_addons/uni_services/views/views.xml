@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<menuitem 
+			id="uni_faculty_student_service_menu" 
+			name="Services" sequence="3"
+			parent='uni_admission.uni_registration_root_menu' 
+		/>
+
+	</data>
+</odoo>

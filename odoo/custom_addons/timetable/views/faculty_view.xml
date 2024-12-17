@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_batch_form_session_inherit" model="ir.ui.view">
+            <field name="name">op.faculty.form.session.inherit</field>
+            <field name="model">uni.faculty.department.batch</field>
+            <field name="inherit_id" ref="uni_core.uni_faculty_batch_view_form"/>
+            <field name="priority" eval="9"/>
+            <field name="arch" type="xml">
+                <sheet position="inside">
+                    <notebook>
+                        <page name="time_table" string="Sessions">
+                            <field name="session_ids" colspan="4"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </field>
+        </record>
+    </data>
+</odoo>

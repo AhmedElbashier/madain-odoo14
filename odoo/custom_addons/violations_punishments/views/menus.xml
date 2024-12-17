@@ -1,0 +1,32 @@
+
+<odoo>
+	<data>
+
+        <menuitem id="menu_punishment_violation_root" name="Violations&amp;Punishments" parent="uni_admission.uni_admission_admissions_menu" sequence="6">
+
+        	<menuitem  
+	        	id="menu_student_violation" name="Student Violations"
+	            action="action_student_violation"
+	        />
+	    </menuitem>
+
+        <menuitem 
+        	id="menu_punishment_violation" name="Violations/Punishments" parent="uni_admission.registration_menu_conf">
+
+        	<menuitem  
+	        	id="menu_violation"
+	            action="action_violation"
+	            name="Violations"
+	        />
+
+	        <menuitem  
+	        	id="menu_punishment" 
+	            action="action_punishment"
+	            name="Punishments"
+	        />
+
+	    </menuitem>
+
+
+	</data>
+</odoo>

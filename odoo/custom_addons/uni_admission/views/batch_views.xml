@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Inherit Batch -->
+	<record id="inherit_batch_form_view" model="ir.ui.view">
+            <field name="name">Batchs</field>
+            <field name="model">uni.faculty.department.batch</field>
+            <field name="inherit_id" ref="uni_core.uni_faculty_batch_view_form" />
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='program_id']" position="before">
+        			<field name="academic_year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+        			<field name="admission_year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+            	</xpath>
+            	<xpath expr="//field[@name='semester_id']" position="after">
+        			<field name="next_level_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+            	</xpath>
+            	<!-- <xpath expr="//sheet" position="inside">
+            		<notebook>
+						<page string="Installment">
+							<field name='batch_installment_ids'>
+								<tree editable="top">
+									<field name="name" required="1"/>
+									<field name="installment_percentage" string="Installment Perc(%)" required="1"/>
+									<field name="start_date" required="1"/>
+									<field name="end_date" required="1"/>
+								</tree>
+							</field>
+						</page>
+						
+					</notebook>
+            	</xpath> -->
+            </field>
+    </record>
+    <record id="inherit_batch_tree_view" model="ir.ui.view">
+            <field name="name">Batchs</field>
+            <field name="model">uni.faculty.department.batch</field>
+            <field name="inherit_id" ref="uni_core.uni_faculty_batch_view_tree" />
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='name']" position="after">
+        			<field name="admission_year_id"/>
+        			<field name="academic_year_id"/>
+            	</xpath>
+            </field>
+        </record>
+
+</odoo>

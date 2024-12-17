@@ -1,0 +1,54 @@
+<odoo>
+	<data>
+		<record id="uni_card_view_form" model="ir.ui.view">
+            <field name="name">uni.card.form</field>
+            <field name="model">uni.card</field>
+            <field name="arch" type="xml">
+                <form string="Students Cards Archive">
+                	<header>
+						<field name="state" widget="statusbar" statusbar_visible="wait_payment,wait_print,wait_delivery,done"/>
+						<button name="action_delivery" type="object" string="Done" states="wait_print" class="oe_highlight"/>
+						<button name="action_done" type="object" string="Done" states="wait_delivery" class="oe_highlight"/>
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<label for="student_id" string="Name" class="oe_edit_only"/>
+							<h1>
+								<field name="student_id" class="oe_inline" readonly="1"/>
+							</h1>
+						</div>
+						<group col="4">
+							<field name="source" readonly="1"/>
+							<field name="number"/>
+							<field name="print_date" attrs="{'required':[('state','=','wait_print')], 'readonly':[('state','!=','wait_print')]}"/>
+							<field name="deliver_date" attrs="{'required':[('state','=','wait_delivery')], 'readonly':[('state','!=','wait_delivery')]}"/>
+							<field name="card_service_id" attrs="{'invisible':[('source','=','admission')]}" readonly="1"/>
+						</group>
+					</sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="uni_card_view_tree" model="ir.ui.view">
+            <field name="name">uni.card.form</field>
+            <field name="model">uni.card</field>
+            <field name="arch" type="xml">
+            	<tree>
+            		<field name="student_id" />
+            		<field name="source" />
+            		<field name="state" />
+            	</tree>
+            </field>
+        </record>
+
+        <record id="uni_card_action" model="ir.actions.act_window">
+			<field name="name">Cards Archive</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">uni.card</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        <menuitem id="card_arch_menu" name="Cards Archive" parent="uni_core.operation_root_menu" action="uni_card_action"/>
+
+	</data>
+</odoo>

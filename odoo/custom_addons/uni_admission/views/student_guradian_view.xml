@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="student_guradian_form_view_inherit" model="ir.ui.view">
+			<field name="name">Student Guradians</field>
+			<field name="model">uni.student.guradian</field>
+			<field name="inherit_id" ref="uni_core.student_guradian_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='email']" position="after">
+					<field name="identity_type_id" required="0"/>
+					<field name="identity_num" required="0"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

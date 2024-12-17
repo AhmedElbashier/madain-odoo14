@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_uni_exam_record_tree" model="ir.ui.view">
+            <field name="name">uni.exam.record.tree</field>
+            <field name="model">uni.exam.record</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Exam Record">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="program_id"/>
+                    <field name="batch_id"/>
+                    <field name="exam_type"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_uni_exam_record_form" model="ir.ui.view">
+            <field name="name">uni.exam.record.form</field>
+            <field name="model">uni.exam.record</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Exam Record">
+                    <header>
+                        <button name="act_submit" states="draft" type="object"
+                                string="Submit" class="oe_highlight"/>
+                        <button name="act_get_students" states="draft" type="object"
+                                string="Get students"/>
+                        <button name="act_confirm" states="submit" type="object"
+                                string="Create Exams" class="oe_highlight"/>
+                        <button name="act_schedule" states="confirmed" type="object"
+                                string="Schedule" class="oe_highlight"/>
+                        <button name="act_run" states="schedule" type="object"
+                                string="Confirm" class="oe_highlight"/>
+                        <button name="act_done" states="run" type="object"
+                                string="Done" class="oe_highlight"/>
+                        <button name="act_draft" states="submit,confirmed,schedule" type="object" string="Reset to Draft"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,confirmed,schedule,run,done"/>
+                    </header>
+                    <sheet>
+                        <field name="active" invisible="1"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                                attrs="{'invisible': [('active', '=', True)]}"/>
+                        <div class="oe_button_box" name="button_box">
+                            <button  class="oe_stat_button" name="exam_tree_view" type="object" icon="fa-file-text-o" string='Exams'>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" class="oe_inline"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="exam_type"/>
+                                <field name="main_exam" attrs="{'invisible':[('is_substitutionals','!=',True)],'required':[('is_substitutionals','=',True)]}"/>
+                                <field name="main_exam" attrs="{'invisible':[('is_supplement','!=',True)],'required':[('is_supplement','=',True)]}"/><field name="substitutionals_exam" attrs="{'invisible':[('is_supplement','!=',True)]}"/>
+                                <field name="academic_year_id"/>
+                                <field name="start_date" required="1"/>
+                                <field name="end_date" required="1"/>
+                                <field name="end_level" invisible="1"/>
+                                <field name="is_substitutionals" invisible="1"/>
+                                <field name="is_supplement" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="program_id"/> 
+                                <field name="level_id"/>
+                                <field name="batch_id"/>
+                                <field name="semester_id"/>
+                                <field name="subject_ids" widget="many2many_tags"/>
+                                <field name="exam_category" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Students">
+                                <field name="student_ids" colspan="4" nolabel="1">
+                                    <tree string="Students" editable="bottom">
+                                        <field name="student_id"/>
+                                        <field name="university_id"/>
+                                        <field name="std_number"/>
+                                        <field name="seeting_number"/>
+                                        <field name="exam_reason"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group col="4">
+                                                <field name="student_id"/>
+                                                <field name="university_id"/>
+                                                <field name="std_number"/>
+                                                <field name="seeting_number"/>
+                                                <field name="exam_reason"/>
+                                                <field name="substitutional_subjects" widget="many2many_tags"/>
+                                                <field name="fulfillment_subjects" widget="many2many_tags"/>
+                                                <field name="supplement_subjects" widget="many2many_tags"/>
+                                                <field name="repeat_subjects" widget="many2many_tags"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Deprived Students" attrs="{'invisible':['|',('exam_category','!=','first_round'),('is_substitutionals','=',True)]}">
+                                <field name="deprived_student_ids" colspan="4" nolabel="1">
+                                    <tree string="Deprived Students" editable="bottom">
+                                        <field name="student_id"/>
+                                        <field name="university_id"/>
+                                        <field name="std_number"/>
+                                        <field name="exam_reason"/>
+                                        <field name="deprived_reason"/>
+                                        <button name="move_deprived_student" type="object" icon="fa-chevron-circle-right"/>
+                                    </tree>
+                                    <form string="Deprived Students">
+                                        <sheet>
+                                            <group col="4">
+                                                <field name="student_id"/>
+                                                <field name="university_id"/>
+                                                <field name="std_number"/>
+                                                <field name="exam_reason"/>
+                                                <field name="deprived_reason"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Exceptional Students">
+                                <field name="exceptional_student_ids" colspan="4" nolabel="1">
+                                    <tree string="Exceptional Students" editable="bottom">
+                                        <field name="student_id"/>
+                                        <field name="university_id"/>
+                                        <field name="std_number"/>
+                                        <field name="reason"/>
+                                        <button name="move_frozen_student" type="object" icon="fa-chevron-circle-right"/>
+                                    </tree>
+                                    <form string="Exceptional Students">
+                                        <sheet>
+                                            <group col="4">
+                                                <field name="student_id"/>
+                                                <field name="university_id"/>
+                                                <field name="std_number"/>
+                                                <field name="reason"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Exams" invisible="1">
+                                <field name="exam_ids" readonly="1" nolabel="1">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="subject_id"/>
+                                        <field name="exam_date"/>
+                                        <field name="start_timing_id"/>
+                                        <field name="exam_duration"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_uni_exam_record_search" model="ir.ui.view">
+            <field name="name">uni.exam.record.search</field>
+            <field name="model">uni.exam.record</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Exam Record">
+                    <field name="name" select="True"/>
+                    <field name="code" select="True"/>
+                    <field name="start_date" select="True"/>
+                    <field name="end_date" select="True"/>
+                    <field name="batch_id" select="True"/>
+                    <filter string="Archived" name="inactive"
+                            domain="[('active', '=', False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="uni_exam_record_action" model="ir.actions.act_window">
+            <field name="name">Exam Record</field>
+            <field name="res_model">uni.exam.record</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new exam record</p>
+            </field>
+        </record>
+
+        <menuitem id="exam_main_menu" name="Exam" parent="result_menu" sequence="1"/>
+        <menuitem id="exam_record_menu" name="Exam Record" parent="exam_main_menu" action="uni_exam_record_action" sequence="1"/>
+
+
+        <!-- student.exam -->
+        <record id="view_uni_exam_student_tree" model="ir.ui.view">
+            <field name="name">uni.student.exam.tree</field>
+            <field name="model">uni.student.exam</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Students">
+                    <field name="student_id"/>
+                    <field name="university_id"/>
+                    <field name="std_number"/>
+                    <field name="program_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_uni_exam_student_form" model="ir.ui.view">
+            <field name="name">uni.student.exam.form</field>
+            <field name="model">uni.student.exam</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Students">
+                    <sheet>
+                        <group col="4">
+                            <field name="student_id"/>
+                            <field name="university_id"/>
+                            <field name="std_number"/>
+                            <field name="program_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

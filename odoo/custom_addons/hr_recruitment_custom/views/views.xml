@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+
+
+      <record model="ir.ui.view" id="view_hr_job_custom_view_form">
+        <field name="name">Jobs - Custom</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form" />
+        <field name="arch" type="xml">
+          <field name="address_id" position="after">
+            <field name="job_title_ids"  widget="many2many_tags"/>
+            <field name="program_ids" options="{'no_edit' : True, 'no_create' : True}" widget="many2many_tags"/>
+          </field>
+        </field>
+      </record>
+
+      <record model="ir.ui.view" id="hr_applicant_custom_view_form">
+        <field name="name">Jobs - Recruitment Form Custom</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form" />
+        <field name="arch" type="xml">
+          <field name="description" position="after">
+              <group string="Other Information">
+                  <group>
+                      <field name="gender" />
+                      <field name="university" />
+                      <field name="college" />
+                      <field name="major_field" />
+                      <field name="neighborhood" />
+                      <field name="grade" />
+                      <field name="degree" />
+                  </group>
+                  <group>
+                      <field name="age" />
+                      <field name="phone2" />
+                      <field name="city" />
+                      <field name="street" />
+                      <field name="address" />
+                      <field name="experience" />
+                      <field name="job_title_id" options="{'no_edit' : True, 'no_create' : True}" />
+                      <field name="program_id" options="{'no_edit' : True, 'no_create' : True}" />
+                  </group>
+                  
+                  <group>
+                    <field name="eng_level" />
+                    <field name="computer_level" />
+                    <field name="microsoft_level" />
+                    <field name="pdf_level" />
+                    <field name="excel_level" />
+                    <field name="excel_advance_level" />
+                    <field name="e_learn_level" />
+                    <field name="email_level" />
+                  </group>
+              </group>
+          </field>
+        </field>
+      </record>
+
+  </data>
+</odoo>

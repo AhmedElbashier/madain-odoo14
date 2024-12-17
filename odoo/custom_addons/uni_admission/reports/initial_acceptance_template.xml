@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<template id="report_initial_acceptane_template_doc">
+		<t t-call="web.html_container">
+			<t t-call="web.internal_layout">
+				<div class="page">
+					<h3>
+						<center><u>شهادة قبول مبدئي</u></center>
+					</h3>
+                    <br></br>
+					<h4>
+						<center>:تشهد كلية المدائن للعلوم الطبية والتكنولوجيا، بأن الطالب/الطالبة بالبيانات أدناه</center>
+					</h4>
+					<br/>
+					<!-- <div style="text-align: right">
+						<h5><span style="font-weidght: bold;">: التاريخ</span></h5>
+					</div> -->
+					<table class="table table-bordered">
+						<thead class="text-center" style="Background-color:#a6a4a4">
+							<th style="border: 1px solid black;">البرنامج</th>
+							<th style="border: 1px solid black;">الجنسية</th>
+							<th style="border: 1px solid black;">الإسم</th>
+							
+						</thead>
+						<tbody>
+							<tr class="text-center">
+								<!-- <td style="border: 1px solid black;">
+								</td>
+								<td style="border: 1px solid black;">
+								</td> -->
+                                <td style="border: 1px solid black;">
+									<span t-esc="o.program_id.name"></span>
+								</td>
+								<!-- <td style="border: 1px solid black;">
+									<span t-esc="o.student_id.registration_fees"></span>
+								</td> -->
+								<td style="border: 1px solid black;">
+									<span t-esc="o.nationality_type_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span t-esc="o.name"></span>
+								</td>
+								
+							</tr>
+						</tbody>
+					</table>
+					<br/>
+					<div style="text-align: right">
+						<span style="font-weidght: bold; margin-right:55px; text-align: right; font-size:20px;"> 
+                 .<t t-esc="o.acadimic_year_id.name"/> قد تم قبوله/قبولها (مبدئياً) بالكلية بالبرنامج أعلاه للعام الدراسي 
+
+ 
+                         </span> 
+					</div>
+                    <br/>
+                    <div style="text-align: right">
+						<span style="font-weidght: bold; margin-right:10px; text-align: right; font-size:20px;"> 
+                             .على أن تكتمل إجراءات القبول النهائي بعد حضور الطالب/الطالبة وتقديمه وإستيفاء كافة المطلوبات 
+                         </span> 
+					</div>
+					<br/><br/>
+
+                    <div style="text-align: left">
+						<span style="font-weidght: bold; margin-right:10px; text-align: right; font-size:18px;"> 
+                            .حررت هذه الشهادة بناءاً على طلبه/طلبها
+                         </span> 
+					</div>
+					<br/><br/>
+                    <br/><br/>
+                    <div style="text-align: right">
+					    <span style="font-weidght: bold;margin-right:550px ; font-size:23px;">نسرين جعفر ابو كشوة</span> 
+                    </div>
+
+                    <div style="text-align: right">
+					    <span style="font-weidght: bold;margin-right:550px">مدير ادارة القبول وشؤون الطلاب</span> 
+                    </div>
+                    
+					
+				</div>
+			</t>
+		</t>
+	</template>
+
+
+	<template id="report_initial_acceptane_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="uni_admission.report_initial_acceptane_template_doc"/>
+			</t>
+		</t>
+	</template>
+</odoo>

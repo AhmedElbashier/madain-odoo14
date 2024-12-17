@@ -1,0 +1,72 @@
+<odoo>
+	<data>
+		<!-- Form view -->
+		<record id="uni_faculty_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.form</field>
+			<field name="model">res.company</field>
+			<field name="arch" type="xml">
+				<form string="Faculty" create="0">
+					<sheet>
+						<field name="logo" widget="image" class="oe_avatar"/>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only" string="Faculty Name"></label>
+							<h1>
+								<field name="name" class="oe_inline"/>
+							</h1>
+						</div>
+						<notebook colspan="4">
+							<page string="General Information">
+								<group>
+									<group>
+										<label for="street" string="Address"/>
+										<div class="o_address_format">
+											<field name="street" placeholder="Street..." class="o_address_street"/>
+											<field name="state_id" class="o_address_country" placeholder="State" options="{'no_create': True}"/>
+											<field name="country_id" placeholder="Country" class="o_address_country" options="{'no_create': True}"/>
+										</div>
+										<field name="website" widget="url" placeholder="e.g. www.uofk.edu"/>
+									</group>
+									<group>
+										<field name="phone"/>
+										<!-- <field name="fax"/> -->
+										<field name="email"/>
+									</group>
+								</group>
+							</page>
+							<page string="Departments">
+								<field name="department_ids" readonly="1"/>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Tree view -->
+		<record id="uni_core_faculty_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.tree</field>
+			<field name="model">res.company</field>
+			<field name="arch" type="xml">
+				<tree string="Faculties" create="0">
+					<field name="name"/>
+					<field name="phone"/>
+					<field name="website"/>
+				</tree>
+			</field>
+		</record>
+		<!-- Actions -->
+		<record id="uni_core_faculty_action" model="ir.actions.act_window">
+			<field name="name">Faculties</field>
+			<field name="res_model">res.company</field>
+			<field name="view_mode">tree,form</field>
+			<!-- <field name="domain">[('type', '=', 'faculty')]</field> -->
+			<field name="context">{'type': 'faculty'}</field>
+			<field name="view_ids" eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('uni_core_faculty_view_tree')}),(0, 0, {'view_mode': 'form', 'view_id': ref('uni_faculty_view_form')})]"/>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new faculty</p>
+			</field>
+		</record>
+		<!-- Menu items -->
+		<menuitem id="uni_faculties_menu" name="Faculties" parent="uni_core_configurations_view_menu" action="uni_core_faculty_action"/>
+		
+	</data>
+</odoo>

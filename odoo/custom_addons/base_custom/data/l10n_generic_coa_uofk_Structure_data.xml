@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data  noupdate="0">
+
+
+        <record id="nile_partner1" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Nile University </field>
+            <field name="notify_email">always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+            <field name="invoice_warn">no-message</field>
+        </record>
+
+        <!-- Basic Company  -->
+
+		<record id="base.main_company" model="res.company">
+            <field name="name">Nile University</field>
+            <field name="partner_id" ref="base.main_partner"/>
+            <field name="rml_header1">Nile University</field>
+			<field name="type">campus</field>
+            <field name="currency_id" ref="base.SDG"/>
+        </record>
+
+        <record id="nile_partner2" model="res.partner" context="{'default_is_company': True}">
+            <field name="name"> Medicine</field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_stk" model="res.company">
+            <field name="name"> Medicine</field>
+            <field name="partner_id" ref="nile_partner2"/>
+            <field name="rml_header1"> Medicine</field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="base.main_company"/>
+        </record>
+
+
+        <record id="nile_partner3" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Dentistry  </field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_o_income" model="res.company">
+            <field name="name">Dentistry  </field>
+            <field name="partner_id" ref="nile_partner3"/>
+            <field name="rml_header1">Dentistry  </field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="base.main_company"/>
+        </record>
+
+
+        <record id="nile_partner4" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Pharmacy</field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_ncas" model="res.company">
+            <field name="name">Pharmacy</field>
+            <field name="partner_id" ref="nile_partner4"/>
+            <field name="rml_header1">Pharmacy</field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="base.main_company"/>
+        </record>
+
+
+        <record id="nile_partner5" model="res.partner" context="{'default_is_company': True}">
+            <field name="name"> Medical Laboratories Science  </field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_prepayments" model="res.company">
+            <field name="name">Medical Laboratories Science   </field>
+            <field name="partner_id" ref="nile_partner5"/>
+            <field name="rml_header1">Medical Laboratories Science   </field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="base.main_company"/>
+        </record>
+
+
+        <record id="nile_partner6" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Nursing</field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_prepayments1" model="res.company">
+            <field name="name">Nursing</field>
+            <field name="partner_id" ref="nile_partner6"/>
+            <field name="rml_header1">Nursing</field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="base.main_company"/>
+        </record>
+
+
+        <record id="nile_partner7" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">BusinessManagement and Accounting</field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_stk1" model="res.company">
+            <field name="name">BusinessManagement and Accounting</field>
+            <field name="partner_id" ref="nile_partner7"/>
+            <field name="rml_header1">BusinessManagement and Accounting</field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="conf_stk"/>
+        </record>
+
+
+        <record id="nile_partner8" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Computer Information System</field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_stk2" model="res.company">
+            <field name="name">Computer Information System</field>
+            <field name="partner_id" ref="nile_partner8"/>
+            <field name="rml_header1">Computer Information System</field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="conf_stk"/>
+        </record>
+
+
+        <record id="nile_partner9" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Management Information System</field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_stk3" model="res.company">
+            <field name="name">Management Information System</field>
+            <field name="partner_id" ref="nile_partner9"/>
+            <field name="rml_header1">Management Information System</field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="conf_stk"/>
+        </record>
+
+
+        <record id="nile_partner10" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Health Information System</field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_o_income1" model="res.company">
+            <field name="name">Health Information System</field>
+            <field name="partner_id" ref="nile_partner10"/>
+            <field name="rml_header1">Health Information System</field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="conf_o_income"/>
+        </record>
+
+
+        <record id="nile_partner11" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Information Technology</field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_o_income2" model="res.company">
+            <field name="name">Information Technology</field>
+            <field name="partner_id" ref="nile_partner11"/>
+            <field name="rml_header1">Information Technology</field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="conf_o_income"/>
+        </record>
+
+
+        <record id="nile_partner12" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Software Engineering</field>
+            <field name="notify_email" >always</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+        </record>
+
+        <!-- Basic Company  -->
+        <record id="conf_o_income3" model="res.company">
+            <field name="name">Software Engineering</field>
+            <field name="partner_id" ref="nile_partner12"/>
+            <field name="rml_header1">Software Engineering</field>
+            <field name="currency_id" ref="base.SDG"/>
+			<field name="type">faculty</field>
+            <field name="parent_id" ref="conf_o_income"/>
+        </record>
+
+    </data>
+</odoo>

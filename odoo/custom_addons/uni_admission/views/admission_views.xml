@@ -1,0 +1,402 @@
+<odoo>
+	<data>
+		<record id="uni_admission_view_form" model="ir.ui.view">
+			<field name="name">uni.admission.form</field>
+			<field name="model">uni.admission</field>
+			<field name="arch" type="xml">
+				<form string="Admission Request">
+					<header>
+						<field name="state" widget="statusbar" statusbar_visible="draft,candidate,wait_interview,interview,accepted,registered,rejected"/>
+						<button name="to_candidate" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+						<button name="to_wait_interview" string="Confirm" type="object" states="candidate" class="oe_highlight"/>
+						<button name="to_interview" string="Start Interview" type="object" states="wait_interview" class="oe_highlight"/>
+						<button name="to_accepted" string="Accept" type="object" states="interview" class="oe_highlight"/>
+						<button name="to_rejected" string="Reject" type="object" states="interview" />
+						<button name="to_return" string="Return" type="object" states="rejected" />
+						<button name="create_student_record" string="Complete First Registration" type="object" states="accepted" class="oe_highlight"/>
+						<button name="to_draft" string="Rest To Draft" type="object" states="candidate,wait_interview,interview,accepted,rejected" />
+					</header>
+					<sheet>
+						<field name="std_img" widget="image" class="oe_left oe_avatar" width="80" height="80"/>
+						<div class="oe_title"  style="margin-left:30px">
+							<h1>
+								<table attrs="{'invisible':[('state','!=','draft')]}">
+									<tr>
+										<td style="padding-right:10px;">
+											<field name="fourth_name" placeholder="Fourth Name" required="1"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="last_name" placeholder="Last Name" required="1"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="middle_name" placeholder="Middle Name" required="1"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="first_name" placeholder="First Name" required="1" />
+										</td>
+									</tr>
+								</table>
+								<field name="name" attrs="{'invisible':[('state','=','draft')]}"/>
+							</h1>
+						</div>
+						<div class="oe_title" style="margin-left:100px" invisible="1">
+							<h1>
+								<table>
+									<tr>
+										<td style="padding-right:10px;">
+											<field name="first_name_en" placeholder="First name (English)"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="middle_name_en" placeholder="Middle Name (English)"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="last_name_en" placeholder="Last Name (English)"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="fourth_name_en" placeholder="Fourth Name (English)"/>
+										</td>
+									</tr>
+								</table>
+							</h1>
+						</div>
+						<br/><br/>
+						<group>
+							<group>
+								<field name="acadimic_year_id" required="1" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="program_id" options="{'no_create': True}" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="batch_id" options="{'no_create': True}" attrs="{'invisible':[('type_admission','!=','new_admission')],'required':[('type_admission','=','new_admission')],'readonly':[('state','!=','draft')]}"/>
+								<field name="student_id" options="{'no_create': True}" attrs="{'invisible':[('state','!=','registered')],'readonly':[('state','!=','draft')]}"/>
+								<field name="admission_record_id" invisible="1" options="{'no_create': True}" />
+							</group>
+							<group>
+								<field name="admission_std_number" readonly="1"/>
+								<field name="university_id" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="university_login" attrs="{'invisible':[('university_id','!=',False)]}"/>
+							</group>
+						</group>
+					
+						<notebook>	
+							<page string="Acadimic">
+								<group>
+									<group>
+										<field name="type_admission" attrs="{'required':[('state','in',['candidate','draft'])],'readonly':[('state','not in',['candidate','draft'])]}"/>
+
+										<field name="batch_id" options="{'no_create': True}" attrs="{'invisible':[('type_admission','=','new_admission')],'required':[('type_admission','!=','new_admission')],'readonly':[('state','!=','draft')]}"/>
+										<field name="level_id" options="{'no_create': True}" attrs="{'invisible':[('type_admission','=','new_admission')],'required':[('type_admission','!=','new_admission')],'readonly':[('state','!=','draft')]}"/>
+										<field name="fulfillment_subject" attrs="{'invisible':[('type_admission','=','new_admission')],'readonly':[('state','!=','draft')]}"/>
+
+										<field name="nationality_type_id" required="1" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}"/>
+										<field name="admission_year" invisible="1"/>
+									</group>
+									<group>
+										<field name="language" attrs="{'readonly':[('state','!=','draft')]}"/>
+										<field name="secondary_school" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+										<field name="school_percentage" attrs="{'invisible':[('state','=','draft')],'readonly':[('state','!=','draft')]}"/>
+										<field name="user_id" required="0" attrs="{'readonly':[('state','!=','draft')]}"/>
+									</group>
+								</group>
+							</page>
+							<page string="Application Data" attrs="{'invisible':[('state','=','draft')]}">
+								<group>
+									<group string="Personal Info">
+										<field name="birth_date" attrs="{'required':[('state','in',['candidate'])],'readonly':[('state','!=','candidate')]}"/>
+										<field name="place_of_birth" attrs="{'required':[('state','in',['candidate'])],'readonly':[('state','!=','candidate')]}"/>
+										<field name="gender" attrs="{'required':[('state','in',['candidate'])],'readonly':[('state','!=','candidate')]}"/>
+										<field name="religion" attrs="{'required':[('state','in',['candidate'])],'readonly':[('state','!=','candidate')]}"/>
+										<field name="city" attrs="{'required':[('state','in',['candidate'])],'readonly':[('state','!=','candidate')]}"/>
+										<field name="email" attrs="{'readonly':[('state','!=','candidate')]}" widget="email"/>
+										<field name="address" attrs="{'required':[('state','in',['candidate'])],'readonly':[('state','!=','candidate')]}"/>
+									</group>
+									<group string="Identity Info">
+										<field name="nationality_id" options="{'no_create': True}" attrs="{'required':[('state','in',['candidate'])],'readonly':[('state','!=','candidate')]}"/>
+										<field name="identity_type_id" attrs="{'required':[('state','in',['candidate'])],'readonly':[('state','!=','candidate')]}"/>
+										<field name="identity_num" attrs="{'required':[('state','in',['candidate'])],'readonly':[('state','!=','candidate')]}"/>
+										<field name="sudan_country_id" invisible="1"/>
+									</group>
+								</group>
+								<group string="Student Contacts"/>
+								<field name="contact_ids" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree editable="bottom">
+										<field name="phone" width="0.5"/>
+										<field name="whatsapp_number" width="0.5"/>
+									</tree>
+								</field>
+								<group string="Guardians Information"/>
+								<field name="guardians_ids" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree>
+										<field name="name"/>
+										<field name="relation_id"/>
+										<field name="email"/>
+									</tree>
+									<form>
+										<group col="4">
+											<field name="name"/>
+											<field name="relation_id" required="1"/>
+											<field name="email" required="1"/>
+											<field name="identity_type_id" required="0"/>
+											<field name="identity_num" required="0"/>
+										</group>
+										<notebook>
+											<page string="Contacts">
+												<field name="contact_ids">
+													<tree editable="bottom">
+														<field name="phone" width="0.5"/>
+														<field name="whatsapp_number" width="0.5"/>
+													</tree>
+												</field>
+											</page>
+										</notebook>
+									</form>
+								</field>
+							</page>
+							<page string="Attachments" attrs="{'invisible':[('state','=','draft')],}">
+								<group>
+									<field name="student_national_id_img" attrs="{'readonly':[('state','!=','draft')]}"/>
+									<field name="student_passport_id_img" attrs="{'readonly':[('state','!=','draft')]}"/>
+									<field name="scondary_certificate_id_img" attrs="{'invisible':[('state','=','draft')],'readonly':[('state','!=','draft')]}"/>
+								</group>
+							</page>
+							<page string="Previous University Info" attrs="{'invisible':[('type_admission','=','new_admission')],'readonly':[('state','!=','draft')]}">
+								<group col="4">
+									<field name="institution_name"/>
+									<field name="study_years"/>
+									<field name="study_college"/>
+									<field name="study_join_year"/>
+									<field name="study_cirtificate_type"/>
+								</group>
+							</page>
+							<page string="Fulfillment Subject" attrs="{'invisible':[('fulfillment_subject','!=',True)]}">
+								<field name="fulfillment_subject_id" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree editable="bottom">
+										<field name="level_id"/>
+										<field name="batch_id"/>
+										<field name="semester_id"/>
+										<field name="subject_id"/>
+										<field name="academic_year_id"/>
+										<field name="program_id" invisible="1"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Interview Result" attrs="{'invisible':[('state','in',['draft','candidate','wait_interview'])]}">
+								<group string="Medical Info" col="4">
+									<field name="medical_condition" attrs="{'required':[('state','=','interview')],'readonly':[('state','!=','interview')]}" widget="radio"/>
+									<field name="committee_recom"  attrs="{'required':[('state','=','interview')],'readonly':[('state','!=','interview')]}" widget="radio"/>
+								</group>
+								<group>
+									<field name="committee_head" attrs="{'required':[('state','=','interview')],'readonly':[('state','!=','interview')]}" />
+
+									<field name="committee_notes"  attrs="{'required':[('state','=','interview')],'readonly':[('state','!=','interview')]}" />
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="uni_admission_view_tree">
+			<field name="name">uni.admission.tree</field>
+			<field name="model">uni.admission</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="university_id"/>
+					<field name="name"/>
+					<field name="program_id"/>
+					<field name="acadimic_year_id"/>
+					<field name="admission_year" />
+					<field name="nationality_type_id"/>
+					<field name="state"/>
+					<field name="active" widget="boolean_toggle"/>
+				</tree>
+			</field>
+		</record>
+		<!-- Admission Kanban View  -->
+		<record model="ir.ui.view" id="uni_admission_view_kanban">
+			<field name="name">uni.admission.view.kanban</field>
+			<field name="model">uni.admission</field>
+			<field name="arch" type="xml">
+				<kanban sample="1" records_draggable="false">
+					<field name="id"/>
+					<field name="name"/>
+					<field name="std_img"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="o_kanban_image">
+									<img t-att-src="kanban_image('uni.admission', 'std_img', record.id.raw_value)" alt="Admission Request" class="o_image_64_contain"/>
+								</div>
+								<div class="oe_kanban_details">
+									<h4>
+										<a type="open">
+											<field name="name" />
+										</a>
+									</h4>
+
+									<ul>
+										<strong>Admission No:</strong>
+										<field name="admission_std_number" />
+									</ul>
+									<ul>
+										<strong>University ID:</strong>
+									<field name="university_id" />
+									</ul>
+									<ul>
+										<strong>Program:</strong>
+										<field name="program_id" />
+									</ul>
+									<ul>
+										<strong>Batch:</strong>
+										<field name="batch_id" />
+									</ul>
+									<ul>
+										<strong>Admission year:</strong>
+										<field name="admission_year" />
+									</ul>
+									
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+		<record id="uni_admission_view_search" model="ir.ui.view">
+			<field name="name">uni.admission.search</field>
+			<field name="model">uni.admission</field>
+			<field name="arch" type="xml">
+				<search string="Search Admission">
+					<group expand="0" string="Group By">
+						<field name="university_id"/>
+						<field name="name"/>
+						<field name="admission_std_number"/>
+						<field name="acadimic_year_id" select="True"/>
+						<field name="program_id" select="True"/>
+						<field name="batch_id" select="True"/>
+						<field name="nationality_type_id" select="True"/>
+						<field name="type_admission"/>
+						<filter string="State" name="groupby_state" domain="[]" context="{'group_by':'state'}"/>
+						<filter string="Program" name="groupby_programe" domain="[]" context="{'group_by':'program_id'}"/>
+						<filter string="Batch" name="groupby_batch" domain="[]" context="{'group_by':'batch_id'}"/>
+						<filter string="Admission Type" name="groupby_admission" domain="[]" context="{'group_by':'type_admission'}"/>
+						<filter string="Nationality Type" name="groupby_nationality" domain="[]" context="{'group_by':'nationality_type_id'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<!-- actions opening views on models -->
+		<record model="ir.actions.act_window" id="uni_admission_action">
+			<field name="name">Admission Requests</field>
+			<field name="res_model">uni.admission</field>
+			<field name="view_mode">kanban,tree,form</field>
+
+		</record>
+
+		<!-- Admission Record View -->
+
+		<record id="uni_admission_record_view_form" model="ir.ui.view">
+		<field name="name">uni.admission.record.form</field>
+		<field name="model">uni.admission.record</field>
+		<field name="arch" type="xml">
+			<form string="Admission Record">
+				<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,approved,closed"/>
+					<button name="action_approve" string="Approve" type="object" states="draft" />
+					<button name="action_close" string="Close" type="object" states="approved" />
+					<button name="rest_draft" string="Rest To Draft" type="object" states="closed" />
+				</header>
+				<sheet>
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only"/>
+						<h1>
+							<field name="name" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</h1>
+					</div>
+					<group col="4">
+						<field name="code" attrs="{'readonly':[('state','!=','draft')]}"/>
+						<field name="start_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+						<field name="academic_year_id" readonly="1"/>
+						<field name="end_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+					</group>
+					<notebook>
+						<page string="Programs">
+							<field name='admission_program_plan_ids' attrs="{'readonly':[('state','!=','draft')]}">
+								<tree editable="top">
+									<field name="program_id" required="1"/>
+									<field name="nationality_type_id"/>
+									<field name="add_new" width="0.5" sum="New"/>
+									<field name="transference" width="0.5" sum="Transference"/>
+									<field name="academic_degrees" width="0.5" sum="Academic Degree"/>
+									<field name="mature" sum="Mature"/>
+									<field name="academic_degree_holders" sum="Holders"/>
+									<field name="total_student" sum="Total"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Batches">
+							<field name="batch_ids" attrs="{'readonly':[('state','!=','draft')]}">
+								<tree> 
+									<field name='code' string="Name"/>
+									<field name='program_id'/>
+									<field name='state'/>
+								</tree>
+							</field>
+						</page>
+						<page string="Candidates">
+							<field name="admission_ids" attrs="{'readonly':[('state','!=','draft')]}">
+								<tree> 
+									<field name='name'/>
+									<field name="program_id"/>
+									<field name="state"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+			</form>
+		</field>
+		</record>
+		<record id="uni_admission_record_view_tree" model="ir.ui.view">
+			<field name="name">uni.admission.record.tree</field>
+			<field name="model">uni.admission.record</field>
+			<field name="arch" type="xml">
+				<tree string="Admission Record">
+					<field name="code"/>
+					<field name="name"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_admission_record_action_form" model="ir.actions.act_window">
+			<field name="name">Admission Record</field>
+			<field name="res_model">uni.admission.record</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">				Click to create new Admission Record			</p>
+			</field>
+		</record>
+
+
+		<!-- admission request menues -->
+		<menuitem name="Admission" id="uni_admission_view_menu"
+		parent="uni_admission_admissions_menu"/>
+		<menuitem name="Admission Requests" id="admission_request_menu" 
+		parent="uni_admission_view_menu" action="uni_admission_action" sequence="1"/>
+
+		<menuitem id="uni_admission_student_menu" name="Students" parent="uni_admission_admissions_menu" action="uni_core.uni_core_students_list_action" sequence="2" />
+
+		<!-- admission record menue -->
+		<menuitem name="Admission Record" id="admission_record_menu" 
+		parent="uni_admission_view_menu" action="uni_admission_record_action_form"/>
+		
+		<menuitem name="Reports" id="uni_report_view_menu" sequence="4" 
+		parent="uni_admission_admissions_menu"/>
+
+	</data>
+</odoo>

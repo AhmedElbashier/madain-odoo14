@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="student_migration_view_form" model="ir.ui.view">
+		<field name="name">student.migration.form</field>
+		<field name="model">student.migration</field>
+		<field name="arch" type="xml">
+			<form string="Student Migration">
+				<sheet>
+					<div class="oe_title">
+						<h1>
+							<table>
+								<tr>
+									<td style="padding-right:10px;">
+										<field name="first_name" placeholder="First Name" />
+									</td>
+									<td style="padding-right:10px;">
+										<field name="middle_name" placeholder="Second Name" />
+									</td>
+									<td style="padding-right:10px;">
+										<field name="last_name" placeholder="Third Name" />
+									</td>
+									<td style="padding-right:10px;">
+										<field name="fourth_name" placeholder="Fourth Name" />
+									</td>
+								</tr>
+							</table>
+						</h1>
+					</div>
+					<group>
+						<field name="university_id" />
+						<field name="faculty_id" options="{'no_create': True}" invisible="1"/>
+						<field name="program_id" options="{'no_create': True}" />
+						<!-- <field name="department_id" options="{'no_create': True}" /> -->
+					</group>
+					<group>
+						<field name="secondary_school" />
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="Student_migration_view_tree" model="ir.ui.view">
+		<field name="name">Students List</field>
+		<field name="model">student.migration</field>
+		<field name="arch" type="xml">
+			<tree string="Student Migration">
+				<field name="university_id"/>
+				<field name="first_name"/>
+				<field name="secondary_school"/>
+				<field name="faculty_id"/>
+				<field name="department_id"/>
+			</tree>
+		</field>
+	</record>
+	<record id="student_migration_action" model="ir.actions.act_window">
+		<field name="name">Students List</field>
+		<field name="res_model">student.migration</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Click on import button to import new students.</p>
+		</field>
+	</record>
+	<menuitem id="menu_student_migration" name="Students List" parent="menu_student_migration_view" action="student_migration_action"/>
+</odoo>

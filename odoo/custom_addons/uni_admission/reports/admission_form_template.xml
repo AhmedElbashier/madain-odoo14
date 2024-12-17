@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="report_admission_form_template">
+		<t t-call="web.html_container">
+		   <t t-foreach="docs" t-as="o">
+		    <div class="article o_report_layout_standard"  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+            <t t-call="uni_admission.admission_header"/>
+			    <style>
+                        @font-face {
+                            font-family: 'Almarai';
+                            src: local('Almarai'), local('Almarai'),
+                            url('/uni_core/static/fonts/Almarai.ttf') format('truetype');
+                            }
+                        *{
+                            font-family: Almarai;
+                            }
+						.box_image{
+							height: 100px;
+							width: 100px;
+							border: 1px solid #000;
+						}
+                    </style> 
+					<div class="page">
+					    <h4 class="text-center"><strong>استمارة القبول</strong></h4>
+						<br/>
+						<br/>					
+						<div style="text-align: right">
+						    <span style="color:red;">.على الطالب مراجعة بيانات الاستمارة والتأكد من صحتها </span>
+					    </div>
+						<br/>
+						<div class="row">
+						   <div class="col-4">
+							   <div class="box_image">
+							      <span style="width:100%; overflow: hidden;" t-field="o.std_img" t-options='{"widget": "image"}'/>
+							   </div>
+						   </div>
+						   <div class="col-8">
+						       <table class="table table-bordered" style="padding:0px;">
+									<tbody>
+										<tr style="Background-color:#BDBDBD">
+											<td colspan="4" style="border: 1px solid black;">
+												<center><span style="font-weidght: bold;">نوع القبول</span></center>
+											</td>
+										</tr>
+										<tr class="text-right">
+											<td style="border: 1px solid black;">
+											    <t t-if="o.type_admission == 'transfer'">
+												   <i class="fa fa-check" style="color:green;"></i>
+												</t>
+												<span style="font-weidght: bold;">تحويل</span>
+											</td>
+											<td style="border: 1px solid black;">
+											    <t t-if="o.type_admission == 'bridging'">
+												   <i class="fa fa-check" style="color:green;"></i>
+												</t>
+												<span style="font-weidght: bold;">تجسير</span>
+											</td>
+											<td style="border: 1px solid black;">
+											    <t t-if="o.type_admission == 'mature'">
+												   <i class="fa fa-check" style="color:green;"></i>
+												</t>
+												<span style="font-weidght: bold;">ناضجين</span>
+												
+											</td>
+											<td style="border: 1px solid black;">
+											    <t t-if="o.type_admission == 'new_admission'">
+												<i class="fa fa-check" style="color:green;"></i>
+												</t>
+												<span style="font-weidght: bold;">قبول جديد</span>
+												
+											</td>
+										</tr>
+									</tbody>
+								</table>
+						   </div>
+						</div>
+						<br/>
+						<br/>
+						<div class="row">
+						        <div class="col-12">
+						        <table class="table table-bordered">
+									<tbody>
+										<tr style="Background-color:#BDBDBD">
+											<td colspan="4" style="border: 1px solid black;">
+												<center><span style="font-weidght: bold;">البيانات الشخصية</span></center>
+											</td>
+										</tr>
+										<tr class="text-right">
+											<td colspan="4" style="border: 1px solid black;">
+												<span style="font-weidght: bold;">الإسم رباعي</span>
+											</td>
+										</tr>
+										<tr class="text-right">
+											<td style="border: 1px solid black;">
+												<span t-esc="o.fourth_name"></span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span t-esc="o.last_name"></span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span t-esc="o.middle_name"></span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span t-esc="o.first_name"></span>
+											</td>
+										</tr>
+										<tr class="text-right">
+											<td colspan="4" style="border: 1px solid black;">
+												<span style="font-weidght: bold;">النوع</span>
+											</td>
+										</tr>
+										<tr class="text-right">
+											<td colspan="2" style="border: 1px solid black;">
+											    <t t-if="o.gender == 'female'">
+												   <i class="fa fa-check" style="color:green;"></i>
+												</t>
+												<span style="font-weidght: bold;">أنثى</span>
+											</td>
+											<td colspan="2" style="border: 1px solid black;">
+											    <t t-if="o.gender == 'male'">
+												   <i class="fa fa-check" style="color:green;"></i>
+												</t>
+												<span style="font-weidght: bold;" >ذكر</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>   
+								</div>   
+						   </div>
+						   <br/>
+						   <br/>
+						   <div class="row">
+						       <div class="col-12">
+							      <table class="table table-bordered">
+										<tbody>
+											<tr style="Background-color:#BDBDBD">
+												<td colspan="6" style="border: 1px solid black;">
+													<center><span style="font-weidght: bold;">وثيقة إثبات الشخصية</span></center>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black;">
+													<span t-esc="o.nationality_id.name"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >جنسية الطالب</span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span t-esc="o.identity_num"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >رقمها</span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span t-esc="o.identity_type_id.name"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">نوعها</span>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black;">
+													<span t-esc="o.religion"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >الديانة</span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span t-esc="o.birth_date"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >تاريخ الميلاد</span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span t-esc="o.place_of_birth"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">دولة الميلاد</span>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td colspan="2" style="border: 1px solid black;">
+													<span t-esc="o.city"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >مدينة السكن</span>
+												</td>
+												<td colspan="2" style="border: 1px solid black;">
+													<span t-esc="o.address"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">العنوان بالتفصيل</span>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td colspan="2" style="border: 1px solid black;">
+												    <t t-if="not o.mobile">
+													    <span>لا يوجد رقم هاتف ثاني</span>
+													</t>
+													<t t-else="">
+													   <span t-esc="o.mobile"></span>
+													</t>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >(رقم هاتف(2</span>
+												</td>
+												<td colspan="2" style="border: 1px solid black;">
+													<span t-esc="o.phone"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">(رقم هاتف(1</span>
+												</td>								
+											</tr>
+										</tbody>
+									</table>
+							   </div>
+						   </div>
+						   <br/>
+						   <br/>
+						   <br/>
+						   <br/>
+						   <br/>
+						   <br/>
+						   <br/>
+						   <br/>
+                           <div class="row">
+						       <div class="col-12">
+							        <table class="table table-bordered">
+										<tbody>
+											<tr style="Background-color:#BDBDBD">
+												<td colspan="4" style="border: 1px solid black;">
+													<center><span style="font-weidght: bold;">بيانات ولي الامر</span></center>
+												</td>
+											</tr>
+											<t t-foreach="o.guardians_ids" t-as="guardian">
+												<tr class="text-right">
+													<td style="border: 1px solid black;">
+														<span t-esc="guardian.relation_id.name"></span>
+													</td>
+													<td style="border: 1px solid black;">
+														<span style="font-weidght: bold;" >صلة القرابة</span>
+													</td>
+													<td style="border: 1px solid black;">
+														<span t-esc="guardian.name"></span>
+													</td>
+													<td style="border: 1px solid black;">
+														<span style="font-weidght: bold;">الأسم</span>
+													</td>								
+												</tr>
+												<tr class="text-right">
+													<t t-foreach="guardian.contact_ids" t-as="contact">
+														<!-- <t t-if="contact_index &lt; 2"> -->
+															<t t-if="contact_index == 0">
+																<td style="border: 1px solid black;">
+																	<span t-esc="contact.phone"></span>
+																</td>
+																<td style="border: 1px solid black;">
+																	<span style="font-weidght: bold;" >(رقم هاتف(2</span>
+																</td>
+															<!-- </t> -->
+															<!-- <t t-else="contact_index == 1"> -->
+																<td style="border: 1px solid black;">
+																	<span t-esc="contact.phone"></span>
+																</td>
+																<td style="border: 1px solid black;">
+																	<span style="font-weidght: bold;" >(رقم هاتف(1</span>
+																</td>
+															</t>
+														<!-- </t> -->
+													</t>							
+												</tr>
+											</t>
+										</tbody>
+									</table>
+							   </div>
+						   </div>
+						   <br/>
+						   <div class="row">
+						      <div class="col-12">
+							    <table class="table table-bordered">
+									<tbody>
+										<tr style="Background-color:#BDBDBD">
+											<td colspan="4" style="border: 1px solid black;">
+												<center><span style="font-weidght: bold;">بيانات القبول</span></center>
+											</td>
+										</tr>
+										<tr class="text-right">
+											<td style="border: 1px solid black;">
+												<span t-esc="o.program_id.name"></span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span style="font-weidght: bold;" >البرنامج</span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span t-esc="o.admission_year.name"></span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span style="font-weidght: bold;">عام القبول</span>
+											</td>								
+										</tr>
+										<tr class="text-right">
+											<td colspan="3" style="border: 1px solid black;">
+												<span t-esc="o.university_id"></span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span style="font-weidght: bold;">الرقم الجامعي</span>
+											</td>								
+										</tr>
+										<tr class="text-right">
+											<td style="border: 1px solid black;">
+												<span t-esc="o.school_percentage"></span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span style="font-weidght: bold;" >نسبة الشهادة الثانوية</span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span t-esc="o.nationality_type_id.name"></span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span style="font-weidght: bold;">نوع الشهادة</span>
+											</td>								
+										</tr>
+										<tr class="text-right">
+											<td colspan="3" style="border: 1px solid black;">
+												<span t-esc="o.secondary_school.name"></span>
+											</td>
+											<td style="border: 1px solid black;">
+												<span style="font-weidght: bold;">مدرسة الشهادة الثانوية</span>
+											</td>								
+										</tr>
+									</tbody>
+								</table>
+							  </div>
+						   </div>
+						   <br/>
+						   <div class="row">
+						       <div class="col-12">
+							        <table class="table table-bordered">
+										<tbody>
+											<tr style="Background-color:#BDBDBD">
+												<td colspan="4" style="border: 1px solid black;">
+													<center><span style="font-weidght: bold;">(بيانات المؤسسة التعليمية السابقة لقبول (التجسير + التحويل + الناضجين</span></center>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black;">
+													<span t-esc="o.study_years"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >عدد السنوات الدراسية التي أكملها</span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span t-esc="o.institution_name"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">إسم المؤسسة</span>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black;">
+													<span t-esc="o.study_college"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >الكلية/البرنامج/التخصص</span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span t-esc="o.study_join_year"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">عام الإلتحلق بالمؤسسة</span>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td colspan="3" style="border: 1px solid black;">
+													<span t-esc="o.study_cirtificate_type"></span>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">نوع شهادة التخرج</span>
+												</td>								
+											</tr>
+										</tbody>
+									</table>
+							   </div>
+						   </div>
+						   <br/>
+						   <div class="row">
+						       <div class="col-12">
+							        <table class="table table-bordered">
+										<tbody>
+											<tr style="Background-color:#BDBDBD">
+												<td colspan="3" style="border: 1px solid black;">
+													<center><span style="font-weidght: bold;">خاص بلجنة المعاينة</span></center>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td colspan="2" style="border: 1px solid black;">
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">التاريخ</span>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black;">
+													<span>غير لائق</span>
+													<i class="fa fa-square-o" style="color:red;"></i>
+												</td>
+												<td style="border: 1px solid black;">
+													<span>لائق</span>
+													<i class="fa fa-square-o" style="color:green;"></i>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">الكشف الطبي</span>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black;">
+													<span>غير مقبول</span>
+													<i class="fa fa-square-o" style="color:red;"></i>
+												</td>
+												<td style="border: 1px solid black;">
+													<span>مقبول</span>
+													<i class="fa fa-square-o" style="color:green;"></i>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">توصية اللجنة</span>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td colspan="2" style="border: 1px solid black;">
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">ملاحظات وتوقيع رئيس اللجنة</span>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td colspan="2" style="border: 1px solid black;">
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">إسم رئيس اللجنة</span>
+												</td>								
+											</tr>
+										</tbody>
+									</table>
+							   </div>
+						   </div>
+						   <div class="row">
+						       <div class="col-12">
+							        <table class="table table-bordered">
+										<tbody>
+											<tr style="Background-color:#BDBDBD">
+												<td colspan="4" style="border: 1px solid black;">
+													<center><span style="font-weidght: bold;">إعتماد منسق البرنامج</span></center>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td colspan="2" style="border: 1px solid black;">
+													<span style="font-weidght: bold;">مقبول بدون مواد إستيفاء</span>
+													<i class="fa fa-square-o" style="color:green;"></i>
+												</td>
+												<td colspan="2"  style="border: 1px solid black;">
+													<span style="font-weidght: bold;">غير مقبول</span>
+													<i class="fa fa-square-o" style="color:green;"></i>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td colspan="4"  style="border: 1px solid black;">
+													<span style="font-weidght: bold;">مقبول وعله مواد الإستيفاء التالية</span>
+													<i class="fa fa-square-o" style="color:green;"></i>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td colspan="2" style="border: 1px solid black;">
+													<span style="font-weidght: bold;">.2</span>
+												</td>
+												<td colspan="2" style="border: 1px solid black;">
+													<span style="font-weidght: bold;">.1</span>
+												</td>								
+											</tr>
+											<tr class="text-right">
+												<td colspan="2" style="border: 1px solid black;">
+													<span style="font-weidght: bold;">.4</span>
+												</td>
+												<td colspan="2" style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >.3</span>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;">الثالث</span>
+													<i class="fa fa-square-o" style="color:green;"></i>
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >الثاني</span>
+													<i class="fa fa-square-o" style="color:green;"></i>
+												</td>
+												<td colspan="2" style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >المستوى الدراسي المقبول به</span>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td colspan="3" style="border: 1px solid black;">
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >إسم المنسق</span>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td colspan="3" style="border: 1px solid black;">
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >التاريخ</span>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td colspan="3" style="border: 1px solid black;">
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >التوقيع</span>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td colspan="3" style="border: 1px solid black;">
+												</td>
+												<td style="border: 1px solid black;">
+													<span style="font-weidght: bold;" >ملحوظات</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							   </div>
+						   </div>
+						   <br/>
+						   <div class="row">
+						       <div class="col-12">
+							       <table class="table table-bordered">
+										<tbody>
+											<tr class="text-right">
+												<td style="border: 1px solid black;width:70%">
+												</td>
+												<td  style="Background-color:#BDBDBD;border: 1px solid black;width:30%">
+													<span style="font-weidght: bold;">مدخل في النظام بواسطة</span>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black;width:70%">
+												</td>
+												<td  style="border: 1px solid black;width:30%">
+													<span style="font-weidght: bold;">إعتماد مدير القبول</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							   </div>
+						   </div>
+						   <br/>
+						   <div class="row">
+						      <div class="col-12">
+							        <table class="table table-bordered">
+										<tbody>
+											<tr style="Background-color:#BDBDBD">
+												<td colspan="3" style="border: 1px solid black;">
+													<center><span style="font-weidght: bold;">إعتماد الشؤون العلمية</span></center>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td rowspan="3" class="text-center" style="border: 1px solid black;width=20%">
+													<span style="font-weidght: bold;width=20%">الختم</span>
+												</td>
+												<td style="border: 1px solid black;width=33%">
+												</td>
+												<td  style="border: 1px solid black;">
+													<span style="font-weidght: bold;width=33%">الإسم</span>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black;width=33%">
+												</td>
+												<td  style="border: 1px solid black;width=33%">
+													<span style="font-weidght: bold;width=33%">التاريخ</span>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black;width=33%">
+												</td>
+												<td  style="border: 1px solid black;width=33%">
+													<span style="font-weidght: bold;width=33%">التوقيع</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							  </div>
+						   </div>
+						   <br/>
+						   <br/>
+						   <br/>
+						   <br/>
+						   <br/>
+						   <br/>
+						   
+						   <div class="row">
+						       <div class="col-12">
+							       <table class="table table-bordered">
+										<tbody>
+											<tr style="Background-color:#BDBDBD">
+												<td colspan="4" style="border: 1px solid black;">
+													<center><i class="fa fa-bullhorn" style="color:#A5CFFF; font-size:22px; margin-right:100px;"></i><span style="font-weidght: bold;width=100%">خطوات وموجهات القبول</span></center>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black; width:50%">
+													<span style="font-size:13px;">. على الطالب توريد المبلغ المالي باسمة والتاكد من اسمه بالايصالات المالية</span><br/>
+													<span style="font-size:13px;">.في حالة التاخير في السداد حسب البرمجة المعلنة يحرم الطالب من الدخول لحرم الكلية ودخول المحاضرات والجلوس للامتحانات لحين إستيغائه للسداد</span><br/>
+													<span style="font-size:13px;"> .على الطالب الالتزام بالتوجيهات المعلنة من مكتب المسجل وارشادات المتابعة والسلامة في جميع اجراء هذه الادارات</span><br/>
+													<span style="font-size:13px;">...على الطالب الاطلاع على جميع لوائح الطلاب وجميع بنود اجرارات الكلية من حيث القبول , التسجيل , التجميد , الاستقالة , الخ</span><br/>
+													<span style="font-size:13px;">.يتوقف قبول الطالب على موافقة لجنة المعاينة</span><br/>
+													<span style="font-size:13px;">.يتوقف القبول للناضجين والتحويل والتجسير على موافقة ادارة التعليم العالي الاهلي الاجنبي والادارة العامة للقبول بوازرة التعليم العالي والبحث العلمي واستيفائه لمطلوبات القبول بالكلية</span><br/>
+													<span style="font-size:13px;">.رسوم التسجيل لا تسترد</span><br/>
+													<span style="font-size:13px;">الرسوم الدراسية لا تسترد بعد اسبوع من تاريخ السداد للتسجيل</span><br/>
+												</td>
+												<td style="border: 1px solid black">
+													<span style="font-size:14px; border-left:1px solid #fff;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+												</td>
+												<td style="border: 1px solid black; width:50%">
+													<span style="font-size:13px;">.إحضار أربعة صور فوتوغرافية حديثة</span><br/>
+													<span style="font-size:13px;">.احضار الشهادة الثانوية اصل وصورة</span><br/>
+													<span style="font-size:13px;">.اثبات الهوية رقم وطني / جواز سفر اصل وصورة</span><br/>
+													<span style="font-size:13px;">.وجوب مراجعة البيانات الاساسية للطالب على الاستمارة بوضوح</span><br/>
+													<span style="font-size:13px;">.على الطالب وولي الامر التوقيع على التعهدات المرفقة مع استمارة التسجيل</span><br/>
+													<span style="font-size:13px;">.تعبئة الاقرار الطبي</span><br/>
+													<span style="font-size:13px;">.المتابعة لمعرفة مواعيد لجنة المعاينة</span><br/>
+													<span style="font-size:13px;">. على الطالب الحرص على اكمال الاجراءات والمستندات في الوقت المحدد للتسجيل والمعلن من قبل ادارة الكلية ويتحمل الطالب كامل المسئولية للاجراءات التي تتخذها الكلية في حالة نقص المستندات وعدم متابعة الاجراءات</span><br/>
+													<span style="font-size:13px;">.دفع المصروفات الدراسية ورسوم التسجيل وفق موجهات الادارة المالية المحدد للاقساط من قبل ادارة الكلية</span><br/>
+												</td>
+												<td style="border: 1px solid black">
+													<span style="font-size:14px; border-left:1px solid #fff;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" ></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							   </div>
+						   </div>
+						   <br/>
+						   <br/>
+						   <br/>
+						   <div class="row">
+						        <div class="col-12">
+							        <table class="table table-bordered">
+										<tbody>
+											<tr style="Background-color:#BDBDBD">
+												<td colspan="2" style="border: 1px solid black; width:50%">
+													<center><i class="fa fa-bullhorn" style="color:#A5CFFF; font-size:22px; margin-right:100px;"></i><span style="font-weidght: bold;width=50%">موجهات وإرشادات الإدارة المالية</span></center>
+												</td>
+												<td colspan="2" style="border: 1px solid black;">
+													<center><i class="fa fa-bullhorn" style="color:#A5CFFF; font-size:22px; margin-right:100px;"></i><span style="font-weidght: bold; width:50%">خطوات وموجهات التسجيل</span></center>
+												</td>
+											</tr>
+											<tr class="text-right">
+												<td style="border: 1px solid black">
+													<span style="font-size:13px;">.على الطالب توريد المبلغ المالي باسمه والتاكد من اسمه بالايصالات المالية</span><br/>
+													<span style="font-size:13px;">.على الطالب الاحتفاظ بالايصال المالي حيث يعتبر هو الدليل الوحيد للسداد </span><br/>
+													<span style="font-size:13px;">.في حالة السداد بالبنك على الطالب احضار صورة اشعار الاضافة الى الادارة المالية . ولا يعتمد السداد بدون هذا الاشعار</span><br/>
+													<span style="font-size:13px;">.لا تعتمد الاستقالة الا بعد سداد نصف رسوم العام الدراسي</span><br/>
+													<span style="font-size:13px;">.لا تعتمد رسوم نفس دفعة القبول في حالة التجميد لعام دراسي واحد وفي حالة التجميد لاكثر من عام تعتمد رسوم العام الدراسي الجديد</span><br/>
+												</td>
+												<td style="border: 1px solid black">
+													<span style="font-size:14px; border-left:none;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+												</td>
+								
+												<td style="border: 1px solid black">
+													<span style="font-size:13px;">.اكمال كافة مطلوبات التسجيل في الفترة المقررة والتي لا تتخطى اسبوعين من تاريخ بداية الدراسي</span><br/>
+													<span style="font-size:13px;">.وجوب مراجعة البيانات الاساسية للطالب بوضوح وتجدد ارقام التواصل للطالب ولولي الامر</span><br/>
+													<span style="font-size:13px;">.دفع الرسوم الدراسية ورسوم التسجيل وفق موجهات الادراة المالية</span><br/>
+												</td>
+												<td style="border: 1px solid black">
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle" style="color:#fff;"></i></span><br/>
+													<span style="font-size:14px;"><i class="fa fa-info-circle"></i></span><br/>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							    </div>
+						    </div>
+						    <br/>
+						    <br/>
+						    <br/>
+						    <br/>
+						    <br/>
+						    <br/>
+						    
+						    <h4 class="text-center"><strong>تعهد</strong></h4>
+							<br/>
+							<div style="text-align: right">
+								<span style="font-weidght: bold;">التاريخ</span><br/>
+								<span style="font-weidght: bold;"> .................................................................أنا الطالب</span>
+								<span style="font-weidght: bold;">..................................................................ببرنامج</span><br/>
+								<span style="font-weidght: bold;">:أتعهد بالتزامي ومعرفتي بالاتي </span><br/>
+							</div>
+							<br/>
+							<div style="text-align: right; margin-right:60px;">
+								<span style="font-weidght: bold; margin-right:10px;">. الالتزام التام بالقوانين واللوائح والنظم بالكلية</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.بذل قصارى جهدي في اداء واجباتي الاكاديمية والتحصيل العلمي</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.المحافظة على مباني ومعدات واجهزة وكافة ممتلكات الكلية</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.التقيد التام بموجهات الزي اللائق الذي تقرره الكلية. والالتزام بموجهات الكلية</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.عدم ممارسة الانشظة السياسية او الانضمام الى جماعة علي اساس ديني او مذهبي او عقائدي داخل حرم الكلية</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.الامتناع عن تعاطي التمباك او التدخين وكافة انواع المنبهات المحظورة داخل حرم الكلية بما فيها القاعات والمكتبة والمعامل والمستشفيات التابعة للكلية</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.الوفاء بالتزاماتي المالية تجاه الكلية</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.عدم حمل الاسلحة او الاسلحة البيضاء او العصي او ما في حكمهم داخل حرم الكلية</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.عدم ادخال المواد الحارقة او معدات التخريب المحظورة للكلية</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.عدم اللجوء للعنف واستعمال القوة مع الاخرين</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.عدم التلفظ بالعبارات الجارحة او البذيئة او السب او التحدث مع الغير باسلوب غير مهذب</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.الامتناع عن كل ما من شانه الاخلال بالنظام او عرقلة سير الدراسة</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.في حال الاخلال بهذا التعهد اكون عرضة للجزاءات العقوبات المترتبة عليها بما في ذلك الفصل من الكلية لسوء السلوك</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.في حالة تغيير عنوان السكن او رقم الهاتف المحمول او رقم هاتق ولي الامر يجب علي اخطار المسجل</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.جميع المنح والتخفيضات تلغى في حالة مخالفة لائحة تنظيم سلوك الطلاب او الاعادة</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.على الطالب اخلاء طرفه من جميع الادارات او الجهات المعنية بالكلية عند الاستقالة</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">.في حالة الاستقالة لا يتوقف الطالب عن الدراسة الا بعد استلام اخطار كتابي بقبول الاستقالة</span><i class="fa fa-thumbs-up"></i><br/>
+								<span style="font-weidght: bold; margin-right:10px;">: معرفتي اطلاعي على رسوم التسجيل والرسوم الدراسية والتزامي بسدادها كاملة في المواعيد الاتية</span><i class="fa fa-thumbs-up"></i><br/>
+
+							</div>
+							<br/>
+							<table class="table table-bordered">
+								<tbody>
+									<tr class="text-right">
+										<td style="border: 1px solid black; padding:5px;">
+											<center><span style="font-weidght: bold">بعد إسبوعين من بداية الفصل الدراسي الأول</span></center>
+										</td>
+										<td style="border: 1px solid black; padding:5px;">
+											<span style="font-weidght: bold">تاريخ إنتهاء سداد رسوم التسجيل والقسط الأول</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td style="border: 1px solid black; padding:5px;">
+											<center><span style="font-weidght: bold">بعد إسبوعين من بداية الفصل الدراسي الثاني</span></center>
+										</td>
+										<td style="border: 1px solid black; padding:5px;">
+											<span style="font-weidght: bold">تاريخ إنتهاء سداد رسوم القسط الثاني</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br/>
+							<div style="text-align: right">
+								<span style="font-weidght: bold;">.وموافقتي على سداد غرامات التأخر في السداد التي تحددها الكلية وفقا لمواعيد السداد المحددة مسبقا وأشهد الله على ذلك والله خير الشاهدين </span><br/>
+							</div>
+							<br/>
+							<table class="table table-bordered">
+								<tbody>
+									<tr class="text-right">
+										<td style="border: 1px solid black;">
+											
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold">توقيع ولي الأمر</span>
+										</td>
+										<td style="border: 1px solid black;">
+											
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold">توقيع الطالب</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>  
+							<br/>
+							<br/> 
+							<br/>
+							<br/> 
+							<h4 class="text-center"><strong>استمارة الاقرار الطبي</strong></h4> 
+							<br/>
+							<table class="table table-bordered">
+								<tbody>
+									<tr class="text-right">
+										<td colspan="4" style="border: 1px solid black; width:25%;">
+										</td>
+										<td colspan="2" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">الرقم الجامعي</span>
+										</td>
+										<td colspan="2" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">2</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">0</span>
+										</td>
+										<td style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">/</span>
+										</td>
+										<td style="border: 1px solid black;">
+										    <span style="color:#eee; font-size:12px;">M</span>
+										</td>
+										<td style="border: 1px solid black;">
+										   <span style="color:#eee; font-size:12px;">M</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">/</span>
+										</td>
+										<td style="border: 1px solid black;">
+										   	<span style="color:#eee; font-size:12px;">D</span>
+
+										</td>
+										<td style="border: 1px solid black;">
+										    <span style="color:#eee; font-size:12px;">D</span>
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">التاريخ</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="18" style="border: 1px solid black;">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">إسم البرنامج</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="5" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">الجنسية</span>
+										</td>
+										<td colspan="9" style="border: 1px solid black;">
+										</td>
+										<td colspan="6" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">إسم الطالب رباعي</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="4" style="border: 1px solid black;">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td colspan="7" style="border: 1px solid black;">
+										</td>
+										<td colspan="6" style="border: 1px solid black">
+										</td>
+										<td style="border: 1px solid black;"><span style="font-weidght: bold;">ع</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>   
+							<br/>
+							<table class="table table-bordered">
+								<tbody>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%;Background-color:#BDBDBD;">
+											<span style="font-weidght: bold;">نعم</span>
+										</td>
+										<td colspan="2" style="border: 1px solid black;Background-color:#BDBDBD;">
+											<span style="font-weidght: bold;">نرجو ملء البيانات الموضحة أدناه</span>
+										</td>
+									</tr>
+									<tr style="Background-color:#BDBDBD;" class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">في حالة الاجابة ب نعم ما نوع الدواء المستخدم</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+											<span style="font-weidght: bold;">لا</span>
+										</td>
+										<td colspan="2" style="border: 1px solid black">
+											<span style="font-weidght: bold;">أ.   هل تعاني من مرض</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">السكري؟</span>
+										</td>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">.1</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">ضغط الدم؟</span>
+										</td>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">.2</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">الربو الشعبي؟</span>
+										</td>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">.3</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">إلتهاب الكبد الوبائي؟</span>
+										</td>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">.4</span>
+										</td>
+									</tr>
+									<tr style="Background-color:#BDBDBD;" class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">في حالة الاجابة ب نعم فحدد</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+											<span style="font-weidght: bold;">نعم</span>
+										</td>
+										<td colspan="2" style="border: 1px solid black">
+											<span style="font-weidght: bold;">ب.   هل تعاني من </span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">أي مرض من أمراض القلب؟</span>
+										</td>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">.1</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">إعاقة جسدية؟</span>
+										</td>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">.2</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">أي مرض نفسي؟</span>
+										</td>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">.3</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">أي مرض اخر؟</span>
+										</td>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">.4</span>
+										</td>
+									</tr>
+									<tr style="Background-color:#BDBDBD;" class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">في حالة الاجابة ب نعم وضح</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+											<span style="font-weidght: bold;"></span>
+										</td>
+										<td colspan="2" style="border: 1px solid black">
+											<span style="font-weidght: bold;">ج.   هل </span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">لزمت سرير المستشفى من قبل؟</span>
+										</td>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">.1</span>
+										</td>
+									</tr>
+									<tr class="text-right">
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">أجريت لك أي عملية جراحية؟</span>
+										</td>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">.2</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>  
+							<br/>
+							<div class="row">
+							    <div class="col-6"></div>
+							    <div class="col-6 text-right" style="border: 1px solid #000;">
+                                    <span style="font-weidght: bold;">.أنا الطالب أعلاه. أقر بصحة البيانات في الاستمارة</span><br/>
+									<span style="font-weidght: bold;">:التوقيع</span>
+								</div>
+							</div>
+							<br/>
+							<h4 class="text-center"><strong>Medical‬‬ ‫‪Declaration‬‬ ‫‪Report</strong></h4> 
+							<table class="table table-bordered">
+							<tbody>
+								<tr class="text-right">
+									<td colspan="4" style="border: 1px solid black; width:25%">
+									</td>
+									<td colspan="2" style="border: 1px solid black;">
+										<span style="font-weidght: bold;">الرقم الجامعي</span>
+									</td>
+									<td colspan="2" style="border: 1px solid black;">
+									</td>
+									<td style="border: 1px solid black;">
+										<span style="font-weidght: bold;">2</span>
+									</td>
+									<td style="border: 1px solid black;">
+										<span style="font-weidght: bold;">0</span>
+									</td>
+									<td style="border: 1px solid black;">
+									</td>
+									<td style="border: 1px solid black;">
+									</td>
+									<td style="border: 1px solid black;">
+										<span style="font-weidght: bold;">/</span>
+									</td>
+									<td style="border: 1px solid black;">
+									    <span style="color:#eee; font-size:12px;">M</span>
+									</td>
+									<td style="border: 1px solid black;">
+									    <span style="color:#eee; font-size:12px;">M</span>
+									</td>
+									<td style="border: 1px solid black;">
+										<span style="font-weidght: bold;">/</span>
+									</td>
+									<td style="border: 1px solid black;">
+									     <span style="color:#eee; font-size:12px;">D</span>
+									</td>
+									<td style="border: 1px solid black;">
+									    <span style="color:#eee; font-size:12px;">D</span>
+									</td>
+									<td colspan="3" style="border: 1px solid black;">
+										<span style="font-weidght: bold;">التاريخ</span>
+									</td>
+								</tr>
+								<tr class="text-right">
+									<td colspan="18" style="border: 1px solid black;">
+									</td>
+									<td colspan="3" style="border: 1px solid black;">
+										<span style="font-weidght: bold;">إسم البرنامج</span>
+									</td>
+								</tr>
+								<tr class="text-right">
+									<td colspan="5" style="border: 1px solid black;">
+									</td>
+									<td style="border: 1px solid black;">
+										<span style="font-weidght: bold;">الجنسية</span>
+									</td>
+									<td colspan="9" style="border: 1px solid black;">
+									</td>
+									<td colspan="6" style="border: 1px solid black;">
+										<span style="font-weidght: bold;">إسم الطالب رباعي</span>
+									</td>
+								</tr>
+								<tr class="text-right">
+									<td colspan="4" style="border: 1px solid black;">
+									</td>
+									<td colspan="3" style="border: 1px solid black;">
+									</td>
+									<td colspan="7" style="border: 1px solid black;">
+									</td>
+									<td colspan="6" style="border: 1px solid black">
+									</td>
+									<td style="border: 1px solid black;"><span style="font-weidght: bold;">ع</span>
+									</td>
+								</tr>
+						     	</tbody>
+							</table>
+							<br/>
+							<br/>
+							<table class="table table-bordered">
+								<tbody>
+									<tr style="Background-color:#a6a4a4;">
+										<td colspan="2" style="border: 1px solid black">
+											<span style="font-weidght: bold;">‫‪‫‪Fill</span>
+											<span style="font-weidght: bold;">‫‪‫‪ ‫‪data‬‬</span>
+											<span style="font-weidght: bold;">‫‪‫‪‫‪following‬‬</span>
+											<span style="font-weidght: bold;">‫‪‫‪‬‬ ‫‪the‬‬ </span>
+										</td>
+										<td style="border: 1px solid black;width=20%;Background-color:#a6a4a4;">Yes
+											<span style="font-weidght: bold;"></span>
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">‫‪</span>
+										</td>
+									</tr>
+									<tr style="Background-color:#a6a4a4;">
+										<td colspan="2" style="border: 1px solid black">
+											<span style="font-weidght: bold;">A.</span>
+											<span style="font-weidght: bold;">‫‪Have‬</span>
+											<span style="font-weidght: bold;">You</span>‬
+											<span style="font-weidght: bold;">any‬‬</span>
+											<span style="font-weidght: bold;">of‬‬ ‫‪</span>
+											<span style="font-weidght: bold;">the‬‬ ‫‪</span>
+											<span style="font-weidght: bold;">following‬‬ ‫‪</span>
+											<span style="font-weidght: bold;">chronic‬‬ </span>
+											<span style="font-weidght: bold;">diseases </span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+											<span style="font-weidght: bold;"></span>
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">‫‪If</span>
+											<span style="font-weidght: bold;">Yes, </span>
+											<span style="font-weidght: bold;">write </span>
+											<span style="font-weidght: bold;">the </span>
+											<span style="font-weidght: bold;">type </span>
+											<span style="font-weidght: bold;">of </span>
+											<span style="font-weidght: bold;">drug </span>
+										</td>
+									</tr>
+									<tr>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">1.</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">‫‪Diabetes‬‬ ‫mellitus‬‬?</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+									</tr>
+									<tr>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">2.</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">‫‫?‪Hypertension‬‬</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+									</tr>
+									<tr>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">3.</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">Bronchial asthma?</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+									</tr>
+									<tr>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">4.</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">Hepatitis B?</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+									</tr>
+									<tr style="Background-color:#a6a4a4;">
+										<td colspan="2" style="border: 1px solid black">
+											<span style="font-weidght: bold;">B. Have you any of the following diseases </span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+											<span style="font-weidght: bold;"></span>
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">If Yes, determine</span>
+										</td>
+									</tr>
+									<tr>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">1.</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">Heart disease?</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+									</tr>
+									<tr>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">2.</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">Physical disability?</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+									</tr>
+									<tr>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">3.</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">Psychiatric disease?</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+									</tr>
+									<tr>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">4.</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">Any other disease?</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+									</tr>
+									<tr style="Background-color:#a6a4a4;">
+										<td colspan="2" style="border: 1px solid black">
+											<span style="font-weidght: bold;">C. Have you ……. </span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+											<span style="font-weidght: bold;"></span>
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+											<span style="font-weidght: bold;">If Yes, Explain</span>
+										</td>
+									</tr>
+									<tr>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">1.</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">Admitted in hospital before?</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+									</tr>
+									<tr>
+										<td style="border: 1px solid black">
+											<span style="font-weidght: bold;">2.</span>
+										</td>
+										<td style="border: 1px solid black;">
+											<span style="font-weidght: bold;">Undergone any surgical procedure before?</span>
+										</td>
+										<td style="border: 1px solid black;width=20%">
+										</td>
+										<td colspan="3" style="border: 1px solid black;">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="row">
+							    <div class="col-6" style="border: 1px solid #000;">
+                                    <span style="font-weidght: bold;">I (the student mentioned above) agree that all information (in this form) is true.</span><br/>
+									<span style="font-weidght: bold;">Signature:</span>
+								</div>
+							</div>
+					</div>
+            </div>	
+			</t>
+		</t>
+	</template>
+</odoo>

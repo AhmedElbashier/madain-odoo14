@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <template id="report_student_preamble">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+            <div class="article o_report_layout_standard"  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+                <t t-call="uni_core.preamble_header"/>
+                    <style>
+                        th{
+                            font-size:30px;
+                        }
+                        h3{
+                            font-size: 30px;
+                            font-style: bold;
+                            margin-bottom: 50px;
+                        }
+                        @font-face {
+                            font-family: 'Almarai';
+                            src: local('Almarai'), local('Almarai'),
+                            url('/uni_core/static/fonts/Almarai.ttf') format('truetype');
+                            }
+                        *{
+                            font-family: Almarai;
+                            }
+                    </style> 
+                    <div class="page">
+                       <h3 class="text-center">إدارة القبول</h3>
+                       <div class="row text-center">
+                          <table class="table table-bordered table-sm table-reports">
+                                <thead>
+                                    <tr>
+                                        <th><span t-field="o.name"/></th>
+                                        <th>اسم الطالب</th>
+                                        <th><i class="fa fa-user" style="color:green;"></i></th> 
+                                    </tr>   
+                                    <tr>
+                                        <th><span t-field="o.program_id.name"/></th>
+                                        <th>البرنامج</th>
+                                        <th><i class="fa fa-briefcase" style="color:green;"></i></th> 
+                                    </tr>                                
+                                    <tr> 
+                                        <th><span t-field="o.batch_id"/></th> 
+                                        <th>الدفعة</th>
+                                        <th><i class="fa fa-list" style="color:green;"></i></th> 
+
+                                    </tr>                                
+                                   <tr>
+                                        <th><span t-field="o.type_admission"/></th>
+                                        <th>نوع القبول</th>
+                                        <th><i class="fa fa-sign-in" style="color:green;"></i></th>                                    
+                                    </tr>                                
+                                    <tr>
+                                        <th><span t-field="o.nationality_type_id"/></th>
+                                        <th>المواطنه</th>
+                                        <th><i class="fa fa-globe" style="color:green;"></i></th> 
+
+                                    </tr>                                 
+                                </thead>
+                          </table>
+                       </div>                    
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <!--Registration-->
+    <template id="report_student_preamble_reg">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+            <div class="article o_report_layout_standard"  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+                <t t-call="uni_core.preamble_header"/>
+                    <style>
+                        th{
+                            font-size:30px;
+                        }
+                        h3{
+                            font-size: 30px;
+                            font-style: bold;
+                            margin-bottom: 50px;
+                        }
+                        @font-face {
+                            font-family: 'Almarai';
+                            src: local('Almarai'), local('Almarai'),
+                            url('/uni_core/static/fonts/Almarai.ttf') format('truetype');
+                            }
+                        *{
+                            font-family: Almarai;
+                            }
+                    </style> 
+                    <div class="page">
+                       <h3 class="text-center">إدارة التسجيل</h3>
+                       <div class="row text-center">
+                          <table class="table table-bordered table-sm table-reports">
+                                <thead>
+                                    <tr>
+                                        <th><span t-field="o.name"/></th>
+                                        <th>اسم الطالب</th>
+                                        <th><i class="fa fa-user" style="color:green;"></i></th> 
+                                    </tr>  
+                                     <tr>
+                                        <th><span t-field="o.university_id"/></th>
+                                        <th>الرقم الجامعي</th>
+                                        <th><i class="fa fa-flag-o" style="color:green;"></i></th> 
+                                    </tr> 
+                                     <tr>
+                                        <th><span t-field="o.std_number"/></th>
+                                        <th>الرقم الداخلي</th>
+                                        <th><i class="fa fa-tags" style="color:green;"></i></th> 
+                                    </tr>  
+                                    <tr>
+                                        <th><span t-field="o.program_id.name"/></th>
+                                        <th>البرنامج</th>
+                                        <th><i class="fa fa-briefcase" style="color:green;"></i></th> 
+                                    </tr>                                
+                                    <tr> 
+                                        <th><span t-field="o.batch_id"/></th> 
+                                        <th>الدفعة</th>
+                                        <th><i class="fa fa-list" style="color:green;"></i></th> 
+
+                                    </tr>                                
+                                   <tr>
+                                        <th><span t-field="o.type_admission"/></th>
+                                        <th>نوع القبول</th>
+                                        <th><i class="fa fa-sign-in" style="color:green;"></i></th>                                    
+                                    </tr>                                
+                                    <tr>
+                                        <th><span t-field="o.nationality_type_id"/></th>
+                                        <th>المواطنه</th>
+                                        <th><i class="fa fa-globe" style="color:green;"></i></th> 
+                                    </tr> 
+                                    <tr>
+                                        <th><span t-field="o.admission_year"/></th>
+                                        <th>سنة التقديم</th>
+                                        <th><i class="fa fa-calendar" style="color:green;"></i></th> 
+                                    </tr>                                 
+                                </thead>
+                          </table>
+                       </div>                    
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+    </data>
+</odoo> 

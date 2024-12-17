@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.module.category" id="uni_core_groups">
+			<field name="name">University Users</field>
+			<field name="description">Base users in university system</field>
+			<field name="sequence">3</field>
+		</record>
+		
+		<record id="uni_group_student" model="res.groups">
+			<field name="name">Students</field>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+<!-- 			<field name="domain_force">[('student_id.user_id','=',user.id)]</field>
+ -->			<field name="category_id" ref="uni_core.uni_core_groups"/>
+		</record>
+		
+		<record id="uni_group_manager" model="res.groups">
+			<field name="name">Manager</field>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="uni_core.uni_core_groups"/>
+		</record>
+		<record id="uni_group_dean" model="res.groups">
+			<field name="name">Dean</field>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="uni_core.uni_core_groups"/>
+		</record>
+		<record id="uni_group_register" model="res.groups">
+			<field name="name">Register</field>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="uni_core.uni_core_groups"/>
+		</record>
+
+<!-- 		<record model="ir.rule" id="faculty_rule">
+			<field name="name">Faculty multi company rule</field>
+			<field name="model_id" ref="uni_core.model_uni_faculty_department_batch"/>
+			<field name="domain_force">[('faculty_id','=',user.company_id.id)]</field>
+			<field name="perm_create" eval="False"/>
+			<field name="perm_unlink" eval="False"/>
+			<field name="perm_write" eval="True"/>
+		</record>
+
+		<record model="ir.rule" id="faculty_rule2">
+			<field name="name">Faculty multi company rule 2</field>
+			<field name="model_id" ref="uni_core.model_uni_faculty_semester"/>
+			<field name="domain_force">[('faculty_id','=',user.company_id.id)]</field>
+			<field name="perm_create" eval="False"/>
+			<field name="perm_unlink" eval="False"/>
+			<field name="perm_write" eval="True"/>
+		</record>
+
+		<record model="ir.rule" id="faculty_rule3">
+			<field name="name">Faculty multi company rule 3</field>
+			<field name="model_id" ref="uni_core.model_uni_faculty_level"/>
+			<field name="domain_force">[('faculty_id','=',user.company_id.id)]</field>
+			<field name="perm_create" eval="False"/>
+			<field name="perm_unlink" eval="False"/>
+			<field name="perm_write" eval="True"/>
+		</record> 
+
+
+		<record model="ir.rule" id="faculty_rule4">
+			<field name="name">Faculty multi company rule 4</field>
+			<field name="model_id" ref="uni_core.model_uni_faculty_department"/>
+			<field name="domain_force">[('faculty_id','=',user.company_id.id)]</field>
+			<field name="perm_create" eval="False"/>
+			<field name="perm_unlink" eval="False"/>
+			<field name="perm_write" eval="True"/>
+		</record>
+
+		<record model="ir.rule" id="res_partner_rule5">
+			<field name="name">Partner multi company rule 5</field>
+			<field name="model_id" ref="base.model_res_partner"/>
+			<field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+			<field name="perm_create" eval="True"/>
+			<field name="perm_unlink" eval="True"/>
+			<field name="perm_write" eval="True"/>
+		</record>-->
+
+		
+	</data>
+</odoo>

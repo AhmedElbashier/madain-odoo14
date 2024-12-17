@@ -1,0 +1,165 @@
+<odoo>
+	<data>
+		<!-- Student Degrees -->
+		<record id="student_degrees_view_form" model="ir.ui.view">
+			<field name="name">student.degrees.form</field>
+			<field name="model">student.degrees</field>
+			<field name="arch" type="xml">
+				<form string="Student Degrees">
+					<!-- <header>
+						<field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done"/>
+						<button name="to_confirmed" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+						<button name="to_done" string="Done" type="object" states="confirmed" class="oe_highlight"/>
+						
+					</header> -->
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" required="1" options="{'no_create': True}" />
+                                <field name="university_id" options="{'no_create': True}" />
+                                <field name="student_id" options="{'no_create': True}" />
+
+                                <field name="active"  />
+                            </group>
+                            <group>  
+                                <field name="sub1" required="1" />
+                                <field name="sub2" required="1" />
+                                <field name="sub3" required="1" />
+                                <field name="sub4" required="1" />
+                                <field name="sub5" required="1" />
+                                <field name="sub6" required="1" />
+                                <field name="sub7" required="1" />
+                                <field name="sub8" required="1" />
+                                <field name="sub9" required="1" />
+                                <field name="sub10" required="1" />
+                            </group>
+                        </group>
+                    </sheet>	
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="student_degrees_view_tree">
+			<field name="name">student.degrees.tree</field>
+			<field name="model">student.degrees</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="code"/>
+					<field name="student_id"/>
+					<field name="university_id"/>
+					<field name="sub1"/>
+                    <field name="sub2"/>
+                    <field name="sub3"/>
+                    <field name="sub4"/>
+                    <field name="sub5"/>
+                    <field name="sub6"/>
+                    <field name="sub7"/>
+                    <field name="sub8"/>
+                    <field name="sub9"/>
+                    <field name="sub10"/>
+                    <field name="active"/>
+				</tree>
+			</field>
+		</record>
+		<!--End Of Student Degrees  -->
+
+		<!-- Student Degrees Migration -->
+		<record id="student_degrees_migration_view_form" model="ir.ui.view">
+			<field name="name">student.degrees.migration.form</field>
+			<field name="model">student.degrees.migration</field>
+			<field name="arch" type="xml">
+				<form string="Student Degrees Migration">
+					<header>
+						<field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done"/>
+						<button name="to_confirmed" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+						<button name="create_subject_line" string="Create Subjects" type="object" states="draft" class="oe_highlight"/>
+						<button name="to_done" string="Done" type="object" states="confirmed" class="oe_highlight"/>
+						<button name="to_draft" string="Set To Draft" type="object" states="confirmed,done" class="oe_highlight"/>
+						
+					</header>
+                    <sheet>
+                        <group>
+                            <group>
+								<field name="exam" required="1" options="{'no_create': True}" />
+                                <field name="exam_type" required="1" options="{'no_create': True}" />
+								<field name="start_date" required="1"/>
+								<field name="end_date" required="1"/>
+								<field name="code" required="1" options="{'no_create': True}" />
+								<field name="active"  />
+							</group>
+                            <group>  
+                                <field name="year_id" required="1" options="{'no_create': True}" />
+                                <field name="program_id" required="1" options="{'no_create': True}" />
+								<field name="batch_id" required="1" options="{'no_create': True}" />
+								<field name="level_id" required="1" options="{'no_create': True}" />
+								<field name="semester_id" required="1" options="{'no_create': True}" />
+                                
+                            </group>
+							
+                        </group>
+						<group>
+							<field name="subject_ids">
+									<tree editable="bottom">
+										<field name="mapping_sub"/>
+										<field name="subject_id_domain" invisible="1"/>
+										<field name="subject_id" required="1" domain="subject_id_domain"/>
+									</tree>
+							</field>
+						</group>
+                    </sheet>	
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="student_migration_view_tree">
+			<field name="name">student.degrees.migration.tree</field>
+			<field name="model">student.degrees.migration</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="year_id"/>
+					<field name="batch_id"/>
+					<field name="level_id"/>
+					<field name="semester_id"/>
+					<field name="program_id"/>
+                    <field name="exam_type"/>
+                    <field name="exam"/>
+                    <field name="student_ids"/>
+                    <field name="code"/>
+                    <field name="subject_ids"/>
+                    <field name="active"/>
+                    
+				</tree>
+			</field>
+		</record>
+	<!-- End Of Student Degrees Migration -->
+
+		
+		<!-- actions opening views on models -->
+		<record model="ir.actions.act_window" id="student_degrees_action">
+			<field name="name">Student Degrees</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">student.degrees</field>
+			<field name="view_mode">tree,kanban,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new record</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="student_degrees_migration_action">
+			<field name="name">Student Degrees Migration</field>
+			<field name="res_model">student.degrees.migration</field>
+			<field name="view_mode">tree,kanban,form</field>
+
+		</record>
+		
+		
+		<!-- Migration Menues -->
+		<menuitem name="Migration" id="migration_view_menu" sequence="5" 
+		parent="migration_menu"/>
+		
+		<menuitem name="Student Degrees" id="studednt_degrees_menu" 
+		parent="migration_menu" action="student_degrees_action"/>
+
+		<menuitem name="Student Degrees Mapping" id="studednt_degrees_migration_menu" 
+		parent="migration_menu" action="student_degrees_migration_action"/>
+
+	</data>
+</odoo>

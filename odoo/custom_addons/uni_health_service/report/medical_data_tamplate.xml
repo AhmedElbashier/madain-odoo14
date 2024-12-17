@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="medical_data_report_template">
+        <t t-call="report.html_container">
+            <t t-call="report.internal_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <h3 class="pull-right">اسم الطالب: <span t-esc="o.student_id.name"/></h3>
+                        <br></br><br></br><br></br>
+                        <h4 class="pull-right">الامراض التي اصيب بها في الماضي</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <t t-foreach="o.past_disease_ids" t-as="line">
+                                    <strong> ،</strong><span t-esc="line.name"/>
+                                    </t>
+                                </td>
+                                <td><strong>الامراض التي اصيب بها في الماضي</strong></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <t t-foreach="o.previous_operations" t-as="line">
+                                    <strong> ،</strong><span t-esc="line.name"/>
+                                    </t>
+                                </td>
+                                <td><strong>عمليات جراحيه سابقه</strong></td> 
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.quantity_per_week"/></td>
+                                <td><strong>الكمليه في الاسبوع</strong></td>
+                                <td>
+                                    <t t-if="o.alcohol == True">
+                                        <p>نعم</p>
+                                    </t>
+                                    <t t-if="o.alcohol == False">
+                                        <p>لا</p>
+                                    </t>
+                                </td>
+                                <td><strong>الكحول</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.no_per_day"/></td>
+                                <td><strong>عدد السجائر في اليوم</strong></td>
+                                <td>
+                                    <t t-if="o.tobacco == True">
+                                        <p>نعم</p>
+                                    </t>
+                                    <t t-if="o.tobacco == False">
+                                        <p>لا</p>
+                                    </t>
+                                </td>
+                                <td><strong>السجائر</strong></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <t t-if="o.snuff == True">
+                                        <p>نعم</p>
+                                    </t>
+                                    <t t-if="o.snuff == False">
+                                        <p>لا</p>
+                                    </t>
+                                </td>
+                                <td><strong>التمباك</strong></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <t t-if="o.hashish == True">
+                                        <p>نعم</p>
+                                    </t>
+                                    <t t-if="o.hashish == False">
+                                        <p>لا</p>
+                                    </t>
+                                </td>
+                                <td><strong>حشيش</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">العادات</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td>
+                                    <span t-esc="o.sport_activity"/>
+                                </td>
+                                <td><strong>النشاطات الرياضيه</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span t-esc="o.social_activity"/>
+                                </td>
+                                <td><strong>النشاطات الاجتماعيه</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span t-esc="o.attitude_religion"/>
+                                </td>
+                                <td><strong>ماهي نظرتك للدين؟</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span t-esc="o.other_happet"/>
+                                </td>
+                                <td><strong>عادات اخري</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">امراض في العائله</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td>
+                                    <t t-foreach="o.family_disease_ids" t-as="line">
+                                    <strong> ،</strong><span t-esc="line.name"/>
+                                    </t>
+                                </td>
+                                <td><strong>امراض في العائله</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">الفحص البدني</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td>
+                                    <span t-esc="o.general_appearance"/>
+                                </td>
+                                <td><strong>المظهر العام</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span t-esc="o.constitution"/>
+                                </td>
+                                <td><strong>constitution</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span t-esc="o.height"/>
+                                </td>
+                                <td><strong>الطول</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span t-esc="o.weight"/>
+                                </td>
+                                <td><strong>الوزن</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span t-esc="o.sclap"/>
+                                </td>
+                                <td><strong>فروه الشعر</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span t-esc="o.cervical_lym_nodes"/>
+                                </td>
+                                <td><strong>العقد الليمفاوية العنقية</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">العيون</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td><span t-esc="o.vision"/></td>
+                                <td><strong>الرؤيه</strong></td>
+                                <td><span t-esc="o.eyes_gen"/></td>
+                                <td><strong>العيون بصفه عامه</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.with_glass"/></td>
+                                <td><strong>بالنظاره</strong></td>
+                                <td><span t-esc="o.without_glass"/></td>
+                                <td><strong>من غير النظاره</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.near_vision"/></td>
+                                <td><strong>الرؤيه عن قرب</strong></td>
+                                <td><span t-esc="o.color_vision"/></td>
+                                <td><strong>رؤيه الالوان</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.mouth"/></td>
+                                <td><strong>اﻵذان</strong></td>
+                                <td><span t-esc="o.ears"/></td>
+                                <td><strong>اﻵذان</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.tongue"/></td>
+                                <td><strong>اللسان</strong></td>
+                                <td><span t-esc="o.trechea"/></td>
+                                <td><strong>القصبه الهوائيه</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.lower_limbs"/></td>
+                                <td><strong>الأطراف السفلية</strong></td>
+                                <td><span t-esc="o.upper_limbs"/></td>
+                                <td><strong>الاطراف العليا</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.b_p"/></td>
+                                <td><strong>B.P</strong></td>
+                                <td><span t-esc="o.pulse"/></td>
+                                <td><strong>النبض</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">الاسنان</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td><span t-esc="o.decayed"/></td>
+                                <td><strong>فاسد</strong></td>
+                                <td><span t-esc="o.teeth"/></td>
+                                <td><strong>الاسنان</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.filled"/></td>
+                                <td><strong>محشو</strong></td>
+                                <td><span t-esc="o.missing"/></td>
+                                <td><strong>مفقود</strong></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><span t-esc="o.other_abnoramality"/></td>
+                                <td><strong>شذوز اخر</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">القلب</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td><span t-esc="o.lungs"/></td>
+                                <td><strong>الرئتين</strong></td>
+                                <td><span t-esc="o.chest_gen"/></td>
+                                <td><strong>الصدر بصفه عامه</strong></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><span t-esc="o.heart"/></td>
+                                <td><strong>القلب</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">البطن</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td><span t-esc="o.liver"/></td>
+                                <td><strong>الكبد</strong></td>
+                                <td><span t-esc="o.abdomen_gen"/></td>
+                                <td><strong>البطن</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.other_masses"/></td>
+                                <td><strong>Other Masses</strong></td>
+                                <td><span t-esc="o.spleen"/></td>
+                                <td><strong>الطحال</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.hernia"/></td>
+                                <td><strong>الفتاق</strong></td>
+                                <td><span t-esc="o.fluid"/></td>
+                                <td><strong>مانع</strong></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><span t-esc="o.genitalia"/></td>
+                                <td><strong>الأعضاء التناسلية</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">G.N.S</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td><span t-esc="o.speech"/></td>
+                                <td><strong>التخاطب</strong></td>
+                                <td><span t-esc="o.intelligence"/></td>
+                                <td><strong>الذكاء</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.motor_sys"/></td>
+                                <td><strong>Motor System</strong></td>
+                                <td><span t-esc="o.cranial_nerves"/></td>
+                                <td><strong>الأعصاب الدماغية</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.reflex"/></td>
+                                <td><strong>ردود الفعل</strong></td>
+                                <td><span t-esc="o.sensor_sys"/></td>
+                                <td><strong>نظام الحواس</strong></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><span t-esc="o.skin"/></td>
+                                <td><strong>الجلد</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">تعليق</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td><span t-esc="o.ex_comment"/></td>
+                                <td><strong>التعليق علي الامتحان</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">البراز بصفه عامه</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td><span t-esc="o.mucus"/></td>
+                                <td><strong>مخاط</strong></td>
+                                <td><span t-esc="o.stol_gen_reaction"/></td>
+                                <td><strong>البراز بصفه عامه</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.parasites"/></td>
+                                <td><strong>طفيليات</strong></td>
+                                <td><span t-esc="o.blood"/></td>
+                                <td><strong>الدم</strong></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><span t-esc="o.concetration"/></td>
+                                <td><strong>التركيز</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">البول بصفه عامه</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td><span t-esc="o.Reaction"/></td>
+                                <td><strong>رد الفعل</strong></td>
+                                <td><span t-esc="o.sp_gravity"/></td>
+                                <td><strong>S.P Gravity</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.rbc"/></td>
+                                <td><strong>R.B.c</strong></td>
+                                <td><span t-esc="o.pus_cell"/></td>
+                                <td><strong>خلايا الصديد</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.ova"/></td>
+                                <td><strong>Ova</strong></td>
+                                <td><span t-esc="o.casts"/></td>
+                                <td><strong>Casts</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">X-Ray</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td><span t-esc="o.x_ray"/></td>
+                                <td><strong>X-Ray</strong></td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <h4 class="pull-right">الدم</h4>
+                        <table class="table table-condensed table-hover table-bordered table-striped" style="text-align:right;">
+                            <tr>
+                                <td><span t-esc="o.b_rbc"/></td>
+                                <td><strong>R.B.C</strong></td>
+                                <td><span t-esc="o.hb"/></td>
+                                <td><strong>HB</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.blood_total"/></td>
+                                <td><strong>المجموع</strong></td>
+                                <td><span t-esc="o.wbc"/></td>
+                                <td><strong>W.B.C</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span t-esc="o.other_investigation"/></td>
+                                <td><strong>تحقيقات اخري</strong></td>
+                                <td><span t-esc="o.mantoux_test"/></td>
+                                <td><strong>Mantoux Test</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

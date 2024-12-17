@@ -1,0 +1,8 @@
+<odoo>
+	<data>
+		<!-- top level menu: no parent groups="uni_health_service.medical_user,uni_health_service.medical_admin" -->
+		<menuitem id="uni_health_service_root_menu" name="Health Service" web_icon="uni_health_service,static/description/medical.png"/>
+		<!-- A first level in the left side menu is needed before using action= attribute -->
+		<menuitem id="uni_health_service_view_menu" name="Health Service" parent="uni_health_service_root_menu"/>
+	</data>
+</odoo>

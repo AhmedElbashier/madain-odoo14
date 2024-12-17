@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Registrati Record Views -->
+	<record id="uni_registration_record_view_form" model="ir.ui.view">
+		<field name="name">uni.registration.record.form</field>
+		<field name="model">uni.registration.record</field>
+		<field name="arch" type="xml">
+			<form string="Registration Record">
+				<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,approved,closed"/>
+					<button name="action_approve" string="Approve" type="object" class="oe_highlight" states="draft" />
+					<button name="action_close" string="Close" type="object" class="oe_highlight" states="approved" />
+					<button name="rest_draft" string="Rest To Draft" type="object" class="oe_highlight" states="closed" />
+				</header>
+				<sheet>
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only"/>
+						<h1>
+							<field name="name" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</h1>
+					</div>
+					<group col="4">
+						<field name="code" class="oe_inline" placeholder="2018/2019" attrs="{'readonly':[('state','!=','draft')]}"/>
+						<field name="academic_year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+					</group>
+					<group col="4">
+						<field name="start_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+						<field name="end_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+						<field name="level_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+					</group>
+					<notebook>
+						<page string="Registration Fees">
+							<field name="registration_fees_ids" attrs="{'readonly':[('state','!=','draft')]}">
+								<tree editable="top">
+									<field name="nationality_type_id"/>
+									<field name="registration_fees"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Batchs">
+							<field name='program_registration_ids' attrs="{'readonly':[('state','!=','draft')]}">
+								<tree>
+									<field name="program_id"/>
+									<field name="batch_id"/>
+									<field name="start_date"/>
+									<field name="end_date"/>
+									<field name="batch_students"/>
+									<field name="registered_students"/>
+									<field name="unregistered_students"/>
+									<button name="action_program_approve" type="object" class="oe_highlight" string="Approve" attrs="{'invisible':[('state', '=', 'approved')]}"/>
+									<field name="state" invisible="1"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Students">
+							<field name='student_ids' attrs="{'readonly':[('state','!=','draft')]}">
+								<tree>
+									<field name="name"/>
+									<field name="program_id"/>
+									<field name="batch_id"/>
+									<field name="state"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="uni_registration_record_view_tree" model="ir.ui.view">
+		<field name="name">uni.registration.record.tree</field>
+		<field name="model">uni.registration.record</field>
+		<field name="arch" type="xml">
+			<tree string="Registration Record">
+				<field name="name"/>
+				<field name="academic_year_id"/>
+				<field name="level_id"/>
+				<field name="start_date"/>
+				<field name="end_date"/>
+				<field name="state" invisible="1"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_uni_registration_record_search" model="ir.ui.view">
+            <field name="name">uni.registration.record</field>
+            <field name="model">uni.registration.record</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            	<search string="Registration Record">
+            		<field name="name"/>
+            		<field name="code"/>
+            		<field name="academic_year_id" select="True"/>
+            		<filter string="Academic Year" name="groupby_academic_year" domain="[]" context="{'group_by':'academic_year_id'}"/>
+            	</search>
+            </field>
+        </record>
+
+	<record id="uni_registration_record_action_form" model="ir.actions.act_window">
+		<field name="name">Registration Record</field>
+		<field name="res_model">uni.registration.record</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">				Click to create new registration record			</p>
+		</field>
+	</record>
+
+	<!-- Program Registration View-->
+	<record id="uni_program_registration_view_form" model="ir.ui.view">
+		<field name="name">uni.program.registration.form</field>
+		<field name="model">uni.program.registration</field>
+		<field name="arch" type="xml">
+			<form string="Program Registration Record">
+				<sheet>
+					<group>
+						<group>
+							<field name="program_id"/>
+							<field name="batch_id"/>
+							<field name="batch_students"/>
+						</group>
+						<group>
+							<field name="start_date"/>
+							<field name="end_date"/>
+							<field name="registered_students"/>
+							<field name="unregistered_students"/>
+						</group>
+					</group>
+					<notebook>
+						<page string="Installment">
+							<field name="installment_ids">
+								<tree editable="top">
+									<field name="name"/>
+									<field name="installment_percentage" string="Installment Perc(%)"/>
+									<field name="start_date"/>
+									<field name="end_date"/>
+									<field name="first_installment"/>
+									<field name="include_registration_fees"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+			</form>
+		</field>
+	</record>
+
+
+	<!-- Registration Request View -->
+	<record id="uni_registration_request_view_form" model="ir.ui.view">
+		<field name="name">uni.registration.request.form</field>
+		<field name="model">uni.registration.request</field>
+		<field name="arch" type="xml">
+			<form string="Registration Request">
+				<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,approved,closed"/>
+					<button name="action_approve" string="Approve" type="object" class="oe_highlight" states="draft" />
+					<button name="action_close" string="Close" type="object" class="oe_highlight" states="approved" />
+					<button name="rest_draft" string="Rest To Draft" type="object" class="oe_highlight" states="closed" />
+				</header>
+				<sheet>
+					<div class="oe_title">
+						<label for="student_id" class="oe_edit_only"/>
+						<h1>
+							<field name="student_id" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</h1>
+					</div>
+					<group>
+						<group>
+							<field name="academic_year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="admission_year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="program_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="level_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="semester_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group>
+							<field name="registration_fees" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="tuition_fees" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="currency_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="discount_perc" attrs="{'invisible':[('discount_record', '=', False)],'readonly':[('state','!=','draft')]}" />
+							<field name="discounted_amount" attrs="{'invisible':[('discount_record', '=', False)],'readonly':[('state','!=','draft')]}"/>
+							<field name="total_amount" attrs="{'invisible':[('discount_record', '=', False)],'readonly':[('state','!=','draft')]}"/>
+							<field name="discount_record" attrs="{'invisible':[('discount_record', '=', False)],'readonly':[('state','!=','draft')]}"/>
+							<!-- <field name="invoice_id" attrs="{'invisible':[('invoice_id', '=', False)]}"/> -->
+							<field name="is_paid" invisible="1"/>
+						</group>
+					</group>
+					<notebook>
+						<page string="Installment">
+							<field name='fees_installment_ids' attrs="{'readonly':[('state','!=','draft')]}">
+								<tree editable="top" create="0" delete="0">
+									<field name="name" readonly="1"/>
+									<field name="installment_percentage" readonly="1"/>
+									<field name="discount_amount"/>
+									<field name="due_amount"/>
+									<field name="invoice_id"/>
+									<field name="invoice_state"/>
+									<field name="payment_state"/>
+									<field name="start_date" readonly="1"/>
+									<field name="end_date" readonly="1"/>
+									<field name="first_installment"/>
+									<field name="include_registration_fees" attrs="{'readonly':[('state', '=', 'approved')]}"/>
+									<button name="action_create_invoice" type="object" class="oe_highlight" string="Create Invoice" attrs="{'invisible':[('state', '=', 'approved')]}"/>
+									<field name="state" invisible="1"/>
+								</tree>
+								<form string="Fees installment">
+									<sheet>
+										<div class="oe_title">
+											<label for="name" class="oe_edit_only"/>
+											<h1>
+												<field name="name" class="oe_inline"/>
+											</h1>
+										</div>
+										<group>
+											<group>
+												<field name="start_date"/>
+												<field name="end_date"/>
+												<field name="include_registration_fees"/>
+											</group>
+											<group>
+												<field name="registration_fees" attrs="{'invisible':[('include_registration_fees', '!=', True)]}"/>
+												<field name="installment_percentage"/>
+											</group>
+											<group string="Invoice Information">
+												<field name="invoice_id"/>
+												<field name="invoice_state"/>
+												<field name="payment_state"/>
+											</group>
+										</group>
+									</sheet>
+								</form>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="uni_registration_request_view_tree" model="ir.ui.view">
+		<field name="name">uni.registration.request.tree</field>
+		<field name="model">uni.registration.request</field>
+		<field name="arch" type="xml">
+			<tree string="Registration Request">
+				<field name="student_id"/>
+				<field name="academic_year_id"/>
+				<field name="batch_id"/>
+				<field name="level_id"/>
+				<field name="semester_id"/>
+				<field name="state"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_uni_registration_request_search" model="ir.ui.view">
+            <field name="name">uni.registration.request</field>
+            <field name="model">uni.registration.request</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            	<search string="Registration Request">
+            		<field name="student_id" select="True"/>
+            		<field name="academic_year_id" select="True"/>
+            		<field name="program_id" select="True"/>
+            		<filter string="Academic Year" name="groupby_academic_year" domain="[]" context="{'group_by':'academic_year_id'}"/>
+            		<filter string="Program" name="groupby_programe" domain="[]" context="{'group_by':'program_id'}"/>
+            		<filter string="Student" name="groupby_student" domain="[]" context="{'group_by':'student_id'}"/>
+            	</search>
+            </field>
+        </record>
+
+	<record id="uni_registration_request_action_form" model="ir.actions.act_window">
+		<field name="name">Registration Request</field>
+		<field name="res_model">uni.registration.request</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">				Click to create new registration request			</p>
+		</field>
+	</record>
+
+	<!-- Menues -->
+	<menuitem id="uni_registration_root_menu" name="Registration" web_icon="uni_admission,static/description/images.png"/>
+
+	<menuitem id="uni_registration_menu" name="Registration" parent="uni_registration_root_menu" sequence="1"/>
+
+	<menuitem id="menu_uni_registration_record" name="Registration Record" parent="uni_registration_menu" action="uni_registration_record_action_form" sequence="1"/>
+
+	<menuitem id="menu_uni_registration_request" name="Registration Request" parent="uni_core.uni_core_faculties_menu" action="uni_registration_request_action_form" sequence="2"/>
+
+	<menuitem 
+		id="registration_menu_conf" 
+		name="Configration" sequence="5"
+		parent='uni_registration_root_menu' 
+	/>
+
+</odoo>

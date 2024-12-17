@@ -1,0 +1,19 @@
+<odoo>
+	<data>
+		<!-- Student -->
+		<record id="uni_student_view_form_inherit" model="ir.ui.view">
+			<field name="name">uni.student.form</field>
+			<field name="model">uni.student</field>
+			<field name="inherit_id" ref="uni_core.uni_student_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[@class='oe_button_box']" position="inside">
+					<button name="card_tree_view" type="object" class="oe_stat_button" icon="fa-file-text-o">
+						<field string="Cards" name="card_count" widget="statinfo"/>
+					</button>
+
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

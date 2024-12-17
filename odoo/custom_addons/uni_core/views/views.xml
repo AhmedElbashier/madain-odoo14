@@ -1,0 +1,16 @@
+<odoo>
+	<data>
+		
+		<!-- top level menu -->
+		<menuitem id="uni_core_faculties_menu" name="Faculty" web_icon="uni_core,static/description/faculty.png"/>
+		<!-- Academic Years -->
+		<menuitem id="menu_uni_year_root" name="Academic Years" parent="uni_core_faculties_menu" sequence="1"/>
+		<!-- Discount and Scholarship -->
+		<menuitem id="discount_scholarship_request" name="Discount and Scholarship" parent="uni_core_faculties_menu" sequence="1"/>
+		<!-- Configurations -->
+		<menuitem id="uni_core_configurations_view_menu" name="Configurations" sequence="3" parent="uni_core_faculties_menu"/>
+		<menuitem id="menu_uni_year_config" name="Academic Years" sequence="2" parent="uni_core_configurations_view_menu"/>
+		
+  
+	</data>
+</odoo>

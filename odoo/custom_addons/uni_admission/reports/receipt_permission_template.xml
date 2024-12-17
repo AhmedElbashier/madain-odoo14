@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<template id="report_receipt_permission_template_doc">
+		<t t-call="web.html_container">
+			<t t-call="web.internal_layout">
+				<div class="page">
+					<h3>
+						<center><u>إدارة القبول</u></center>
+					</h3>
+					<h3>
+						<center><u>إذن توريد في الحسابات</u></center>
+					</h3>
+					<br/>
+					<div style="text-align: right">
+						<h5><span style="font-weidght: bold;">: التاريخ</span></h5>
+					</div>
+					<table class="table table-bordered">
+						<thead class="text-right" style="Background-color:#a6a4a4">
+							<th style="border: 1px solid black;">ملاحظات</th>
+							<th style="border: 1px solid black;">القسط الأول</th>
+							<th style="border: 1px solid black;">رسوم التسجيل</th>
+							<th style="border: 1px solid black;">الرقم الجامعي</th>
+							<th style="border: 1px solid black;">البرنامج</th>
+							<th style="border: 1px solid black;">إسم الطالب</th>
+						</thead>
+						<tbody>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+								</td>
+								<td style="border: 1px solid black;">
+								</td>
+								<td style="border: 1px solid black;">
+									<span t-esc="o.student_id.registration_fees"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span t-esc="o.university_id"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span t-esc="o.program_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span t-esc="o.name"></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br/>
+					<div style="text-align: right">
+						<span style="font-weidght: bold;margin-right:10px">  إسم موظف القبول</span> 
+						<span style="font-weidght: bold;margin-right:400px">  التوقيع</span>
+					</div>
+					<br/><br/>
+					<div style="float: right;border: 3px outset green;text-align:center;padding: 10px;border-radius: 400px;width: 150px;">
+						<span style="font-weidght: bold">   الختم</span>
+					</div>
+				</div>
+			</t>
+		</t>
+	</template>
+
+
+	<template id="report_receipt_permission_template">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="uni_admission.report_receipt_permission_template_doc"/>
+			</t>
+		</t>
+	</template>
+</odoo>

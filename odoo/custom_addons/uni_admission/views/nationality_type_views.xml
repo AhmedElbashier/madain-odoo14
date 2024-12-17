@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="nationality_type_view_form" model="ir.ui.view">
+		<field name="name">uni.nationality.type.form</field>
+		<field name="model">uni.nationality.type</field>
+		<field name="arch" type="xml">
+			<form string="Nationality Types">
+				<sheet>
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only"/>
+						<h1>
+							<field name="name" class="oe_inline" placeholder="Sudanese" />
+						</h1>
+					</div>
+					<group col="4">
+						<field name="currency_id" options="{'no_create': True}"/>
+						<field name="active"/>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="nationality_type_view_tree" model="ir.ui.view">
+		<field name="name">uni.nationality.type.tree</field>
+		<field name="model">uni.nationality.type</field>
+		<field name="arch" type="xml">
+			<tree string="Nationality Types">
+				<field name="name"/>
+				<field name="currency_id"/>
+			</tree>
+		</field>
+	</record>
+	<record id="nationality_type_action_form" model="ir.actions.act_window">
+		<field name="name">Nationality Type</field>
+		<field name="res_model">uni.nationality.type</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Click to create new Nationality			</p>
+		</field>
+	</record>
+	<menuitem id="menu_nationality_type" name="Nationality Types" parent="menu_configuration_view" action="nationality_type_action_form" sequence="3"/>
+</odoo>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="uni_study_fees_view_form" model="ir.ui.view">
+		<field name="name">uni.study_fees.form</field>
+		<field name="model">uni.study_fees</field>
+		<field name="arch" type="xml">
+			<form string="Tuition Fees">
+				<header>
+					<field name="state" widget="statusbar"/>
+					<button name="approve" string="Submit" type="object" states="draft" />
+					<button name="rest_draft" string="Rest To Draft" type="object" states="done" />
+					<button name="done" string="Approve" type="object" states="approve" />
+					
+				</header>
+				<sheet>
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only"/>
+						<h1>
+							<field name="name" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</h1>
+					</div>
+					<group col="2">
+						<field name="year_id" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+					</group>
+					<notebook>
+						<page string="Registratin Fees">
+							<field name="registered_line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+								<tree editable="top">
+									<field name="nationality_type_id"/>
+									<field name="registration_fees"/>
+									<field name="currency_id" invisible="1"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Program Fees">
+							<field name="program_line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+								<tree editable="top">
+									<field name="program_id"/>
+									<field name="nationality_type_id"/>
+									<field name="add_new" width="0.5"/>
+									<field name="transference" width="0.5"/>
+									<field name="academic_degrees"/>
+									<field name="mature"/>
+									<field name="academic_degree_holders"/>
+									<field name="currency_id" invisible="1"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="uni_study_fees_view_tree" model="ir.ui.view">
+		<field name="name">uni.study_fees.tree</field>
+		<field name="model">uni.study_fees</field>
+		<field name="arch" type="xml">
+			<tree string="Tuition Fees">
+				<field name="name"/>
+				<field name="year_id"/>
+				<field name="state"/>
+			</tree>
+		</field>
+	</record>
+	<record id="uni_study_fees_action_form" model="ir.actions.act_window">
+		<field name="name">Tuition Fees</field>
+		<field name="res_model">uni.study_fees</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">				Click to add new tuition fees			</p>
+		</field>
+	</record>
+	<menuitem id="menu_uni_study_fees" name="Academic Year Fees" parent="uni_core.menu_uni_year_root" action="uni_study_fees_action_form" sequence="2"/>
+
+	<!-- uni student fees -->
+	<record id="uni_study_fees_line_view_form" model="ir.ui.view">
+		<field name="name">uni.study_fees.line.form</field>
+		<field name="model">uni.study_fees.line</field>
+		<field name="arch" type="xml">
+			<form string="Faculty Fees">
+				<sheet>
+					<group>
+						<field name="faculty_id" options="{'no_create': True}"/>
+						<field name="registration_fees"/>
+						<field name="study_fees"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="uni_study_fees_line_view_tree" model="ir.ui.view">
+		<field name="name">uni.study_fees.line.tree</field>
+		<field name="model">uni.study_fees.line</field>
+		<field name="arch" type="xml">
+			<tree string="Faculty Fees">
+				<field name="faculty_id"/>
+				<field name="registration_fees"/>
+				<field name="study_fees"/>
+			</tree>
+		</field>
+	</record>
+	<!-- uni student fees For Departments-->
+	<record id="uni_study_fees_departments_view_form" model="ir.ui.view">
+		<field name="name">uni.study_fees.departments.form</field>
+		<field name="model">uni.study_fees.departments</field>
+		<field name="arch" type="xml">
+			<form string="Departments Fees">
+				<sheet>
+					<group>
+						<field name="faculty_id" options="{'no_create': True}"/>
+						<field name="department_id" options="{'no_create': True}"/>
+						<field name="registration_fees"/>
+						<field name="study_fees"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="uni_study_fees_departments_view_tree" model="ir.ui.view">
+		<field name="name">uni.study_fees.departments.tree</field>
+		<field name="model">uni.study_fees.departments</field>
+		<field name="arch" type="xml">
+			<tree string="Departments Fees">
+				<field name="faculty_id"/>
+				<field name="department_id"/>
+				<field name="registration_fees"/>
+				<field name="study_fees"/>
+			</tree>
+		</field>
+	</record>
+</odoo>

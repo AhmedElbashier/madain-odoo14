@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	<record id="confirm_wizard_view_form" model="ir.ui.view">
+		<field name="name">Confirmation</field>
+		<field name="model">confirm.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Confirmation">
+				<h3>The student does not have a university ID</h3>
+				
+				<footer>
+					<button name="action_continue" string="Continue" type="object" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+</data>
+</odoo>

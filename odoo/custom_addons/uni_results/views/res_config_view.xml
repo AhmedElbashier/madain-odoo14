@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<!-- Form view -->
+		<record id="res_config_settings_view_form" model="ir.ui.view">
+			<field name="name">Grades Configuration</field>
+			<field name="model">res.config.settings</field>
+			<field name="inherit_id" ref="uni_services.res_config_settings_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='general_setting']" position="inside">
+					<div>
+						<h2>Grades Configuration</h2>
+
+						<div class="row mt16 o_settings_container">
+							<div class="col-xs-12 col-md-6 o_setting_box">
+								<div class="o_setting_right_pane">
+									<label for="level_grade"/>
+									<div class="content-group">
+										<div class="mt16">
+											<field name="level_grade" class="o_light_label"/>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6 o_setting_box">
+								<div class="o_setting_right_pane">
+									<label for="semester_grade"/>
+									<div class="content-group">
+										<div class="mt16">
+											<field name="semester_grade" class="o_light_label"/>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6 o_setting_box">
+								<div class="o_setting_right_pane">
+									<label for="subject_grade"/>
+									<div class="content-group">
+										<div class="mt16">
+											<field name="subject_grade" class="o_light_label"/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- <div class="row mt16 o_settings_container">
+							<div class="col-xs-12 col-md-6 o_setting_box">
+								<div class="o_setting_right_pane">
+									<label for="gpa_grade"/>
+									<div class="content-group">
+										<div class="mt16">
+											<field name="gpa_grade" class="o_light_label"/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+					<div>
+						<h2>Exams</h2>
+
+						<div class="row mt16 o_settings_container">
+							<div class="col-xs-12 col-md-6 o_setting_box">
+								<div class="o_setting_right_pane">
+									<label for="attendance_perc"/>
+									<div class="content-group">
+										<div class="mt16">
+											<field name="attendance_perc" class="o_light_label"/>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 o_setting_box">
+								<div class="o_setting_right_pane">
+									<label for="recorrection_period"/>
+									<div class="content-group">
+										<div class="mt16">
+											<field name="recorrection_period" class="o_light_label"/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</xpath>
+			</field>
+		</record>
+		<menuitem id="uni_results_config_menu" name="Settings" sequence="0" parent="result_confg_root_menu" action="uni_admission.core_config_setting_action"/>
+	</data>
+</odoo>

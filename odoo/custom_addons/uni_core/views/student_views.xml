@@ -1,0 +1,232 @@
+<odoo>
+	<data>
+		<!-- uni.student form view -->
+		<record id="uni_student_view_form" model="ir.ui.view">
+            <field name="name">uni.student.form</field>
+            <field name="model">uni.student</field>
+            <field name="arch" type="xml">
+                <form string="Students" delete="0">
+                	<header>
+						<field name="state" widget="statusbar" statusbar_visible="student,graduate,resigned,dismissed"/>
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+						</div>
+						<field name="std_img" widget="image" class="oe_left oe_avatar" width="80" height="80"/>
+						<!-- <div class="oe_title"> -->
+							<h2 style="margin-left:150px;">
+								<table >
+									<tr>		
+										<td style="padding-right:10px; width:200px; height:40px;">
+											<field name="fourth_name" placeholder="Fourth Name" required="1" attrs="{'readonly':[('state','!=','student')]}"/>
+										</td>
+										<td style="padding-right:10px; width:200px; height:40px;">
+											<field name="last_name" placeholder="Last Name" required="1" attrs="{'readonly':[('state','!=','student')]}"/>
+										</td>
+										<td style="padding-right:10px; width:200px; height:40px;">
+											<field name="middle_name" placeholder="Middle Name" required="1" attrs="{'readonly':[('state','!=','student')]}"/>
+										</td>
+										 <td style="padding-right:10px; width:200px; height:40px;">
+											<field name="first_name" placeholder="First Name" required="1" attrs="{'readonly':[('state','!=','student')]}"/>
+										</td>
+									</tr>
+								</table>
+							</h2>
+						<!-- </div> -->
+						<div class="oe_title" style="margin-left:100px;"  invisible="1">
+							<h2>
+								<table>
+									<tr>
+										<td style="padding-right:10px;">
+											<field name="first_name_en" placeholder="First name (English)" attrs="{'readonly':[('state','!=','student')]}"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="middle_name_en" placeholder="Middle Name (English)" attrs="{'readonly':[('state','!=','student')]}"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="last_name_en" placeholder="Last Name (English)" attrs="{'readonly':[('state','!=','student')]}"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="fourth_name_en" placeholder="Fourth Name (English)" attrs="{'readonly':[('state','!=','student')]}"/>
+										</td>
+									</tr>
+								</table>
+							</h2>
+						</div>
+						<group>
+							<group>
+								<field name="university_id" attrs="{'readonly':[('state','!=','student')]}"/>
+								<field name="std_number"/>
+								<field name="program_id" options="{'no_create': True}"/>
+								<field name="specialization_id" options="{'no_create': True}"/>
+							</group>
+							<group>
+								<field name="level_id" options="{'no_create': True}" />
+								<field name="semester_id" options="{'no_create': True}"/>
+								<field name="academic_status"/>
+							</group>
+						</group>
+			
+						<notebook>
+							<page string="Personal" name="personal">
+								<group>
+									<group string="Personal Info">
+										<field name="birth_date"/>
+										<field name="place_of_birth"/>
+										<field name="email" widget="email"/>
+										<field name="religion"/>
+										<field name="nationality_id" options="{'no_create': True}"/>
+									</group>
+									<group string="Status">
+										<field name="gender" />
+										<field name="martial_status" required="1"/>
+									</group>
+								</group>
+								<group>
+									<group string='Address' name="address">
+										<field name="city"/>
+										<field name="address"/>
+									</group>
+									<group string="System Related Data">
+										<field name="partner_id"/>
+									</group>
+								</group>
+								<group string="Medical Info" name="medical">
+								</group>
+								<group string="Contacts"/>
+								<field name="contact_ids">
+									<tree editable="bottom">
+										<field name="phone" width="0.5"/>
+										<field name="whatsapp_number" width="0.5"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Family" name="family">
+								<field name="guardian_ids">
+									<group string="Guardians info"/>
+									<tree>
+										<field name="name"/>
+										<field name="relation_id"/>
+										<field name="email"/>
+									</tree>
+									<form>
+										<group col="4">
+											<field name="name"/>
+											<field name="relation_id" required="1"/>
+											<field name="email" required="1"/>
+										</group>
+										<notebook>
+											<page>
+												<field name="contact_ids">
+													<tree>
+														<field name="phone"/>
+														<field name="whatsapp_number"/>
+													</tree>
+												</field>
+											</page>
+										</notebook>
+									</form>
+								</field>
+							</page>
+							
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+                </form>
+            </field>
+        </record>
+		<!-- uni.student tree view -->
+		<record id="uni_student_view_tree" model="ir.ui.view">
+			<field name="name">uni.student.view.tree</field>
+			<field name="model">uni.student</field>
+			<field name="arch" type="xml">
+				<tree delete="0">
+					<field name="std_number"/>
+					<field name="name"/>
+					<field name="university_id"/>
+					<field name="batch_id"/>
+					<field name="level_id"/>
+					<field name="semester_id"/>
+					<field name="nationality_id"/>
+					<field name="program_id"/>
+					<field name="specialization_id"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+		<!-- uni.student Kanban View  -->
+		<record model="ir.ui.view" id="uni_student_view_kanban">
+			<field name="name">uni.student.view.kanban</field>
+			<field name="model">uni.student</field>
+			<field name="arch" type="xml">
+				<kanban sample="1">
+					<field name="id"/>
+					<field name="name"/>
+					<field name="std_img"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="o_kanban_image">
+									<img t-att-src="kanban_image('uni.student', 'std_img', record.id.raw_value)" alt="Studens" class="o_image_64_contain"/>
+								</div>
+								<div class="oe_kanban_details">
+									<h4>
+										<a type="open">
+											<field name="name" />
+										</a>
+									</h4>
+									<ul>
+										<strong>University ID:</strong>
+										<field name="university_id" />
+									</ul>
+									<ul>
+										<strong>Program:</strong>
+										<field name="program_id" />
+									</ul>
+									<ul>
+										<strong>Level:</strong>
+										<field name="level_id" />
+									</ul>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+		<record id="view_uni_student_search" model="ir.ui.view">
+            <field name="name">uni.student.search</field>
+            <field name="model">uni.student</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            	<search string="Student">
+            		<field name="name"/>
+            		<field name="university_id"/>
+            		<field name="std_number"/>
+					<field name="program_id" select="True"/>
+					<field name="batch_id" select="True"/>
+					<filter string="State" name="groupby_state" domain="[]" context="{'group_by':'state'}"/>
+					<filter string="Program" name="groupby_programe" domain="[]" context="{'group_by':'program_id'}"/>
+					<filter string="Batch" name="groupby_batch" domain="[]" context="{'group_by':'batch_id'}"/>
+            	</search>
+            </field>
+        </record>
+		
+		<!-- Students list action -->
+		<record id="uni_core_students_list_action" model="ir.actions.act_window">
+			<field name="name">Students</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">uni.student</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new student</p>
+			</field>
+		</record>
+		<!-- Students left menu -->
+		<menuitem id="uni_core_students_list_menu" name="Students" parent="uni_core_faculties_menu" action="uni_core_students_list_action" sequence="0"/>
+
+	</data>
+</odoo>

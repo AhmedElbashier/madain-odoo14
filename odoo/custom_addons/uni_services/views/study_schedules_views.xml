@@ -1,0 +1,73 @@
+<odoo>
+	<data>
+		<!-- late registration form view -->
+		<record id="late_registration_view_form" model="ir.ui.view">
+			<field name="name">uni.late.registration.view.form</field>
+			<field name="model">uni.late.registration</field>
+			<field name="arch" type="xml">
+				<form string="Late Registration">
+					<header>
+						<field name="state" widget="statusbar" statusbar_visible="draft,under_payment,paid,coordinator,scientific_affairs,dean_decision"/>
+						<button name="action_confirm" string="Confirm" type="object" states="draft" />
+						<button name="action_scientific_affairs" string="Scientific Affairs Recommendation" type="object" states="coordinator" />
+						<button name="action_dean_decision" string="Dean Decision" type="object" states="scientific_affairs" />
+						<button name="action_approve" string="Approve" type="object" states="dean_decision" />
+						<button name="rest_draft" string="Rest To Draft" type="object" states="rejected" />
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name" class="oe_inline" domain="[('state','in',['student','resigned'])]" attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h1>
+						</div>
+						<br/>
+						<group col="4">
+							<field name="code" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="request_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group col="4" string="Student Information">
+							<field name="program_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="academic_status" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="level_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="semester_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<notebook>
+							<page string="Decisions" attrs="{'invisible':[('state','not in',['coordinator','scientific_affairs','dean_decision','approved'])]}">
+								<group>
+									<field name="coordinator_recommendation" attrs="{'required':[('state','in',['coordinator','scientific_affairs','dean_decision'])],'readonly':[('state','!=','draft')]}"/>
+									<field name="scientific_affairs_recommendation" attrs="{'required':[('state','in',['scientific_affairs','dean_decision'])],'readonly':[('state','!=','draft')]}"/>
+									<field name="dean_decision" attrs="{'required':[('state','=','dean_decision')],'readonly':[('state','!=','draft')]}"/>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- late registration tree view -->
+		<record id="late_registration_view_tree" model="ir.ui.view">
+			<field name="name">uni.late.registration.view.tree</field>
+			<field name="model">uni.late.registration</field>
+			<field name="arch" type="xml">
+				<tree string="Late Registration">
+					<field name="code"/>
+					<field name="name" string="Name"/>
+					
+				</tree>
+			</field>
+		</record>
+
+		<record id="late_registration_action" model="ir.actions.act_window">
+			<field name="name">Late Registration</field>
+			<field name="res_model">uni.late.registration</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new late registration</p>
+			</field>
+		</record>
+
+		<menuitem id="late_registration_menu" name="Late Registration" action="late_registration_action" parent="uni_faculty_student_service_menu"/>
+
+	</data>
+</odoo>

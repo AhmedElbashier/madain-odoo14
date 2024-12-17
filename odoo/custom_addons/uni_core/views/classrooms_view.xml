@@ -1,0 +1,235 @@
+<odoo>
+	<data>
+		<!-- Classroom view -->
+		<record id="uni_faculty_classroom_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.classroom.form</field>
+			<field name="model">uni.faculty.classroom</field>
+			<field name="arch" type="xml">
+				<form string="Classrooms">
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name" class="oe_inline" required="1"/>
+							</h1>
+						</div>
+						<group col="4">
+							<field name="code"/>
+							<field name="class_type" invisible="1"/>
+						</group>
+						<group>
+							<group>
+								<field name="building_id" required="1"/>
+								<field name="capacity" required="1"/>
+							</group>
+							<group>
+								<field name="teaching_adis_ids" widget="many2many_tags"/>
+								<field name="asset_ids" widget="many2many_tags"/>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="uni_faculty_classroom_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.classroom.tree</field>
+			<field name="model">uni.faculty.classroom</field>
+			<field name="arch" type="xml">
+				<tree string="Classrooms">
+					<field name="name"/>
+					<field name="code"/>
+					<field name="building_id"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="uni_faculty_classroom_action" model="ir.actions.act_window">
+			<field name="name">Classrooms</field>
+			<field name="res_model">uni.faculty.classroom</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{'default_class_type': 'classroom'}</field>
+			<field name="domain">[('class_type','=','classroom')]</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new classroom</p>
+			</field>
+		</record>
+
+		<record id="uni_faculty_classroom_view1" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="uni_faculty_classroom_view_tree"/>
+            <field name="act_window_id" ref="uni_faculty_classroom_action"/>
+        </record>
+		<record id="uni_faculty_classroom_view2" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="uni_faculty_classroom_view_form"/>
+            <field name="act_window_id" ref="uni_faculty_classroom_action"/>
+        </record>
+
+		<menuitem id="classroom_management_menu" name="Classrooms Management" parent="uni_core_configurations_view_menu"/>
+		
+		<menuitem id="uni_faculty_classroom_menu" name="Classrooms" parent="classroom_management_menu" action="uni_faculty_classroom_action" sequence="1"/>
+
+
+		<!-- Building view -->
+		<record id="uni_faculty_building_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.building.form</field>
+			<field name="model">uni.faculty.building</field>
+			<field name="arch" type="xml">
+				<form string="Buildings">
+					<sheet>
+						<group col="4">
+							<field name="name" required="1"/>
+							<field name="code"/>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="uni_faculty_building_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.building.tree</field>
+			<field name="model">uni.faculty.building</field>
+			<field name="arch" type="xml">
+				<tree string="Buildings">
+					<field name="code"/>
+					<field name="name"/>
+					
+				</tree>
+			</field>
+		</record>
+
+		<record id="view_uni_classroom_search" model="ir.ui.view">
+            <field name="name">uni.faculty.classroom</field>
+            <field name="model">uni.faculty.classroom</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            	<search string="Classrooms">
+            		<field name="name"/>
+            		<field name="code"/>
+					<field name="building_id" select="True"/>
+					<filter string="Building" name="groupby_building" domain="[]" context="{'group_by':'building_id'}"/>
+            	</search>
+            </field>
+        </record>
+
+        <record id="view_uni_building_search" model="ir.ui.view">
+            <field name="name">uni.faculty.building</field>
+            <field name="model">uni.faculty.building</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            	<search string="Buildings">
+            		<field name="name"/>
+            		<field name="code"/>
+            	</search>
+            </field>
+        </record>
+
+		<record id="uni_faculty_building_action" model="ir.actions.act_window">
+			<field name="name">Buildings</field>
+			<field name="res_model">uni.faculty.building</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new building</p>
+			</field>
+		</record>
+
+		<menuitem id="uni_faculty_building_menu" name="Buildings" parent="classroom_management_menu" action="uni_faculty_building_action"/>
+
+		<!-- Teaching Adis view -->
+		<record id="uni_faculty_teaching_adis_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.teaching.adis.form</field>
+			<field name="model">uni.faculty.teaching.adis</field>
+			<field name="arch" type="xml">
+				<form string="Teaching Tools">
+					<sheet>
+						<group col="4">
+							<field name="name" required="1"/>
+							<field name="code"/>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="uni_faculty_teaching_adis_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.teaching.adis.tree</field>
+			<field name="model">uni.faculty.teaching.adis</field>
+			<field name="arch" type="xml">
+				<tree string="Teaching Tools">
+					<field name="name"/>
+					<field name="code"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="uni_faculty_teaching_adis_action" model="ir.actions.act_window">
+			<field name="name">Teaching Tools</field>
+			<field name="res_model">uni.faculty.teaching.adis</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new Teaching Tool</p>
+			</field>
+		</record>
+
+		<menuitem id="uni_faculty_teaching_adis_menu" name="Teaching Tools" parent="classroom_management_menu" action="uni_faculty_teaching_adis_action"/>
+
+		<!-- Assets view -->
+		<record id="uni_faculty_assets_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.assets.form</field>
+			<field name="model">uni.faculty.assets</field>
+			<field name="arch" type="xml">
+				<form string="Assets">
+					<sheet>
+						<group col="4">
+							<field name="name" required="1"/>
+							<field name="code"/>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="uni_faculty_assets_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.assets.tree</field>
+			<field name="model">uni.faculty.assets</field>
+			<field name="arch" type="xml">
+				<tree string="Assets">
+					<field name="name"/>
+					<field name="code"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="uni_faculty_assets_action" model="ir.actions.act_window">
+			<field name="name">Assets</field>
+			<field name="res_model">uni.faculty.assets</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new Assets</p>
+			</field>
+		</record>
+
+		<menuitem id="uni_faculty_assets_menu" name="Assets" parent="classroom_management_menu" action="uni_faculty_assets_action"/>
+
+	</data>
+
+</odoo>

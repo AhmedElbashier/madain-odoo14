@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="identity_type_view_form" model="ir.ui.view">
+		<field name="name">uni.identity.type.form</field>
+		<field name="model">uni.identity.type</field>
+		<field name="arch" type="xml">
+			<form string="Identity Types">
+				<sheet>
+					<group>
+						<group>
+							<field name="name"/>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="identity_type_view_tree" model="ir.ui.view">
+		<field name="name">uni.identity.type.tree</field>
+		<field name="model">uni.identity.type</field>
+		<field name="arch" type="xml">
+			<tree string="Identity Types">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+	<record id="identity_type_action_form" model="ir.actions.act_window">
+		<field name="name">Identity Type</field>
+		<field name="res_model">uni.identity.type</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Click to create new Identity			</p>
+		</field>
+	</record>
+	<menuitem id="menu_identity_type" name="Identity Types" parent="menu_configuration_view" action="identity_type_action_form" sequence="4"/>
+</odoo>

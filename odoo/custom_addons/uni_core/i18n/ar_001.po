@@ -1,0 +1,2283 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* uni_core
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-27 18:40+0000\n"
+"PO-Revision-Date: 2022-04-27 18:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: uni_core
+#: model:ir.actions.report,print_report_name:uni_core.action_report_student_idcard
+msgid "'Student ID Card - %s' % (object.name)"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_semester__order__10
+msgid "10"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_semester__order__11
+msgid "11"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_semester__order__12
+msgid "12"
+msgstr ""
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_kanban
+msgid "<strong>Level:</strong>"
+msgstr "المستوى:"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_kanban
+msgid "<strong>Program:</strong>"
+msgstr "البرنامج:"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_kanban
+msgid "<strong>University ID:</strong>"
+msgstr "الرقم الجامعي:"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_activities__activity_type__academic
+msgid "Academic"
+msgstr "اكاديمية"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.menu_uni_year_config
+#: model:ir.ui.menu,name:uni_core.menu_uni_year_root
+msgid "Academic Years"
+msgstr "السنة الدراسية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__academic_status
+msgid "Acadimic Status"
+msgstr "الحالة الأكاديمية"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__committee_recom__accepted
+msgid "Acceptable"
+msgstr "مقبول"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_needaction
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__active
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_calendar_activities_action
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_calendar_activities_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_calendar_activities_view_tree
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_activities_view_calendar
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_calendar_view_form
+msgid "Activities"
+msgstr "النشاطات"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_activities_action
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_activities_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_activities_view_tree
+msgid "Activity"
+msgstr "النشاط"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.uni_faculty_activities_menu
+msgid "Activity Advertisement"
+msgstr "إعلان النشاط"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__activity_details
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_activities_view_form
+msgid "Activity Details"
+msgstr "تفاصيل النشاط"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__activity_type
+msgid "Activity Type"
+msgstr "نوع النشاط"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__address
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Address"
+msgstr "العنوان"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__advertiser_id
+msgid "Advertiser"
+msgstr "المعلن"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_activities__employee_group__all
+msgid "All Employee"
+msgstr "كل الموظفين"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_activities_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_calendar_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_department_specialization_form_view
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_program_view_form
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_activities__state__approved
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_calendar__state__approved
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_curriculum__state__approved
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_department_specialization__state__approved
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_program__state__approved
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_assets_action
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__asset_ids
+#: model:ir.ui.menu,name:uni_core.uni_faculty_assets_menu
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_assets_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_assets_view_tree
+msgid "Assets"
+msgstr "الأصول"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_attachment_count
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.module.category,description:uni_core.uni_core_groups
+msgid "Base users in university system"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_batch_action
+#: model:ir.model,name:uni_core.model_uni_faculty_department_batch
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__batch_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__batch_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__batch_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__batch_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__batch_id
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_batch_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_batch_view_tree
+msgid "Batch"
+msgstr "الدفعة"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.uni_faculty_batch_menu
+msgid "Batches"
+msgstr "الدفع"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__birth_date
+msgid "Birth date"
+msgstr "تاريخ الميلاد"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_branch
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__branch_id
+msgid "Branch"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__building_id
+msgid "Building"
+msgstr "المبنى"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_building_action
+#: model:ir.ui.menu,name:uni_core.uni_faculty_building_menu
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_building_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_building_view_tree
+msgid "Buildings"
+msgstr "المباني"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_calendar_action
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_calendar_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_calendar_view_tree
+msgid "Calendar"
+msgstr "التقويم"
+
+#. module: uni_core
+#: code:addons/uni_core/models/study_calendar.py:0
+#, python-format
+msgid "Calendar %s has a same details"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__calendar_activities_ids
+#: model:ir.ui.menu,name:uni_core.uni_calendar_activities_menu
+msgid "Calendar Activities"
+msgstr "نشاطات التقويم"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__capacity
+msgid "Capacity"
+msgstr "السعة"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__religion__christianity
+msgid "Christianity"
+msgstr "مسيحي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__city
+msgid "City"
+msgstr "المدينة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__class_type
+msgid "Class Type"
+msgstr "نوع القاعة"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_classroom__class_type__classroom
+msgid "Classroom"
+msgstr "القاعه"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_classroom_action
+#: model:ir.ui.menu,name:uni_core.uni_faculty_classroom_menu
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_classroom_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_classroom_view_tree
+msgid "Classrooms"
+msgstr "القاعات"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.classroom_management_menu
+msgid "Classrooms Management"
+msgstr "إدارة القاعات"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_calendar_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_department_specialization_form_view
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_program_view_form
+msgid "Close"
+msgstr "مغلق"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_calendar__state__closed
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_curriculum__state__closed
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_department_specialization__state__closed
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_program__state__closed
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__code
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: uni_core
+#: code:addons/uni_core/models/program.py:0
+#, python-format
+msgid "Code length must be equal 3"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__committee_recom
+msgid "Committee Recommendation"
+msgstr "توصية اللجنة"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.uni_core_configurations_view_menu
+msgid "Configurations"
+msgstr "الإعدادت"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__contact_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__contact_ids
+msgid "Contact"
+msgstr "جهة الإتصال"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.student_guradian_form_view
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Contacts"
+msgstr "جهات الإتصال"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history__coordinator_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__coordinator
+msgid "Coordinator"
+msgstr "المنسق"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__coordinators_history_ids
+msgid "Coordinators"
+msgstr "المنسقين"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_program_view_form
+msgid "Coordinators History"
+msgstr "أرشيف المنسقين"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_assets_action
+msgid "Create new Assets"
+msgstr "إنشاء اصل جديد"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.students_groups_action
+msgid "Create new Group"
+msgstr "إنشاء مجموعة جديدة"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_core_program_action
+msgid "Create new Program"
+msgstr "إنشاء برنامج جديد"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_teaching_adis_action
+msgid "Create new Teaching Tool"
+msgstr "إنشاء أداة تعليمية جديدة"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_activities_action
+msgid "Create new activity"
+msgstr "إنشاء نشاط جديد"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_batch_action
+msgid "Create new batch"
+msgstr "إنشاء دفعة جديدة"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_building_action
+msgid "Create new building"
+msgstr "إنشاء مبنى جديد"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_calendar_activities_action
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_calendar_action
+msgid "Create new calendar"
+msgstr "إنشاء تقويم جديد"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_classroom_action
+msgid "Create new classroom"
+msgstr "إنشاء قاعة جديدة"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_curriculum_list_action
+msgid "Create new curriculum"
+msgstr "إنشاء منهج جديد"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_department_list_action
+msgid "Create new department"
+msgstr "إنشاء قسم جديد"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_lab_action
+msgid "Create new lab"
+msgstr "إنشاء معمل جديد"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_core_levels_list_action
+msgid "Create new level"
+msgstr "إنشاء مستوى جديد"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_core_students_list_action
+msgid "Create new student"
+msgstr "إنشاء طالب جديد"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_faculty_subjects_list_action
+msgid "Create new subject"
+msgstr "إنشاء مادة جديدة"
+
+#. module: uni_core
+#: model_terms:ir.actions.act_window,help:uni_core.uni_core_semesters_list_action
+msgid "Create new term"
+msgstr "إنشاء فصل جديد"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_notification_types__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_family_relation__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__create_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__create_date
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact__create_date
+#: model:ir.model.fields,field_description:uni_core.field_notification_types__create_date
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_family_relation__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__create_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__credit_hours
+msgid "Credit Hours"
+msgstr "الساعات المعتمدة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__practical_credit_hours
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__theoretical_credit_hours
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__practical_credit_hours
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__theoretical_credit_hours
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__credit_hours
+msgid "Credit hours"
+msgstr "الساعات المعتمدة"
+
+#. module: uni_core
+#: code:addons/uni_core/models/subject.py:0
+#, python-format
+msgid "Credit hours must be greater than zero"
+msgstr "الساعات المعتمدة يجب ان اتكون اكبر من الصفر"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__level_id
+msgid "Current Level"
+msgstr "المستوى الحالي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__semester_id
+msgid "Current Term"
+msgstr "الفصل الدراسي الحالي"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_curriculum_list_action
+#: model:ir.model,name:uni_core.model_uni_faculty_curriculum
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__curriculum_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__curriculum_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__curriculum_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__curriculum_id
+#: model:ir.ui.menu,name:uni_core.uni_core_curriculum_menu
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_tree
+#: model_terms:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid "Curriculum"
+msgstr "المنهج"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_curriculum_lines_action
+#: model:ir.ui.menu,name:uni_core.uni_curriculum_lines_menu
+msgid "Curriculum Detail"
+msgstr "تفاصيل المنهج"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_curriculum_line
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__curriculum_line_ids
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_lines_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_lines_view_tree
+msgid "Curriculum Details"
+msgstr "تفاصيل المنهج"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.curriculum_management_menu
+msgid "Curriculum Management"
+msgstr "إدارة المنهج"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_curriculum_subjects_line
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__curriculum_subjets_line_ids
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_form
+msgid "Curriculum Subjects"
+msgstr "مواد المنهج"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_form
+msgid "Curriculum Subjects Details"
+msgstr "تفاصيل مواد المنهج"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__days_number
+msgid "Days"
+msgstr "الأيام"
+
+#. module: uni_core
+#: model:res.groups,name:uni_core.uni_group_dean
+msgid "Dean"
+msgstr "العميد"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_department
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__department_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__department_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__department_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__department_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__department_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__department_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__department_id
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_activities__employee_group__department
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_department_view_form
+msgid "Department"
+msgstr "القسم"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_department_list_action
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch__department_ids
+#: model:ir.ui.menu,name:uni_core.uni_faculty_department_list_menu
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__description
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__description
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__description
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_subject_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_program_view_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.discount_scholarship_request
+msgid "Discount and Scholarship"
+msgstr "المنح والتخفيضات"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__academic_status__dismiss
+msgid "Dismiss"
+msgstr "فصل"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__state__dismissed
+msgid "Dismissed"
+msgstr "مفصول"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__display_name
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact__display_name
+#: model:ir.model.fields,field_description:uni_core.field_notification_types__display_name
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_family_relation__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__display_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__martial_status__divorsed
+msgid "Divorsed"
+msgstr "مطلق"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_activities__state__draft
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_calendar__state__draft
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_curriculum__state__draft
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_department_specialization__state__draft
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_program__state__draft
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__email_notification
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__email
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__email
+msgid "Email"
+msgstr "الايميل"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__employee_ids
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__employee_group
+msgid "Employee Group"
+msgstr "مجموعة الموظف"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__tag_ids
+msgid "Employee Tags"
+msgstr "وسوم الموظف"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_activities__target_group__employees
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_activities_view_form
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history__end_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__end_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__english_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__english_name
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_subject_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_program_view_form
+msgid "English Name"
+msgstr "الأسم الانجليزي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch__faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__faculty_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__faculty_id
+#: model:ir.ui.menu,name:uni_core.uni_core_faculties_menu
+msgid "Faculty"
+msgstr "الكلية"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_activities
+msgid "Faculty Activities"
+msgstr "نشاطات الكلية"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_calendar
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__faculty_calendar_id
+msgid "Faculty Calendar"
+msgstr "تقويم الكلية"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.faculty_management_menu
+msgid "Faculty Management"
+msgstr "إادارة الكلية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__fail_remove
+msgid "Fail can be removed"
+msgstr "يمكن إزالة الرسوب"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Family"
+msgstr "العائلة"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__gender__female
+msgid "Female"
+msgstr "أنثى"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "First Name"
+msgstr "الأسم الأول"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__first_name
+msgid "First name"
+msgstr "الأسم الأول"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__first_name_en
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "First name (English)"
+msgstr "الأسم الأول(الانجليزي)"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_calendar_activities__activity_type__first_sem
+msgid "First semester study"
+msgstr "دراسة الفصل الدراسي الأول"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_follower_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_channel_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_partner_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Fourth Name"
+msgstr "الأسم الرابع"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Fourth Name (English)"
+msgstr "الأسم الرابع(الانجليزي)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__fourth_name
+msgid "Fourth name"
+msgstr "الأسم الرابع"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__fourth_name_en
+msgid "Fourth name (English)"
+msgstr "الأسم الرابع(الانجليزي)"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__academic_status__fresh
+msgid "Fresh"
+msgstr "جديد"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__state__graduate
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_batch_view_form
+msgid "Graduate"
+msgstr "خريج"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_department_batch__state__graduated
+msgid "Graduated"
+msgstr "خريج"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_activities__employee_group__group
+msgid "Group"
+msgstr "المجموعة"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid "Group By"
+msgstr ""
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.students_groups_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.students_groups_view_tree
+msgid "Groups"
+msgstr "المجموعات"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__guardian_ids
+msgid "Guardians"
+msgstr "أولياء الأمر"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Guardians info"
+msgstr "معلومات أولياء الأمر"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact__guradian_id
+msgid "Guradian"
+msgstr "ولي الأمر"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__academic_status__substitutional_supplement
+msgid "Has Substitutional & Supplements"
+msgstr "لدية بدائل او ملاحق"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__academic_status__substitutions
+msgid "Has Substitutionals"
+msgstr "لديه بدائل"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__academic_status__supplement
+msgid "Has Supplements"
+msgstr "لديه ملاحق"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__committee_head
+msgid "Head of Committee"
+msgstr "رئيس اللجنة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__id
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact__id
+#: model:ir.model.fields,field_description:uni_core.field_notification_types__id
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_family_relation__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__id
+msgid "ID"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_calendar_activities__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_calendar_activities__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_activities__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_activities__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_assets__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_assets__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_building__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_building__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_calendar__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_calendar__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_classroom__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_classroom__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_curriculum__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_curriculum__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_batch__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_batch__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_specialization__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_specialization__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_level__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_level__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_program__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_program__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_semester__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_semester__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_subject__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_subject__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_teaching_adis__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_teaching_adis__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_student__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_student__message_unread
+#: model:ir.model.fields,help:uni_core.field_uni_student_groups__message_needaction
+#: model:ir.model.fields,help:uni_core.field_uni_student_groups__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_calendar_activities__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_calendar_activities__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_activities__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_activities__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_assets__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_assets__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_building__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_building__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_calendar__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_calendar__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_classroom__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_classroom__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_curriculum__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_curriculum__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_batch__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_batch__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_specialization__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_specialization__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_level__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_level__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_program__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_program__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_semester__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_semester__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_subject__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_subject__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_teaching_adis__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_teaching_adis__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_student__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_student__message_has_sms_error
+#: model:ir.model.fields,help:uni_core.field_uni_student_groups__message_has_error
+#: model:ir.model.fields,help:uni_core.field_uni_student_groups__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_is_follower
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__religion__islam
+msgid "Islam"
+msgstr "مسلم"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_classroom__class_type__lab
+msgid "Lab"
+msgstr "المعمل"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_lab_action
+#: model:ir.ui.menu,name:uni_core.uni_faculty_lab_menu
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_lab_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_lab_view_tree
+msgid "Labs"
+msgstr "المعامل"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line____last_update
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact____last_update
+#: model:ir.model.fields,field_description:uni_core.field_notification_types____last_update
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_family_relation____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_student____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups____last_update
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Last Name"
+msgstr "الأسم الأخير"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Last Name (English)"
+msgstr "الأسم الأخير(الانجليزي)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_notification_types__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_family_relation__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__write_uid
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__write_date
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact__write_date
+#: model:ir.model.fields,field_description:uni_core.field_notification_types__write_date
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_family_relation__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__write_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__last_name
+msgid "Last name"
+msgstr "الأسم الأخير"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__last_name_en
+msgid "Last name (English)"
+msgstr "الأسم الأخير(الانجليزي)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__practical_lectures
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__theoretical_lectures
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__practical_lectures
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__theoretical_lectures
+msgid "Lectures No"
+msgstr "عدد المحاضرات"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_program_coordinator_history
+msgid "Legacy Coordination Data"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__level_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__level_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__level_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__level_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__level_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__level_id
+#: model_terms:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid "Level"
+msgstr "المستوى"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.uni_core_levels_list_menu
+msgid "Levels"
+msgstr "المستويات"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__location
+msgid "Location"
+msgstr "المكان"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_main_attachment_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__gender__male
+msgid "Male"
+msgstr "ذكر"
+
+#. module: uni_core
+#: model:res.groups,name:uni_core.uni_group_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__martial_status__married
+msgid "Married"
+msgstr "متزوج"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__martial_status
+msgid "Martial Status"
+msgstr "الحالة الإجتماعية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__medical_condition
+msgid "Medical Check"
+msgstr "الفحص الطبي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__medical_data
+msgid "Medical Data"
+msgstr "البيانات الطبية"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Medical Info"
+msgstr "المعلومات الطبية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_has_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Middle Name"
+msgstr "الإسم الثاني"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Middle Name (English)"
+msgstr "الإسم الثاني(الانجليزي)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__middle_name
+msgid "Middle name"
+msgstr "الإسم الثاني"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__middle_name_en
+msgid "Middle name (English)"
+msgstr "الإسم الثاني(الانجليزي)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_notification_types__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_branch__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__english_name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_family_relation__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__name
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__name
+#: model_terms:ir.ui.view,arch_db:uni_core.students_groups_view_form
+msgid "Name"
+msgstr "الإسم"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__name_en
+msgid "Name (English)"
+msgstr "الإسم (الانجليزي)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__national_id
+msgid "National ID"
+msgstr "الرقم الوطني"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__nationality_id
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: uni_core
+#: code:addons/uni_core/models/curriculum.py:0
+#: code:addons/uni_core/models/curriculum.py:0
+#: code:addons/uni_core/models/curriculum.py:0
+#: code:addons/uni_core/models/curriculum.py:0
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_department_batch__state__new
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__committee_recom__not_accepted
+msgid "Not Acceptable"
+msgstr "غير مقبول"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__committee_notes
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_activities_view_form
+msgid "Notification Type"
+msgstr "نوع الإشعار"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_needaction_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_has_error_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_calendar_activities__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_activities__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_assets__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_building__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_calendar__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_classroom__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_curriculum__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_batch__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_specialization__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_level__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_program__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_semester__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_subject__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_teaching_adis__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_student__message_needaction_counter
+#: model:ir.model.fields,help:uni_core.field_uni_student_groups__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_calendar_activities__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_activities__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_assets__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_building__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_calendar__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_classroom__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_curriculum__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_batch__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_specialization__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_level__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_program__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_semester__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_subject__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_teaching_adis__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_student__message_has_error_counter
+#: model:ir.model.fields,help:uni_core.field_uni_student_groups__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_calendar_activities__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_activities__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_assets__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_building__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_calendar__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_classroom__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_curriculum__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_batch__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_specialization__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_level__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_program__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_semester__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_subject__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_teaching_adis__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_student__message_unread_counter
+#: model:ir.model.fields,help:uni_core.field_uni_student_groups__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__order
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__order
+msgid "Order"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__religion__other
+msgid "Other"
+msgstr "إخرى"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_activities_view_form
+msgid "Other Info"
+msgstr "المعلومات الأخرى"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__parent_left
+msgid "Parent Left"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__parent_right
+msgid "Parent Right"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__parent_id
+msgid "Parent Specialization"
+msgstr ""
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Personal"
+msgstr "المعلومات الشخصية"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Personal Info"
+msgstr "المعلومات الشخصية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact__phone
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__phone
+msgid "Phone"
+msgstr "رقم الموبايل"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__phone
+msgid "Phone(1)"
+msgstr "رقام الموبايل(1)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__mobile
+msgid "Phone(2)"
+msgstr "رقم الموبايل(2)"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__place_of_birth
+msgid "Place of Birth"
+msgstr "مكان الميلاد"
+
+#. module: uni_core
+#: code:addons/uni_core/models/batch.py:0
+#, python-format
+msgid "Please Configure The Program Default Curriculum"
+msgstr "الرجاء ادخال المنهج الرئيسي للبرنامج"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_curriculum_line__subject_type__practical
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_subject__subject_type__practical
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_lines_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_subject_view_form
+msgid "Practical"
+msgstr "عملي"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_core_program_action
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__program_id
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history__program_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__program_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__program_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__program_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__program_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__program_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__program_id
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_program_view_tree
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_program_view_form
+msgid "Program"
+msgstr "البرنامج"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_program
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__program_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__program_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__program_ids
+#: model:ir.ui.menu,name:uni_core.uni_core_program_menu
+msgid "Programs"
+msgstr "البرامج"
+
+#. module: uni_core
+#: model:res.groups,name:uni_core.uni_group_register
+msgid "Register"
+msgstr "مسجل"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__partner_id
+msgid "Related Partner"
+msgstr "الشريك المرتبط"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__relation_id
+msgid "Relation"
+msgstr "العلاقة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__religion
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__academic_status__repeat
+msgid "Repeat"
+msgstr "إعادة"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__academic_status__repeat_subjects
+msgid "Repeat With Subjects"
+msgstr "إعادة بمواد"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__state__resigned
+msgid "Resigned"
+msgstr "مستقيل"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_activities_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_calendar_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_department_specialization_form_view
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_program_view_form
+msgid "Rest To Draft"
+msgstr "إجاع الى مبدئي"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_batch_view_form
+msgid "Rest To New"
+msgstr "غرجاع الى جديد"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__sms_notification
+msgid "SMS"
+msgstr "رسالة نصية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_has_sms_error
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__school_percentage
+msgid "School Percentage"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_calendar_activities__activity_type__second_sem
+msgid "Second semester study"
+msgstr "دراسة الفصل الدراسي الثاني"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__secondary_school
+msgid "Secondary School"
+msgstr "المدرسة الثانوية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__term_semester_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__term_semester_id
+msgid "Semester"
+msgstr "الفصل الدراسي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__sequence_id
+msgid "Sequence"
+msgstr "المتسلسل"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__martial_status__single
+msgid "Single"
+msgstr "اعزب"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_department_specialization
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__specialization_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__specialization_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__specialization_id
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_program_view_form
+msgid "Specialization"
+msgstr "التخصص"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_department_specialization_action
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__specialization_ids
+#: model:ir.ui.menu,name:uni_core.dept_spsdsd_location_menu_loc
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_department_specialization_form_view
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_department_specialization_tree_view
+msgid "Specializations"
+msgstr "التخصصات"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_activities__activity_type__sportive
+msgid "Sportive"
+msgstr "رياضي"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__start_date
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__state
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__state
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__state
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__state
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__state
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__state
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Status"
+msgstr "الحالة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_program_coordinator_history__start_date
+msgid "Strat Date"
+msgstr ""
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_kanban
+msgid "Studens"
+msgstr "الطلاب"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_student
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact__student_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__student_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_guradian__student_id
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__state__student
+msgid "Student"
+msgstr "الطالب"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.student_guradian_form_view
+#: model_terms:ir.ui.view,arch_db:uni_core.student_guradian_tree_view
+msgid "Student Guradians"
+msgstr "ولي امر لطالب"
+
+#. module: uni_core
+#: model:ir.actions.report,name:uni_core.action_report_student_idcard
+msgid "Student ID Card"
+msgstr "رقم بطاقة الطالب"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__std_img
+msgid "Student Image"
+msgstr "صورة الطالب"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__std_number
+msgid "Student Number"
+msgstr "رقم الطالب"
+
+#. module: uni_core
+#: code:addons/uni_core/models/student.py:0
+#, python-format
+msgid "Student age can't be less than 15 years"
+msgstr "عمر الطالب لايمكن ان يكون اقل من 15 سنة"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_core_students_list_action
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__student_ids
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_activities__target_group__students
+#: model:ir.ui.menu,name:uni_core.uni_core_students_list_menu
+#: model:res.groups,name:uni_core.uni_group_student
+#: model_terms:ir.ui.view,arch_db:uni_core.students_groups_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_activities_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.students_groups_action
+#: model:ir.ui.menu,name:uni_core.students_groups_menu
+msgid "Students Groups"
+msgstr "مجموعات الطلاب"
+
+#. module: uni_core
+#: model:ir.ui.menu,name:uni_core.uni_faculty_calendar_menu
+msgid "Study Calendar"
+msgstr "التقويم ادراسي"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_subject
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__subject_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__subject_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__subject_id
+#: model_terms:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid "Subject"
+msgstr "المادة"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_subject_line
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__subject_line_ids
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_subject_line_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_subject_line_view_tree
+msgid "Subject Details"
+msgstr "تفاصيل المادة"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_subjects_list_action
+#: model:ir.ui.menu,name:uni_core.uni_core_subjects_menu
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_subject_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_subject_view_tree
+msgid "Subjects"
+msgstr "المواد"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_batch_view_form
+msgid "Submit"
+msgstr "تأكيد"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__academic_status__success
+msgid "Success"
+msgstr "نجاح"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__state__frozen
+msgid "Suspended"
+msgstr "مجمد"
+
+#. module: uni_core
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_student_view_form
+msgid "System Related Data"
+msgstr "البيانات المرتبطة بالنظام"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__target_group
+msgid "Target Group"
+msgstr "المجموعة المستهدفة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__teacher_id
+msgid "Teacher"
+msgstr "الأستاذ"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__teacher_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__teacher_ids
+msgid "Teachers"
+msgstr "الأساتذة"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_faculty_teaching_adis_action
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__teaching_adis_ids
+#: model:ir.ui.menu,name:uni_core.uni_faculty_teaching_adis_menu
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_teaching_adis_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_teaching_adis_view_tree
+msgid "Teaching Tools"
+msgstr "الأدوات التعليمية"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__template_curriculum
+msgid "Template Curriculum"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_semester
+#: model:ir.model.fields,field_description:uni_core.field_curriculum_subjects_line__semester_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__semester_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__semester_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__semester_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__semester_id
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__semester_id
+#: model_terms:ir.ui.view,arch_db:uni_core.view_curriculum_lines_line_filter
+msgid "Term"
+msgstr "الفصل الدراسي"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_core_semesters_list_action
+#: model:ir.ui.menu,name:uni_core.uni_core_semesters_menu
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_semester_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_semester_view_tree
+msgid "Terms"
+msgstr "الفصول الدراسية"
+
+#. module: uni_core
+#: code:addons/uni_core/models/program.py:0
+#, python-format
+msgid "The Curriculum must be set before approving the program"
+msgstr "يجب ادخال المنهج قبل اعتماد البرنامج"
+
+#. module: uni_core
+#: code:addons/uni_core/models/branch.py:0
+#: model:ir.model.constraint,message:uni_core.constraint_uni_faculty_branch_name_unique
+#, python-format
+msgid "The name must be unique"
+msgstr "يجب ان يكون الأسم متفردا"
+
+#. module: uni_core
+#: code:addons/uni_core/models/curriculum.py:0
+#: code:addons/uni_core/models/specialization.py:0
+#, python-format
+msgid "The record must be in dratf state to be deleted."
+msgstr "يجب ان يكون السجل في الحالة مبدئي لحذفه"
+
+#. module: uni_core
+#: code:addons/uni_core/models/student.py:0
+#: model:ir.model.constraint,message:uni_core.constraint_uni_student_university_id_unique
+#, python-format
+msgid "The university ID must be unique"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_curriculum_line__subject_type__theoretical
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_subject__subject_type__theoretical
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_curriculum_lines_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_subject_view_form
+msgid "Theoretical"
+msgstr "نظري"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_curriculum_line__subject_type__both
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_subject__subject_type__both
+msgid "Theoretical & Practical"
+msgstr "نظري و عملي"
+
+#. module: uni_core
+#: code:addons/uni_core/models/department.py:0
+#, python-format
+msgid "There is another Department with the same name: %s"
+msgstr "يوجد قسم آخر بنفس الإسم : "
+
+#. module: uni_core
+#: code:addons/uni_core/models/level.py:0
+#, python-format
+msgid "There is another Level with the same name or code: %s"
+msgstr "يوجد مسوى آخر بنفس الكود : "
+
+#. module: uni_core
+#: code:addons/uni_core/models/level.py:0
+#, python-format
+msgid "There is another Level with the same order: %s"
+msgstr "يوجد مستوى آخر بنفس التسلسل : "
+
+#. module: uni_core
+#: code:addons/uni_core/models/specialization.py:0
+#, python-format
+msgid "There is another Specialization with the same name or code: %s"
+msgstr "يوجد تخصص آخر بنفس الإسم او الكود : "
+
+#. module: uni_core
+#: code:addons/uni_core/models/batch.py:0
+#, python-format
+msgid "There is another batch with the same name: %s"
+msgstr "يوجد دفعة آخرى بنفس الإسم : "
+
+#. module: uni_core
+#: code:addons/uni_core/models/curriculum.py:0
+#, python-format
+msgid "There is another curriculum with the same name or code: %s"
+msgstr "يوجد منهج آخر بنفس الإسم او الكود : "
+
+#. module: uni_core
+#: code:addons/uni_core/models/program.py:0
+#, python-format
+msgid "There is another program with the same name or code: %s"
+msgstr "يوجد برنامج آخر بنفس الإسم او الكود : "
+
+#. module: uni_core
+#: code:addons/uni_core/models/semester.py:0
+#, python-format
+msgid "There is another semester with the same name or code: %s"
+msgstr "يوجد فصل دراسي آخر بنفس الإسم او الكود"
+
+#. module: uni_core
+#: code:addons/uni_core/models/semester.py:0
+#, python-format
+msgid "There is another semester with the same order: %s"
+msgstr "يوجد فصل دراسي آخر بنفس التسلسل"
+
+#. module: uni_core
+#: code:addons/uni_core/models/student.py:0
+#, python-format
+msgid "There is another student with the same number: %s"
+msgstr "يوجد طالب آخر بنفس الرقم"
+
+#. module: uni_core
+#: code:addons/uni_core/models/subject.py:0
+#, python-format
+msgid "There is another subject with the same name or code: %s"
+msgstr "يوجد مادة آخرى بنفس الإسم او الكود"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__credit_hours
+msgid "Total Credit Hours"
+msgstr "مموع الساعات المعتمدة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__activity_type
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum_line__subject_type
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__subject_type
+msgid "Type"
+msgstr "النوع"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_faculty_department_batch__state__under_study
+msgid "Under Study"
+msgstr "تحت الدراسة"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__university_id
+msgid "University ID"
+msgstr "الرقم الجامعي"
+
+#. module: uni_core
+#: model:ir.module.category,name:uni_core.uni_core_groups
+msgid "University Users"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_unread
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__message_unread_counter
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__user_id
+msgid "User"
+msgstr "المستخدم"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_calendar_activities__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_assets__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_building__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_classroom__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_curriculum__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_batch__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_department_specialization__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_level__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_program__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_semester__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_teaching_adis__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student__website_message_ids
+#: model:ir.model.fields,field_description:uni_core.field_uni_student_groups__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,help:uni_core.field_uni_calendar_activities__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_activities__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_assets__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_building__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_calendar__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_classroom__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_curriculum__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_batch__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_department_specialization__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_level__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_program__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_semester__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_subject__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_faculty_teaching_adis__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_student__website_message_ids
+#: model:ir.model.fields,help:uni_core.field_uni_student_groups__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_calendar_activities_line__week_number
+msgid "Weeks"
+msgstr "الأسابيع"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_guradian_contact__whatsapp_number
+msgid "Whatsapp Number"
+msgstr "رقم الواتساب"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__martial_status__widow
+msgid "Widow"
+msgstr "أرمل"
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_subject_line__level_id
+msgid "Year"
+msgstr "السنة"
+
+#. module: uni_core
+#: model:ir.actions.act_window,name:uni_core.uni_core_levels_list_action
+#: model:ir.model,name:uni_core.model_uni_faculty_level
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_level_view_form
+#: model_terms:ir.ui.view,arch_db:uni_core.uni_faculty_level_view_tree
+msgid "Years"
+msgstr "السنين"
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__medical_condition__fit
+msgid "fit"
+msgstr "لائق"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_guradian_contact
+msgid "guradian.contact"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_notification_types
+msgid "notification.types"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields.selection,name:uni_core.selection__uni_student__medical_condition__unfit
+msgid "unfit"
+msgstr "غير لائق"
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_calendar_activities
+msgid "uni.calendar.activities"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_assets
+msgid "uni.faculty.assets"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_building
+msgid "uni.faculty.building"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_calendar_activities_line
+msgid "uni.faculty.calendar.activities.line"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_classroom
+msgid "uni.faculty.classroom"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_faculty_teaching_adis
+msgid "uni.faculty.teaching.adis"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_family_relation
+msgid "uni.family.relation"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_student_groups
+msgid "uni.student.groups"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model,name:uni_core.model_uni_student_guradian
+msgid "uni.student.guradian"
+msgstr ""
+
+#. module: uni_core
+#: model:ir.model.fields,field_description:uni_core.field_uni_faculty_activities__whatsapp_notification
+msgid "whatsapp"
+msgstr "واتساب"

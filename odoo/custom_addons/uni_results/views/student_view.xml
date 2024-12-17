@@ -1,0 +1,43 @@
+<odoo>
+	<data>
+		<!-- Student -->
+		<record id="uni_result_student_view_form_inh" model="ir.ui.view">
+			<field name="name">uni.student.form</field>
+			<field name="model">uni.student</field>
+			<field name="inherit_id" ref="uni_core.uni_student_view_form"/>
+			<field name="arch" type="xml">
+		
+				<xpath expr="//page[@name='fees']" position="after">
+					<page string="Results" name="result">
+						<field name="result_ids">
+							<tree>
+                                <field name="level_id" required="1"/>
+                                <field name="semester_id" required="1"/>
+                                <field name="total_points"/>
+                                <field name="total_hours"/>
+                                <field name="sgpa"/>
+                                <field name="sgpa2"/>
+                                <field name="gpa"/>
+                                <field name="sgpa_grade_letter"/>
+                                <field name="sgpa_grade"/>
+                            </tree>
+						</field>
+					</page>				
+				</xpath>
+			</field>
+		</record>
+
+		<record id="uni_program_view_form_inh" model="ir.ui.view">
+			<field name="name">uni.faculty.program.form</field>
+			<field name="model">uni.faculty.program</field>
+			<field name="inherit_id" ref="uni_core.uni_program_view_form"/>
+			<field name="arch" type="xml">
+		
+				<xpath expr="//field[@name='curriculum_id']" position="after">
+					<field name="maximum_study_years"/>		
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Inherit Form view -->
+	<record id="view_account_config_settings_inherit" model="ir.ui.view">
+		<field name="name">account.config.settings.form</field>
+		<field name="model">account.config.settings</field>
+		<field name="inherit_id" ref="account.view_account_config_settings"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='group_warning_account']" position="after">
+				<label for="id" string="students"/>
+				<div name="students_payments">
+					<div>
+						<field name="income_journal_id" class="oe_inline"/>
+						<label for="income_journal_id"/>
+					</div>
+					<div>
+						<field name="general_account_id" class="oe_inline"/>
+						<label for="general_account_id"/>
+					</div>
+					<div>
+						<field name="bank_account_id" class="oe_inline"/>
+						<label for="bank_account_id"/>
+					</div>
+					<div>
+						<field name="special_account_id" class="oe_inline"/>
+						<label for="special_account_id"/>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+</odoo>

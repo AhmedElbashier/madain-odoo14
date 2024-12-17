@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="report_guides_and_steps">
+		<t t-call="web.html_container">
+			<t t-call="web.internal_layout">
+				<t t-foreach="docs" t-as="o">
+					<div class="page">
+						<h3>
+							<center>إستمارة متطلبات القبول و الإرشادات</center>
+						</h3>
+						<br/><br/>
+						<table class="table table-bordered">
+							<tbody>
+								<tr style="Background-color:#a6a4a4">
+									<td style="border: 1px solid black;">
+										<center><span style="font-weidght: bold;width=100%">خطوات وموجهات القبول</span></center>
+									</td>
+								</tr>
+								<tr class="text-right">
+									<td style="border: 1px solid black">
+										<t t-foreach="o.admission_steps_ids" t-as="step">
+											<span style="font-weidght: bold" t-esc="step.name"></span><br/>
+										</t>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						<table class="table table-bordered">
+							<tbody>
+								<tr style="Background-color:#a6a4a4">
+									<td style="border: 1px solid black;">
+										<center><span style="font-weidght: bold;width=100%">خطوات وموجهات التسجيل</span></center>
+									</td>
+								</tr>
+								<tr class="text-right">
+									<td style="border: 1px solid black">
+										<t t-foreach="o.registration_steps_ids" t-as="step">
+											<span style="font-weidght: bold" t-esc="step.name"></span><br/>
+										</t>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="table table-bordered">
+							<tbody>
+								<tr style="Background-color:#a6a4a4">
+									<td style="border: 1px solid black;">
+										<center><span style="font-weidght: bold;width=100%">موجهات وإرشادات الإدارة الماليةل</span></center>
+									</td>
+								</tr>
+								<tr class="text-right">
+									<td style="border: 1px solid black">
+										<t t-foreach="o.guidelines_financial_management" t-as="step">
+											<span style="font-weidght: bold" t-esc="step.name"></span><br/>
+										</t>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+</odoo>

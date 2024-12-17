@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* base_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-14 06:33+0000\n"
+"PO-Revision-Date: 2018-03-14 06:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_custom
+#: selection:res.company,type:0
+msgid "Administration"
+msgstr "إدارة"
+
+#. module: base_custom
+#: selection:res.company,type:0
+msgid "Campus"
+msgstr "مجمع"
+
+#. module: base_custom
+#: selection:res.company,type:0
+msgid "Center"
+msgstr "مركز"
+
+#. module: base_custom
+#: model:ir.model,name:base_custom.model_res_company
+msgid "Companies"
+msgstr "المؤسسات"
+
+#. module: base_custom
+#: model:res.company,overdue_msg:base_custom.conf_ncas
+#: model:res.company,overdue_msg:base_custom.conf_ncas1
+#: model:res.company,overdue_msg:base_custom.conf_ncas10
+#: model:res.company,overdue_msg:base_custom.conf_ncas11
+#: model:res.company,overdue_msg:base_custom.conf_ncas12
+#: model:res.company,overdue_msg:base_custom.conf_ncas13
+#: model:res.company,overdue_msg:base_custom.conf_ncas14
+#: model:res.company,overdue_msg:base_custom.conf_ncas2
+#: model:res.company,overdue_msg:base_custom.conf_ncas3
+#: model:res.company,overdue_msg:base_custom.conf_ncas4
+#: model:res.company,overdue_msg:base_custom.conf_ncas5
+#: model:res.company,overdue_msg:base_custom.conf_ncas6
+#: model:res.company,overdue_msg:base_custom.conf_ncas7
+#: model:res.company,overdue_msg:base_custom.conf_ncas8
+#: model:res.company,overdue_msg:base_custom.conf_ncas9
+#: model:res.company,overdue_msg:base_custom.conf_o_income
+#: model:res.company,overdue_msg:base_custom.conf_o_income1
+#: model:res.company,overdue_msg:base_custom.conf_o_income10
+#: model:res.company,overdue_msg:base_custom.conf_o_income11
+#: model:res.company,overdue_msg:base_custom.conf_o_income12
+#: model:res.company,overdue_msg:base_custom.conf_o_income2
+#: model:res.company,overdue_msg:base_custom.conf_o_income3
+#: model:res.company,overdue_msg:base_custom.conf_o_income4
+#: model:res.company,overdue_msg:base_custom.conf_o_income5
+#: model:res.company,overdue_msg:base_custom.conf_o_income6
+#: model:res.company,overdue_msg:base_custom.conf_o_income7
+#: model:res.company,overdue_msg:base_custom.conf_o_income8
+#: model:res.company,overdue_msg:base_custom.conf_o_income9
+#: model:res.company,overdue_msg:base_custom.conf_prepayment1
+#: model:res.company,overdue_msg:base_custom.conf_prepayment2
+#: model:res.company,overdue_msg:base_custom.conf_prepayment3
+#: model:res.company,overdue_msg:base_custom.conf_prepayment4
+#: model:res.company,overdue_msg:base_custom.conf_prepayment5
+#: model:res.company,overdue_msg:base_custom.conf_prepayment6
+#: model:res.company,overdue_msg:base_custom.conf_prepayment7
+#: model:res.company,overdue_msg:base_custom.conf_prepayment8
+#: model:res.company,overdue_msg:base_custom.conf_prepayment9
+#: model:res.company,overdue_msg:base_custom.conf_prepayments
+#: model:res.company,overdue_msg:base_custom.conf_prepayments1
+#: model:res.company,overdue_msg:base_custom.conf_prepayments10
+#: model:res.company,overdue_msg:base_custom.conf_prepayments11
+#: model:res.company,overdue_msg:base_custom.conf_prepayments12
+#: model:res.company,overdue_msg:base_custom.conf_prepayments13
+#: model:res.company,overdue_msg:base_custom.conf_prepayments14
+#: model:res.company,overdue_msg:base_custom.conf_prepayments15
+#: model:res.company,overdue_msg:base_custom.conf_prepayments16
+#: model:res.company,overdue_msg:base_custom.conf_prepayments17
+#: model:res.company,overdue_msg:base_custom.conf_prepayments18
+#: model:res.company,overdue_msg:base_custom.conf_prepayments19
+#: model:res.company,overdue_msg:base_custom.conf_prepayments2
+#: model:res.company,overdue_msg:base_custom.conf_prepayments20
+#: model:res.company,overdue_msg:base_custom.conf_prepayments21
+#: model:res.company,overdue_msg:base_custom.conf_prepayments22
+#: model:res.company,overdue_msg:base_custom.conf_prepayments23
+#: model:res.company,overdue_msg:base_custom.conf_prepayments24
+#: model:res.company,overdue_msg:base_custom.conf_prepayments25
+#: model:res.company,overdue_msg:base_custom.conf_prepayments26
+#: model:res.company,overdue_msg:base_custom.conf_prepayments27
+#: model:res.company,overdue_msg:base_custom.conf_prepayments28
+#: model:res.company,overdue_msg:base_custom.conf_prepayments29
+#: model:res.company,overdue_msg:base_custom.conf_prepayments3
+#: model:res.company,overdue_msg:base_custom.conf_prepayments30
+#: model:res.company,overdue_msg:base_custom.conf_prepayments31
+#: model:res.company,overdue_msg:base_custom.conf_prepayments32
+#: model:res.company,overdue_msg:base_custom.conf_prepayments33
+#: model:res.company,overdue_msg:base_custom.conf_prepayments34
+#: model:res.company,overdue_msg:base_custom.conf_prepayments4
+#: model:res.company,overdue_msg:base_custom.conf_prepayments5
+#: model:res.company,overdue_msg:base_custom.conf_prepayments6
+#: model:res.company,overdue_msg:base_custom.conf_prepayments7
+#: model:res.company,overdue_msg:base_custom.conf_prepayments8
+#: model:res.company,overdue_msg:base_custom.conf_prepayments9
+#: model:res.company,overdue_msg:base_custom.conf_stk
+#: model:res.company,overdue_msg:base_custom.conf_stk1
+#: model:res.company,overdue_msg:base_custom.conf_stk2
+#: model:res.company,overdue_msg:base_custom.conf_stk3
+msgid "Dear Sir/Madam,\n"
+"\n"
+"Our records indicate that some payments on your account are still due. Please find details below.\n"
+"If the amount has already been paid, please disregard this notice. Otherwise, please forward us the total amount stated below.\n"
+"If you have any queries regarding your account, Please contact us.\n"
+"\n"
+"Thank you in advance for your cooperation.\n"
+"Best Regards,"
+msgstr "Dear Sir/Madam,\n"
+"\n"
+"Our records indicate that some payments on your account are still due. Please find details below.\n"
+"If the amount has already been paid, please disregard this notice. Otherwise, please forward us the total amount stated below.\n"
+"If you have any queries regarding your account, Please contact us.\n"
+"\n"
+"Thank you in advance for your cooperation.\n"
+"Best Regards,"
+
+#. module: base_custom
+#: selection:res.company,type:0
+msgid "Faculty"
+msgstr "الكلية"
+
+#. module: base_custom
+#: selection:res.company,type:0
+msgid "Institute"
+msgstr "معهد"
+
+#. module: base_custom
+#: model:ir.model.fields,field_description:base_custom.field_res_company_type
+msgid "Type"
+msgstr "نوع"
+

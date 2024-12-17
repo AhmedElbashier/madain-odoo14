@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_session_tree" model="ir.ui.view">
+            <field name="name">op.session.tree</field>
+            <field name="model">op.session</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Sessions">
+                    <!-- <field name="faculty_id"/> -->
+                    <field name="batch_id"/>
+                    <field name="subject_id"/>
+                    <field name="classroom_id"/>
+                    <field name="start_datetime"/>
+                    <field name="end_datetime"/>
+                    <field name="state"/>
+                    <field name="session_number"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_session_form" model="ir.ui.view">
+            <field name="name">op.session.form</field>
+            <field name="model">op.session</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Session">
+                    <header>
+                        <button type="object" name="get_students"
+                                states="draft" string="Get Students"
+                                class="oe_highlight"/>
+                        <button type="object" name="lecture_confirm"
+                                states="draft" string="Confirm"
+                                class="oe_highlight"/>
+                        <button type="object" name="reschedule"
+                                states="cancel" string="Re Shedule"
+                                class="oe_highlight"/>
+                        <button type="object" name="lecture_done"
+                                states="confirm" string="Done"
+                                class="oe_highlight"/>
+                        <button type="object" name="lecture_draft"
+                                states="cancel" string="Set to Draft"
+                                class="oe_highlight"/>
+                        <button type="object" name="lecture_cancel"
+                                states="draft,confirm" string="Cancel"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,confirm"/>
+                    </header>
+                    <sheet>
+                        <div name="smart_button" class="oe_button_box">
+                        </div>
+                        <field name="active" invisible="1"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                                attrs="{'invisible': [('active', '=', True)]}"/>
+                        <group>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="original_lecture" attrs="{'invisible': [('session_type','=','original')]}"/>
+                                <field name="compensation_lecture" attrs="{'invisible': ['|',('state','!=','cancel'),('session_type','=','compensation')]}"/>
+                                <field name="timing_id"/>
+                                <field name="subject_id"/>
+                                <field name="subject_type"/>
+                                <field name="subject_groups" attrs="{'invisible': [('subject_type', '!=', 'practical')]}"/>
+                                <field name="session_number"/>
+                                <field name="session_type" invisible="1"/>
+                                
+                            </group>
+                            <group>
+                                <field name="batch_id" options='{"no_open": True}'/>
+                                <field name="calendar_id"/>
+                                <field name="classroom_id"/>
+                                <field name="type"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <field name="start_datetime" required="1"/>
+                            <field name="end_datetime" required="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Attendees">
+                                <field name="session_attendees_ids">
+                                    <tree editable="bottom">
+                                        <field name="student_id"/>
+                                        <field name="university_id"/>
+                                        <field name="status"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Lecture Headline">
+                                <form>
+                                    <field name="headline" required="1"/>
+                                </form>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"
+                               groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_session_search" model="ir.ui.view">
+            <field name="name">op.session.search</field>
+            <field name="model">op.session</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Sessions">
+                    <!-- <field name="faculty_id" select="True"/> -->
+                    <field name="course_id" select="True"/>
+                    <field name="batch_id" select="True"/>
+                    <field name="timing_id" select="True"/>
+                    <field name="subject_id" select="True"/>
+                    <field name="program_id" select="True"/>
+                    <field name="level_id" select="True"/>
+                    <field name="semester_id" select="True"/>
+                    <field name="start_datetime" select="True"/>
+                    <field name="end_datetime" select="True"/>
+                    <field name="type" select="True"/>
+                    <newline/>
+                    <filter string="Today" name="filter_session_today"
+                            domain="[('start_datetime', '&gt;=', time.strftime('%%Y-%%m-%%d 00:00:00')),('start_datetime', '&lt;=', time.strftime('%%Y-%%m-%%d 23:59:59'))]"/>
+                    <filter string="Week" name="filter_session_week"
+                            domain="[('start_datetime', '&gt;=', (context_today()+relativedelta(weeks=-2,days=1,weekday=0)).strftime('%Y-%m-%d')),
+                                    ('start_datetime', '&lt;', (context_today()+relativedelta(weekday=6)).strftime('%Y-%m-%d'))]"/>
+                    <filter string="Month" name="filter_session_month"
+                            domain="[('start_datetime', '&lt;=', (datetime.date.today()+relativedelta(day=31)).strftime('%Y-%m-%d')),
+                                    ('start_datetime', '&gt;=', (datetime.date.today()-relativedelta(day=1)).strftime('%Y-%m-%d'))]"/>
+                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Batch" name="group_by_session_batch_id"
+                                domain="[]" context="{'group_by':'batch_id'}"/>
+                        <filter string="Program" name="group_by_session_program_id"
+                                domain="[]" context="{'group_by':'program_id'}"/>
+                        <filter string="Level" name="group_by_session_level_id"
+                                domain="[]" context="{'group_by':'level_id'}"/>
+                        <filter string="Term" name="group_by_session_semester_id"
+                                domain="[]" context="{'group_by':'semester_id'}"/>
+                        <filter string="Period" name="group_by_session_timing_id"
+                                domain="[]" context="{'group_by':'timing_id'}"/>
+                        <filter string="Subject" name="group_by_session_subject_id"
+                                domain="[]" context="{'group_by':'subject_id'}"/>
+                        <filter string="State" name="group_by_session_state"
+                                domain="[]" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_op_session_calendar" model="ir.ui.view">
+            <field name="name">op.session.calendar</field>
+            <field name="model">op.session</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <calendar string="Sessions" date_start="start_datetime"
+                          color="course_id" date_stop="end_datetime">
+                    <!-- <field name="faculty_id"/> -->
+                    <!-- <field name="course_id"/> -->
+                    <field name="batch_id"/>
+                    <field name="timing_id"/>
+                    <field name="subject_id"/>
+                    <field name="type"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_session_kanban">
+            <field name="name">session.kanban</field>
+            <field name="model">op.session</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="type" class="o_kanban_small_column">
+                    <field name="type"/>
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="#{kanban_color(record.color.raw_value)} oe_kanban_global_click">
+                                <div class="o_dropdown_kanban dropdown">
+                                    <a class="dropdown-toggle btn" data-toggle="dropdown" href="#" role="button">
+                                        <span class="fa fa-bars fa-lg" title="Session"/>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <t t-if="widget.editable">
+                                            <li>
+                                                <a type="edit">Edit</a>
+                                            </li>
+                                        </t>
+                                        <t t-if="widget.deletable">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                        </t>
+                                        <li>
+                                            <ul class="oe_kanban_colorpicker"
+                                                data-field="color"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="oe_kanban_content">
+                                    <div>
+                                        <strong>
+                                            <field name="timing_id"/>
+                                        </strong>
+                                    </div>
+                                    <div class="oe_kanban_left">
+                                        <li t-if="record.faculty_id.raw_value">
+                                            <b>Faculty:</b>
+                                            <field name="faculty_id"/>
+                                        </li>
+                                        <li t-if="record.subject_id.raw_value">
+                                            <b>Subject:</b>
+                                            <field name="subject_id"/>
+                                        </li>
+                                        <li t-if="record.subject_type.raw_value">
+                                            <b>Type:</b>
+                                            <field name="subject_type"/>
+                                        </li>
+                                        <li t-if="record.subject_groups.raw_value">
+                                            <b>Group:</b>
+                                            <field name="subject_groups"/>
+                                        </li>
+
+                                        <li t-if="record.course_id.raw_value">
+                                            <b>Course:</b>
+                                            <field name="course_id"/>
+                                        </li>
+                                        <li t-if="record.batch_id.raw_value">
+                                            <b>Batch:</b>
+                                            <field name="batch_id"/>
+                                        </li>
+                                        <li t-if="record.start_datetime.raw_value">
+                                            <b>Start:</b>
+                                            <field name="start_datetime"/>
+                                        </li>
+                                        <li t-if="record.end_datetime.raw_value">
+                                            <b>End:</b>
+                                            <field name="end_datetime"/>
+                                        </li>
+                                        <li t-if="record.classroom_id.raw_value">
+                                            <b>Classroom/Lab:</b>
+                                            <field name="classroom_id"/>
+                                        </li>
+                                    </div>
+                                    <!-- <div class="oe_kanban_bottom_right">
+                                        <img alt="Faculty"
+                                             t-att-src="kanban_image('op.faculty', 'image_1920', record.faculty_id.raw_value)"
+                                             t-att-title="record.faculty_id.value" width="24" height="24"
+                                             class="oe_kanban_avatar"/>
+                                    </div> -->
+                                    <div class="oe_clear"></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_op_session_pivot" model="ir.ui.view">
+            <field name="name">op.session.pivot</field>
+            <field name="model">op.session</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <pivot string="Session Analysis">
+                    <field name="name"/>
+                    <!-- <field name="faculty_id" type="col"/> -->
+                    <field name="timing_id"/>
+                    <!-- <field name="course_id"/> -->
+                    <field name="batch_id"/>
+                    <field name="subject_id"/>
+                    <field name="classroom_id"/>
+                    <field name="start_datetime" type="row"/>
+                    <field name="end_datetime"/>
+                    <field name="type"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_session_view">
+            <field name="name">Sessions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.session</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">kanban,calendar,pivot</field>
+            <field name="search_view_id" ref="view_op_session_search"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_session_view_form">
+            <field name="act_window_id" ref="act_open_op_session_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_session_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_session_view_tree">
+            <field name="act_window_id" ref="act_open_op_session_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_op_session_tree"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_session_view_kanban">
+            <field name="act_window_id" ref="act_open_op_session_view"/>
+            <field name="sequence" eval="5"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="view_session_kanban"/>
+        </record>
+    </data>
+</odoo>

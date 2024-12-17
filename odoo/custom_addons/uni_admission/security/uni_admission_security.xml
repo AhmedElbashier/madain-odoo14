@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.module.category" id="uni_admission_groups">
+			<field name="name">Admission  Users</field>
+			<field name="description">Base users in university medical system</field>
+			<field name="sequence">4</field>
+		</record>
+		<record id="uni_group_admission_admin" model="res.groups">
+			<field name="name">admission Admin</field>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="uni_admission.uni_admission_groups"/>
+		</record>
+		<!-- <record model="ir.rule" id="medical_admission_rule">
+			<field name="name">the medical rule in admission</field>
+			<field name="model_id" ref="uni_admission.model_uni_admission"/> -->
+			<!-- <field name="domain_force">[('state','=','clinic')]</field> -->
+			<!-- <field name="perm_create" eval="False"/>
+			<field name="perm_unlink" eval="False"/>
+			<field name="perm_write" eval="True"/>
+			<field name="groups" eval="[(4, ref('uni_health_service.uni_group_medical_admin'))]"/>
+		</record> -->
+		<record id="uni_group_admission_user" model="res.groups">
+			<field name="name">admission user</field>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="uni_admission.uni_admission_groups"/>
+		</record>
+		<record id="uni_group_commitee_user" model="res.groups">
+			<field name="name">Committe</field>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="uni_admission.uni_admission_groups"/>
+		</record>
+		<record id="uni_group_reg_user" model="res.groups">
+			<field name="name">Register</field>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="uni_admission.uni_admission_groups"/>
+		</record>
+		<!-- <record model="ir.rule" id="faculty_rule">
+			<field name="name">Faculty multi company rule</field>
+			<field name="model_id" ref="uni_admission.model_uni_admission"/>
+			<field name="domain_force">[('faculty_id','in',[user.company_id.id])]</field>
+			<field name="perm_create" eval="False"/>
+			<field name="perm_unlink" eval="False"/>
+			<field name="perm_write" eval="True"/>
+			<field name="groups" eval="[(4, ref('uni_admission.uni_group_commitee_user'))]"/>
+		</record> -->
+
+	</data>
+</odoo>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_exam_exam_form" model="ir.ui.view">
+            <field name="name">exam.exam.form</field>
+            <field name="model">exam.exam</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Exam">
+                    <header>
+                        <button name="act_schedule" states="draft" type="object"
+                                string="Schedule" class="oe_highlight"/>
+                        <button name="act_done" states="schedule" type="object"
+                                string="Confirm" class="oe_highlight"/>
+                        <button name="act_draft" states="schedule,done" type="object"       class="oe_highlight" string="Reset To Draft"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,schedule,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button  class="oe_stat_button" name="exam_template_tree_view" type="object" icon="fa-file-text-o" string='Exam Forms'>
+                            <field name="forms_count"/>
+                            </button>
+                        </div>
+                        <field name="active" invisible="1"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                                attrs="{'invisible': [('active', '=', True)]}"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" class="oe_inline" required="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="record_id"/>
+                                <field name="subject_id"/>
+                                <field name="teacher_id" required="1"/>
+                                <!-- <field name="total_marks"/> -->
+                                <!-- <field name="min_marks"/> -->
+                            </group>
+                            <group>
+                                <field name="exam_date" required="1"/>
+                                <field name="start_timing_id" options="{'no_create': True,'no_open': True}" string="Start"/>
+                                <field name="end_time" string="End" widget="float_time"/>
+                                <field name="exam_duration" required="0" widget="float_time"/>
+                            </group>
+                        </group>
+                        <br/><br/>
+                        <group col="4">
+                            <field name="full_degree"/>
+                            <field name="success_degree"/>
+                            <field name="attendance" invisible="1"/>
+                            <field name="practical" invisible="1"/>
+                            <field name="year_works" invisible="1"/>
+                            <field name="final_exam" invisible="1"/>
+                        </group>
+                        <separator string="Degree Component" colspan="4"/>
+                        <field name="degree_component">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="component_type"/>
+                                <field name="percentage"/>
+                            </tree>
+                        </field>
+                        <notebook>
+                            <page string="Attendees">
+                                <field name="attendees_line" nolabel="1" attrs="{'readonly':[('state','=','done')]}">
+                                    <tree string="Exam Attendees" editable="top">
+                                        <field name="student_id"  />
+                                        <field name="university_id"  />
+                                        <field name="seeting_number"  />
+                                        <field name="status"/>
+                                        <field name="violation_id"  widget="many2many_tags"/>
+                                        <field name="attendees_degree" attrs="{'readonly':['|',('status','in',['absence','justified_absence']),('parent.attendance','!=',True)]}"/>
+                                        <field name="practical_degree" attrs="{'readonly':['|',('status','in',['absence','justified_absence']),('parent.practical','!=',True)]}"/>
+                                        <field name="year_work_degree" attrs="{'readonly':['|',('status','in',['absence','justified_absence']),('parent.year_works','!=',True)]}"/>
+                                        <field name="final_exam_degree" attrs="{'readonly':['|',('status','in',['absence','justified_absence']),('parent.final_exam','!=',True)]}"/>
+                                        <field name="final_degree"  />
+                                    </tree>
+                                </field>
+                                <separator colspan="4" string="Description"/>
+                                <field name="note" colspan="4"/>
+                            </page>
+                            <page string="Deprived Students">
+                                <field name="deprived_student_ids" nolabel="1">
+                                    <tree string="Deprived Students" editable="bottom">
+                                        <field name="student_id"/>
+                                        <field name="university_id"/>
+                                        <field name="std_number"/>
+                                        <field name="deprived_reason"/>
+                                    </tree>
+                                    <form string="Deprived Students">
+                                        <sheet>
+                                            <group col="4">
+                                                <field name="student_id"/>
+                                                <field name="university_id"/>
+                                                <field name="std_number"/>
+                                                <field name="deprived_reason"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page> 
+                        </notebook>
+                        
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_exam_exam_tree" model="ir.ui.view">
+            <field name="name">exam.exam.tree</field>
+            <field name="model">exam.exam</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Exam">
+                    <!-- <field name="record_id"/> -->
+                    <field name="name"/>
+                    <field name="subject_id"/>
+                    <field name="exam_date"/>
+                    <field name="start_timing_id"/>
+                    <field name="end_time" widget="float_time"/>
+                    <field name="exam_duration" widget="float_time"/>
+                    <field name="state"/>
+                    <!-- <field name="total_marks"/>
+                    <field name="min_marks"/> -->
+                    <!-- <field name="full_degree"/> -->
+                    <!-- <field name="success_degree"/> -->
+                </tree>
+            </field>
+        </record>
+
+        
+
+        <record id="view_exam_exam_search" model="ir.ui.view">
+            <field name="name">exam.exam.search</field>
+            <field name="model">exam.exam</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Exam">
+                    <field name="name"/>
+                    <field name="subject_id"/>
+                    <!-- <field name="start_time"/> -->
+                    <!-- <field name="end_time"/> -->
+                    <field name="state"/>
+                    <field name="note"/>
+                    <field name="full_degree"/>
+                    <field name="success_degree"/>
+                    <!-- <field name="total_marks"/> -->
+                    <!-- <field name="min_marks"/> -->
+                    <filter string="Archived" name="inactive"
+                            domain="[('active', '=', False)]"/>
+                    <newline/>
+                    <filter string="Not Done" name="not_done"
+                            domain="[('state', '!=', 'done')]"/>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Exam Record" name="group_by_exam_record"
+                                domain="[]" context="{'group_by':'record_id'}"/>
+                        <filter string="Program" name="group_by_program"
+                                domain="[]" context="{'group_by':'program_id'}"/>
+                        <filter string="Level" name="group_by_level"
+                                domain="[]" context="{'group_by':'level_id'}"/>
+                        <filter string="Term" name="group_by_semester"
+                                domain="[]" context="{'group_by':'semester_id'}"/>
+                        <filter string="Batch" name="group_by_batch"
+                                domain="[]" context="{'group_by':'batch_id'}"/>
+                        <!-- <filter string="Subject" name="group_by_exam_subject_id"
+                                domain="[]" context="{'group_by':'subject_id'}"/> -->
+                        <filter string="State" name="group_by_exam_state"
+                                domain="[]" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_exam_exam_view">
+            <field name="name">Exams</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">exam.exam</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_exam_exam_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{'search_default_group_by_exam_record':1,'search_default_not_done':1}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_exam_exam_view_form">
+            <field name="act_window_id" ref="act_exam_exam_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_exam_exam_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_exam_exam_view_tree">
+            <field name="act_window_id" ref="act_exam_exam_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_exam_exam_tree"/>
+        </record>
+
+        <menuitem id="menu_exam_exam_main"
+                  name="Exams"
+                  parent="exam_main_menu"
+                  sequence="2"
+                  action="act_exam_exam_view"/>
+
+    </data>
+</odoo>

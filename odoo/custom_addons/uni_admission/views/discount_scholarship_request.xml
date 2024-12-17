@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Student Discount tree view -->
+    <record id="discount_scholarship_request_tree" model="ir.ui.view">
+        <field name="name">discount_scholarship.request.tree</field>
+        <field name="model">uni.discount_scholarship.request</field>
+        <field name="arch" type="xml">
+            <tree string="Discount and Scholarship Request">
+                <field name="sequence"/>
+                <field name="student_id"/>
+                <field name="discount_scholarship_id"/>
+                <field name="student_program_id"/>
+                <field name="academic_year_id"/>
+                <field name="state"/>
+            </tree>
+
+        </field>
+    </record>
+
+	<!-- Student Discount form view  --> 
+	<record id="discount_scholarship_request_view" model="ir.ui.view">
+		<field name="name">discount_scholarship.request.form</field>
+		<field name="model">uni.discount_scholarship.request</field>
+        <field name="arch" type="xml">
+            <form string="Discount and Scholarship Request">
+            	<header>
+                    <button name="action_waiting_for_approval" type="object" states="draft" string="Confirm" class="oe_highlight"/>
+                    <button name="action_approved" type="object" states="waiting_for_approval" string="Approve" class="oe_highlight"/>
+                    <button name="action_rejected" type="object" states="waiting_for_approval" string="Rejected" class="oe_highlight"/>
+                    <button name="action_set_to_draft" type="object" states="approved" string="Set To Draft" class="oe_highlight"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,waiting_for_approval,approved"/>
+                </header>
+            	<sheet>
+                    <div class="oe_button_box" name="button_box" groups="base.group_user">
+                        <button  class="oe_stat_button" name="attachment_tree_view" type="object" icon="fa-file-text-o" string='Documents'>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <field name="type_of_dis" widget="radio" class="oe_edit_only" options="{'horizontal': true}"/>
+                        <h1>
+                            <field name="student_id" placeholder="Student Name" required="1" attrs="{'readonly':[('state','!=','draft')]}" />
+                        </h1>
+                    </div>
+
+        			<group>
+                        <group>
+                            <field name="student_program_id"/>
+                            <field name="academic_year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="admission_year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="discount_scholarship_id" options="{'no_create': True}" attrs="{'readonly':[('state','!=','draft')],'readonly':[('state','!=','draft')]}"/>
+                            <field name="reason" attrs="{'invisible':['|',('type_of_dis','!=','discount'),('siblings','!=',False)],'readonly':[('state','!=','draft')]}"/>
+                            <field name="percentage" attrs="{'invisible':[('siblings','!=',False)],'required':[('siblings','=',False)],'readonly':[('state','!=','draft')]}"/>
+                            <field name="siblings" invisible="1"/>
+                            <field name="type" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="start_date" attrs="{'required':[('state','in',['waiting_for_approval','approved'])],'readonly':[('state','!=','draft')]}"/>
+                            <field name="end_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                    </group>
+                    <group col="4">
+                        <field name="discount_to" invisible="1"/>
+                        <field name="candidate" invisible="1"/>
+                    </group>
+                    <group attrs="{'invisible':[('siblings','!=',True)]}">
+                        <group string="Sibling Info">
+                            <field name="sibling_status" attrs="{'invisible':[('siblings','!=',True)],'required':[('siblings','=',True)],'readonly':[('state','!=','draft')]}"/>
+                            <field name="sibling_student_id" domain="[('state','=','student')]" attrs="{'invisible':[('sibling_status','!=','student')],'required':[('sibling_status','=','student')],'readonly':[('state','!=','draft')]}"/>
+                            <field name="sibling_candidate_id" string='Sibling' attrs="{'invisible':[('sibling_status','!=','candidate')],'required':[('sibling_status','=','candidate')],'readonly':[('state','!=','draft')]}"/>
+                            <field name="second_sibling" attrs="{'invisible':[('siblings','!=',True)],'required':[('siblings','=',True)],'readonly':[('state','!=','draft')]}"/>
+                           
+                        </group>
+                        <group string="Siblings Discount(%)">
+                             <field name="first_brother_percentage" attrs="{'invisible':[('siblings','!=',True)],'required':[('siblings','=',True)],'readonly':[('state','!=','draft')]}"/>
+                            <field name="second_brother_percentage"  attrs="{'invisible':['|',('siblings','!=',True),('discount_to','!=','two_brother')],'required':[('siblings','=',True)],'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Discount Details">
+                            <field name="fees_amount" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="discounted_amount"/>
+                            <field name="total_amount"/>
+                        </group>
+                        <!-- <group string="Guardian Info"  attrs="{'invisible':[('type_of_dis','!=','discount')],'readonly':[('state','!=','draft')]}">
+                            <field name="guardian_name" string="Name" attrs="{'required':[('type_of_dis','=','discount')],'readonly':[('state','!=','draft')]}"/>
+                            <field name="phone" attrs="{'required':[('type_of_dis','=','discount')]}"/>
+                        </group> -->
+                        <group string="Scholarship Info" attrs="{'invisible':[('type_of_dis','!=','scholarship')],'readonly':[('state','!=','draft')]}">
+                            <field name="program_id" widget="many2many_tags" attrs="{'invisible':[('type_of_dis','!=','scholarship')],'required':[('type_of_dis','=','scholarship')],'readonly':[('state','!=','draft')]}"/>
+                            <field name="certificate_info" attrs="{'invisible':[('type_of_dis','!=','scholarship')],'required':[('type_of_dis','=','scholarship')],'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                    </group>
+              
+				</sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+			</form>
+		</field>
+	</record>
+
+
+	<record id="action_uni_discount_scholarship_request" model="ir.actions.act_window">
+		<field name="name">Discount and Scholarship Request</field>
+		<field name="res_model">uni.discount_scholarship.request</field>
+ 		<field name="view_mode">tree,form</field>
+        <field name="context">{'default_type' : 'student'}</field>
+        <field name="domain">[('type', '=', 'student')]</field>
+       	<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				  Click to Create  !
+			</p>
+		</field>
+	</record>
+
+    <record id="discount_student_tree_action" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="discount_scholarship_request_tree"/>
+            <field name="act_window_id" ref="action_uni_discount_scholarship_request"/>
+    </record>
+    <record id="discount_student_form_action" model="ir.actions.act_window.view">
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="discount_scholarship_request_view"/>
+        <field name="act_window_id" ref="action_uni_discount_scholarship_request"/>
+    </record>
+    
+
+  
+    <menuitem id="discount_scholarship_req" name="Discount&amp;Scholarship" parent="uni_core.uni_core_faculties_menu"  action = "action_uni_discount_scholarship_request" sequence="2"/>
+
+
+    <!-- Candidate Discount tree view -->
+    <record id="discount_scholarship_request_candidate_tree" model="ir.ui.view">
+        <field name="name">discount_scholarship.request.candidate.tree</field>
+        <field name="model">uni.discount_scholarship.request</field>
+        <field name="arch" type="xml">
+            <tree string="Discount and Scholarship Request">
+                <field name="sequence"/>
+                <field name="candidate_id"/>
+                <field name="state"/>
+            </tree>
+
+        </field>
+    </record>
+
+    <!-- Candidate Discount form view  --> 
+    <record id="discount_scholarship_request_candidate_view" model="ir.ui.view">
+        <field name="name">discount_scholarship.request.candidate.form</field>
+        <field name="model">uni.discount_scholarship.request</field>
+        <field name="arch" type="xml">
+            <form string="Discount and Scholarship Request">
+                <header>
+                    <button name="action_waiting_for_approval" type="object" states="draft" string="Confirm" class="oe_highlight"/>
+                    <button name="action_approved" type="object" states="waiting_for_approval" string="Approve" class="oe_highlight"/>
+                    <button name="action_rejected" type="object" states="waiting_for_approval" string="Rejected" class="oe_highlight"/>
+                    <button name="action_set_to_draft" type="object" states="approved" string="Set To Draft" class="oe_highlight"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,waiting_for_approval,approved"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box" groups="base.group_user">
+                        <button  class="oe_stat_button" name="attachment_tree_view" type="object" icon="fa-file-text-o" string='Documents'>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <field name="type_of_dis" widget="radio" class="oe_edit_only" options="{'horizontal': true}"/>
+                        <h1>
+                            <field name="candidate_id" placeholder="Candidate Name" required="1"/>
+                        </h1>
+                    </div>
+                    <group col="1">
+                        <group>
+                            <group>
+                                <field name="student_program_id"/>
+                                <field name="academic_year_id"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="admission_year_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="discount_scholarship_id"/>
+                                <field name="reason" attrs="{'invisible':['|',('type_of_dis','!=','discount'),('siblings','!=',False)],'readonly':[('state','!=','draft')]}"/>
+                                <field name="percentage" attrs="{'invisible':[('siblings','!=',False)],'required':[('siblings','=',False)],'readonly':[('state','!=','draft')]}"/>
+                                <field name="siblings" invisible="1"/>
+                                <field name="type" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="start_date" attrs="{'required':[('state','in',['waiting_for_approval','approved'])],'readonly':[('state','!=','draft')]}"/>
+                                <field name="end_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+
+                        <field name="discount_to" invisible="1" nolabel="1"/>
+                        <field name="candidate" invisible="1" nolabel="1"/>
+
+                        <group attrs="{'invisible':[('siblings','!=',True)]}">
+                            <group string="Sibling Info">
+                                <field name="sibling_status"
+                                       attrs="{'invisible':[('siblings','!=',True)],
+                                                'required':[('siblings','=',True)],'readonly':[('state','!=','draft')]}"/>
+                                <field name="sibling_student_id" domain="[('state','=','student')]"
+                                       attrs="{'invisible':[('sibling_status','!=','student')],
+                                                'required':[('sibling_status','=','student')],'readonly':[('state','!=','draft')]}"/>
+                                <field name="sibling_candidate_id"
+                                       string='Sibling'
+                                       attrs="{'invisible':[('sibling_status','!=','candidate')],
+                                                'required':[('sibling_status','=','candidate')],'readonly':[('state','!=','draft')]}"/>
+                                <field name="second_sibling"
+                                       attrs="{'invisible':[('siblings','!=',True)],
+                                                'required':[('siblings','=',True)]}"/>
+                            </group>
+                            <group string="Siblings Discount(%)">
+                                <field name="first_brother_percentage"
+                                       string="Student Discount(%)"
+                                       attrs="{'invisible':[('siblings','!=',True)],
+                                                'required':[('siblings','=',True)],'readonly':[('state','!=','draft')]}"/>
+                                <field name="second_brother_percentage"
+                                       string="Sibling Discount(%)"
+                                       attrs="{'invisible':['|',('siblings','!=',True),('discount_to','!=','two_brother')],
+                                                'required':[('siblings','=',True)],'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group string="Discount Details">
+                                <field name="fees_amount" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="discounted_amount"/>
+                                <field name="total_amount"/>
+                            </group>
+                            <!-- <group string="Guardian Info"  attrs="{'invisible':[('type_of_dis','!=','discount')]}">
+                                <field name="guardian_name" string="Name" attrs="{'required':[('type_of_dis','=','discount')],'readonly':[('state','!=','draft')]}"/>
+                                <field name="phone" attrs="{'required':[('type_of_dis','=','discount')]}"/>
+                            </group> -->
+                            <group string="Scholarship Info" attrs="{'invisible':[('type_of_dis','!=','scholarship')],'readonly':[('state','!=','draft')]}">
+                                <field name="program_id" widget="many2many_tags" attrs="{'invisible':[('type_of_dis','!=','scholarship')],'required':[('type_of_dis','=','scholarship')],'readonly':[('state','!=','draft')]}"/>
+                                <field name="certificate_info" attrs="{'invisible':[('type_of_dis','!=','scholarship')],'required':[('type_of_dis','=','scholarship')],'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_candidate_discount_request" model="ir.actions.act_window">
+        <field name="name">Discount and Scholarship Request</field>
+        <field name="res_model">uni.discount_scholarship.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_type' : 'candidate'}</field>
+        <field name="domain">[('type', '=', 'candidate')]</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                  Click to Create  !
+            </p>
+        </field>
+    </record>
+
+    <record id="discount_candidate_tree_action" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="discount_scholarship_request_candidate_tree"/>
+            <field name="act_window_id" ref="action_candidate_discount_request"/>
+    </record>
+    <record id="discount_candidate_form_action" model="ir.actions.act_window.view">
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="discount_scholarship_request_candidate_view"/>
+        <field name="act_window_id" ref="action_candidate_discount_request"/>
+    </record>
+    
+
+  
+    <menuitem id="discount_scholarship_candidate_req" name="Discount and Scholarship" parent="uni_admission_view_menu"  action = "action_candidate_discount_request"/>
+
+</odoo>
+

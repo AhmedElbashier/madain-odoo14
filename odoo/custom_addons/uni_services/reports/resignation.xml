@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<template id="report_resignation_template">
+		<t t-call="web.html_container">
+			<t t-call="web.internal_layout">
+				<div class="page">
+					<h3 class="text-center">
+						<strong>خطــاب رسمي</strong>
+					</h3>
+                    	<br></br>
+					<br/>
+					<table class="table table-bordered">
+						<thead class="text-right" style="Background-color:#a6a4a4">
+							<th style="border: 1px solid black;">  : النمرة  </th>
+						</thead>
+						
+					</table>
+					<br/>
+					<table class="table table-bordered">
+						<tbody>
+							<tr class="text-right">
+								<td style="border: 1px solid black;">
+									<span t-esc="o.student_id.name"></span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold; font-size:20px;" >:الي</span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span>الشؤون العلمية</span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold; font-size:20px;">:من</span>
+								</td>								
+							</tr>
+							<tr class="text-right">
+								<td style="border: 1px solid black;"> 
+									<span> السيد المسجل  • </span><br/>
+									<span>السيد نائب العميد  • </span><br/>
+									<span> السيد العميد  • </span><br/>
+									<span> السيد  رئيس اللجنة الاداريه والمالية • </span>
+								</td>
+								<td style="border: 1px solid black;">
+									<br/>
+									<span style="font-weidght: bold; font-size:20px;" >صورة</span>
+									<br/>
+									<span style="font-weidght: bold; font-size:20px;" >:الي</span>
+								</td>
+								<td style="border: 1px solid black;">
+									<span  t-esc="o.request_date"> </span>
+								</td>
+
+								<td style="border: 1px solid black;">
+									<span style="font-weidght: bold; font-size:20px; ">التاريخ</span>
+								</td>						
+							</tr>
+							<tr class="text-right">
+								<td colspan="2" style="border: 1px solid black;">
+									<span t-esc="o.resignation_sequence"></span>
+								</td>
+								<td colspan="2" style="border: 1px solid black;">
+									<span style="font-weidght: bold; font-size:20px;">المرجع</span>
+								</td>			
+							</tr>
+	
+						</tbody>
+					</table>
+
+					<br/>
+					<div style="text-align: right">
+						<center><span style="font-weidght: bold; margin-right:55px; text-align: right; font-size:20px;"> ,,, السلام عليكم ورحمة الله تعالى و بركاته</span></center> 
+					</div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div style="text-align: right">
+						<center><span style="font-weidght: bold; margin-right:55px; text-align: right; font-size:20px;"><u> الموضوع/ إفادة إستقالة طالب </u></span></center> 
+					</div>
+					<br></br>
+
+					<table class="table table-bordered">
+						<thead class="text-center" style="Background-color:#9cb6b6">
+							<th style="border: 1px solid black;">الرقم الجامعي </th>
+							<th style="border: 1px solid black;">التخصص</th>
+							<th style="border: 1px solid black;">الإسم</th>
+							<th style="border: 1px solid black;">م</th>
+						</thead>
+						<tbody>
+						<tr class="text-center">		
+                            <td style="border: 1px solid black;">
+								<span t-esc="o.university_id"></span>
+							</td>
+							<td style="border: 1px solid black;">
+									<span t-esc="o.program_id.name"></span>
+								</td>
+							<td style="border: 1px solid black;">
+								<span t-esc="o.student_id.name"></span>
+							</td>
+							<td style="border: 1px solid black;">
+								<span>1</span>
+							</td>
+								
+							</tr>
+						</tbody>
+					</table>
+					<div style="text-align: right">
+						<span style="font-weidght: bold; margin-right:55px; text-align: right; font-size:20px;">نفيدكم بقبول الاستقالة</span>
+						<br/><br/>
+						<div style="text-align: right">
+						<center><span style="font-weidght: bold; margin-right:55px; text-align: right; font-size:20px;"> وجزاكم الله خيراً</span></center> 
+					</div> 
+					</div>
+					<br/><br/>
+					<div style="text-align: right">
+						<span style="font-weidght: bold;margin-right:550px ; font-size:23px;">د. وليد إبراهيم عثمان إبراهيم</span> 
+			                    </div>
+
+			                    <div style="text-align: right">
+						<span style="font-weidght: bold;margin-right:550px"> نائب امين الشؤون العلمية</span> 
+			                    </div>
+				</div>
+			</t>
+		</t>
+	</template>
+
+
+	<template id="report_resignation_template_doc">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="uni_services.report_resignation_template"/>
+			</t>
+		</t>
+	</template>
+</odoo>

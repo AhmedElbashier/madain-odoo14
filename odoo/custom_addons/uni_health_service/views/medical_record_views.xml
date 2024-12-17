@@ -1,0 +1,60 @@
+<odoo>
+	<data>
+		<!-- uni.health_service.medical_record form view -->
+		<record id="medical_record_view_form" model="ir.ui.view">
+			<field name="name">uni.health_service.medical_record.view.form</field>
+			<field name="model">uni.health_service.medical_record</field>
+			<field name="arch" type="xml">
+				<form string="Medical Record">
+					<sheet>
+						<group colspan="4" col="2">
+							<group col="2">
+								<field name="student_id" options="{'no_create': True}"/>
+								<field name="doctor_id" options="{'no_create': True}"/>
+								<field name="date"/>
+							</group>
+							<group col="2">
+								<field name="faculty_id" readonly="1" options="{'no_create': True}"/>
+								<field name="pharmacist_id" options="{'no_create': True}"/>
+							</group>
+						</group>
+						<notebook>
+							<page string="Medical Information">
+								<group colspan="2" col="2">
+									<field name="treatment"/>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- uni.health_service.medical_record tree view -->
+		<record id="medical_record_view_tree" model="ir.ui.view">
+			<field name="name">uni.health_service.medical_record.view.tree</field>
+			<field name="model">uni.health_service.medical_record</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="student_id"/>
+					<field name="faculty_id" readonly="1"/>
+					<field name="doctor_id"/>
+					<field name="date"/>
+				</tree>
+			</field>
+		</record>
+		<!-- Health Service list action -->
+		<record id="uni_health_service_list_action" model="ir.actions.act_window">
+			<field name="name">Medical Records</field>
+			<field name="res_model">uni.health_service.medical_record</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new record</p>
+			</field>
+		</record>
+		<!-- Students left menu -->
+		<menuitem id="uni_health_service_list_menu" name="Medical Records" parent="uni_health_service_view_menu" 
+		action="uni_health_service_list_action"
+		groups="uni_health_service.uni_group_medical_admin,uni_health_service.uni_group_medical_user"/>
+
+	</data>
+</odoo>

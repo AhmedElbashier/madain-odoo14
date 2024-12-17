@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Academic Year -->
+	<record id="uni_year_view_form" model="ir.ui.view">
+		<field name="name">uni.year.form</field>
+		<field name="model">uni.year</field>
+		<field name="arch" type="xml">
+			<form string="Academic Years">
+				<header>
+					<field name="state" widget="statusbar" statusbar_visible="draft,approved,closed"/>
+					<button name="to_approved" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+					<button name="to_closed" string="Close" type="object" states="approved" class="oe_highlight"/>
+					<button name="reset_to_draft" type="object" string="Reset To Draft" class="oe_highlight" attrs="{'invisible':['|',('draft_records','=',True),('state','not in',['closed'])]}"/>
+				</header>
+				<sheet>
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only"/>
+						<h1>
+							<field name="name" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</h1>
+					</div>
+					<group>
+						<group>
+							<field name="code" attrs="{'readonly':[('first_year','=',True)]}" placeholder='19-20'/>
+							<field name="program_ids" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="last_code" invisible="1"/>
+							<field name="company_id" invisible="1"/>
+							<field name="first_year" invisible="1"/>
+							<field name="draft_records" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group>
+							<field name="start_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="end_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+					</group>
+					
+					<notebook>
+						<page string="Finance">
+							<group col="4">
+								<field name="study_fees_id" string="Fees" context="{'default_year_id': active_id}" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="fees_increse_percenatge" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="allow_installment" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="fees_id" widget="many2many_tags" context="{'default_year_id': active_id}" invisible="1"/>
+							</group>
+							<field name='fees_installment_ids' attrs="{'invisible':[('allow_installment','!=',True)],'readonly':[('state','!=','draft')]}">
+								<tree editable="top">
+									<field name="name" required="1"/>
+									<field name="installment_percentage" string="Installment Perc(%)" required="1" width="0.5"/>
+									<field name="start_date" required="1" width="0.5"/>
+									<field name="end_date" required="1" width="0.5"/>
+									<field name="first_installment" width="0.5"/>
+									<field name="include_registration_fees" width="0.5"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Calendars">
+							<field name="calendar_ids" attrs="{'readonly':[('state','!=','draft')]}">
+								<form>
+									<sheet>
+										<div class="oe_title">
+											<label for="name" class="oe_edit_only"/>
+											<h1>
+												<field name="name" class="oe_inline"/>
+											</h1>
+										</div>
+										<group>
+											<field name="code"/>
+										</group>
+										<group col="4">
+											<field name="program_ids" widget="many2many_tags"/>
+											<field name="academic_year_id" required="0" invisible="1"/>
+										</group>
+										<notebook>
+											<page string="Activities">
+												<field name="calendar_activities_ids">
+													<tree editable="top">
+														<field name="name"/>
+														<field name="start_date"/>
+														<field name="end_date"/>
+													</tree>
+												</field>
+											</page>
+										</notebook>
+									</sheet>
+								</form>
+								<tree>
+									<field name="code"/>
+									<field name="name"/>
+									
+									<field name="program_ids" widget="many2many_tags"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Repeat">
+							<group col="4">
+								<field name="allow_discount" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="can_be_repeated" attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name="discount_percentage"  attrs="{'invisible':[('allow_discount','!=',True)],'required':[('allow_discount','=',True)],'readonly':[('state','!=','draft')]}"/>
+							</group>
+						</page>
+						<page string="Registration Records">
+							<field name="registration_record_ids" attrs="{'readonly':[('state','!=','draft')]}">
+								<tree>
+									<field name="name"/>
+									<field name="level_id"/>
+									<field name="state"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Admission Records">
+							<field name="admission_record_ids" attrs="{'readonly':[('state','!=','draft')]}">
+								<tree>
+									<field name="name"/>
+									<field name="state"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	
+	<record id="uni_year_view_tree" model="ir.ui.view">
+		<field name="name">uni.year.tree</field>
+		<field name="model">uni.year</field>
+		<field name="arch" type="xml">
+			<tree string="Academic Year">
+				<field name="code"/>
+				<field name="name"/>
+				<field name="state"/>
+				<field name="active" widget="boolean_toggle"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_uni_year_search" model="ir.ui.view">
+            <field name="name">uni.year</field>
+            <field name="model">uni.year</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            	<search string="Academic Year">
+            		<field name="name"/>
+            		<field name="code"/>
+            	</search>
+            </field>
+    </record>
+
+	<record id="uni_year_action_form" model="ir.actions.act_window">
+		<field name="name">Academic Years</field>
+		<field name="res_model">uni.year</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">				Click to create new academic year			</p>
+		</field>
+	</record>
+
+	<menuitem id="menu_uni_year" name="Academic Years" parent="uni_core.menu_uni_year_root" action="uni_year_action_form" sequence="1"/>
+	
+	</odoo>

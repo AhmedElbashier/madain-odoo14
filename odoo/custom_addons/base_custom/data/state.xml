@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!--
+        Resource: res.country.state
+        Update states
+        -->
+
+        <record id="state_L" model="res.country.state">
+            <field name="code">L</field>
+            <field name="name">الولاية الشمالية</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+        <record id="state_N" model="res.country.state">
+            <field name="code">N</field>
+            <field name="name">ولاية نهر النيل</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+        <record id="state_P" model="res.country.state">
+            <field name="code">P</field>
+            <field name="name"> ولاية البحر الأحمر</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+        <record id="state_G" model="res.country.state">
+            <field name="code">G</field>
+            <field name="name">ولاية القضارف</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+        <record id="state_K" model="res.country.state">
+            <field name="code">K</field>
+            <field name="name">ولاية كسلا</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		 <record id="state_S" model="res.country.state">
+            <field name="code">S</field>
+            <field name="name">ولاية سنار</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		 <record id="state_KH" model="res.country.state">
+            <field name="code">KH</field>
+            <field name="name">ولاية الخرطوم</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		 <record id="state_GZ" model="res.country.state">
+            <field name="code">GZ</field>
+            <field name="name">ولاية الجزيرة</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		 <record id="state_NK" model="res.country.state">
+            <field name="code">NK</field>
+            <field name="name">ولاية شمال كردفان</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		<record id="state_BN" model="res.country.state">
+            <field name="code">BN</field>
+            <field name="name">ولاية النيل الأزرق</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		<record id="state_WN" model="res.country.state">
+            <field name="code">WN</field>
+            <field name="name">ولاية النيل الأبيض</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		<record id="state_WK" model="res.country.state">
+            <field name="code">WK</field>
+            <field name="name"> ولاية غرب كردفان</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		<record id="state_EK" model="res.country.state">
+            <field name="code">EK</field>
+            <field name="name">ولاية شرق دارفور</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		<record id="state_Eb" model="res.country.state">
+            <field name="code">Eb</field>
+            <field name="name">ولاية جنوب كردفان</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		<record id="state_SD" model="res.country.state">
+            <field name="code">SD</field>
+            <field name="name">ولاية جنوب دارفور</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		<record id="state_WD" model="res.country.state">
+            <field name="code">WD</field>
+            <field name="name">ولاية وسط دارفور</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		<record id="state_ND" model="res.country.state">
+            <field name="code">ND</field>
+            <field name="name"> ولاية شمال دارفور</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+		<record id="state_DD" model="res.country.state">
+            <field name="code">DD</field>
+            <field name="name"> ولاية غرب دارفور</field>
+            <field name="country_id" ref="base.sd"/>
+        </record>
+
+
+
+</odoo>

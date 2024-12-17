@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_op_timing,name_op_timing_faculty,model_op_timing,,1,1,1,1
+access_op_session,name_op_session,model_op_session,,1,1,1,1
+access_op_session_attendees,name_op_session_attendees,model_op_session_attendees,,1,1,1,1
+
+access_generate_time_table,name_generate_time_table,model_generate_time_table,,1,1,1,1
+access_gen_time_table_line,name_gen_time_table_line,model_gen_time_table_line,,1,1,1,1
+access_session_confirmation,name_session_confirmation,model_session_confirmation,,1,1,1,1

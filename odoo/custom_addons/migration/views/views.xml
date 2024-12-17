@@ -1,0 +1,10 @@
+<odoo>
+	<data>
+		<menuitem id="migration_menu" name="Exams Mapping" parent="uni_results.exam_main_menu" sequence="3"/>
+		<!-- student migration menu view -->
+		<!-- <menuitem id="menu_student_migration_view" name="Students List" sequence="3" parent="uni_admission_admissions_menu"/> -->
+		
+
+
+	</data>
+</odoo>

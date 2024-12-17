@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	<!-- Inherit Batch -->
+	<record id="inherit_faculty_calendar_form_view" model="ir.ui.view">
+        <field name="name">uni.faculty.calendar.inherit.form</field>
+        <field name="model">uni.faculty.calendar</field>
+        <field name="inherit_id" ref="uni_core.uni_faculty_calendar_view_form" />
+        <field name="arch" type="xml">
+        	<xpath expr="//field[@name='program_ids']" position="before">
+    			<field name="academic_year_id" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+        	</xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,52 @@
+<odoo>
+	<data>
+		<!-- uni.exam.types form view -->
+		<record id="uni_exam_types_view_form" model="ir.ui.view">
+			<field name="name">uni.exam.types.form</field>
+			<field name="model">uni.exam.types</field>
+			<field name="arch" type="xml">
+				<form string="Exam Types">
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name" class="oe_inline"/>
+							</h1>
+						</div>
+						<group col="4">
+							<field name="code"/>
+							<field name="active" widget="boolean_toggle"/>
+						
+						</group>
+					</sheet>
+					<!-- <div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div> -->
+				</form>
+			</field>
+		</record>
+		<!-- uni.exam.types tree view -->
+		<record id="uni_exam_types_view_tree" model="ir.ui.view">
+			<field name="name">uni.exam.types.view.tree</field>
+			<field name="model">uni.exam.types</field>
+			<field name="arch" type="xml">
+				<tree string="Exam Types">
+					<field name="code"/>
+					<field name="name"/>
+					<field name="active" widget="boolean_toggle"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_exam_types_action" model="ir.actions.act_window">
+			<field name="name">Exam Types</field>
+			<field name="res_model">uni.exam.types</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new Exam Types</p>
+			</field>
+		</record>
+		<!-- Exam Types left menu -->
+		<menuitem id="uni_exam_types_menu" name="Exam Types" parent="uni_admission.registration_menu_conf" action="uni_exam_types_action"/>
+	</data>
+</odoo>

@@ -1,0 +1,116 @@
+<odoo>
+    <template id="letter_report">
+        <t t-call="web.html_container">
+           
+            <t t-call="web.external_layout">
+
+            <div class="page">
+                                   
+            <div class="center-block"
+				style="height: 75px; width: 100%; border: 1px solid black; background-color: #F2F2F2;">
+					<div style=
+                    "margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size:16px">
+						<b>
+                            <h3 class="text-center">
+								<strong>خطــاب رسمي</strong>
+                            </h3>
+						</b>
+                    </div>
+                    <br></br>
+                
+                <table border="1" style="width:100%;">
+                   
+                    <tr style="height: 50px;" class="text-center">
+                        
+                        <td style="border: 1px solid black; width:40%;">
+                            <t t-esc="form_data['letter_to']"/>
+                        </td>
+                        <td style="border: 1px solid black; width:10%;"> إلى </td>
+                        
+                        <td style="border: 1px solid black; width:40%;">
+                            <t t-esc="form_data['letter_from']"/>
+                        </td>  
+                        <td style="border: 1px solid black; width:10%;"> من </td>
+                                           
+                    </tr>
+                
+                    <tr style="height: 25px;" class="text-center">
+                        
+                        <td rowspan="2" style="border: 1px solid black;">
+                            <t t-esc="form_data['copy_to']"/>
+                        </td>
+                        <td rowspan="2" style="border: 1px solid black;"> صورة إلى </td>
+                        
+                        <td style="border: 1px solid black;">
+                           <t t-esc="form_data['letter_date']"/>
+                        </td>
+                        <td style="border: 1px solid black;"> التاريخ </td>
+                    </tr>
+
+                    <tr style="height: 25px;" class="text-center">
+                        
+                        <td style="border: 1px solid black;">
+                            <t t-esc="form_data['letter_reference']"/>
+                        </td>
+                        <td style="border: 1px solid black;"> المرجع </td>
+                            
+                    </tr>
+
+                                               
+                        <br> </br>
+                  
+                </table>
+                <br></br>
+                				
+                </div>
+                </div>
+                <div>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                
+                <h3>
+						<center><u> الموضــوع: استرجاع رســـوم </u></center>
+				</h3>
+                <br/><br/>
+                
+                <div style="text-align: right; font-size:20px; font-family:Arial !important;">
+                    <t t-esc="form_data['student_name'][1]"/> /بالإشارة للموضوع أعلاه، نرجو إسترجاع رسوم الطالب     
+                </div>
+                <div style="text-align: right; font-size:20px">
+                    .(<t t-esc="form_data['program']"/>) برنامج 
+
+                </div>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+
+                <div style="text-align: center">
+                    ولكم منا الشكر والتقدير
+                </div>
+
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                
+                <div style="text-align: right">
+						<span style="font-weidght: bold;margin-right:600px"><t t-esc="form_data['admission_manager']"/></span> 
+                </div>
+                
+                <div style="text-align: right">
+					<span style="font-weidght: bold;margin-right:550px">  مدير ادارة القبول وشؤون الطلاب</span> 
+                </div>
+                <br/>
+                <div style="text-align: right">   
+                    <span style="font-weidght: bold;margin-right:550px">  .........................التوقيع</span>
+				</div>
+					
+				</div>
+  
+                </t>
+        </t>
+    </template>
+</odoo>
+
+
